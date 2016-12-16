@@ -25,3 +25,5 @@
 > ### 論文情報・リンク
 > 
 > * 著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年 [論文リンク]()
+
+> ![FTMA15-1-page-65](https://github.com/shunk031/paper-survey/blob/master/FTMA15-1-page-65.png)

@@ -30,5 +30,5 @@
 
 ### 論文情報・リンク
 
-* [Xiang Zhang, Junbo Zhao and Yann LeCunn. Character-level Convlutional Networks for Text Classification](https://arxiv.org/abs/1509.01626)
+* [Xiang Zhang, Junbo Zhao and Yann LeCunn. "Character-level Convlutional Networks for Text Classification"](https://arxiv.org/abs/1509.01626)
 

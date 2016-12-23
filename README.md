@@ -26,4 +26,9 @@
 > 
 > * 著者，"タイトル，" ジャーナル名，voluem，no.，ページ，年 [論文リンク]()
 
-> ![FTMA15-1-page-65](https://github.com/shunk031/paper-survey/blob/master/FTMA15-1-page-65.png)
+## Example
+
+[先端技術とメディア表現1 #FTMA15](http://www.slideshare.net/Ochyai/1-ftma15) from [Yoichi Ochiai](http://www.slideshare.net/Ochyai)  
+[www.slideshare.net](http://www.slideshare.net/Ochyai/1-ftma15/65)
+
+![FTMA15-1-page-65](https://github.com/shunk031/paper-survey/blob/master/FTMA15-1-page-65.png)

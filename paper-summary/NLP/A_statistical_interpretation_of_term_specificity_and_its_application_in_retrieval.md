@@ -22,4 +22,4 @@
 
 ### 論文情報・リンク
 
-* [K. S. Jones and P. W. Daly, "A statistical interpretation of term specificity and its retrieval," Journal of Documentation, vol 28, pp. 11-21, 1972.]()
+* [K. S. Jones and P. W. Daly, "A statistical interpretation of term specificity and its retrieval," Journal of Documentation, vol 28, pp. 11-21, 1972.](https://ai2-s2-pdfs.s3.amazonaws.com/4f09/e6ec1b7d4390d23881852fd7240994abeb58.pdf)

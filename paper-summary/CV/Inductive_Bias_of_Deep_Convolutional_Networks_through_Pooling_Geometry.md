@@ -18,4 +18,4 @@
 
 ### 論文情報・リンク
 
-* [Nadav Cohen and Amnon Shashua, "Inductive Bias of Deep Convolutional Networks through Pooling Geometry"](https://arxiv.org/abs/1605.06743v1)
+* [N. Cohen and A. Shashua. Inductive bias of deep convolutional networks through pooling geometry. arXiv:1605.06743, 2016.](https://arxiv.org/abs/1605.06743v1)

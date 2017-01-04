@@ -39,4 +39,4 @@
 
 ### 論文情報・リンク
 
-* [Alexis Conneau, Holger Schwenk, Yann Le Cun and Loïc Barreau. "Very Deep Convolutional Networks for Natural Language Processing"](https://arxiv.org/abs/1606.01781)
+* [Alexis Conneau, Holger Schwenk, Loïc Barreau and Yann Lecun. "Very deep convolutional networks for natural language processing." arXiv preprint arXiv:1606.01781, 2016](https://arxiv.org/abs/1606.01781)

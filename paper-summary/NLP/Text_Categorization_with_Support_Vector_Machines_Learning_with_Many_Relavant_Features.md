@@ -25,4 +25,4 @@ Support Vector Machines(SVMs)を用いてテキストのカテゴリ分類を行
 
 ### 論文情報・リンク
 
-* [Thorsten Joachims. "Text Categorization with Support Vector Machines: Learning with Many Relevant Features"](http://www.cs.cornell.edu/people/tj/publications/joachims_98a.pdf)
+* [Thorsten Joachims. "Text categorization with support vector machines: Learning with many relevant features." In Proc. of the European Conference on Machine Learning (ECML), pages 137–142, 1998](http://www.cs.cornell.edu/people/tj/publications/joachims_98a.pdf)

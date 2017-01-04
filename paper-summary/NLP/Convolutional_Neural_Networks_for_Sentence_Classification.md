@@ -33,4 +33,4 @@ CNNの重みの初期化方法を変えたり、pre-trainingをしたり、チ�
 
 ### 論文情報・リンク
 
-* [Yoon Kim. "Convolutional Neural Networks for Sentence Classification"](https://arxiv.org/abs/1408.5882) 
+* [Kim, Yoon. 2014. Convolutional neural networks for sentence classification. arXiv preprint arXiv:1408.5882.](https://arxiv.org/abs/1408.5882)

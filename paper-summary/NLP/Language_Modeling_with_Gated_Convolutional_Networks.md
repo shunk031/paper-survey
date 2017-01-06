@@ -20,7 +20,9 @@ Google Billion Word dataset(GBW)とWikiText-103を用いて実験を行った。
 
 ## 5. 議論はあるか？
 
-
+* TanhやReLUなどをGLUの代わりとした場合ではあまり予測性能が良くならなかった。
+* ネットワークの層を深くすればするほど予測精度が良くなっていった。
+* gradient clippingやweight normalizationなどを適用した結果、予測精度が良くなった。
 
 ## 6. 次に読むべき論文はあるか？
 

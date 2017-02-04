@@ -26,8 +26,11 @@ SSTbコーパスにおいてはCharSCNNとSCNNの精度の違いはほとんど�
 
 ## 6. 次に読むべき論文はあるか？
 
-* [Collobert, Ronan. "Deep Learning for Efficient Discriminative Parsing." AISTATS. Vol. 15. 2011.](http://www.jmlr.org/proceedings/papers/v15/collobert11a/collobert11a.pdf)
-* [dos Santos, Cícero Nogueira, and Bianca Zadrozny. "Learning Character-level Representations for Part-of-Speech Tagging." ICML. 2014.](http://www.jmlr.org/proceedings/papers/v32/santos14.pdf)
+* [Collobert, Ronan. "Deep Learning for Efficient Discriminative Parsing." AISTATS. Vol. 15. 2011.](http://www.jmlr.org/proceedings/papers/v15/collobert11a/collobert11a.pdf)  
+  意味役割付与(semantic role labeling task)についてCNNを使用している。CharSCNNはこの論文を元に構築されている。
+
+* [dos Santos, Cícero Nogueira, and Bianca Zadrozny. "Learning Character-level Representations for Part-of-Speech Tagging." ICML. 2014.](http://www.jmlr.org/proceedings/papers/v32/santos14.pdf)  
+  Twitterデータの感情分析のタスクでは、ハッシュタグにおいて「ly」で終わる単語に有益な情報が付与されている。これらを畳み込みのアプローチを用いて考察している。
 
 ### 論文情報・リンク
 

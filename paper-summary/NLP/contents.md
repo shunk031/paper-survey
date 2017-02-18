@@ -8,6 +8,7 @@
 * [Dos Santos, Cícero Nogueira, and Maira Gatti. "Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts." COLING. 2014.](./Deep_Convolutional_Neural_Networks_for_Sentiment_Analysis_of_Short_Texts)
 * [Le, Quoc V., and Tomas Mikolov. "Distributed Representations of Sentences and Documents." ICML. Vol. 14. 2014.](./Distributed_Representations_of_Words_and_Phrases_and_their_Compositionally)
 * [Dauphin, Yann N., et al. "Language Modeling with Gated Convolutional Networks." arXiv preprint arXiv:1612.08083 (2016).](./Language_Modeling_with_Gated_Convolutional_Networks)
+* [Berger, Mark J. "Large Scale Multi-label Text Classification with Semantic Word Vectors." (2015).](./Large_Scale_Multi-label_Text_Classification_with_Semantic_Word_Vectors)
 * [Zhang, Min-Ling, and Zhi-Hua Zhou. "Multilabel neural networks with applications to functional genomics and text categorization." IEEE transactions on Knowledge and Data Engineering 18.10 (2006): 1338-1351.](./Multi-Label_Neural_Networks_with_Applications_to_Functional_Genomics_and_Text_Categorization)
 * [Joachims, Thorsten. "Text categorization with support vector machines: Learning with many relevant features." European conference on machine learning. Springer Berlin Heidelberg, 1998.](./Text_Categorization_with_Support_Vector_Machines_Learning_with_Many_Relavant_Features)
 * [Dhingra, Bhuwan, et al. "Tweet2vec: Character-based distributed representations for social media." arXiv preprint arXiv:1605.03481 (2016).](./Tweet2Vec_Character_Based_Distributed_Representations_for_Social_Media)

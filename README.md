@@ -4,6 +4,11 @@
 * ProjectsのRelated Worksに論文を読んだかどうかを管理する。
 * [format.md](https://github.com/shunk031/paper-survey/blob/master/format.md)にしたがって論文の要旨をまとめる。
 
+## Contents
+
+* [Paper summary of computer vision](./CV/contents)
+* [Paper summary of natural language processing](./NLP/contents)
+
 ## format.mdについて
 
 [【参考】高速で論文がバリバリ読める落合先生のフォーマットがいい感じだったのでメモ](http://lafrenze.hatenablog.com/entry/2015/08/04/120205)

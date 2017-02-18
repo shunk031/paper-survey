@@ -1,0 +1,14 @@
+# Paper summary of natural language processing
+
+* [Yin, Wenpeng, et al. "Abcnn: Attention-based convolutional neural network for modeling sentence pairs." arXiv preprint arXiv:1512.05193 (2015).](./ABCNN_Attention-Based_Convolutional_Neural_Network_for_Modeling_Sentence_Pairs)
+* [Zhang, Ye, and Byron Wallace. "A sensitivity analysis of (and practitioners' guide to) convolutional neural networks for sentence classification." arXiv preprint arXiv:1510.03820 (2015).](./A_Sensitivity_Analysis_of_Convolutional_Neural_Networks_for_Sentence_Classification)
+* [Sparck Jones, Karen. "A statistical interpretation of term specificity and its application in retrieval." Journal of documentation 28.1 (1972): 11-21.](./A_statistical_interpretation_of_term_specificity_and_its_application_in_retrieval)
+* [Zhang, Xiang, Junbo Zhao, and Yann LeCun. "Character-level convolutional networks for text classification." Advances in neural information processing systems. 2015.](./Character-level_Convolutional_Networks_for_Text_Classification)
+* [Kim, Yoon. "Convolutional neural networks for sentence classification." arXiv preprint arXiv:1408.5882 (2014).](./Convolutional_Neural_Networks_for_Sentence_Classification)
+* [Dos Santos, Cícero Nogueira, and Maira Gatti. "Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts." COLING. 2014.](./Deep_Convolutional_Neural_Networks_for_Sentiment_Analysis_of_Short_Texts)
+* [Le, Quoc V., and Tomas Mikolov. "Distributed Representations of Sentences and Documents." ICML. Vol. 14. 2014.](./Distributed_Representations_of_Words_and_Phrases_and_their_Compositionally)
+* [Dauphin, Yann N., et al. "Language Modeling with Gated Convolutional Networks." arXiv preprint arXiv:1612.08083 (2016).](./Language_Modeling_with_Gated_Convolutional_Networks)
+* [Zhang, Min-Ling, and Zhi-Hua Zhou. "Multilabel neural networks with applications to functional genomics and text categorization." IEEE transactions on Knowledge and Data Engineering 18.10 (2006): 1338-1351.](./Multi-Label_Neural_Networks_with_Applications_to_Functional_Genomics_and_Text_Categorization)
+* [Joachims, Thorsten. "Text categorization with support vector machines: Learning with many relevant features." European conference on machine learning. Springer Berlin Heidelberg, 1998.](./Text_Categorization_with_Support_Vector_Machines_Learning_with_Many_Relavant_Features)
+* [Dhingra, Bhuwan, et al. "Tweet2vec: Character-based distributed representations for social media." arXiv preprint arXiv:1605.03481 (2016).](./Tweet2Vec_Character_Based_Distributed_Representations_for_Social_Media)
+* [Conneau, Alexis, et al. "Very deep convolutional networks for natural language processing." arXiv preprint arXiv:1606.01781 (2016).](./Very_Deep_Convolutional_Networks_for_Natural_Language_Processing)

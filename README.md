@@ -6,8 +6,8 @@
 
 ## Contents
 
-* [Paper summary of computer vision](./CV/contents)
-* [Paper summary of natural language processing](./NLP/contents)
+* [Paper summary of computer vision](./paper-summary/CV/contents)
+* [Paper summary of natural language processing](./paper-summary/NLP/contents)
 
 ## format.mdについて
 

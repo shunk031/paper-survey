@@ -2,7 +2,7 @@
 
 ## 1. どんなもの？
 
-言語モデリングを行う際はLong shot term memory(LSTM)を用いることが多かったが、Convolutional Neural Network(CNN)にGateを導入したネットワークを利用することにより、state-of-the-artなLSTMの結果と同程度の精度を達成することができ、同時に遥かに高い並行処理能力を獲得したGated Convolutional Networks(GCN)を提案。
+言語モデリングを行う際はLong shot term memory(LSTM)を用いることが多かったが、Convolutional Neural Network(CNN)にGateを導入したネットワークを利用することにより、state-of-the-artなLSTMの結果と同程度の精度を達成することができた。同時に遥かに高い並行処理能力を獲得している。
 
 ## 2. 先行研究と比べてどこがすごいの？
 

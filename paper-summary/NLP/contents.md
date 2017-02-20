@@ -5,6 +5,7 @@
 * [Sparck Jones, Karen. "A statistical interpretation of term specificity and its application in retrieval." Journal of documentation 28.1 (1972): 11-21.](./A_statistical_interpretation_of_term_specificity_and_its_application_in_retrieval)
 * [Zhang, Xiang, Junbo Zhao, and Yann LeCun. "Character-level convolutional networks for text classification." Advances in neural information processing systems. 2015.](./Character-level_Convolutional_Networks_for_Text_Classification)
 * [Kim, Yoon. "Convolutional neural networks for sentence classification." arXiv preprint arXiv:1408.5882 (2014).](./Convolutional_Neural_Networks_for_Sentence_Classification)
+* [Johnson, Rie, and Tong Zhang. "Convolutional Neural Networks for Text Categorization: Shallow Word-level vs. Deep Character-level." arXiv preprint arXiv:1609.00718 (2016).](./Convolutional_Neural_Networks_for_Text_categorization_Shallow_Word-level_vs_Deep_Character-level)
 * [Dos Santos, Cícero Nogueira, and Maira Gatti. "Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts." COLING. 2014.](./Deep_Convolutional_Neural_Networks_for_Sentiment_Analysis_of_Short_Texts)
 * [Le, Quoc V., and Tomas Mikolov. "Distributed Representations of Sentences and Documents." ICML. Vol. 14. 2014.](./Distributed_Representations_of_Words_and_Phrases_and_their_Compositionally)
 * [Dauphin, Yann N., et al. "Language Modeling with Gated Convolutional Networks." arXiv preprint arXiv:1612.08083 (2016).](./Language_Modeling_with_Gated_Convolutional_Networks)

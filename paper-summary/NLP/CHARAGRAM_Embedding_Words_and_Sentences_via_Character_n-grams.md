@@ -1,4 +1,4 @@
-# CHARAGRAM: Embedding Words ant Sentences via Character n-grams
+# CHARAGRAM: Embedding Words and Sentences via Character n-grams
 
 ## 1. どんなもの？
 

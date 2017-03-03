@@ -4,7 +4,7 @@
 * [Kalchbrenner, Nal, Edward Grefenstette, and Phil Blunsom. "A convolutional neural network for modelling sentences." arXiv preprint arXiv:1404.2188 (2014).](./A_Convolutional_Neural_Network_for_Modelling_Sentences)
 * [Zhang, Ye, and Byron Wallace. "A sensitivity analysis of (and practitioners' guide to) convolutional neural networks for sentence classification." arXiv preprint arXiv:1510.03820 (2015).](./A_Sensitivity_Analysis_of_Convolutional_Neural_Networks_for_Sentence_Classification)
 * [Sparck Jones, Karen. "A statistical interpretation of term specificity and its application in retrieval." Journal of documentation 28.1 (1972): 11-21.](./A_statistical_interpretation_of_term_specificity_and_its_application_in_retrieval)
-* [CHARAGRAM: Embedding Words ant Sentences via Character n-grams](./CHARAGRAM_Embedding_Words_and_Sentences_via_Character_n-grams)
+* [Wieting, John, et al. "CHARAGRAM: Embedding Words and Sentences via Character n-grams." arXiv preprint arXiv:1607.02789 (2016).](./CHARAGRAM_Embedding_Words_and_Sentences_via_Character_n-grams)
 * [Zhang, Xiang, Junbo Zhao, and Yann LeCun. "Character-level convolutional networks for text classification." Advances in neural information processing systems. 2015.](./Character-level_Convolutional_Networks_for_Text_Classification)
 * [Kim, Yoon. "Convolutional neural networks for sentence classification." arXiv preprint arXiv:1408.5882 (2014).](./Convolutional_Neural_Networks_for_Sentence_Classification)
 * [Johnson, Rie, and Tong Zhang. "Convolutional Neural Networks for Text Categorization: Shallow Word-level vs. Deep Character-level." arXiv preprint arXiv:1609.00718 (2016).](./Convolutional_Neural_Networks_for_Text_categorization_Shallow_Word-level_vs_Deep_Character-level)

@@ -2,7 +2,7 @@
 
 ## 1. どんなもの？
 
-Convolutional Neural Network(CNN)で獲得したDeep Featureを用いた、Deep Decision Tree(DDT)を用いて画像を分類する。
+Convolutional Neural Network(CNN)で獲得したDeep Featureを用いた、Deep Decision Tree(DDT)で画像を分類する。
 
 ## 2. 先行研究と比べてどこがすごいの？
 

@@ -10,6 +10,7 @@
 * [Kim, Yoon. "Convolutional neural networks for sentence classification." arXiv preprint arXiv:1408.5882 (2014).](./Convolutional_Neural_Networks_for_Sentence_Classification)
 * [Johnson, Rie, and Tong Zhang. "Convolutional Neural Networks for Text Categorization: Shallow Word-level vs. Deep Character-level." arXiv preprint arXiv:1609.00718 (2016).](./Convolutional_Neural_Networks_for_Text_categorization_Shallow_Word-level_vs_Deep_Character-level)
 * [Dos Santos, Cícero Nogueira, and Maira Gatti. "Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts." COLING. 2014.](./Deep_Convolutional_Neural_Networks_for_Sentiment_Analysis_of_Short_Texts)
+* [Marc Moreno Lopez, Jugal Kalita. 2017. "Deep Learning applied to NLP." arXiv preprint arXiv:1703.03091.](./Deep_Learning_applied_to_NLP)
 * [Le, Quoc V., and Tomas Mikolov. "Distributed Representations of Sentences and Documents." ICML. Vol. 14. 2014.](./Distributed_Representations_of_Words_and_Phrases_and_their_Compositionally)
 * [Dauphin, Yann N., et al. "Language Modeling with Gated Convolutional Networks." arXiv preprint arXiv:1612.08083 (2016).](./Language_Modeling_with_Gated_Convolutional_Networks)
 * [Berger, Mark J. "Large Scale Multi-label Text Classification with Semantic Word Vectors." (2015).](./Large_Scale_Multi-label_Text_Classification_with_Semantic_Word_Vectors)

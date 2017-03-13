@@ -22,10 +22,6 @@ Convolutional Neural Network(CNN)をベースにしたモデルを用いて、�
 
 提案手法を用いて生成された要約の評価については、予めIMDBのデータセットでトレーニングしておいたNaive Bayes分類器を用いて生成した要約文の分類を行うことで評価を行っている。比較対象として、文書内からランダムに文を取り出したものを要約としたものの結果も掲載されているが、提案手法の要約がとても良い結果になっていることがわかる。
 
-以下は提案手法のCNNが選択した文がハイライトされているものである。
-
-![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Modelling_Visualising_and_Summarising_Documents_with_a_Single_Convolutional_Neural_Network_Figure_3.png)
-
 ## 5. 議論はあるか？
 
 パラグラフの最初と最後の文を取り出したものを要約とした結果も掲載されているが、あまり良い結果ではない。これは映画レビューにおいては最初もしくは最後の文が要旨を捉えていなかったからだと考えられている。

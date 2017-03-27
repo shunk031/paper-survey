@@ -8,6 +8,7 @@
 
 * [Paper summary of computer vision](./paper-summary/CV/contents)
 * [Paper summary of natural language processing](./paper-summary/NLP/contents)
+* [Paper summary of others](./paper-summary/Other/contents)
 
 ## format.mdについて
 

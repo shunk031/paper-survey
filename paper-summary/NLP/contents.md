@@ -14,6 +14,7 @@
 * [Le, Quoc V., and Tomas Mikolov. "Distributed Representations of Sentences and Documents." ICML. Vol. 14. 2014.](./Distributed_Representations_of_Words_and_Phrases_and_their_Compositionally)
 * [Dauphin, Yann N., et al. "Language Modeling with Gated Convolutional Networks." arXiv preprint arXiv:1612.08083 (2016).](./Language_Modeling_with_Gated_Convolutional_Networks)
 * [Berger, Mark J. "Large Scale Multi-label Text Classification with Semantic Word Vectors." (2015).](./Large_Scale_Multi-label_Text_Classification_with_Semantic_Word_Vectors)
+* [Collobert, Ronan, et al. "Natural language processing (almost) from scratch." Journal of Machine Learning Research 12.Aug (2011): 2493-2537.](./Natural_Language_Processing_almost_from_Scratch)
 * [Denil, Misha, et al. "Modelling, visualising and summarising documents with a single convolutional neural network." arXiv preprint arXiv:1406.3830 (2014).](./Modelling_Visualising_and_Summarising_Documents_with_a_Single_Convolutional_Neural_Network)
 * [dos Santos, Cícero Nogueira, and Bianca Zadrozny. "Learning Character-level Representations for Part-of-Speech Tagging." ICML. 2014](./Learning_Character-level_Representations_for_Part-of-Speech_Tagging)
 * [Zhang, Min-Ling, and Zhi-Hua Zhou. "Multilabel neural networks with applications to functional genomics and text categorization." IEEE transactions on Knowledge and Data Engineering 18.10 (2006): 1338-1351.](./Multi-Label_Neural_Networks_with_Applications_to_Functional_Genomics_and_Text_Categorization)

@@ -12,6 +12,7 @@
 * [Dos Santos, Cícero Nogueira, and Maira Gatti. "Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts." COLING. 2014.](./Deep_Convolutional_Neural_Networks_for_Sentiment_Analysis_of_Short_Texts)
 * [Marc Moreno Lopez, Jugal Kalita. 2017. "Deep Learning applied to NLP." arXiv preprint arXiv:1703.03091.](./Deep_Learning_applied_to_NLP)
 * [Le, Quoc V., and Tomas Mikolov. "Distributed Representations of Sentences and Documents." ICML. Vol. 14. 2014.](./Distributed_Representations_of_Words_and_Phrases_and_their_Compositionally)
+* [Johnson, Rie, and Tong Zhang. "Effective use of word order for text categorization with convolutional neural networks." arXiv preprint arXiv:1412.1058 (2014).](./Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks)
 * [Dauphin, Yann N., et al. "Language Modeling with Gated Convolutional Networks." arXiv preprint arXiv:1612.08083 (2016).](./Language_Modeling_with_Gated_Convolutional_Networks)
 * [Berger, Mark J. "Large Scale Multi-label Text Classification with Semantic Word Vectors." (2015).](./Large_Scale_Multi-label_Text_Classification_with_Semantic_Word_Vectors)
 * [Collobert, Ronan, et al. "Natural language processing (almost) from scratch." Journal of Machine Learning Research 12.Aug (2011): 2493-2537.](./Natural_Language_Processing_almost_from_Scratch)

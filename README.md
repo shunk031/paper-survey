@@ -1,5 +1,7 @@
 # Paper survey
 
+[![Build Status](https://travis-ci.org/shunk031/paper-survey.svg?branch=master)](https://travis-ci.org/shunk031/paper-survey)
+
 * 読もうと思っている論文は[Issue](https://github.com/shunk031/paper-survey/issues)に上げる。
 * [ProjectsのRelated Works](https://github.com/shunk031/paper-survey/projects/2)に論文を読んだかどうかを管理する。
 * [format.md](https://github.com/shunk031/paper-survey/blob/master/format.md)にしたがって論文の要旨をまとめる。

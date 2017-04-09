@@ -34,4 +34,4 @@ Google Billion Word dataset(GBW)とWikiText-103を用いて実験を行った。
 
 ### 論文情報・リンク
 
-* [Dauphin, Yann N., et al. "Language Modeling with Gated Convolutional Networks." arXiv preprint arXiv:1612.08083 (2016).](Language Modeling with Gated Convolutional Networks)
+* [Dauphin, Yann N., et al. "Language Modeling with Gated Convolutional Networks." arXiv preprint arXiv:1612.08083 (2016).](https://arxiv.org/pdf/1612.08083.pdf)

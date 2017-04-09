@@ -14,7 +14,7 @@ GPUの発展により効率的にモデルの学習を行うことができる�
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/ImageNet_Classification_with_Deep_Convolutional_Neural_Networks_Figure_2.png)
+![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/ImageNet_Classification_with_Deep_Convolutional_Neural_Networks/figure2.png)
 
 * 畳み込み層5層、全結合層3層の計8層のCNN
 * 活性化関数にReLUを使用することで、学習の収束を早めることができた

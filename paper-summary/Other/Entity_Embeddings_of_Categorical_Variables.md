@@ -15,7 +15,7 @@
 * Embedding Layerを用いたニューラルネットワーク
 * ネットワークの過学習を防ぐ手法として有名なDropoutについては、結果が改善しなかったため今回利用していない
 
-![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Entity_Embeddings_of_Categorical_Embeddings_Figure_1.png)
+![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Entity_Embeddings_of_Categorical_Embeddings/figure1.png)
 
 ## 4. どうやって有効だと検証した？
 
@@ -26,7 +26,7 @@ KaggleのRossmann Sale Predictionデータセットを用いて、従来のXGBoo
 * ニューラルネットワークの学習から得たカテゴリ変数のEmbeddingを特徴量として他の機械学習手法に入力をしたところ、カテゴリ変数を直接入力した場合に比べてとても良い結果になっている。
 * Rossmann Sale Predictionデータセットを学習して得られた曜日のEmbeddingを、t-SNEで2次元に落として可視化すると以下のようになる。平日と休日とで差が出ているのがわかる。
 
-![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Entity_Embeddings_of_Categorical_Embeddings_Figure_2.png)
+![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Entity_Embeddings_of_Categorical_Embeddings/figure2.png)
 
 ## 6. 次に読むべき論文はあるか？
 

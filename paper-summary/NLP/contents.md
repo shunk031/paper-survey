@@ -16,6 +16,7 @@
 * [Johnson, Rie, and Tong Zhang. "Effective use of word order for text categorization with convolutional neural networks." arXiv preprint arXiv:1412.1058 (2014).](./Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks)
 * [Dauphin, Yann N., et al. "Language Modeling with Gated Convolutional Networks." arXiv preprint arXiv:1612.08083 (2016).](./Language_Modeling_with_Gated_Convolutional_Networks)
 * [Berger, Mark J. "Large Scale Multi-label Text Classification with Semantic Word Vectors." (2015).](./Large_Scale_Multi-label_Text_Classification_with_Semantic_Word_Vectors)
+* [Liu, Frederick, et al. "Learning Character-level Compositionality with Visual Features." arXiv preprint arXiv:1704.04859 (2017).](./Learning_Character-level_Compositionality_with_Visual_Features)
 * [Collobert, Ronan, et al. "Natural language processing (almost) from scratch." Journal of Machine Learning Research 12.Aug (2011): 2493-2537.](./Natural_Language_Processing_almost_from_Scratch)
 * [Aldón Mínguez, David, Marta Ruiz Costa-Jussà, and José Adrián Rodríguez Fonollosa. "Neural machine translation using bitmap fonts." Proceedings of the EAMT 2016 Fifth Workshop on Hybrid Approaches to Translation (HyTra). 2016.](Neural_Machine_Translation_usuing_Bitmap_Fonts)
 * [Denil, Misha, et al. "Modelling, visualising and summarising documents with a single convolutional neural network." arXiv preprint arXiv:1406.3830 (2014).](./Modelling_Visualising_and_Summarising_Documents_with_a_Single_Convolutional_Neural_Network)

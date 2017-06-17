@@ -1,6 +1,7 @@
 # Paper summary of computer vision
 
 * [LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. "Deep learning." Nature 521.7553 (2015): 436-444.](./Deep_learning)
+* [Selvaraju, Ramprasaath R., et al. "Grad-cam: Why did you say that? visual explanations from deep networks via gradient-based localization." arXiv preprint arXiv:1610.02391 (2016).](./Grad-CAM_Why_did_you_say_that)
 * [Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012.](./ImageNet_Classification_with_Deep_Convolutional_Neural_Networks)
 * [Hinton, Geoffrey E., et al. "Improving neural networks by preventing co-adaptation of feature detectors." arXiv preprint arXiv:1207.0580 (2012).](./Improving_neural_networks_by_preventing_co-adaption_of_feature_detectors)
 * [Cohen, Nadav, and Amnon Shashua. "Inductive bias of deep convolutional networks through pooling geometry." arXiv preprint arXiv:1605.06743 (2016).](./Inductive_Bias_of_Deep_Convolutional_Networks_through_Pooling_Geometry)

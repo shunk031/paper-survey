@@ -1,21 +1,15 @@
-language: ruby
-rvm:
-- 2.3.3
-
-before_script:
- - chmod +x ./script/cibuild # or do this locally and commit
-
-# Assume bundler is being used, therefore
-# the `install` step will run `bundle install` by default.
-script: ./script/cibuild
-
-# branch whitelist, only for GitHub Pages
-branches:
-  only:
-  - master     # test the master branch
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-sudo: false # route your build to the container-based infrastructure for a faster build
+language: python
+install:
+  - curdir=$(pwd)
+  - cd ../
+  - git clone https://github.com/rcmdnk/linkchecker
+  - cd linkchecker
+  - pip install -r requirements.txt
+  - python setup.py install
+  - pip install --upgrade requests
+  - cd $curdir
+script:
+  - linkchecker https://shunk031.github.io/paper-survey/
+notifications:
+  slack:
+    secure: tvhImRwqWN9gX/RADwbUYPoCnvV8hhgxP83RNG4uaTReuvsUyNlGNISjmdIbkFo/KX7nStplb2+NAHCIcwKp6k19ODVpz/F9fUWMKjfSHt3vnOB9OZbo69sjiO9RemCgq11eG1K/oV3useMu9Cgh/gWVIIgat1VZVij8BXLhLx4J49cn+BOvnmDjcg7Tw1EBKG9XBKqar8aobFMP6/gVjtD9zDr5rx9NM/76HxgC6B2bgFSLe5kVabZcaaZapegxzGQd+p2TGvYOjx9UOR4FEZ/+dfz8uTvVCPqmtbtnpym7DHplQrAcKODg4pK5xreInIPMnfv+rxQMENDwQFLPWcig9R/YS1Dobi3v20MDDTQTkcXoq9sLz/2zpclDCY8FhG6C3xhaRCqW6h3eByV6SQq06QEf17X91dmeyMgnq0s1jpPxXVNTFwnFU+fgVckrHqYSWhyTQh10tYg0EePlF7GeJAntci83TJONFUcXuz79w7FkkjBUGo0o0vlSu+ixJIQ9Aeum9qaw2+EFP0PC+58r1bqIkPLrEJJAGOR2MBhvaDeEq8JhEdVg28NWDbqDbmQ/3CY18SH8dXii7NcVU9ivag6buuHXjMEp32+zFtC32QXBCYuxN3D4QIA/c9LsZHb4la/pgketRP0RmkuMuE96+feIRROGihJxLdbx1y8=

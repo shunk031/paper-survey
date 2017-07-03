@@ -2,7 +2,7 @@
 set -e # halt script on error
 
 git clone https://github.com/pietromenna/jekyll-cayman-theme.git
-cd jekyll-cayman-theme-master
+cd jekyll-cayman-theme
 bundle install
 
 bundle exec jekyll build

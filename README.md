@@ -8,9 +8,9 @@
 
 ## Contents
 
-* [Paper summary of computer vision](./paper-summary/CV/contents)
-* [Paper summary of natural language processing](./paper-summary/NLP/contents)
-* [Paper summary of others](./paper-summary/Other/contents)
+* [Paper Summary of Computer Vision](https://shunk031.github.io/paper-survey/paper-summary/CV/contents)
+* [Paper Summary of Natural Language Processing](https://shunk031.github.io/paper-survey/paper-summary/NLP/contents)
+* [Paper Summary of Others](https://shunk031.github.io/paper-survey/paper-summary/Other/contents)
 
 ## format.mdについて
 

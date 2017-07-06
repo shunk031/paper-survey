@@ -2,16 +2,34 @@
 
 ## 1. どんなもの？
 
+画像やテキストといった複数の要素を用いた「クロスモーダル検索」について、最新の研究にフォーカスをして調査を行っている。
+
 ## 2. 先行研究と比べてどこがすごいの？
 
+近年の携帯端末やSNSの発展により、写真を中心とした画像やテキスト、動画といったマルチモーダルなデータが多数生成されている。こういったデータを検索する方法は、ほとんどが「テキストからテキストを検索する」「画像から画像を検索する」といった同じタイプのデータに対してのみに行われてきている。
+
+本調査では違うタイプのメディア同士を検索を行うことができ、重要となりつつある「クロスモーダル検索」について複数の手法について調査を行っている。
+
 ## 3. 技術や手法の"キモ"はどこにある？
+
+一般的に画像やテキストといったマルチモーダルなデータに対して共通の表現空間を学習することで、クロスモーダルな検索を可能にする。
+
+クロスモーダル検索に対するアプローチとして、大きく「Real-valued Representation Learning」と「Binary Representation Learning」の2つのカテゴリに分けることができる。
+
+また異なるメディアについての共通の表現空間を学習する方法として「Unsupervised Methods」「Pairwise Based Methods」「Rank Based Methods」「Supervised Methods」の4つの分野に分けられる。
+
+これらの分野についての概要は以下のようになる。
 
 ### Real-valued Representation Learning
 
 #### Unsupervised Methods
+
+![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Comprehensive_Survey_on_Cross-modal_Retrieval/figure1.png)
+
 ##### Subspace learning methods
 
 * Canonical Correlation Analysis (CCA)
+  * 
 * Partial Least Squares (PLS)
 * Bilinear Model (BLM)
 * Cross-modal factor analysis (CFA)

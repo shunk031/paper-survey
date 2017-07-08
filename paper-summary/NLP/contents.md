@@ -7,6 +7,7 @@
 * [Wieting, John, et al. "CHARAGRAM: Embedding Words and Sentences via Character n-grams." arXiv preprint arXiv:1607.02789 (2016).](./CHARAGRAM_Embedding_Words_and_Sentences_via_Character_n-grams)
 * [Zheng, Xiaoqing, et al. "Character-Based Parsing with Convolutional Neural Network." IJCAI. 2015.](./Character-Based_Parsing_with_Convolutional_Neural_Network)
 * [Zhang, Xiang, Junbo Zhao, and Yann LeCun. "Character-level convolutional networks for text classification." Advances in neural information processing systems. 2015.](./Character-level_Convolutional_Networks_for_Text_Classification)
+* [Li, Yanran, et al. "Component-enhanced chinese character embeddings." arXiv preprint arXiv:1508.06669 (2015).](./Component-Enhanced_Chinese_Character_Embeddings)
 * [Kim, Yoon. "Convolutional neural networks for sentence classification." arXiv preprint arXiv:1408.5882 (2014).](./Convolutional_Neural_Networks_for_Sentence_Classification)
 * [Johnson, Rie, and Tong Zhang. "Convolutional Neural Networks for Text Categorization: Shallow Word-level vs. Deep Character-level." arXiv preprint arXiv:1609.00718 (2016).](./Convolutional_Neural_Networks_for_Text_categorization_Shallow_Word-level_vs_Deep_Character-level)
 * [Dos Santos, Cícero Nogueira, and Maira Gatti. "Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts." COLING. 2014.](./Deep_Convolutional_Neural_Networks_for_Sentiment_Analysis_of_Short_Texts)

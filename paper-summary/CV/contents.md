@@ -1,5 +1,6 @@
 # Paper summary of computer vision
 
+* [Wen, Yandong, et al. "A discriminative feature learning approach for deep face recognition." European Conference on Computer Vision. Springer International Publishing, 2016.](./A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition)
 * [Rennie, Steven J., Vaibhava Goel, and Samuel Thomas. "Annealed dropout training of deep networks." Spoken Language Technology Workshop (SLT), 2014 IEEE. IEEE, 2014.](./Annealed_Dropout_Training_of_Deep_Networks)
 * [LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. "Deep learning." Nature 521.7553 (2015): 436-444.](./Deep_learning)
 * [Selvaraju, Ramprasaath R., et al. "Grad-cam: Why did you say that? visual explanations from deep networks via gradient-based localization." arXiv preprint arXiv:1610.02391 (2016).](./Grad-CAM_Why_did_you_say_that)

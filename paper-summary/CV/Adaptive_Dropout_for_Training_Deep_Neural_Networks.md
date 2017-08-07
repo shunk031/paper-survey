@@ -17,7 +17,7 @@ Neural Networkの過学習を抑えるDrooutでは，一般的に0.5という一
   * Binary Belief Networkのように振る舞う
   * 元のネットワークとパラメータを共有している
   * Dropoutマスクm，ネットワークのパラメータw．Dropout率πとしたとき，以下のように学習を行う
-	* Binary Belief Networkで生成される分布P(m|π,w)を事後分布に近づける
+	* Binary Belief Networkで生成される分布P(m\|π,w)を事後分布に近づける
 	* 尤度L(m, w)を最大化する
 
 ## 4. どうやって有効だと検証した？

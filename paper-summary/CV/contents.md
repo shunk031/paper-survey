@@ -4,6 +4,7 @@
 * [Ba, Jimmy, and Brendan Frey. "Adaptive dropout for training deep neural networks." Advances in Neural Information Processing Systems. 2013.](./Adaptive_Dropout_for_Training_Deep_Neural_Networks)
 * [Xie, Saining, et al. "Aggregated residual transformations for deep neural networks." arXiv preprint arXiv:1611.05431 (2016).](./Aggregated_Residual_Transformations_for_Deep_Neural_Networks)
 * [Rennie, Steven J., Vaibhava Goel, and Samuel Thomas. "Annealed dropout training of deep networks." Spoken Language Technology Workshop (SLT), 2014 IEEE. IEEE, 2014.](./Annealed_Dropout_Training_of_Deep_Networks)
+* [Huang, Gao, et al. "Deep networks with stochastic depth." European Conference on Computer Vision. Springer International Publishing, 2016.](./Deep_Networks_with_Stochastic_Depth)
 * [LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. "Deep learning." Nature 521.7553 (2015): 436-444.](./Deep_learning)
 * [Selvaraju, Ramprasaath R., et al. "Grad-cam: Why did you say that? visual explanations from deep networks via gradient-based localization." arXiv preprint arXiv:1610.02391 (2016).](./Grad-CAM_Why_did_you_say_that)
 * [Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012.](./ImageNet_Classification_with_Deep_Convolutional_Neural_Networks)

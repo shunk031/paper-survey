@@ -16,5 +16,6 @@
 * [Jin, Jonghoon, Aysegul Dundar, and Eugenio Culurciello. "Robust Convolutional Neural Networks under Adversarial Noise." arXiv preprint arXiv:1511.06306 (2015).](./Robust_Convolutional_Neural_Networks_Under_Adversarial_Noise)
 * [Bromley, Jane, et al. "Signature Verification Using A "Siamese" Time Delay Neural Network." IJPRAI 7.4 (1993): 669-688.](./Signature_Verification_using_a_Siamese_Time_Delay_Neural_Network)
 * [Masci, Jonathan, et al. "Stacked convolutional auto-encoders for hierarchical feature extraction." International Conference on Artificial Neural Networks. Springer Berlin Heidelberg, 2011.](./Stacked_Convolutional_Auto-Encoders_for_Hierarchical_Feature_Extraction)
+* [Lee, Hanbit, et al. "Style2Vec: Representation Learning for Fashion Items from Style Sets." arXiv preprint arXiv:1708.04014 (2017).](./Style2Vec_Representation_Learning_for_Fashion_Items_from_Style_Sets)
 * [Zagoruyko, Sergey, and Nikos Komodakis. "Wide residual networks." arXiv preprint arXiv:1605.07146 (2016).](./Wide_Residual_Networks)
 * [Redmon, Joseph, et al. "You only look once: Unified, real-time object detection." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.](./You_Only_Look_Onece_Unified_Real-Time_Object_Detection)

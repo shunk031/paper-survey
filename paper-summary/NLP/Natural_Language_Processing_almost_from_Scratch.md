@@ -18,9 +18,9 @@
 
 * 単語Embeddingから高次の特徴を抽出する2つのアプローチ
   * Windowアプローチ  
-  ![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Natural_Language_Processing_almost_from_Scratch/figure1.png)
+  ![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Natural_Language_Processing_almost_from_Scratch/figure1.png)
   * Sentenceアプローチ  
-  ![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Natural_Language_Processing_almost_from_Scratch/figure2.png)
+  ![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Natural_Language_Processing_almost_from_Scratch/figure2.png)
   
 * ネットワークの最終層でタグの予測を行う
   * 各タスクで可能性のあるすべてのタグについてスコアを計算する。
@@ -48,7 +48,7 @@
 
 マルチタスクアプローチはモデル間のパラメータを共有しながら学習を行う方法である。
 
-![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Natural_Language_Processing_almost_from_Scratch/figure5.png)
+![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Natural_Language_Processing_almost_from_Scratch/figure5.png)
 
 ### 3.4. タスク依存の特徴量選択
 

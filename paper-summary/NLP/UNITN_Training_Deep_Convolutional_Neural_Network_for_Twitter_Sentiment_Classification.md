@@ -24,7 +24,7 @@ Semeval-2015というTwitterのデータをメインとしたデータセット�
 
 個人的に本論文のCNNアーキテクチャの図がわかりやすかった。
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/UNITN_Training_Deep_Convolutional_Neural_Network_for_Twitter_Sentiment_Classification/figure1.png)
+![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/UNITN_Training_Deep_Convolutional_Neural_Network_for_Twitter_Sentiment_Classification/figure1.png)
 
 ## 6. 次に読むべき論文はあるか？
 

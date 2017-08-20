@@ -10,12 +10,12 @@
 
 本研究では長距離依存の係り受け関係を捉えるために予め構文解析を行い、それらの情報をCNNに入力することで、より文の意味を捉えるような構造になっている。
 
-![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Dependency_based_Convolutional_Neural_Networks_for_Sentence_Embedding/figure1.png)
+![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Dependency_based_Convolutional_Neural_Networks_for_Sentence_Embedding/figure1.png)
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
 * ancestor pathsとsiblingsの情報を単語情報に付加  
-  ![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Dependency_based_Convolutional_Neural_Networks_for_Sentence_Embedding/figure2.png)
+  ![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Dependency_based_Convolutional_Neural_Networks_for_Sentence_Embedding/figure2.png)
 
 * Max-Over-Tree Pooling(Max poolingのParse Tree版)
 * Dropout
@@ -32,7 +32,7 @@
 
 * TRECデータセットにおいて、DCNNが分類に失敗してベースラインCNNが成功している例と、ベースラインCNNが分類に失敗してDCNNが成功している例。そもそも構文パーサーが間違ってしまうこともある。またDCNNが長距離の依存関係を捉えられていることがわかる。
 
-![Figure4-5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Dependency_based_Convolutional_Neural_Networks_for_Sentence_Embedding/figure4_5.png)
+![Figure4-5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Dependency_based_Convolutional_Neural_Networks_for_Sentence_Embedding/figure4_5.png)
 
 ## 6. 次に読むべき論文はあるか？
 

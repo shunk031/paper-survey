@@ -15,7 +15,7 @@ Deep Learningにおける文章の翻訳はAutoencoder構造を主に使用し�
 * AttentionをベースとしたEncoder-Decoderモデルを利用している
 * 入力は中国語の文字をを2次元のビットマップ画像に変換したものを使っている
 
-![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Neural_Machine_Translation_using_Bitmap_Fonts/figure3.png)
+![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Neural_Machine_Translation_using_Bitmap_Fonts/figure3.png)
 
 ## 4. どうやって有効だと検証した？
 

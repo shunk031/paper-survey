@@ -12,7 +12,7 @@
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Component-Enhanced_Chinese_Character_Embeddings/figure1.png)
+![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Component-Enhanced_Chinese_Character_Embeddings/figure1.png)
 
 * CBOWやSkip-gramを文字レベルで適用した「*char*CBOW」・「*char*SkipGram」
 * 学習した文字表現をbi-gramのように2つ組み合わせた「*char*CBOW-bi」・「*char*SkipGram-bi」

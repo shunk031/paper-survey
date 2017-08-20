@@ -13,7 +13,7 @@
 ## 3. 技術や手法の"キモ"はどこにある？
 
 * CNNとRNNを用いた構造  
-  ![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Learning_Character-level_Compositionality_with_Visual_Features/figure3.png)
+  ![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Character-level_Compositionality_with_Visual_Features/figure3.png)
 * 複数の角度からのembedding
   * VISUAL model
 	* CNNを用いた文字画像からの視覚的な特徴を捉えたembedding
@@ -44,9 +44,9 @@
 * Traditional Chinese(繁体字)でトレーニングしたVISUAL modelでSimplified Chinese(簡体字)のテストデータで予測を行っても良い結果を出している。
   * 繁体字も簡体字も視覚的に似ている文字であり、モデルが類似の文字間でも適応が可能であると考えられる。
 * 文字のどの部分が寄与しているかを可視化した結果が以下のようになっている。  
-  ![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Learning_Character-level_Compositionality_with_Visual_Features/figure5.png)
+  ![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Character-level_Compositionality_with_Visual_Features/figure5.png)
 * 学習した文字embeddingについてK-nearest neighborsを用いて近傍6つのembeddingを図示した結果が以下のようになっている。
-  ![Figure 6](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Learning_Character-level_Compositionality_with_Visual_Features/figure6.png)
+  ![Figure 6](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Character-level_Compositionality_with_Visual_Features/figure6.png)
   
 ## 6. 次に読むべき論文はあるか？
 

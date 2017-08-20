@@ -14,15 +14,15 @@
 
 * 文書を2つのベクトル表現にして入力し、比較
   * seq-CNN  
-  ![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure1.png)
+  ![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure1.png)
   * bow-CNN  
-  ![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure2.png)
+  ![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure2.png)
 
 * 可変長である文書ベクトルに対応したPooling層  
-  ![Figure3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure3.png)
+  ![Figure3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure3.png)
 
 * Parallel CNN  
-  ![Figure4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure4.png)
+  ![Figure4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure4.png)
 
 ## 4. どうやって有効だと検証した？
 

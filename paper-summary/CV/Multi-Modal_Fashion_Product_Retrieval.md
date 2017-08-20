@@ -12,7 +12,7 @@
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Multi-Modal_Fashion_Product_Retrieval/figure2.png)
+![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Multi-Modal_Fashion_Product_Retrieval/figure2.png)
 
 * 2つのNeural Network(NN)構造
   * 画像用NN
@@ -36,7 +36,7 @@ Eコマースサイトのファッション画像データセット431,841枚を
 ## 5. 議論はあるか？
 
 * クエリにテキストを与えた場合に近い距離として現れる画像が以下のようになっている。  
-  ![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Multi-Modal_Fashion_Product_Retrieval/figure1.png)
+  ![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Multi-Modal_Fashion_Product_Retrieval/figure1.png)
 
 ## 6. 次に読むべき論文はあるか？
 

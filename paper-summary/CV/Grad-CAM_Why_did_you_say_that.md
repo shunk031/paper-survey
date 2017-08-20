@@ -12,13 +12,13 @@ CNNを始めとしたDeep modelを使う場合，抽象度の高い学習によ�
 
 Class Activation Mapping(CAM)という手法があるが，これは分類に用いられたモデルアーキテクチャに手を加えることで，入力画像に対する予測の可視化を行っているものである．しかしながらこの手法は画像分類タスクで正解率が低くなってしまったり，画像のキャプション生成や画像に対する質問応答といったタスクには適していない．
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Grad-CAM_Why_did_you_say_that/figure1.png)
+![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Grad-CAM_Why_did_you_say_that/figure1.png)
 
 本研究では入力画像に対してCNNモデルがどの領域に注目しているかを可視化できるGrad-CAMを提案している．CAMのようにモデルのアーキテクチャを変えること無く，どのようなCNNにも適用でき，画像キャプション生成や画像に対する質問応答タスクにも応用可能である．
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Grad-CAM_Why_did_you_say_that/figure2.png)
+![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Grad-CAM_Why_did_you_say_that/figure2.png)
 
 * Gradient-weighted Class Activation Mapping(Grad-CAM)
   1. Pre-training AlexNetやVGGを用いて入力画像の推論を行う
@@ -38,16 +38,16 @@ PASCAL VOC2007のトレーニングセットでfine-tuningしたAlexNetとVGGを
 ## 5. 議論はあるか？
 
 * 各畳み込み層についてGrad-CAMで可視化すると，最終の畳み込み層の出力が可視化に適していることがわかる  
-  ![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Grad-CAM_Why_did_you_say_that/figure3.png)
+  ![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Grad-CAM_Why_did_you_say_that/figure3.png)
 
 * 分類問題で分類に失敗したサンプルを可視化している  
-  ![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Grad-CAM_Why_did_you_say_that/figure5.png)
+  ![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Grad-CAM_Why_did_you_say_that/figure5.png)
 
 * 画像のキャプション生成タスクに対して適用  
-  ![Figure 6a](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Grad-CAM_Why_did_you_say_that/figure6_a.png)
+  ![Figure 6a](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Grad-CAM_Why_did_you_say_that/figure6_a.png)
 
 * 画像に対する質問応答タスクに対して適用  
-  ![Figure 6b](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Grad-CAM_Why_did_you_say_that/figure6_b.png)
+  ![Figure 6b](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Grad-CAM_Why_did_you_say_that/figure6_b.png)
 
 ## 6. 次に読むべき論文はあるか？
 

@@ -12,7 +12,7 @@ Residual Blockを確率的にドロップさせることで学習時間の向上
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Deep_Networks_with_Stochastic_Depth/figure2.png)
+![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Deep_Networks_with_Stochastic_Depth/figure2.png)
 
 * Stochastic Depth
   * Residual Blockを確率的にドロップさせる．

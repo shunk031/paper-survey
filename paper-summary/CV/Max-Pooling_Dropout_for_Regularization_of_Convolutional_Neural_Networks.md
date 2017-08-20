@@ -14,7 +14,7 @@ Dropoutは最近Deep Learningに導入された正則化技術であり，通常
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Max-Pooling_Dropout_for_Regularization_of_Convolutional_Neural_Networks/figure1.png)
+![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Max-Pooling_Dropout_for_Regularization_of_Convolutional_Neural_Networks/figure1.png)
 
 * Max-Pooling Dropout
   * 学習時にMax-Poolingする前にDropoutさせる

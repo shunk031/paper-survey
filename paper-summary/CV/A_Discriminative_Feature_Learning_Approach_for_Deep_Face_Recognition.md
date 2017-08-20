@@ -6,7 +6,7 @@
 
 ## 2. 先行研究と比べてどこがすごいの？
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/figure1.png)
+![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/figure1.png)
 
 Convolutional Neural Networks(CNN)を用いた一般的な画像認識ではSoftmax Lossを用いたクラスラベルの予測を行うことが多い．この方法は最後の全結合層で線形分類器のような振る舞いでDeep Featureを分類している．
 
@@ -20,9 +20,9 @@ Convolutional Neural Networks(CNN)を用いた一般的な画像認識ではSoft
 
 * Center Loss
   * 異なるクラスの特徴を分離可能に保ちながら、クラス内の変動を最小にする
-  ![Eq 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/eq2.png)
+  ![Eq 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/eq2.png)
   * 勾配計算や中心点の更新が容易
-  ![Fq 3, 4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/eq3-4.png)
+  ![Fq 3, 4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/eq3-4.png)
 
   
 ## 4. どうやって有効だと検証した？
@@ -35,11 +35,11 @@ Convolutional Neural Networks(CNN)を用いた一般的な画像認識ではSoft
 
 Softmax Lossの場合，特徴空間では単純に線形分離が可能な形で学習されている．
 
-![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/figure2.png)
+![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/figure2.png)
 
 Softmax LossにCenter Lossを加えた場合，クラスの特徴を線形に分離する状態を保ちつつ，クラス内の変動が小さくなっていることが分かる．またCenter Lossの効果を調整するハイパーパラメータλの値を変えることで，クラス内の変動の度合いを制限することができる．
 
-![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/figure3.png)
+![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/A_Discriminative_Feature_Learning_Approach_for_Deep_Face_Recognition/figure3.png)
 
 ## 6. 次に読むべき論文はあるか？
 

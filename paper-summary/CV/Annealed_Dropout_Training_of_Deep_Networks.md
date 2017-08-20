@@ -14,7 +14,7 @@ Dropoutを用いた学習は，複数のニューロンが繰り返し同じ特�
 
 * エポック数，ミニバッチ数でDropout率を決定するAnnealing Schedule
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Annealed_Dropout_Training_of_Deep_Networks/figure1.png)
+![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Annealed_Dropout_Training_of_Deep_Networks/figure1.png)
 
 ## 4. どうやって有効だと検証した？
 

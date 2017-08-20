@@ -10,11 +10,11 @@
 
 本研究のStyle2VecではWord2Vecからヒントを得ている．以下のようなStyle Setというユーザーの行動を元に作られたデータに対してファッションアイテムを単語とみなし，共起確率を最大化するよう分散表現を学習する．
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Style2Vec_Representation_Learning_for_Fashion_Items_from_Style_Sets/figure1.png)
+![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Style2Vec_Representation_Learning_for_Fashion_Items_from_Style_Sets/figure1.png)
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Style2Vec_Representation_Learning_for_Fashion_Items_from_Style_Sets/figure2.png)
+![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Style2Vec_Representation_Learning_for_Fashion_Items_from_Style_Sets/figure2.png)
 
 * 2つのネットワークを用いてファッション商品のスタイルを学習
   * ネットワークのアーキテクチャはVGGNetを使用
@@ -29,10 +29,10 @@
 有名なファッションサイト[Polyvore](https://www.polyvore.com/)から得られたデータを用いて，提案手法で学習したベクトル表現の可視化やスタイルの分類について評価を行っている．
 
 * 学習したベクトル表現の可視化  
-  ![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Style2Vec_Representation_Learning_for_Fashion_Items_from_Style_Sets/figure3.png)
+  ![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Style2Vec_Representation_Learning_for_Fashion_Items_from_Style_Sets/figure3.png)
 
 * アナロジーテストの結果
-  ![Figure 4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Style2Vec_Representation_Learning_for_Fashion_Items_from_Style_Sets/figure4.png)
+  ![Figure 4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Style2Vec_Representation_Learning_for_Fashion_Items_from_Style_Sets/figure4.png)
 
 ## 5. 議論はあるか？
 

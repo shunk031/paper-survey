@@ -14,7 +14,7 @@ Convolutional Neural Network(CNN)で獲得したDeep Featureを用いた、Deep 
 * Deepな木構造は学習データに対して過学習を引き起こしやすいため、Pruning(剪定)が必須である。
 * DDTはBaggingを行う。
 
-![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Learning_Deep_Classifiers_with_Deep_Features/figure2.png)
+![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Learning_Deep_Classifiers_with_Deep_Features/figure2.png)
 
 ## 4. どうやって有効だと検証した？
 

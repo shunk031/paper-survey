@@ -30,7 +30,7 @@
 
 以下のデータセットと前処理方法と前処理を利用してモデルの検証を行っている．
 
-* 検証したモデルについて
+### 検証したモデルについて
   * GlyphNet
 	* Large
 	* Small
@@ -64,21 +64,21 @@
 	  * 1-gram (plain/tfidf)
 	  * 5-gram (plain/tfidf)
   
-* データセット一覧
+### データセット一覧
   
-| データセット | 詳細                       | 言語   | 
-|--------------|----------------------------|:------:|
-| Dianping     | https://www.dianping.com/  | 中国語 |
-| JD           | http://www.jd.com/         | 中国語 |
-| Rakuten      | https://www.rakuten.co.jp/ | 日本語 |
-| 11st         | http://www.11st.co.kr/     | 韓国語 |
-| Amazon       | https://www.amazon.com/    | 英語   |
-| Ifeng        | http://www.ifeng.com/      | 中国語 |
-| Chinanews    | http://chinanews.com/      | 中国語 |
-| NYTimes      | https://www.nytimes.com/   | 英語   |
-| Joint        | JD, Rakuten, 11st, Amazon  | 複数   |
+| データセット | 詳細                                                     | 言語   | 
+|--------------|----------------------------------------------------------|:------:|
+| Dianping     | [https://www.dianping.com/](https://www.dianping.com/)   | 中国語 |
+| JD           | [http://www.jd.com/](http://www.jd.com/)                 | 中国語 |
+| Rakuten      | [https://www.rakuten.co.jp/](https://www.rakuten.co.jp/) | 日本語 |
+| 11st         | [http://www.11st.co.kr/](http://www.11st.co.kr/)         | 韓国語 |
+| Amazon       | [https://www.amazon.com/](https://www.amazon.com/)       | 英語   |
+| Ifeng        | [http://www.ifeng.com/](http://www.ifeng.com/)           | 中国語 |
+| Chinanews    | [http://chinanews.com/](http://chinanews.com/)           | 中国語 |
+| NYTimes      | [https://www.nytimes.com/](https://www.nytimes.com/)     | 英語   |
+| Joint        | [JD](http://www.jd.com/), [Rakuten](https://www.rakuten.co.jp/), [11st](http://www.11st.co.kr/), [Amazon](https://www.amazon.com/)  | 複数   |
 
-* 単語分割とローマ字化(前処理)
+### 単語分割とローマ字化(前処理)
 
 | 言語   | 分かち書き                                            | ローマ字化                                                           |
 |--------|-------------------------------------------------------|----------------------------------------------------------------------|

@@ -32,13 +32,6 @@ Maxpoolingの逆操作をUnpoolingで行う．deconvnetでは，CNNでpoolingさ
 
 #### Filtering
 
-The convnet uses learned filters to convoluve the feature maps from the previous layer. To invert this, the deconvnet uses transposed versions of the same filters, but applied to the rectified maps, not the output of the layer beneath. 
-
-convnetは、学習されたフィルタを使用して、前のレイヤからのフィーチャマッ
-プを畳み込みます。これを逆にするには、デコンネットは同じフィルタの転置
-バージョンを使用しますが、下のレイヤの出力ではなく整流マップに適用しま
-す。
-
 convolutionは学習されたフィルタを使用して，前の層の特徴マップを畳み込む．この逆操作を行うため，deconvnetでは同じフィルタを転置したものを利用する．なおReLUに通した後にdeconvolutionを適用する．
 
 ### CNNの可視化
@@ -64,7 +57,7 @@ convolutionは学習されたフィルタを使用して，前の層の特徴マ
 
 全学習データを学習している際に，学習が行われて変化していく特徴マップの過底を示している．
 
-モデルの浅い層では数epochで収束するのに対し，深い層では40-50epochをかけて就職していくのが分かる．
+モデルの浅い層では数epochで収束するのに対し，深い層では40-50epochをかけて収束していくのが分かる．
 
 ![Figure 4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure4.png)
 

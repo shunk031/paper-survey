@@ -107,7 +107,17 @@ AlexNetの第1層および第2層を可視化することで，いくつか問�
 
 ## 4. どうやって有効だと検証した？
 
+![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure3.png)
+
+ImageNetデータセットに対して，本研究の可視化手法で分かったAlexNetの欠点を改善した上図Figure 3のモデルを適用したところSoTAな結果を出すことができている．
+
+またImageNetで学習したモデルが一般性のある特徴を学習しているかを確認するため，Caltech-101，Caltech-256，およびPASCAL VOC2012を用いて精度を確認している．
+この時一番最終のsoftmax層部分のみを再学習させている．
+
 ## 5. 議論はあるか？
+
+* PASCALデータに対しては複数物体を捉えられるような損失関数に変更することでより良い精度が出せるのではないだろうか
+* 上記が達成できれば物体認識にモデルを適用することができそう
 
 ## 6. 次に読むべき論文はあるか？
 

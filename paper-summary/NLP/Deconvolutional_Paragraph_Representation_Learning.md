@@ -28,7 +28,7 @@ ConvolutionおよびDeconvolutionを用いて，長い文章の潜在的表現�
   - 半教師ありタスクをマルチタスク学習として捉え，エンコーダーと教師ありモデルを同時に学習させる．
 	- 学習させた潜在的表現は高い再構成性や分類能力を保持する．
   - 以下のLoss関数を定義して半教師あり学習の枠組みを導入．  
-	![Eq 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Deconvolutional_Paragraph_Representation_Learning/eq1.png)
+	![Eq 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Deconvolutional_Paragraph_Representation_Learning/eq3.png)
 	- ラベル付きデータとラベル無しデータを用いてautoencoderのlossとclassifierのlossを最小化するよう学習．
 	- ハイパーパラメータαを導入して学習初期は文の概要を捉えるよう焦点を当て，学習が進むにつれて細部を学習するようにする．
   

@@ -46,7 +46,7 @@
 	  | ![Aspect ratio range](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1_r.png)  | マスク領域のアスペクト比の最小/最大値                      |
 
 	- アルゴリズムは以下のようになっている．  
-	  ![Algorithm 1](https://github.com/shunk031/paper-survey/blob/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1.png)
+	  ![Algorithm 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1.png)
 
 ## 4. どうやって有効だと検証した？
 

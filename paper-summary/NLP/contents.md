@@ -10,6 +10,7 @@
 * [Li, Yanran, et al. "Component-enhanced chinese character embeddings." arXiv preprint arXiv:1508.06669 (2015).](./Component-Enhanced_Chinese_Character_Embeddings)
 * [Kim, Yoon. "Convolutional neural networks for sentence classification." arXiv preprint arXiv:1408.5882 (2014).](./Convolutional_Neural_Networks_for_Sentence_Classification)
 * [Johnson, Rie, and Tong Zhang. "Convolutional Neural Networks for Text Categorization: Shallow Word-level vs. Deep Character-level." arXiv preprint arXiv:1609.00718 (2016).](./Convolutional_Neural_Networks_for_Text_categorization_Shallow_Word-level_vs_Deep_Character-level)
+* [Zhang, Yizhe, et al. "Deconvolutional Paragraph Representation Learning." arXiv preprint arXiv:1708.04729 (2017).](./Deconvolutional_Paragraph_Representation_Learning)
 * [Dos Santos, Cícero Nogueira, and Maira Gatti. "Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts." COLING. 2014.](./Deep_Convolutional_Neural_Networks_for_Sentiment_Analysis_of_Short_Texts)
 * [Marc Moreno Lopez, Jugal Kalita. 2017. "Deep Learning applied to NLP." arXiv preprint arXiv:1703.03091.](./Deep_Learning_applied_to_NLP)
 * [Ma, Mingbo, et al. "Dependency-based convolutional neural networks for sentence embedding." arXiv preprint arXiv:1507.01839 (2015).](./Dependency_based_Convolutional_Neural_Networks_for_Sentence_Embedding)

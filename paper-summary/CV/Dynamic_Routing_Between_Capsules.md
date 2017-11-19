@@ -2,7 +2,7 @@
 
 ## 1. どんなもの？
 
-「Capsule」構造をネストさせることでアフィン変換に対してよりロバストなCapsule Network(CapsNet)を提案．
+Capsule構造とRouting-by-Agreementでアフィン変換に対してよりロバストになったCapsule Network(CapsNet)を提案．
 
 ## 2. 先行研究と比べてどこがすごいの？
 
@@ -12,17 +12,16 @@ Convolutional Neural Network(CNN)は画像認識において最先端のアプ�
 
 また先行研究で用いられているCNNは以下のような欠点が存在している．
 - CNNはある一方向のみの物体で学習を行っている場合，回転を扱うことができないため，向きが変わると予測できない場合がある．
-- プーリング操作を行うととても深いレイヤーでは不変性が得られるが，とても荒い表現になってしまう．
+- プーリング操作を行うととても深いレイヤーでは位置に対する不変性が得られるが，とても荒い表現になってしまう．
   - 例えば鼻や口などの正確な空間関係を損なってしまう．顔認識の場合は鼻や口といった物体の正しい空間関係の認識が必要である．
-  - プーリング操作をオーバーラップさせることで軽減はできる．
 
-本研究ではアフィン変換にロバストなCapsule構造を取り入れ，新たな非線形変換である「squash」，およびプーリング操作に変わる「routing」からなるCapsule Networkを提案している．
+本研究では計算効率の良いCapsule構造を取り入れ，非線形変換である「squash」，およびプーリング操作に変わりアフィン変換にロバストな「routing」からなるCapsule Networkを提案している．
   
 ## 3. 技術や手法の"キモ"はどこにある？
 
 - Squash
   - 通常の典型的なニューラルネットワークでは、ユニットの出力のみがReLUといった非線形活性化関数によって潰される．
-  - Capsule Networkでは、Capsuleから出力されるベクトル全体が潰される．
+  - Capsule Networkでは，Capsuleから出力されるベクトル全体が潰される．
     ![Eq 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/eq1.png)
 - Routing (Routing-by-Agreement)
   - 特徴の関連性に基づいて次のレイヤーのCapsuleにルーティングする．
@@ -35,10 +34,10 @@ Convolutional Neural Network(CNN)は画像認識において最先端のアプ�
 	![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/figure1.png)
   - PrimaryCapsules
     - 32チャンネルのConvolutional 8D Capsules
-      - 各primary capsuleは9x9のカーネルでstrideが2のconvolutionユニットが8つからなる．
+      - 各primary capsuleは9x9のカーネルでstrideが2のconvolutionユニットが8つから構成されている．
     - PrimaryCapsulesは複数のConvolutionの結果をsquashしていると見ることができる．
   - DigitCaps
-    - 1クラスあたり16のDigitCapsの構造で，各クラスについてよりロバストな表現を学習する．
+    - 1クラスあたり16のDigitCapsの構造であり，各クラスについてよりロバストな表現を学習する．
   - Margin loss
     - 複数のクラスを許容するために，各クラスに対応するCapsuleに対してmargin lossを定義している．
       ![Eq 4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/eq4.png)
@@ -66,7 +65,7 @@ Convolutional Neural Network(CNN)は画像認識において最先端のアプ�
 
 - Capsuleに関する研究は今世紀初めの音声認識のためのRecurrent Neural Networkの研究と同様の段階にある．
 - Capsuleがより良いアプローチだと信じる根本的な理由はあるが、CNNのような近年爆発的に研究されてきた技術を凌駕するには，もっと小さな洞察を必要だろう．
-- シンプルなCapsule構造がすでに重なり合う数字を分けて認識し，とてもよい性能を発揮しているという事実は、Capsule構造が今後研究対象として価値のあるものと考えているので，早期に結果を示してみた．
+- シンプルなCapsule構造がすでに重なり合う数字を分けて認識し，とてもよい性能を発揮しているという事実は，Capsule構造が今後研究対象として価値のあるものと考えているので，早期に結果を示してみた．
 
 ## 6. 次に読むべき論文はあるか？
 

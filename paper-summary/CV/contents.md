@@ -6,7 +6,7 @@
 * [Rennie, Steven J., Vaibhava Goel, and Samuel Thomas. "Annealed dropout training of deep networks." Spoken Language Technology Workshop (SLT), 2014 IEEE. IEEE, 2014.](./Annealed_Dropout_Training_of_Deep_Networks)
 * [Huang, Gao, et al. "Deep networks with stochastic depth." European Conference on Computer Vision. Springer International Publishing, 2016.](./Deep_Networks_with_Stochastic_Depth)
 * [LeCun, Yann, Yoshua Bengio, and Geoffrey Hinton. "Deep learning." Nature 521.7553 (2015): 436-444.](./Deep_learning)
-* [Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic Routing Between Capsules." arXiv preprint arXiv:1710.09829 (2017).](https://arxiv.org/pdf/1710.09829)
+* [Sabour, Sara, Nicholas Frosst, and Geoffrey E. Hinton. "Dynamic Routing Between Capsules." arXiv preprint arXiv:1710.09829 (2017).](./Dynamic_Routing_Between_Capsules)
 * [Selvaraju, Ramprasaath R., et al. "Grad-cam: Why did you say that? visual explanations from deep networks via gradient-based localization." arXiv preprint arXiv:1610.02391 (2016).](./Grad-CAM_Why_did_you_say_that)
 * [Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. "Imagenet classification with deep convolutional neural networks." Advances in neural information processing systems. 2012.](./ImageNet_Classification_with_Deep_Convolutional_Neural_Networks)
 * [Hinton, Geoffrey E., et al. "Improving neural networks by preventing co-adaptation of feature detectors." arXiv preprint arXiv:1207.0580 (2012).](./Improving_neural_networks_by_preventing_co-adaption_of_feature_detectors)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization"
-date:   2017-03-19
+date:   2017-01-22
 categories: NLP
 ---
 

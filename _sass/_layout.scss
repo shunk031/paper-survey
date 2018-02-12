@@ -6,7 +6,10 @@
     padding: $spacing-unit/2 0;
     // Positioning context for the mobile navigation icon
     position: relative;
-    background: #4db6ac;
+    // background: #4db6ac;
+    background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+    
     a{
       color:#fff;
     }
@@ -113,6 +116,7 @@
       border-color: aliceblue;
     }
   }
+
   h1{
     margin:12px 0 0 0;
     font-size: 30px;
@@ -138,6 +142,20 @@
 .page-content {
     padding: 80px 0;
     display: block;
+}
+
+.page-content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+	color: $section-headings-color;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-weight: normal;
+    }
 }
 
 .page-heading {
@@ -185,18 +203,20 @@
     margin-bottom: $spacing-unit;
 
     h2 {
-        font-size: 28px;
+        // font-size: 28px;
+	font-size: 1.5em;
 
         @include media-query($on-laptop) {
-            font-size: 32px;
+            // font-size: 32px;
+	    font-size: 1.5em;
         }
     }
 
     h3 {
-        font-size: 22px;
+        font-size: 1.17em;
 
         @include media-query($on-laptop) {
-            font-size: 26px;
+            font-size: 1.17em;
         }
     }
 
@@ -207,6 +227,49 @@
             font-size: 20px;
         }
     }
+
+    table {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	word-break: normal;
+	word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+	-webkit-overflow-scrolling: touch;
+	border-collapse: collapse;
+    th {
+      font-weight: bold;
+    }
+
+    th,
+    td {
+      padding: 0.5rem 1rem;
+      border: 1px solid $table-border-color;
+    }
+  }
+
+  dl {
+    padding: 0;
+
+    dt {
+      padding: 0;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    dd {
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  hr {
+    height: 2px;
+    padding: 0;
+    margin: 1rem 0;
+    background-color: $hr-border-color;
+    border: 0;
+  }
 }
 
 .pagination {

@@ -31,7 +31,7 @@ categories: NLP
 
 ## 6. 次に読むべき論文はあるか？
 
-日本語や中国語の文書分類についての先行研究。
+日本語や中国語の文書分類についての先行研究
 
 * [Aizawa, Akiko N. "Linguistic Techniques to Improve the Performance of Automatic Text Categorization." NLPRS. Vol. 1. 2001.](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.331.1455&rep=rep1&type=pdf)
 

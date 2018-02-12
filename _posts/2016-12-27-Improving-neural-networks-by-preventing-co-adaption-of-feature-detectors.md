@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Improving neural networks by preventing co-adaptation of feature detectors"
-date:   2016-12-29
+date:   2016-12-27
 categories: CV
 ---
 

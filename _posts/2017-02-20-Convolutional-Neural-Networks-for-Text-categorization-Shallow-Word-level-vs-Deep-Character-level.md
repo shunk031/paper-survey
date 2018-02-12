@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Convolutional Neural Networks for Text Categorization: Shallow Word-level vs. Deep Character-level"
-date:   2017-01-02
+date:   2017-02-20
 categories: NLP
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Convolutional Neural Networks for Sentence Classification"
-date:   2017-01-05
+date:   2016-12-17
 categories: NLP
 ---
 

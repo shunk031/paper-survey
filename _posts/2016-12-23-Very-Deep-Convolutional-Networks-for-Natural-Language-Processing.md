@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Very Deep Convolutional Networks for Natural Language Processing"
-date:   2016-12-23
+date:   2017-01-05
 categories: NLP
 ---
 

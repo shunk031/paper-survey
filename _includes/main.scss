@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
@@ -9,7 +9,8 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #4c4c4c;
+$section-headings-color: #159957;
+$text-color:       #606c71;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
 
@@ -23,6 +24,8 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$table-border-color: #e9ebec !default;
+$hr-border-color: #eff0f1 !default;
 
 
 // Use media queries like this:

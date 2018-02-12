@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "UNITN: Training Deep Convolutional Neural Network for Twitter Sentiment Classification"
-date:   2017-08-20
+date:   2017-03-05
 categories: NLP
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ABCNN: Attention-Based Convolutional Neural Network for Modeling Sentence Pairs"
-date:   2017-01-02
+date:   2017-01-05
 categories: NLP
 ---
 

@@ -1,4 +1,4 @@
-var CACHE_NAME = '20180211231548';
+var CACHE_NAME = '20180212215348';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stacked Convolutional Auto-Encoders for Hierarchical Feature Extraction"
-date:   2016-12-29
+date:   2016-12-19
 categories: CV
 ---
 

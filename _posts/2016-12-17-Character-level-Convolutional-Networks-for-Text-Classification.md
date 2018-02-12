@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Character-level Convolutional Networks for Text Classification"
-date:   2017-01-05
+date:   2016-12-17
 categories: NLP
 ---
 

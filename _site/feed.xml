@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/paper-survey/" rel="alternate" type="text/html" /><updated>2018-02-11T23:15:48+09:00</updated><id>http://localhost:4000/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/paper-survey/" rel="alternate" type="text/html" /><updated>2018-02-12T21:53:48+09:00</updated><id>http://localhost:4000/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
 </subtitle><entry><title type="html">Radical-level Ideograph Encoder for RNN-based Sentiment Analysis of Chinese and Japanese</title><link href="http://localhost:4000/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese" rel="alternate" type="text/html" title="Radical-level Ideograph Encoder for RNN-based Sentiment Analysis of Chinese and Japanese" /><published>2017-12-04T00:00:00+09:00</published><updated>2017-12-04T00:00:00+09:00</updated><id>http://localhost:4000/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese</id><content type="html" xml:base="http://localhost:4000/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;漢字を構成する部首レベル(Radical-level)の特徴から、CNNおよびBi-directional RNNを用いて少ないパラメータ数で文書分類を行うモデルを提案している。&lt;/p&gt;
@@ -600,7 +600,7 @@
 &lt;p&gt;CNNの動きを理解するためには中間層の働きを解釈する必要があるが，この中間層の働きを可視化するためにdeconvnetを利用する．
 CNNの各層に対応するようdecnovnetを構築する． CNNで得た特徴マップをDeconvolutionやUmpooling，Rectificationを繰り返して入力の画像空間へ再構築する．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;unpooling&quot;&gt;Unpooling&lt;/h4&gt;
 
@@ -631,9 +631,9 @@ CNNの各層に対応するようdecnovnetを構築する． CNNで得た特徴�
   &lt;li&gt;第5層目：全体のオブジェクトが現れている．キーボードや犬など&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure2-1-2.png&quot; alt=&quot;Figure 2-1-2&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure2-3.png&quot; alt=&quot;Figure 2-3&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure2-4-5.png&quot; alt=&quot;Figure 2-4-5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure2-1-2.png&quot; alt=&quot;Figure 2-1-2&quot; /&gt;
+&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure2-3.png&quot; alt=&quot;Figure 2-3&quot; /&gt;
+&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure2-4-5.png&quot; alt=&quot;Figure 2-4-5&quot; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;学習時に学習される特徴の変化&quot;&gt;学習時に学習される特徴の変化&lt;/h5&gt;
 
@@ -641,7 +641,7 @@ CNNの各層に対応するようdecnovnetを構築する． CNNで得た特徴�
 
 &lt;p&gt;モデルの浅い層では数epochで収束するのに対し，深い層では40-50epochをかけて収束していくのが分かる．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/p&gt;
 
 &lt;h5 id=&quot;特徴の不変性&quot;&gt;特徴の不変性&lt;/h5&gt;
 
@@ -649,7 +649,7 @@ CNNの各層に対応するようdecnovnetを構築する． CNNで得た特徴�
 
 &lt;p&gt;小さな変形はモデルの第1層で劇的な効果を持つが，深い層での影響は小さい．変形やスケーリングに対してモデルの出力は安定している．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;モデルアーキテクチャの選択&quot;&gt;モデルアーキテクチャの選択&lt;/h4&gt;
 
@@ -669,7 +669,7 @@ CNNの各層に対応するようdecnovnetを構築する． CNNで得た特徴�
 
 &lt;p&gt;結果的にモデルの予測精度が向上している．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure6.png&quot; alt=&quot;Figure 6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure6.png&quot; alt=&quot;Figure 6&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;対象をマスクした場合の挙動&quot;&gt;対象をマスクした場合の挙動&lt;/h4&gt;
 
@@ -680,7 +680,7 @@ CNNの各層に対応するようdecnovnetを構築する． CNNで得た特徴�
 &lt;p&gt;対象オブジェクトを隠した場合に予測精度は大幅に減少した．
 また特徴マップの活性化度合いも大幅に低下していることが確認できた．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure7.png&quot; alt=&quot;Figure 7&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure7.png&quot; alt=&quot;Figure 7&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;対応分析&quot;&gt;対応分析&lt;/h3&gt;
 
@@ -689,11 +689,11 @@ CNNの各層に対応するようdecnovnetを構築する． CNNで得た特徴�
 
 &lt;p&gt;目と鼻を隠した場合にスコアが低くなったが，これはモデルが暗黙的に顔のパーツの対応を確立していると言える．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure8.png&quot; alt=&quot;Figure 8&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure8.png&quot; alt=&quot;Figure 8&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;ImageNetデータセットに対して，本研究の可視化手法で分かったAlexNetの欠点を改善した上図Figure 3のモデルを適用したところSoTAな結果を出すことができている．&lt;/p&gt;
 
@@ -978,15 +978,24 @@ CNNではないDeepなNeural Networkについて可視化を試みたもの&lt;/
       &lt;li&gt;annealed noise
         &lt;ul&gt;
           &lt;li&gt;学習中の入力とパラメータに対して適応的なノイズの追加&lt;/li&gt;
-          &lt;li&gt;パラメータ&lt;code class=&quot;highlighter-rouge&quot;&gt;W&lt;/code&gt;と入力&lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt;との角度&lt;code class=&quot;highlighter-rouge&quot;&gt;θ&lt;/code&gt;を用いることでガウスノイズ&lt;code class=&quot;highlighter-rouge&quot;&gt;ξ&lt;/code&gt;を適応的に付加
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Noisy_Softmax_Improving_the_Generalization_Ability_of_DCNN_via_Postponing_the_Early_Softmax_Saturation/eq5.png&quot; alt=&quot;eq5&quot; /&gt;&lt;/li&gt;
+          &lt;li&gt;パラメータ&lt;code class=&quot;highlighter-rouge&quot;&gt;W&lt;/code&gt;と入力&lt;code class=&quot;highlighter-rouge&quot;&gt;X&lt;/code&gt;との角度&lt;code class=&quot;highlighter-rouge&quot;&gt;θ&lt;/code&gt;を用いることでガウスノイズ&lt;code class=&quot;highlighter-rouge&quot;&gt;ξ&lt;/code&gt;を適応的に付加&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;softmaxに対してシンプルな変更で導入可能
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Noisy_Softmax_Improving_the_Generalization_Ability_of_DCNN_via_Postponing_the_Early_Softmax_Saturation/eq6.png&quot; alt=&quot;eq6&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align*}
+  f^{noise}_{y_{i}} = f_{y_i} - \alpha \|W_{y_i}\| \|X_i\|(1 - \cos{\theta_{y_i}}) |\xi|
+\end{align*}&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;softmaxに対してシンプルな変更で導入可能&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align*}
+  L = - \frac{1}{N} \sum_{i}^{} \log{\frac{e^{f_{y_i} - \alpha \|W_{y_i}\| \|X_i\|(1-\cos{\theta_{y_i}} |\xi|)}}{\sum_{j \neq y_i}^{} e^{f_j} + e^{f_{y_j} - \alpha \|W_{y_i}\| \|X_i\|(1 - \cos{\theta_{y_i}}) |\xi|}}}
+\end{align*}&lt;/script&gt;
 
 &lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 
@@ -996,22 +1005,22 @@ VGGライクなネットワークに対してノイズを付加する各手法�
 &lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;ノイズの効力を決めるパラメータαについて
+  &lt;li&gt;ノイズの効力を決めるパラメータ &lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; について
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;α&lt;/code&gt;の値を大きくし過ぎるとbackpropするときに大きな勾配が伝搬してしまい，収束しづらい．&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;α&lt;/code&gt;の値を小さく設定するとモデルの汎化性能が上がる．&lt;/li&gt;
-      &lt;li&gt;特に&lt;code class=&quot;highlighter-rouge&quot;&gt;α=0.l&lt;/code&gt;程度で効果が出ている．&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; の値を大きくし過ぎるとbackpropするときに大きな勾配が伝搬してしまい，収束しづらい．&lt;/li&gt;
+      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; の値を小さく設定するとモデルの汎化性能が上がる．&lt;/li&gt;
+      &lt;li&gt;特に &lt;script type=&quot;math/tex&quot;&gt;\alpha = 0.1&lt;/script&gt; 程度で効果が出ている．&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;正のノイズか負のノイズか
     &lt;ul&gt;
-      &lt;li&gt;正のノイズ&lt;code class=&quot;highlighter-rouge&quot;&gt;n=σξ&lt;/code&gt;と負のノイズ&lt;code class=&quot;highlighter-rouge&quot;&gt;n=-σ|ξ|&lt;/code&gt;を比較している．&lt;/li&gt;
+      &lt;li&gt;正のノイズ &lt;script type=&quot;math/tex&quot;&gt;n = \alpha \xi&lt;/script&gt; と負のノイズ &lt;script type=&quot;math/tex&quot;&gt;n = - \alpha \|\xi\|&lt;/script&gt; を比較している．&lt;/li&gt;
       &lt;li&gt;負のノイズは通常のsoftmaxよりも悪い結果になってしまっている．&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;annealed noiseとfixed noiseについて
     &lt;ul&gt;
-      &lt;li&gt;固定のノイズを付加するfree noise&lt;code class=&quot;highlighter-rouge&quot;&gt;n=α|ξ|&lt;/code&gt;，amplitude noise&lt;code class=&quot;highlighter-rouge&quot;&gt;n=α||W||・||X||・|ξ|&lt;/code&gt;とannealed noise&lt;code class=&quot;highlighter-rouge&quot;&gt;n=α||W||・||X||・(1-cosθ)|ξ|&lt;/code&gt;を比較している．&lt;/li&gt;
+      &lt;li&gt;固定のノイズを付加するfree noise &lt;script type=&quot;math/tex&quot;&gt;n = \alpha \|\xi\|&lt;/script&gt; ，amplitude noise &lt;script type=&quot;math/tex&quot;&gt;n = \alpha \|W\| \|X\| \|\xi\|&lt;/script&gt; とannealed noise &lt;script type=&quot;math/tex&quot;&gt;n = \alpha \|W\| \|X\| (1 - \cos{\theta}) \|\xi\|&lt;/script&gt; を比較している．&lt;/li&gt;
       &lt;li&gt;free noise・amplitude noiseは通常のsoftmaxより少しよい精度となっている．&lt;/li&gt;
       &lt;li&gt;amplitude noiseとannealed noiseを比べた場合，annealed noiseはだんだんとノイズの量が減るため，より良い局所解に落ちていくと考えられている．&lt;/li&gt;
     &lt;/ul&gt;

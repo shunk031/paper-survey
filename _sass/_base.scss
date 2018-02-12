@@ -20,6 +20,7 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+    line-height: 1.5;
 }
 
 
@@ -32,6 +33,8 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
     margin-bottom: $spacing-unit / 2;
+    margin-top: $spacing-unit / 2;
+
 }
 
 

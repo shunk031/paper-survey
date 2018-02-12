@@ -25,7 +25,7 @@ CNNは画像認識の分野で素晴らしい成果を上げているが，な�
 CNNの動きを理解するためには中間層の働きを解釈する必要があるが，この中間層の働きを可視化するためにdeconvnetを利用する．
 CNNの各層に対応するようdecnovnetを構築する． CNNで得た特徴マップをDeconvolutionやUmpooling，Rectificationを繰り返して入力の画像空間へ再構築する．
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure1.png)
+![Figure 1]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure1.png)
 
 #### Unpooling
 
@@ -54,9 +54,9 @@ convolutionは学習されたフィルタを使用して，前の層の特徴マ
 * 第4層目：第3層よりもバリエーションが豊富な模様で，より詳細にカテゴリの特徴を表している
 * 第5層目：全体のオブジェクトが現れている．キーボードや犬など
 
-![Figure 2-1-2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure2-1-2.png)
-![Figure 2-3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure2-3.png)
-![Figure 2-4-5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure2-4-5.png)
+![Figure 2-1-2]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure2-1-2.png)
+![Figure 2-3]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure2-3.png)
+![Figure 2-4-5]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure2-4-5.png)
 
 ##### 学習時に学習される特徴の変化
 
@@ -64,7 +64,7 @@ convolutionは学習されたフィルタを使用して，前の層の特徴マ
 
 モデルの浅い層では数epochで収束するのに対し，深い層では40-50epochをかけて収束していくのが分かる．
 
-![Figure 4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure4.png)
+![Figure 4]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure4.png)
 
 ##### 特徴の不変性
 
@@ -72,7 +72,7 @@ convolutionは学習されたフィルタを使用して，前の層の特徴マ
 
 小さな変形はモデルの第1層で劇的な効果を持つが，深い層での影響は小さい．変形やスケーリングに対してモデルの出力は安定している．
 
-![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure5.png)
+![Figure 5]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure5.png)
 
 #### モデルアーキテクチャの選択
 
@@ -88,7 +88,7 @@ AlexNetの第1層および第2層を可視化することで，いくつか問�
 
 結果的にモデルの予測精度が向上している．
 
-![Figure 6](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure6.png)
+![Figure 6]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure6.png)
 
 #### 対象をマスクした場合の挙動
 
@@ -99,7 +99,7 @@ AlexNetの第1層および第2層を可視化することで，いくつか問�
 対象オブジェクトを隠した場合に予測精度は大幅に減少した．
 また特徴マップの活性化度合いも大幅に低下していることが確認できた．
 
-![Figure 7](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure7.png)
+![Figure 7]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure7.png)
 
 ### 対応分析
 
@@ -108,11 +108,11 @@ AlexNetの第1層および第2層を可視化することで，いくつか問�
 
 目と鼻を隠した場合にスコアが低くなったが，これはモデルが暗黙的に顔のパーツの対応を確立していると言える．
 
-![Figure 8](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure8.png)
+![Figure 8]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure8.png)
 
 ## 4. どうやって有効だと検証した？
 
-![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Visualizing_and_Understanding_Convolutional_Networks/figure3.png)
+![Figure 3]({{ site.baseurl }}/assets/img/cv/Visualizing-and-Understanding-Convolutional-Networks/figure3.png)
 
 ImageNetデータセットに対して，本研究の可視化手法で分かったAlexNetの欠点を改善した上図Figure 3のモデルを適用したところSoTAな結果を出すことができている．
 

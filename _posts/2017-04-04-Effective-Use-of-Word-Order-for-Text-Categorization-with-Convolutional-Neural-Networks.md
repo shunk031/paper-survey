@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Effective Use of Word Order for Text Categorization with Convolutional Neural Networks"
-date:   2017-08-20
+date:   2017-04-04
 categories: NLP
 ---
 

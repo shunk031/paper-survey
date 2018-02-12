@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Signiture Verification using a "Siamese" Time Delay Neural Network'
-date:   2017-05-09
+date:   2017-04-09
 categories: CV
 ---
 

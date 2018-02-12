@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Natural Language Processing (almost) from Scratch"
-date:   2017-08-20
+date:   2017-04-03
 categories: NLP
 ---
 
@@ -23,9 +23,9 @@ categories: NLP
 
 * 単語Embeddingから高次の特徴を抽出する2つのアプローチ
   * Windowアプローチ  
-  ![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Natural_Language_Processing_almost_from_Scratch/figure1.png)
+  ![Figure 1]({{ site.baseurl }}/assets/img/nlp/Natural-Language-Processing-almost-from-Scratch/figure1.png)
   * Sentenceアプローチ  
-  ![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Natural_Language_Processing_almost_from_Scratch/figure2.png)
+  ![Figure 2]({{ site.baseurl }}/assets/img/nlp/Natural-Language-Processing-almost-from-Scratch/figure2.png)
   
 * ネットワークの最終層でタグの予測を行う
   * 各タスクで可能性のあるすべてのタグについてスコアを計算する。

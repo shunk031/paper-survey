@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Language Modeling with Gated Convolutional Networks"
-date:   2017-04-04
+date:   2017-01-06
 categories: NLP
 ---
 

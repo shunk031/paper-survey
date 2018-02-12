@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A statistical interpretation of term specificity and its application in retrieval"
-date:   2017-01-05
+date:   2016-12-29
 categories: NLP
 ---
 

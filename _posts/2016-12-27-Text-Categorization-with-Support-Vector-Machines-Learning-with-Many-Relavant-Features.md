@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Text Categorization with Support Vector Machines: Learning with Many Relavant Features"
-date:   2017-01-05
+date:   2016-12-27
 categories: NLP
 ---
 

@@ -23,9 +23,20 @@ Convoluional Neural Networks(CNN)といった層の深いモデルを学習さ�
   * annealed noise
 	* 学習中の入力とパラメータに対して適応的なノイズの追加
 	* パラメータ`W`と入力`X`との角度`θ`を用いることでガウスノイズ`ξ`を適応的に付加
-	  ![eq5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Noisy_Softmax_Improving_the_Generalization_Ability_of_DCNN_via_Postponing_the_Early_Softmax_Saturation/eq5.png)
+	
+$$
+\begin{align*}
+  f^{noise}_{y_{i}} = f_{y_i} - \alpha \|W_{y_i}\| \|X_i\|(1 - \cos{\theta_{y_i}}) |\xi|
+\end{align*}
+$$
+
   * softmaxに対してシンプルな変更で導入可能
-	![eq6](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Noisy_Softmax_Improving_the_Generalization_Ability_of_DCNN_via_Postponing_the_Early_Softmax_Saturation/eq6.png)
+  
+$$
+\begin{align*}
+  L = - \frac{1}{N} \sum_{i}^{} \log{\frac{e^{f_{y_i} - \alpha \|W_{y_i}\| \|X_i\|(1-\cos{\theta_{y_i}} |\xi|)}}{\sum_{j \neq y_i}^{} e^{f_j} + e^{f_{y_j} - \alpha \|W_{y_i}\| \|X_i\|(1 - \cos{\theta_{y_i}}) |\xi|}}}
+\end{align*}
+$$
 	
 ## 4. どうやって有効だと検証した？
 
@@ -34,15 +45,15 @@ VGGライクなネットワークに対してノイズを付加する各手法�
 
 ## 5. 議論はあるか？
 
-* ノイズの効力を決めるパラメータαについて
-  * `α`の値を大きくし過ぎるとbackpropするときに大きな勾配が伝搬してしまい，収束しづらい．
-  * `α`の値を小さく設定するとモデルの汎化性能が上がる．
-  * 特に`α=0.l`程度で効果が出ている．
+* ノイズの効力を決めるパラメータ $$ \alpha $$ について
+  * $$ \alpha $$ の値を大きくし過ぎるとbackpropするときに大きな勾配が伝搬してしまい，収束しづらい．
+  * $$ \alpha $$ の値を小さく設定するとモデルの汎化性能が上がる．
+  * 特に $$ \alpha = 0.1 $$ 程度で効果が出ている．
 * 正のノイズか負のノイズか
-  * 正のノイズ`n=σξ`と負のノイズ`n=-σ|ξ|`を比較している．
+  * 正のノイズ $$ n = \alpha \xi $$ と負のノイズ $$ n = - \alpha \|\xi\|$$ を比較している．
   * 負のノイズは通常のsoftmaxよりも悪い結果になってしまっている．
 * annealed noiseとfixed noiseについて
-  * 固定のノイズを付加するfree noise`n=α|ξ|`，amplitude noise`n=α||W||・||X||・|ξ|`とannealed noise`n=α||W||・||X||・(1-cosθ)|ξ|`を比較している．
+  * 固定のノイズを付加するfree noise $$ n = \alpha \|\xi\| $$ ，amplitude noise $$ n = \alpha \|W\| \|X\| \|\xi\| $$ とannealed noise $$n = \alpha \|W\| \|X\| (1 - \cos{\theta}) \|\xi\| $$ を比較している．
   * free noise・amplitude noiseは通常のsoftmaxより少しよい精度となっている．
   * amplitude noiseとannealed noiseを比べた場合，annealed noiseはだんだんとノイズの量が減るため，より良い局所解に落ちていくと考えられている．
 * 正則化の働きについて

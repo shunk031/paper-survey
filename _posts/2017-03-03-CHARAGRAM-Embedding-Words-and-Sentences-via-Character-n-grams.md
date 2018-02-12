@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CHARAGRAM: Embedding Words and Sentences via Character n-grams"
-date:   2017-03-04
+date:   2017-03-03
 categories: NLP
 ---
 

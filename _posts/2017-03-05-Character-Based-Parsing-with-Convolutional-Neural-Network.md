@@ -11,7 +11,7 @@ Character-levelのConvolutional Neural Network(CNN)を用いて中国語の「�
 
 ## 2. 先行研究と比べてどこがすごいの？
 
-CNNをベースとして言語のモデリングを行っている先行研究の[Dynamic Convolutional Neural Network](https://shunk031.github.io/paper-survey/paper-summary/NLP/A_Convolutional_Neural_Network_for_Modelling_Sentences)は文単位でのタスクに対しとても素晴らしい結果を残している。しかしながら中国語や日本語と行ったアジアの言語は、英語のように語の切れ目が曖昧であるため、英語をターゲットとした先行研究に比べて語の切れ目についてはあまり考慮されていない。本研究で提案されているKMCNNと呼ばれる、k-max pooling層のあるCNNを用いることで、語の切れ目を判定しその情報を元に構文木を生成するものとなっている。
+CNNをベースとして言語のモデリングを行っている先行研究の[Dynamic Convolutional Neural Network]({{ site.baseurl }}/summary/nlp/A-Convolutional-Neural-Network-for-Modelling-Sentences)は文単位でのタスクに対しとても素晴らしい結果を残している。しかしながら中国語や日本語と行ったアジアの言語は、英語のように語の切れ目が曖昧であるため、英語をターゲットとした先行研究に比べて語の切れ目についてはあまり考慮されていない。本研究で提案されているKMCNNと呼ばれる、k-max pooling層のあるCNNを用いることで、語の切れ目を判定しその情報を元に構文木を生成するものとなっている。
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
@@ -35,7 +35,7 @@ Penn Chinese Treebank 5(CTB-5)という統語構造にラベルが付与され�
 ## 6. 次に読むべき論文はあるか？
 
 先行研究であるDCNNについて。
-* [Kalchbrenner, Nal, Edward Grefenstette, and Phil Blunsom. "A convolutional neural network for modelling sentences." arXiv preprint arXiv:1404.2188 (2014).](https://arxiv.org/pdf/1404.2188.pdf?utm_content=bufferee286&utm_medium=social&utm_source=plus.google.com&utm_campaign=buffer)
+* [Kalchbrenner, Nal, Edward Grefenstette, and Phil Blunsom. "A convolutional neural network for modelling sentences." arXiv preprint arXiv:1404.2188 (2014).](https://arxiv.org/pdf/1404.2188.pdf)
 
 ### 論文情報・リンク
 

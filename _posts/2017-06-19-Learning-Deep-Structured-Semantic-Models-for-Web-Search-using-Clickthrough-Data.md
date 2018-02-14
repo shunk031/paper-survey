@@ -19,7 +19,7 @@ PLSAやLDAといったモデルは多くの場合，検索結果の評価とは�
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/Learning_Deep_Structured_Semantic_Models_for_Web_Search_using_Clickthrough_Data/figure1.png)
+![Figure 1]({{ site.baseurl }}/assets/img/others/Learning-Deep-Structured-Semantic-Models-for-Web-Search-using-Clickthrough-Data/figure1.png)
 
 * 3層からなるDeep Neural Network(DNN)
   * Term VectorからWordHashingするときに掛ける重みは学習させない

@@ -11,7 +11,7 @@ Convolutional Neural Network(CNN)をベースにしたモデルを用いて、�
 
 ## 2. 先行研究と比べてどこがすごいの？
 
-[Dynamic Convolutional Neural Network(DCNN)](https://shunk031.github.io/paper-survey/paper-summary/NLP/A_Convolutional_Neural_Network_for_Modelling_Sentences)を用いた先行研究では、可変長である文を扱えるCNNを提案し、感情分析や質問応答分類などで素晴らしい結果を残している。加えて、コンピュータビジョン分野におけるCNNのパラメータの可視化を行った先行研究がある。本研究ではDCNNをベースとしたモデルをトレーニングし、CNNのパラメータの可視化時のテクニックを自然言語処理にも適用することで、文書の要約を実現している。
+[Dynamic Convolutional Neural Network(DCNN)]({{ site.baseurl }}/summary/nlp/A-Convolutional-Neural-Network-for-Modelling-Sentences)を用いた先行研究では、可変長である文を扱えるCNNを提案し、感情分析や質問応答分類などで素晴らしい結果を残している。加えて、コンピュータビジョン分野におけるCNNのパラメータの可視化を行った先行研究がある。本研究ではDCNNをベースとしたモデルをトレーニングし、CNNのパラメータの可視化時のテクニックを自然言語処理にも適用することで、文書の要約を実現している。
 
 ## 3. 技術や手法の"キモ"はどこにある？
 

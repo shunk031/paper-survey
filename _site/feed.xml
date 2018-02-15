@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/paper-survey/" rel="alternate" type="text/html" /><updated>2018-02-15T00:56:22+09:00</updated><id>http://localhost:4000/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="http://localhost:4000/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/paper-survey/" rel="alternate" type="text/html" /><updated>2018-02-16T01:03:57+09:00</updated><id>http://localhost:4000/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
 </subtitle><entry><title type="html">Radical-level Ideograph Encoder for RNN-based Sentiment Analysis of Chinese and Japanese</title><link href="http://localhost:4000/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese" rel="alternate" type="text/html" title="Radical-level Ideograph Encoder for RNN-based Sentiment Analysis of Chinese and Japanese" /><published>2017-12-04T00:00:00+09:00</published><updated>2017-12-04T00:00:00+09:00</updated><id>http://localhost:4000/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese</id><content type="html" xml:base="http://localhost:4000/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;漢字を構成する部首レベル(Radical-level)の特徴から、CNNおよびBi-directional RNNを用いて少ないパラメータ数で文書分類を行うモデルを提案している。&lt;/p&gt;
@@ -11,7 +11,7 @@
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Radical-level_Ideograph_Encoder_for_RNN-based_Sentiment_Analysis_of_Chinese_and_Japanese/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;先行研究(Kim+ 2016)のモデルと似ているアーキテクチャを採用
@@ -29,7 +29,7 @@
     &lt;ul&gt;
       &lt;li&gt;各文字に対して、”部首”や”つくり”に分解した文字表現であるRadical-level Embeddingsを用いる&lt;/li&gt;
       &lt;li&gt;Radical-level Embeddingsが固定長になるようにゼロパディングを行っている
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Radical-level_Ideograph_Encoder_for_RNN-based_Sentiment_Analysis_of_Chinese_and_Japanese/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/paper-survey/assets/img/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;CNNエンコーダを用いた文字Radicalから単語表現の獲得
@@ -118,8 +118,13 @@
   &lt;li&gt;Squash
     &lt;ul&gt;
       &lt;li&gt;通常の典型的なニューラルネットワークでは、ユニットの出力のみがReLUといった非線形活性化関数によって潰される．&lt;/li&gt;
-      &lt;li&gt;Capsule Networkでは，Capsuleから出力されるベクトル全体が潰される．
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/eq1.png&quot; alt=&quot;Eq 1&quot; /&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Capsule Networkでは，Capsuleから出力されるベクトル全体が潰される．&lt;/p&gt;
+
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align*}
+  {\bf v}_{j} = \frac{ \| {\bf s}_{j} \|^{2} }{ 1 + \| {\bf s}_{j} \|^{2} } \frac{ {\bf s}_{j} }{ \|{\bf s}_{j} \| }
+\end{align*}&lt;/script&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Routing (Routing-by-Agreement)
@@ -127,7 +132,7 @@
       &lt;li&gt;特徴の関連性に基づいて次のレイヤーのCapsuleにルーティングする．&lt;/li&gt;
       &lt;li&gt;Max-poolingでは最大の値のみ保持するが，これがCNNの欠点とも言える．&lt;/li&gt;
       &lt;li&gt;RoutingによってCapsuleは前の層からの特徴の加重和を得る．これは物体が重なっている場合の特徴検出に適している．
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/procedure1.png&quot; alt=&quot;Procedure 1&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/paper-survey/assets/img/cv/Dynamic-Routing-Between-Capsules/procedure1.png&quot; alt=&quot;Procedure 1&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;CapsNet
@@ -135,7 +140,7 @@
       &lt;li&gt;全体のアーキテクチャ
         &lt;ul&gt;
           &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Convolution+ReLU &amp;gt; PrimaryCapsules &amp;gt; DigitCaps&lt;/code&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/paper-survey/assets/img/cv/Dynamic-Routing-Between-Capsules/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li&gt;PrimaryCapsules
@@ -155,9 +160,16 @@
       &lt;/li&gt;
       &lt;li&gt;Margin loss
         &lt;ul&gt;
-          &lt;li&gt;複数のクラスを許容するために，各クラスに対応するCapsuleに対してmargin lossを定義している．
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/eq4.png&quot; alt=&quot;Eq 4&quot; /&gt;&lt;/li&gt;
-          &lt;li&gt;各クラスに対するlossをすべて足し合わせて全lossとする．&lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;複数のクラスを許容するために，各クラスに対応するCapsuleに対してmargin lossを定義している．&lt;/p&gt;
+
+            &lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align*}
+  L_{k} = T_{k} \max{(0, m^{+} - \| {\bf v}_k \|)}^{2} + \lambda (1 - T_k) \max{(0, \| {\bf v}_k - m^{-} \|)}^{2}
+\end{align*}&lt;/script&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;p&gt;各クラスに対するlossをすべて足し合わせて全lossとする．&lt;/p&gt;
+          &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -167,7 +179,7 @@
       &lt;li&gt;margin lossの他に入力画像と再構成画像とのMSEをreconstruction lossとして追加している．&lt;/li&gt;
       &lt;li&gt;DigitCapsの後段に3層の全結合層を持つDecoderを導入し，正則化の効果を追加している．&lt;/li&gt;
       &lt;li&gt;学習時には再構成対象の特徴表現のみを利用し，それ以外はマスクしている．
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/paper-survey/assets/img/cv/Dynamic-Routing-Between-Capsules/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -187,7 +199,7 @@
     &lt;p&gt;重なり合っている物体の認識について&lt;br /&gt;
 異なるクラスに属する数字が重なり合っているようなデータセットであるMultiMNISTデータセットを作成し，Routingが一種のAttentionのような働きをしていることを確認する実験を行っている．これは複数のオブジェクトが重なり合っていても認識できる効果があると考えられている．&lt;br /&gt;
 以下の再構成画像ではCapsNetが重なり合う2つの数字をそれぞれ正確に認識していることがわかる．&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/paper-survey/assets/img/cv/Dynamic-Routing-Between-Capsules/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -238,7 +250,7 @@
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Deep_Embedding_for_Clustering_Analysis/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Deep-Embedding-for-Clustering-Analysis/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Deep Embedding Clustering
@@ -274,7 +286,7 @@
   &lt;li&gt;不均衡なデータに対しても提案手法であるDECはよいパフォーマンスを見せている．&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Deep_Embedding_for_Clustering_Analysis/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Deep-Embedding-for-Clustering-Analysis/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
 
@@ -313,7 +325,7 @@
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Character-level_Intra_Attention_Network_for_Natural_Language_Inference/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Character-level Intra Attention Network
@@ -346,8 +358,8 @@
 &lt;p&gt;Attentionの重みを可視化した結果は以下のようになっている．左が前提の文で右が仮説の文を表している．より色が濃い単語が重要で予測に寄与しているものとなっている．
 可視化の結果から，モデルはより似ている意味を持つ単語(ここではloveやenjoy)に注意をしていることがわかる．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Character-level_Intra_Attention_Network_for_Natural_Language_Inference/figure3-1.png&quot; alt=&quot;Figure 3-1&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Character-level_Intra_Attention_Network_for_Natural_Language_Inference/figure3-2.png&quot; alt=&quot;Figure 3-2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference/figure3-1.png&quot; alt=&quot;Figure 3-1&quot; /&gt;
+&lt;img src=&quot;/paper-survey/assets/img/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference/figure3-2.png&quot; alt=&quot;Figure 3-2&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
 
@@ -400,7 +412,7 @@
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://github.com/shunk031/paper-survey/blob/master/images/CV/Random_Erasing_Data_Augmentation/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Random-Erasing-Data-Augmentation/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Random Erasing
@@ -419,15 +431,15 @@
               &lt;/thead&gt;
               &lt;tbody&gt;
                 &lt;tr&gt;
-                  &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1_p.png&quot; alt=&quot;Erasing probability&quot; /&gt;&lt;/td&gt;
+                  &lt;td&gt;Erasing probability &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt;&lt;/td&gt;
                   &lt;td&gt;Random Erasingを使用する確率&lt;/td&gt;
                 &lt;/tr&gt;
                 &lt;tr&gt;
-                  &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1_s.png&quot; alt=&quot;Area ratio range&quot; /&gt;&lt;/td&gt;
+                  &lt;td&gt;Area ratio range &lt;script type=&quot;math/tex&quot;&gt;s_l&lt;/script&gt; , &lt;script type=&quot;math/tex&quot;&gt;s_h&lt;/script&gt;&lt;/td&gt;
                   &lt;td&gt;マスクする領域の最小/最大比率 (画像全体に対する面積比)&lt;/td&gt;
                 &lt;/tr&gt;
                 &lt;tr&gt;
-                  &lt;td&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1_r.png&quot; alt=&quot;Aspect ratio range&quot; /&gt;&lt;/td&gt;
+                  &lt;td&gt;Aspect ratio range &lt;script type=&quot;math/tex&quot;&gt;r_1&lt;/script&gt; , &lt;script type=&quot;math/tex&quot;&gt;r_2&lt;/script&gt;&lt;/td&gt;
                   &lt;td&gt;マスク領域のアスペクト比の最小/最大値&lt;/td&gt;
                 &lt;/tr&gt;
               &lt;/tbody&gt;
@@ -435,7 +447,7 @@
           &lt;/li&gt;
           &lt;li&gt;
             &lt;p&gt;アルゴリズムは以下のようになっている．&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1.png&quot; alt=&quot;Algorithm 1&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/paper-survey/assets/img/cv/Random-Erasing-Data-Augmentation/algorithm1.png&quot; alt=&quot;Algorithm 1&quot; /&gt;&lt;/p&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
@@ -515,7 +527,7 @@
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Deconvolutional_Paragraph_Representation_Learning/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Deconvolutional-Paragraph-Representation-Learning/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Convolutional encoder
@@ -541,8 +553,13 @@
           &lt;li&gt;学習させた潜在的表現は高い再構成性や分類能力を保持する．&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;以下のLoss関数を定義して半教師あり学習の枠組みを導入．&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Deconvolutional_Paragraph_Representation_Learning/eq3.png&quot; alt=&quot;Eq 3&quot; /&gt;
+      &lt;li&gt;
+        &lt;p&gt;以下のLoss関数を定義して半教師あり学習の枠組みを導入．&lt;/p&gt;
+
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align*}
+  \mathcal{L}^{semi} = \alpha \sum_{d \in {\mathcal{D}_l + \mathcal{D}_u}}^{} \sum_{t}^{} \log{p(\hat{w}^{t}_d = w^{t}_d)} + \sum_{d \in \mathcal{D}_l}^{} \mathcal{L}^{sup} (f({\bf h}_d), y_d)
+\end{align*}&lt;/script&gt;
+
         &lt;ul&gt;
           &lt;li&gt;ラベル付きデータとラベル無しデータを用いてautoencoderのlossとclassifierのlossを最小化するよう学習．&lt;/li&gt;
           &lt;li&gt;ハイパーパラメータαを導入して学習初期は文の概要を捉えるよう焦点を当て，学習が進むにつれて細部を学習するようにする．&lt;/li&gt;
@@ -554,7 +571,7 @@
 
 &lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Deconvolutional_Paragraph_Representation_Learning/table1.png&quot; alt=&quot;Table 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Deconvolutional-Paragraph-Representation-Learning/table1.png&quot; alt=&quot;Table 1&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;encoder-decoderの構造それぞれCNN-DCNN，CNN-LSTM，LSTM-LSTMとして各タスクで評価を行っている．&lt;/li&gt;
@@ -1061,7 +1078,7 @@ VGGライクなネットワークに対してノイズを付加する各手法�
 
 &lt;p&gt;先行研究における単語の分散表現の学習はCBOWやSkipgram，GloVeといったものがある．また中国語における単語の分散表現の学習は「漢字」の形状的特徴を活用する，Character-enhanced word embedding(CWE)やMulti-granularity Embedding(MGE)といったものが提案されている．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;本研究ではCWEやMGEといった先行研究と同様に，漢字の形状に着目し文字の形状情報を抽出したのち，単語表現の学習に利用する2つの手法を提案している．&lt;/p&gt;
 
@@ -1071,7 +1088,7 @@ VGGライクなネットワークに対してノイズを付加する各手法�
   &lt;li&gt;文字表現の獲得
     &lt;ul&gt;
       &lt;li&gt;漢字の形状的特徴を考慮した文字表現を抽出するconvAE&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure6.png&quot; alt=&quot;Figure 6&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure6.png&quot; alt=&quot;Figure 6&quot; /&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;単語表現の獲得
@@ -1081,13 +1098,13 @@ VGGライクなネットワークに対してノイズを付加する各手法�
           &lt;li&gt;Enhanced by Context Word Glyphs(ctxG)
             &lt;ul&gt;
               &lt;li&gt;文字表現を組み合わせた単語表現ctxGからターゲット単語の表現を学習する&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure7.png&quot; alt=&quot;Figure 7&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure7.png&quot; alt=&quot;Figure 7&quot; /&gt;&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
           &lt;li&gt;Enhanced by Target Word Glyphs(tarG)
             &lt;ul&gt;
               &lt;li&gt;ターゲット単語の文字表現の平均値を用いてターゲット単語の表現を学習する&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure8.png&quot; alt=&quot;Figure 8&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure8.png&quot; alt=&quot;Figure 8&quot; /&gt;&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
@@ -1097,13 +1114,13 @@ VGGライクなネットワークに対してノイズを付加する各手法�
           &lt;li&gt;RNN-Skipgram
             &lt;ul&gt;
               &lt;li&gt;GRUを用いて直接文字表現を並べた単語からターゲット単語の表現を学習する&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure9.png&quot; alt=&quot;Figure 9&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure9.png&quot; alt=&quot;Figure 9&quot; /&gt;&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
           &lt;li&gt;RNN-GloVe
             &lt;ul&gt;
               &lt;li&gt;ターゲット単語と異なる単語を用いて共起からターゲット単語の表現を学習する&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure10.png&quot; alt=&quot;Figure 10&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure10.png&quot; alt=&quot;Figure 10&quot; /&gt;&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
         &lt;/ul&gt;
@@ -1118,7 +1135,7 @@ VGGライクなネットワークに対してノイズを付加する各手法�
 
 &lt;p&gt;学習した文字表現をt-SNEを用いて2次元まで落とし，可視化したものが以下のようになっている．形状の似ている漢字が集まっていることが分かる．&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure12.png&quot; alt=&quot;Figure 12&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure12.png&quot; alt=&quot;Figure 12&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
 

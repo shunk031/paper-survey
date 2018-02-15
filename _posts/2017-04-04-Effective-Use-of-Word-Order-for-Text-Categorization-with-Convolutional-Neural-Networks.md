@@ -19,16 +19,14 @@ categories: NLP
 
 * 文書を2つのベクトル表現にして入力し、比較
   * seq-CNN  
-  ![Figure1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure1.png)
+  ![Figure 1]({{ site.baseurl }}/assets/img/nlp/Effective-Use-of-Word-Order-for-Text-Categorization-with-Convolutional-Neural-Networks/figure1.png)
   * bow-CNN  
-  ![Figure2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure2.png)
-
+  ![Figure 2]({{ site.baseurl }}/assets/img/nlp/Effective-Use-of-Word-Order-for-Text-Categorization-with-Convolutional-Neural-Networks/figure2.png)
 * 可変長である文書ベクトルに対応したPooling層  
-  ![Figure3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure3.png)
-
+  ![Figure 3]({{ site.baseurl }}/assets/img/nlp/Effective-Use-of-Word-Order-for-Text-Categorization-with-Convolutional-Neural-Networks/figure3.png)
 * Parallel CNN  
-  ![Figure4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Effective_Use_of_Word_Order_for_Text_Categorization_with_Convolutional_Neural_Networks/figure4.png)
-
+  ![Figure 4]({{ site.baseurl }}/assets/img/nlp/Effective-Use-of-Word-Order-for-Text-Categorization-with-Convolutional-Neural-Networks/figure4.png)
+  
 ## 4. どうやって有効だと検証した？
 
 評判分析用のIMDB movie reviewの映画レビューデータセットとElectronics product reviewsのエレクトロニクス製品のレビューデータセット、トピック分類用のRCV1のニュース記事データセットを用いて評価を行っている。IMDBとElectronics product reviewsにおいてはseq-CNNが、RCV1においてはbow-CNNが従来手法より遥かに高いパフォーマンスを出している。

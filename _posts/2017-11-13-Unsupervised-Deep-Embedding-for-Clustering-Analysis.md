@@ -23,7 +23,7 @@ k-meansを改良して高次元の入力に対しても効率よく扱う手法�
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Deep_Embedding_for_Clustering_Analysis/figure1.png)
+![Figure 1]({{ site.baseurl }}/assets/img/cv/Deep-Embedding-for-Clustering-Analysis/figure1.png)
 
 - Deep Embedding Clustering
   - KLダイバージェンスを用いたクラスタリング
@@ -47,7 +47,7 @@ MNIST，STL-10，REUTERSの3つのデータセットを用いてる，教師な�
 - DNNのパラメータをautoencoderで初期化しなかった場合のパフォーマンスは低かった．
 - 不均衡なデータに対しても提案手法であるDECはよいパフォーマンスを見せている．
 
-![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Deep_Embedding_for_Clustering_Analysis/figure5.png)
+![Figure 5]({{ site.baseurl }}/assets/img/cv/Deep-Embedding-for-Clustering-Analysis/figure5.png)
 
 ## 6. 次に読むべき論文はあるか？
 

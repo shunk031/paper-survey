@@ -21,7 +21,7 @@ categories: NLP
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Character-level_Intra_Attention_Network_for_Natural_Language_Inference/figure2.png)
+![Figure 2]({{ site.baseurl }}/assets/img/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference/figure2.png)
 
 - Character-level Intra Attention Network
   - Character-level Convolutional Neural Networks
@@ -43,8 +43,8 @@ NLIタスクを評価する際に使用されてきたStanford Natural Language 
 Attentionの重みを可視化した結果は以下のようになっている．左が前提の文で右が仮説の文を表している．より色が濃い単語が重要で予測に寄与しているものとなっている．
 可視化の結果から，モデルはより似ている意味を持つ単語(ここではloveやenjoy)に注意をしていることがわかる．
 
-![Figure 3-1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Character-level_Intra_Attention_Network_for_Natural_Language_Inference/figure3-1.png)
-![Figure 3-2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Character-level_Intra_Attention_Network_for_Natural_Language_Inference/figure3-2.png)
+![Figure 3-1]({{ site.baseurl }}/assets/img/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference/figure3-1.png)
+![Figure 3-2]({{ site.baseurl }}/assets/img/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference/figure3-2.png)
 
 ## 6. 次に読むべき論文はあるか？
 

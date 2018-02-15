@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Aggregated Residual Transformation for Deep Neural Networks"
-date:   2017-08-20
+date:   2017-08-13
 categories: CV
 ---
 
@@ -17,17 +17,17 @@ VGGやResNetといったネットワークは同じ形状のブロックを複�
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Table 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Aggregated_Residual_Transformations_for_Deep_Neural_Networks/table1.png)
+![Table 1]({{ site.baseurl }}/assets/img/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks/table1.png)
 
 * VGG/ResNetライクなブロック構成で同一トポロジの維持とハイパーパラメータの削減を行う．
   * ブロックは同じトポロジを有している．  
-	![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Aggregated_Residual_Transformations_for_Deep_Neural_Networks/figure1.png)
+	![Figure 1]({{ site.baseurl }}/assets/img/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks/figure1.png)
   * ブロック構造の2つのルール
 	* 同じサイズのマップを出力するブロックでは，幅やフィルタサイズといったハイパーパラメータを共通化する．
 	* マップが1/2にダウンサンプリングされた場合は，ブロックの幅を2倍にする．
 * シンプルなニューロンで行われる重みと入力の積をそれぞれ足し合わせた集約を行うが，ResNeXtブロックではこの変換と集約を一般化している．
 * 変換処理のサイズとして"cardinality"を定義している．cardinalityはより複雑な変換処理の回数をコントロールしており，ネットワークの幅や深さよりも効果的なパラメータとなっている．  
-![Figure 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Aggregated_Residual_Transformations_for_Deep_Neural_Networks/figure3.png)
+![Figure 3]({{ site.baseurl }}/assets/img/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks/figure3.png)
 * *Fig 1(右)* のResNeXtブロックは *Fig 3(b)や(c)* と等価である．
   * *Fig 3(b)* のResNeXtブロックはInception-ResNetブロックに似た構造をしているが，ResNeXtブロックはすべてのパスにおいて同一のトポロジを共有している．
   * *Fig 3(c)* のようにGrouped Convolutionを用いることでResNeXtブロックを簡潔に記述することができる．
@@ -66,7 +66,7 @@ ImageNet-1/ImageNet-5K，CIFAR-10/CIFAR-100，COCO object detection setを利用
 	
 * cardinalityとbase widthについて
   * ブロック構造の2つのルールを適用するため，cardinalityとそれに伴うbase widthの関係は以下のようになる．  
-	![Table 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Aggregated_Residual_Transformations_for_Deep_Neural_Networks/table2.png)
+	![Table 2]({{ site.baseurl }}/assets/img/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks/table2.png)
 	* ネットワークの層をより深くする/より広くするより，cardinalityを増やすほうが精度が良くなっている．
 	
 ## 6. 次に読むべき論文はあるか？

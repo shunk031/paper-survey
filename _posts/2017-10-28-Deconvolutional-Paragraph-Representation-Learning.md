@@ -20,26 +20,35 @@ ConvolutionおよびDeconvolutionを用いて，長い文章の潜在的表現�
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Deconvolutional_Paragraph_Representation_Learning/figure1.png)
+![Figure 1]({{ site.baseurl }}/assets/img/nlp/Deconvolutional-Paragraph-Representation-Learning/figure1.png)
 
 - Convolutional encoder
   - 浅い層のフィルタはn-gram情報(画像における「エッジ」情報に類似)を学習し，深い層のフィルタはセマンティックな構文構造(画像における個々のオブジェクト情報)を学習している．
   - max-poolingといったpooling処理を用いずstrideを調整した畳み込みを用いている．これは畳み込み操作だけで空間的ダウンサンプリングを学習できるからだと考えられている．
 	- 本研究の初期実験ではmax-poolingを入れたモデルで精度があまり出なかった．
+
 - Deconvolutional decoder
   - Convolutionの転置操作を行う．
   - RNNと比べて長い文における共起を捉えるのに優れているため，分類問題や文書要約のための特徴抽出に効果がある．
+
 - 本研究のConvolutional autoencodingを半教師ありの分類と要約タスクを解けるよう拡張
   - 半教師ありタスクをマルチタスク学習として捉え，エンコーダーと教師ありモデルを同時に学習させる．
 	- 学習させた潜在的表現は高い再構成性や分類能力を保持する．
-  - 以下のLoss関数を定義して半教師あり学習の枠組みを導入．  
-	![Eq 3](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Deconvolutional_Paragraph_Representation_Learning/eq3.png)
+
+  - 以下のLoss関数を定義して半教師あり学習の枠組みを導入．
+    {% raw %}
+	$$
+	\begin{align*}
+	  \mathcal{L}^{semi} = \alpha \sum_{d \in {\mathcal{D}_l + \mathcal{D}_u}}^{} \sum_{t}^{} \log{p(\hat{w}^{t}_d = w^{t}_d)} + \sum_{d \in \mathcal{D}_l}^{} \mathcal{L}^{sup} (f({\bf h}_d), y_d)
+	\end{align*}
+	$$
+	{% endraw %}
 	- ラベル付きデータとラベル無しデータを用いてautoencoderのlossとclassifierのlossを最小化するよう学習．
 	- ハイパーパラメータαを導入して学習初期は文の概要を捉えるよう焦点を当て，学習が進むにつれて細部を学習するようにする．
   
 ## 4. どうやって有効だと検証した？
 
-![Table 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Deconvolutional_Paragraph_Representation_Learning/table1.png)
+![Table 1]({{ site.baseurl }}/assets/img/nlp/Deconvolutional-Paragraph-Representation-Learning/table1.png)
 
 - encoder-decoderの構造それぞれCNN-DCNN，CNN-LSTM，LSTM-LSTMとして各タスクで評価を行っている．
 - 文章の再構成タスクでは，Hotel Reviews Datasetを用いてモデルを学習させ，ROUGEおよびBLEUスコアの比較を行っている．

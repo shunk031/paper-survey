@@ -17,7 +17,7 @@ categories: NLP
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Radical-level_Ideograph_Encoder_for_RNN-based_Sentiment_Analysis_of_Chinese_and_Japanese/figure1.png)
+![Figure 1]({{ site.baseurl }}/assets/img/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese/figure1.png)
 
 - 先行研究(Kim+ 2016)のモデルと似ているアーキテクチャを採用
   - 異なる点はCharacter-levelの特徴の代わりにRadical-levelの特徴を利用している
@@ -27,7 +27,7 @@ categories: NLP
 - N Radical-level Embeddings
   - 各文字に対して、"部首"や"つくり"に分解した文字表現であるRadical-level Embeddingsを用いる
   - Radical-level Embeddingsが固定長になるようにゼロパディングを行っている
-    ![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Radical-level_Ideograph_Encoder_for_RNN-based_Sentiment_Analysis_of_Chinese_and_Japanese/figure2.png)
+	![Figure 2]({{ site.baseurl }}/assets/img/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese/figure2.png)
 - CNNエンコーダを用いた文字Radicalから単語表現の獲得
   - 複数サイズのカーネルで複数種類の特徴を抽出
   - stride=1でRadical-levelの特徴を抽出する

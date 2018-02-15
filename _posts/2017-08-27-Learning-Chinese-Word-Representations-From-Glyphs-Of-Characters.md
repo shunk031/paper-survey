@@ -13,7 +13,7 @@ categories: NLP
 
 先行研究における単語の分散表現の学習はCBOWやSkipgram，GloVeといったものがある．また中国語における単語の分散表現の学習は「漢字」の形状的特徴を活用する，Character-enhanced word embedding(CWE)やMulti-granularity Embedding(MGE)といったものが提案されている．
 
-![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure5.png)
+![Figure 5]({{ site.baseurl }}/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure5.png)
 
 本研究ではCWEやMGEといった先行研究と同様に，漢字の形状に着目し文字の形状情報を抽出したのち，単語表現の学習に利用する2つの手法を提案している．
 
@@ -21,30 +21,30 @@ categories: NLP
 
 * 文字表現の獲得
   * 漢字の形状的特徴を考慮した文字表現を抽出するconvAE  
-	![Figure 6](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure6.png)
+	![Figure 6]({{ site.baseurl }}/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure6.png)
 * 単語表現の獲得
   * Glyph-Enchanced Word Embedding(GWE)
 	* Enhanced by Context Word Glyphs(ctxG)
 	  * 文字表現を組み合わせた単語表現ctxGからターゲット単語の表現を学習する  
-	  ![Figure 7](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure7.png)
+	  ![Figure 7]({{ site.baseurl }}/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure7.png)
 	* Enhanced by Target Word Glyphs(tarG)
 	  * ターゲット単語の文字表現の平均値を用いてターゲット単語の表現を学習する  
-	  ![Figure 8](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure8.png)
+	  ![Figure 8]({{ site.baseurl }}/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure8.png)
   * Directly Learn From Character Glyph Features
 	* RNN-Skipgram
 	  * GRUを用いて直接文字表現を並べた単語からターゲット単語の表現を学習する  
-	  ![Figure 9](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure9.png)
+	  ![Figure 9]({{ site.baseurl }}/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure9.png)
 	* RNN-GloVe
 	  * ターゲット単語と異なる単語を用いて共起からターゲット単語の表現を学習する  
-	  ![Figure 10](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure10.png)
-
+	  ![Figure 10]({{ site.baseurl }}/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure10.png)
+	  
 ## 4. どうやって有効だと検証した？
 
 提案手法で学習した単語表現を用いて，単語の類似度，単語の類推タスクを行っている．
 
 学習した文字表現をt-SNEを用いて2次元まで落とし，可視化したものが以下のようになっている．形状の似ている漢字が集まっていることが分かる．
 
-![Figure 12](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/NLP/Learning_Chinese_Word_Representations_From_Glyphs_Of_Characters/figure12.png)
+![Figure 12]({{ site.baseurl }}/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure12.png)
 
 ## 5. 議論はあるか？
 

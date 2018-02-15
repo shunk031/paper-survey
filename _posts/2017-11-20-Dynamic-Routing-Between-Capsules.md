@@ -27,31 +27,47 @@ Convolutional Neural Network(CNN)は画像認識において最先端のアプ�
 - Squash
   - 通常の典型的なニューラルネットワークでは、ユニットの出力のみがReLUといった非線形活性化関数によって潰される．
   - Capsule Networkでは，Capsuleから出力されるベクトル全体が潰される．
-    ![Eq 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/eq1.png)
+	{% raw %}
+	$$
+	\begin{align*}
+	  {\bf v}_{j} = \frac{ \| {\bf s}_{j} \|^{2} }{ 1 + \| {\bf s}_{j} \|^{2} } \frac{ {\bf s}_{j} }{ \|{\bf s}_{j} \| }
+	\end{align*}
+	$$
+	{% endraw %}
 - Routing (Routing-by-Agreement)
   - 特徴の関連性に基づいて次のレイヤーのCapsuleにルーティングする．
   - Max-poolingでは最大の値のみ保持するが，これがCNNの欠点とも言える．
   - RoutingによってCapsuleは前の層からの特徴の加重和を得る．これは物体が重なっている場合の特徴検出に適している．
-    ![Procedure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/procedure1.png)
+	![Procedure 1]({{ site.baseurl }}/assets/img/cv/Dynamic-Routing-Between-Capsules/procedure1.png)
+
 - CapsNet
   - 全体のアーキテクチャ
     - `Convolution+ReLU > PrimaryCapsules > DigitCaps`
-	![Figure 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/figure1.png)
+	![Figure 1]({{ site.baseurl }}/assets/img/cv/Dynamic-Routing-Between-Capsules/figure1.png)
+
   - PrimaryCapsules
     - 32チャンネルのConvolutional 8D Capsules
       - 各primary capsuleは9x9のカーネルでstrideが2のconvolutionユニットが8つから構成されている．
     - PrimaryCapsulesは複数のConvolutionの結果をsquashしていると見ることができる．
+
   - DigitCaps
     - 1クラスあたり16のDigitCapsの構造であり，各クラスについてよりロバストな表現を学習する．
+
   - Margin loss
     - 複数のクラスを許容するために，各クラスに対応するCapsuleに対してmargin lossを定義している．
-      ![Eq 4](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/eq4.png)
+	  {% raw %}
+	  $$
+	  \begin{align*}
+	    L_{k} = T_{k} \max{(0, m^{+} - \| {\bf v}_k \|)}^{2} + \lambda (1 - T_k) \max{(0, \| {\bf v}_k - m^{-} \|)}^{2}
+	  \end{align*}
+	  $$
+	  {% endraw %}
     - 各クラスに対するlossをすべて足し合わせて全lossとする．
 - 再構成による正規化効果
   - margin lossの他に入力画像と再構成画像とのMSEをreconstruction lossとして追加している．
   - DigitCapsの後段に3層の全結合層を持つDecoderを導入し，正則化の効果を追加している．
   - 学習時には再構成対象の特徴表現のみを利用し，それ以外はマスクしている．
-    ![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/figure2.png)
+	![Figure 2]({{ site.baseurl }}/assets/img/cv/Dynamic-Routing-Between-Capsules/figure2.png)
 
 ## 4. どうやって有効だと検証した？
 
@@ -64,7 +80,7 @@ Convolutional Neural Network(CNN)は画像認識において最先端のアプ�
 - 重なり合っている物体の認識について  
   異なるクラスに属する数字が重なり合っているようなデータセットであるMultiMNISTデータセットを作成し，Routingが一種のAttentionのような働きをしていることを確認する実験を行っている．これは複数のオブジェクトが重なり合っていても認識できる効果があると考えられている．  
   以下の再構成画像ではCapsNetが重なり合う2つの数字をそれぞれ正確に認識していることがわかる．  
-  ![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Dynamic_Routing_Between_Capsules/figure5.png)
+  ![Figure 5]({{ site.baseurl }}/assets/img/cv/Dynamic-Routing-Between-Capsules/figure5.png)
   
 ## 5. 議論はあるか？
 

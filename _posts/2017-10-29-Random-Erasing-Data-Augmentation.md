@@ -36,21 +36,21 @@ categories: CV
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 1](https://github.com/shunk031/paper-survey/blob/master/images/CV/Random_Erasing_Data_Augmentation/figure1.png)
+![Figure 1]({{ site.baseurl }}/assets/img/cv/Random-Erasing-Data-Augmentation/figure1.png)
 
 - Random Erasing
   - 入力画像に対してランダムに矩形領域をノイズでマスクする．
 	- ハイパーパラメータ
   
-	  | パラメータ                                                                                                                                         | 説明                                                       |
-	  |----------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------|
-	  | ![Erasing probability](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1_p.png) | Random Erasingを使用する確率                               |
-	  | ![Area ratio range](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1_s.png)    | マスクする領域の最小/最大比率 (画像全体に対する面積比)     |
-	  | ![Aspect ratio range](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1_r.png)  | マスク領域のアスペクト比の最小/最大値                      |
+	  | パラメータ                                  | 説明                                             |
+	  |------------------------------------------|----------------------------------------------------|
+	  | Erasing probability $$ p $$              | Random Erasingを使用する確率                        |
+	  | Area ratio range $$ s_l $$ , $$ s_h $$   | マスクする領域の最小/最大比率 (画像全体に対する面積比) |
+	  | Aspect ratio range $$ r_1 $$ , $$ r_2 $$ | マスク領域のアスペクト比の最小/最大値                 |
 
 	- アルゴリズムは以下のようになっている．  
-	  ![Algorithm 1](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Random_Erasing_Data_Augmentation/algorithm1.png)
-
+	  ![Algorithm 1]({{ site.baseurl }}/assets/img/cv/Random-Erasing-Data-Augmentation/algorithm1.png)
+	  
 ## 4. どうやって有効だと検証した？
 
 画像分類タスクに対してはCIFAR-10/100，物体識別タスクに対してはPASCAL VOC 2007，人物の認識タスクに対してはMarket-1501，DukeMTMC-reID，CHHK03をそれぞれ利用している．

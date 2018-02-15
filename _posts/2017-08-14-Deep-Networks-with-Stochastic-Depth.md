@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Deep Networks with Stochastic Depth"
-date:   2017-08-20
+date:   2017-08-14
 categories: CV
 ---
 
@@ -17,7 +17,7 @@ Residual Blockを確率的にドロップさせることで学習時間の向上
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 2](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/CV/Deep_Networks_with_Stochastic_Depth/figure2.png)
+![Figure 2]({{ site.baseurl }}/assets/img/cv/Deep-Networks-with-Stochastic-Depth/figure2.png)
 
 * Stochastic Depth
   * Residual Blockを確率的にドロップさせる．

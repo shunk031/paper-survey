@@ -18,8 +18,8 @@ permalink: /
 
 ## Contents
 
-- [Paper Summary of Computer Vision]({{ site.baseurl | append: '/category/cv/' }})
-- [Paper Summary of Natural Language Processing]({{ site.baseurl | append: '/category/nlp/' }})
+- [Paper Summary of Computer Vision]({{ site.baseurl | append: '/category/cv' }})
+- [Paper Summary of Natural Language Processing]({{ site.baseurl | append: '/category/nlp' }})
 - [Paper Summary of Others]({{ site.baseurl | append: '/category/others' }})
 
 ## Latest posts

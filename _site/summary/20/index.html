@@ -1,0 +1,357 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    
+  <title>Summary - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Summary" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
+<meta property="og:description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
+<link rel="canonical" href="http://localhost:4000/paper-survey/summary/20/" />
+<meta property="og:url" content="http://localhost:4000/paper-survey/summary/20/" />
+<meta property="og:site_name" content="Paper Survey" />
+<link rel="prev" href="http://localhost:4000/paper-survey/summary/19">
+<link rel="next" href="http://localhost:4000/paper-survey/summary/21">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@shunk031" />
+<script type="application/ld+json">
+{"name":null,"description":"Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese","author":null,"@type":"WebPage","url":"http://localhost:4000/paper-survey/summary/20/","publisher":null,"image":null,"headline":"Summary","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/paper-survey/feed.xml" title="Paper Survey" />
+  <style amp-custom>
+  
+  body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,dl,dd,ol,ul,figure{margin:0;padding:0}body{font:400 16px/1.5 "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;color:#606c71;-webkit-text-size-adjust:100%;-webkit-font-feature-settings:"kern" 1;-moz-font-feature-settings:"kern" 1;-o-font-feature-settings:"kern" 1;font-feature-settings:"kern" 1;font-kerning:normal;line-height:1.5}h1,h2,h3,h4,h5,h6,p,blockquote,pre,ul,ol,dl,figure,.highlight{margin-bottom:15px;margin-top:15px}hr{display:block;border:none;height:1px;margin:40px auto;background:#eee}img{max-width:100%;vertical-align:middle}figure>img{display:block}figcaption{font-size:14px}ul,ol{margin-left:30px}li>ul,li>ol{margin-bottom:0}h1,h2,h3,h4,h5,h6{font-weight:400}a{color:#2a7ae2;text-decoration:none}a:visited{color:#1756a9}a:hover{color:#606c71}blockquote{color:#828282;border-left:4px solid #e8e8e8;padding-left:15px;font-size:18px;letter-spacing:-1px;font-style:italic}blockquote>:last-child{margin-bottom:0}pre,code{font-family:Menlo,Monaco,Courier;font-size:14px;border:1px solid #e8e8e8;border-radius:3px;background-color:#eef}code{padding:1px 5px}pre{padding:8px 12px;overflow-x:auto}pre>code{border:0;padding-right:0;padding-left:0}.default .wrapper{max-width:600px}.wrapper{max-width:-webkit-calc(800px - (30px));max-width:calc(800px - (30px));padding-right:15px;padding-left:15px;margin:0 auto}@media screen and (min-width: 800px){.wrapper{max-width:-webkit-calc(800px - (30px * 2));max-width:calc(800px - (30px * 2));padding:0 30px}}.wrapper:after{content:"";display:table;clear:both}.icon>svg{display:inline-block;width:16px;height:16px;vertical-align:middle}.icon>svg path{fill:#828282}.site-header{min-height:60px;padding:15px 0;position:relative;background-color:#159957;background-image:linear-gradient(120deg, #155799, #159957)}.site-header a{color:#fff}.header-nav .site-nav{position:absolute;right:40px;top:26px;font-weight:700}.site-title{font-size:26px;font-weight:300;line-height:56px;letter-spacing:-1px;margin-bottom:0;float:left}.site-nav{float:right;position:absolute;top:18px;right:15px;border:1px solid #e8e8e8;border-radius:5px}.site-nav .menu-icon{float:right;width:36px;height:36px;line-height:0;background:none;border:0;outline:0}.site-nav .menu-icon>svg{width:18px;height:15px}.site-nav .menu-icon>svg path{fill:#fff}.site-nav .trigger{clear:both;display:none}@media screen and (min-width: 600px){.site-nav{position:relative;background-color:transparent;border:none}.site-nav .menu-icon{display:none}.site-nav .trigger{display:block}.site-nav .page-link{display:inline}}.page-link{display:block;padding:5px 10px;margin-left:20px}.page-link:not(:last-child){margin-right:0}amp-sidebar{width:200px;padding-right:10px}.amp-close-image{top:10px;left:175px;cursor:pointer}.author{text-align:center;align-items:center;padding:10px;margin:60px 0 10px 0}.author .avatar{width:90px;height:90px;margin:0 auto}.author .avatar img{border-radius:50%;border-color:aliceblue}.author h1{margin:12px 0 0 0;font-size:30px;color:#fff}.author h2{font-size:19px;color:#E0E0E0}.site-footer{padding:30px 0}.site-footer .wrapper{border-top:solid 1px #eff0f1;padding-top:2rem;margin-top:2rem}.site-footer-owner{display:block;font-weight:bold}.site-footer-credits{color:#819198}.page-content{padding:80px 0;display:block}.page-content h1,.page-content h2,.page-content h3,.page-content h4,.page-content h5,.page-content h6{color:#159957;margin-top:1rem;margin-bottom:1rem;font-weight:normal}.page-heading{font-size:20px}.post-list{margin-left:0;list-style:none}.post-list>li{margin-bottom:30px}.post-meta{font-size:14px;color:#828282}.post-link{display:block;font-size:24px}.post-header{margin-bottom:30px;text-align:center}.post-title{font-size:42px;letter-spacing:-1px;line-height:1}@media screen and (min-width: 800px){.post-title{font-size:36px}}.post-content{margin-bottom:30px}.post-content h2{font-size:1.5em}@media screen and (min-width: 800px){.post-content h2{font-size:1.5em}}.post-content h3{font-size:1.17em}@media screen and (min-width: 800px){.post-content h3{font-size:1.17em}}.post-content h4{font-size:18px}@media screen and (min-width: 800px){.post-content h4{font-size:20px}}.post-content table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all;-webkit-overflow-scrolling:touch;border-collapse:collapse}.post-content table th{font-weight:bold}.post-content table th,.post-content table td{padding:0.5rem 1rem;border:1px solid #e9ebec}.post-content dl{padding:0}.post-content dl dt{padding:0;margin-top:1rem;font-size:1rem;font-weight:bold}.post-content dl dd{padding:0;margin-bottom:1rem}.post-content hr{height:2px;padding:0;margin:1rem 0;background-color:#eff0f1;border:0}.pagination{width:100%;padding:20px 0;display:block;position:relative}.pagination a{background:#E3F2FD;padding:5px 7px}.pagination .prev{float:left}.pagination .next{float:right}.highlight{background:#fff}.highlighter-rouge .highlight{background:#eef}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}
+
+  </style>
+    <link rel="apple-touch-icon" sizes="57x57" href="/paper-survey/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/paper-survey/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/paper-survey/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/paper-survey/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/paper-survey/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/paper-survey/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/paper-survey/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/paper-survey/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/paper-survey/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" href="/paper-survey/assets/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/paper-survey/assets/favicons/android-icon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/paper-survey/assets/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/paper-survey/assets/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="shortcut icon" href="/paper-survey/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/paper-survey/favicon.ico" type="image/x-icon">
+<link rel="mask-icon" href="/paper-survey/assets/favicons/icon.svg" color="#5bbad5">
+<meta name="msapplication-TileImage" content="/paper-survey/assets/favicons/ms-icon-144x144.png">
+<link rel="manifest" href="/paper-survey/manifest.json">
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#ffffff">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#ffffff">
+<meta name=msapplication-TileColor content=#ffffff>
+<!-- iOS Safari -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+  <body>
+    <amp-sidebar id='sidebar'
+    layout="nodisplay"
+    side="right">
+  <amp-img class='amp-close-image'
+      src="/paper-survey/assets/img/close.png"
+      width="20"
+      height="20"
+      alt="close sidebar"
+      on="tap:sidebar.close"
+      role="button"
+      tabindex="0"></amp-img>
+      
+        
+      
+        
+        <a class="page-link" href="/paper-survey/about/">About</a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      <a class="page-link" href="/paper-survey/summary/">Summary</a>
+      <a class="page-link" href="/paper-survey/category/cv/">CV</a>
+      <a class="page-link" href="/paper-survey/category/nlp/">NLP</a>
+      <a class="page-link" href="/paper-survey/category/others/">Others</a>
+</amp-sidebar>
+
+<header class="site-header header-nav">
+    
+
+    <nav class="site-nav">
+      <button on='tap:sidebar.toggle' class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </button>
+      <div class="trigger">
+        
+          
+        
+          
+          <a class="page-link" href="/paper-survey/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+	<a class="page-link" href="/paper-survey/summary/">Summary</a>
+	<a class="page-link" href="/paper-survey/category/cv/">CV</a>
+	<a class="page-link" href="/paper-survey/category/nlp/">NLP</a>
+	<a class="page-link" href="/paper-survey/category/others">Others</a>
+      </div>
+    </nav>
+    <div class="wrapper">
+        <div class="author">
+          <a href="/paper-survey/">
+            <!-- <amp-img class="avatar" src="/paper-survey/assets/avatar.png" width="90" height="90" layout="responsive" alt="Paper Survey" ></amp-img> -->
+            <h1 class="name">Paper Survey</h1>
+          </a>
+          <h2 class="description">Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</h2>
+        </div>
+    </div>
+  
+</header>
+ 
+    <div class="page-content ">
+      <div class="wrapper">
+	  <ul class="post-list">
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/nlp/A-statistical-interpretation-of-term-specificity-and-its-application-in-retrieval">A statistical interpretation of term specificity and its application in retrieval</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Dec 29, 2016
+	    in 
+	    <a href="/paper-survey/category/NLP">NLP</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                1. どんなもの？  IDF(inverse document frequency)の原典。  文書の記述の網羅性と索引用語の特異性は、通常独立していると考えられている。  特異性は、用語の意味ではなく、用語の使用法に応じて統計的に解釈されるべき。  頻繁に出現する用語は、全体的な成果を上げるために必要である。  用語というのは、観測された頻度に応じて重み付けされる。2. 先行研究と比べてどこがすごいの？これらのとてもシンプルなルールに従ってテストデータを検証した結果、よりよいパフォーマン...
+            </p>
+      </li>
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/nlp/Text-Categorization-with-Support-Vector-Machines-Learning-with-Many-Relavant-Features">Text Categorization with Support Vector Machines: Learning with Many Relavant Features</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Dec 27, 2016
+	    in 
+	    <a href="/paper-survey/category/NLP">NLP</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                1. どんなもの？Support Vector Machines(SVMs)を用いてテキストのカテゴリ分類を行なった。2. 先行研究と比べてどこがすごいの？テキスト分類というタスクは「入力が高次元」、「関連性の少ない特徴量」、「スパースな文書ベクトル」、「線形分離不可能」といった性質を持つが、先行研究に比べてこういった性質により適した結果を出すことができた。3. 技術や手法の”キモ”はどこにある？  ストップワードを取り除く  information gainを基準とした文書ベクトルの作成...
+            </p>
+      </li>
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/cv/Improving-neural-networks-by-preventing-co-adaption-of-feature-detectors">Improving neural networks by preventing co-adaptation of feature detectors</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Dec 27, 2016
+	    in 
+	    <a href="/paper-survey/category/CV">CV</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                1. どんなもの？大規模なニューラルネットワークの隠れ層をランダムにドロップアウトさせることで過学習を大幅に抑える。2. 先行研究と比べてどこがすごいの？様々なベンチマークタスクに対してランダムなドロップアウトを採用することで、大きな改善をもたらし、多くの新記録を生み出した。3. 技術や手法の”キモ”はどこにある？  学習率を10からスタートさせ、学習毎に0.998を掛けて減少させている。これにより重みの初期値が小さく、なおかつ学習率も小さい場合のニューラルネットワークに比べて、重みの探索...
+            </p>
+      </li>
+    
+  </ul>
+<!-- Pagination links -->
+  <div class="pagination">
+     <a href="/paper-survey/summary/19" class="prev">← Newer Posts</a> 
+     <a href="/paper-survey/summary/21" class="next">Older Posts →</a>
+  </div>
+
+      </div>
+    </div>
+    <footer class="site-footer">
+  <div class="wrapper">
+    <span class="site-footer-owner">
+      <a href="https://github.com/shunk031/paper-survey">Paper Survey</a> is maintained by <a href="https://github.com/shunk031">shunk031</a>.
+    </span>
+    <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+  </div>
+</footer>
+<amp-analytics type="googleanalytics" id="analytics1">
+<script type="application/json">
+{
+  "vars": {
+    "account": ""
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    }
+  }
+}
+</script>
+</amp-analytics>
+<amp-install-serviceworker src="http://localhost:4000/paper-survey/sw.js" layout="nodisplay"></amp-install-serviceworker>
+
+  </body>
+</html>

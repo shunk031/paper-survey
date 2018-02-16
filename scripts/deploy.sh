@@ -52,9 +52,5 @@ fi
 git add -A .
 git commit -m "[Travis CI] Deploy to GitHub Pages: ${SHA}"
 
-chmod 600 ../deploy_paper-survey_key
-eval `ssh-agent -s`
-ssh-add ../deploy_paper-survey_key
-
 echo "git push $SSH_REPO $TARGET_BRANCH"
 git push $SSH_REPO $TARGET_BRANCH

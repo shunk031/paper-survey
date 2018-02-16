@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n" >> ~/.ssh/config
+# echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n" >> ~/.ssh/config
 
 set -e # Exit with nonzero exit code if anything fails
 

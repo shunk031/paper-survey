@@ -25,7 +25,7 @@ permalink: /
 ## Latest posts
 
 {% for post in site.posts limit: 3 %}
-- [{{ post.title }}]({{ post.url | append: site.baseurl }}){% endfor %}
+- [{{ post.title }}]({{ post.url | prepend: site.baseurl }}){% endfor %}
 
 ---
 

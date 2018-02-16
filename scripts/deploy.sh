@@ -32,16 +32,16 @@ SHA=`git rev-parse --verify HEAD`
 git clone $REPO out
 cd out
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
-cd ..
+# cd ..
 
-# Clean out existing contents
-rm -rf out/**/* || exit 0
+# # Clean out existing contents
+# rm -rf out/**/* || exit 0
 
 # Run our compile script
 doCompile
 
 # Now let's go have some fun with the cloned repo
-cd out
+# cd out
 git config user.name "Shunsuke KITADA"
 git config user.email "septemtrio.ager@gmail.com"
 

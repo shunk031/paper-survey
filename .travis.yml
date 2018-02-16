@@ -8,9 +8,9 @@ branches:
 
 
 before_script:
-  - chmod +x ./script/deploy.sh
+  - chmod +x ./scripts/deploy.sh
 
-script: "./script/deploy.sh"
+script: "./scripts/deploy.sh"
 
 exclude:
   - vendor

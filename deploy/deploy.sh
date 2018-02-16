@@ -31,7 +31,7 @@ SHA=`git rev-parse --verify HEAD`
 
 # Clone the existing gh-pages for this repo into out/
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
-git checkout -b $TARGET_BRANCH origin/$TARGET_BRANCH
+git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
 
 # Run our compile script
 doCompile
@@ -54,4 +54,4 @@ git add -A .
 git commit -m "[Travis CI] Deploy to GitHub Pages: ${SHA}"
 
 echo "git push $SSH_REPO $TARGET_BRANCH"
-git push --force $SSH_REPO master:$TARGET_BRANCH
+git push $SSH_REPO $TARGET_BRANCH

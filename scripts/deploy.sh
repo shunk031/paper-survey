@@ -52,10 +52,9 @@ fi
 git add -A .
 git commit -m "[Travis CI] Deploy to GitHub Pages: ${SHA}"
 
-openssl aes-256-cbc -K $encrypted_0c5788daacb5_key -iv $encrypted_0c5788daacb5_iv -in ../deploy_paper-survey_key.enc -out deploy_paper-survey_key -d
-chmod 600 deploy_paper-survey_key
+chmod 600 ~/.ssh/deploy_paper-survey_key
 eval `ssh-agent -s`
-ssh-add deploy_paper-survey_key
+ssh-add ~/.ssh/deploy_paper-survey_key
 
 echo "git push $SSH_REPO $TARGET_BRANCH"
 git push $SSH_REPO $TARGET_BRANCH

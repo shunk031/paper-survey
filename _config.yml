@@ -38,6 +38,7 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - vendor
   
 paginate: 3
 paginate_path: '/summary/:num'

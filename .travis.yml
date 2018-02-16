@@ -13,8 +13,6 @@ before_script:
   
 script: "./scripts/deploy.sh"
 
-exclude: [vendor]
-
 sudo: false
 
 env:

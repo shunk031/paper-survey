@@ -1,23 +1,23 @@
-# language: ruby
-# rvm:
-#   - 2.4.0
+language: ruby
+rvm:
+  - 2.4.0
   
-# install: gem install jekyll html-proofer
-# script: jekyll build && htmlproofer ./_site --disable-external
+install: gem install jekyll html-proofer
+script: jekyll build && htmlproofer ./_site --disable-external
 
-# branches:
-#   only:
-#     - master
-#     - /pages-(.*)
+branches:
+  only:
+    - master
+    - /pages-(.*)
 
-# env:
-#   global:
-#     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 
-# exclude: [vendor]
+exclude: [vendor]
   
-# sudo: false
+sudo: false
 
-# notifications:
-#   slack:
-#     secure: tvhImRwqWN9gX/RADwbUYPoCnvV8hhgxP83RNG4uaTReuvsUyNlGNISjmdIbkFo/KX7nStplb2+NAHCIcwKp6k19ODVpz/F9fUWMKjfSHt3vnOB9OZbo69sjiO9RemCgq11eG1K/oV3useMu9Cgh/gWVIIgat1VZVij8BXLhLx4J49cn+BOvnmDjcg7Tw1EBKG9XBKqar8aobFMP6/gVjtD9zDr5rx9NM/76HxgC6B2bgFSLe5kVabZcaaZapegxzGQd+p2TGvYOjx9UOR4FEZ/+dfz8uTvVCPqmtbtnpym7DHplQrAcKODg4pK5xreInIPMnfv+rxQMENDwQFLPWcig9R/YS1Dobi3v20MDDTQTkcXoq9sLz/2zpclDCY8FhG6C3xhaRCqW6h3eByV6SQq06QEf17X91dmeyMgnq0s1jpPxXVNTFwnFU+fgVckrHqYSWhyTQh10tYg0EePlF7GeJAntci83TJONFUcXuz79w7FkkjBUGo0o0vlSu+ixJIQ9Aeum9qaw2+EFP0PC+58r1bqIkPLrEJJAGOR2MBhvaDeEq8JhEdVg28NWDbqDbmQ/3CY18SH8dXii7NcVU9ivag6buuHXjMEp32+zFtC32QXBCYuxN3D4QIA/c9LsZHb4la/pgketRP0RmkuMuE96+feIRROGihJxLdbx1y8=
+notifications:
+  slack:
+    secure: tvhImRwqWN9gX/RADwbUYPoCnvV8hhgxP83RNG4uaTReuvsUyNlGNISjmdIbkFo/KX7nStplb2+NAHCIcwKp6k19ODVpz/F9fUWMKjfSHt3vnOB9OZbo69sjiO9RemCgq11eG1K/oV3useMu9Cgh/gWVIIgat1VZVij8BXLhLx4J49cn+BOvnmDjcg7Tw1EBKG9XBKqar8aobFMP6/gVjtD9zDr5rx9NM/76HxgC6B2bgFSLe5kVabZcaaZapegxzGQd+p2TGvYOjx9UOR4FEZ/+dfz8uTvVCPqmtbtnpym7DHplQrAcKODg4pK5xreInIPMnfv+rxQMENDwQFLPWcig9R/YS1Dobi3v20MDDTQTkcXoq9sLz/2zpclDCY8FhG6C3xhaRCqW6h3eByV6SQq06QEf17X91dmeyMgnq0s1jpPxXVNTFwnFU+fgVckrHqYSWhyTQh10tYg0EePlF7GeJAntci83TJONFUcXuz79w7FkkjBUGo0o0vlSu+ixJIQ9Aeum9qaw2+EFP0PC+58r1bqIkPLrEJJAGOR2MBhvaDeEq8JhEdVg28NWDbqDbmQ/3CY18SH8dXii7NcVU9ivag6buuHXjMEp32+zFtC32QXBCYuxN3D4QIA/c9LsZHb4la/pgketRP0RmkuMuE96+feIRROGihJxLdbx1y8=

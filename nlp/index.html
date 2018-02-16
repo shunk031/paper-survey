@@ -1,0 +1,20 @@
+---
+layout: default
+title: "Natural Language Processing"
+avatar: true
+permalink: /category/nlp
+---
+<h2>Natural Language Processing ({{ site.categories.NLP | size }})</h2>
+<ul class="posts">
+  {% assign sortedPosts = site.categories.NLP | sort: 'title' %}
+  {% for post in sortedPosts %}
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% if paginator.total_pages > 1 %}<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %} <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="prev">← Newer Posts</a> {% endif %}
+  {% if paginator.next_page %} <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Older Posts →</a>{% endif %}
+</div>{% endif %}

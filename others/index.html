@@ -1,0 +1,19 @@
+---
+layout: default
+title: "Others"
+avatar: true
+permalink: /category/others
+---
+<h2>Others ({{ site.categories.Others | size }})</h2>
+<ul class="posts">
+  {% for post in site.categories.Others %}
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% if paginator.total_pages > 1 %}<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %} <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="prev">← Newer Posts</a> {% endif %}
+  {% if paginator.next_page %} <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">Older Posts →</a>{% endif %}
+</div>{% endif %}

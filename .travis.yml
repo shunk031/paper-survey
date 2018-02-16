@@ -6,7 +6,6 @@ branches:
   - master
 before_script:
 - chmod +x ./scripts/deploy.sh
-- chmod +x ./scripts/compile.sh
 script: "./scripts/deploy.sh"
 sudo: false
 notifications:

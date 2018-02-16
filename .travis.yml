@@ -15,4 +15,4 @@ notifications:
 
 before_install:
 - openssl aes-256-cbc -K $encrypted_0c5788daacb5_key -iv $encrypted_0c5788daacb5_iv
-  -in deploy_paper-survey_key.enc -out ~\/.ssh/deploy_paper-survey_key -d
+  -in deploy_paper-survey_key.enc -out deploy_paper-survey_key -d

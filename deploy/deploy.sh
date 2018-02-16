@@ -40,6 +40,7 @@ rm -rf _site/**/* || exit 0
 # Run our compile script
 doCompile
 
+cd _site
 # Now let's go have some fun with the cloned repo
 git config user.name "Shunsuke KITADA"
 git config user.email "septemtrio.ager@gmail.com"

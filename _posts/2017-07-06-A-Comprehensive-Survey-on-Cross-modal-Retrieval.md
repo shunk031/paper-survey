@@ -19,9 +19,7 @@ categories: Others
 
 一般的に画像やテキスト、動画といったマルチモーダルなデータに対してそれぞれに適した方法を使って特徴量を取得し、それらの特徴量を元に共通の表現空間を学習することで、クロスモーダルな検索を可能にする。
 
-<div align="center">
-	<img width="350" src=https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Comprehensive_Survey_on_Cross-modal_Retrieval/figure3.png alt="Figure 3">
-</div>
+![Figure 3]({{ site.baseurl }}/assets/img/others/A-Comprehensive-Survey-on-Cross-modal-Retrieval/figure3.png)
 
 クロスモーダル検索に対するアプローチとして、大きく「Real-valued Representation Learning」と「Binary Representation Learning」の2つのカテゴリに分けることができる。
 
@@ -57,19 +55,19 @@ categories: Others
 * Multimodal Deep Restricted Boltzmann Machine (Multimodal DBM)
   * [Srivastava and Salakhutdinov](http://papers.nips.cc/paper/4683-multimodal-learning-with-deep-boltzmann-machines.pdf)
   * はじめに各モダリティそれぞれの低次元の表現を学習し、最終層で各モダリティの表現を結合し1つのベクトルとしている。  
-	![Figure 5](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Comprehensive_Survey_on_Cross-modal_Retrieval/figure5.png)
+	![Figure 5]({{ site.baseurl }}/assets/img/others/A-Comprehensive-Survey-on-Cross-modal-Retrieval/figure5.png)
 * Deep Canonical Correlation Analysis (DCCA)
   * [Andrew et al.](http://www.jmlr.org/proceedings/papers/v28/andrew13.pdf)
   * Deep Learning手法からインスパイアを得たもので、異なるモダリティのデータに対して複雑な非線形射影を学習する方法。
 * End-to-end DCCA
   * [Yan and Mikolajczyk](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Yan_Deep_Correlation_for_2015_CVPR_paper.pdf)
   * DCCAをEnd-to-Endの学習スキームへと発展させている。  
-	![Figure 6](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Comprehensive_Survey_on_Cross-modal_Retrieval/figure6.png)
+	![Figure 6]({{ site.baseurl }}/assets/img/others/A-Comprehensive-Survey-on-Cross-modal-Retrieval/figure6.png)
 * Correspondence AutoEncoder (Corr-AE)
   * [Feng et al.](https://people.cs.clemson.edu/~jzwang/1501863/mm2014/p7-feng.pdf)
   * 画像・テキストそれぞれに対してAutoEncoderを用意し、隠れ層での表現を相関させるように学習させる。
   * 表現学習のエラーと相関学習のエラーを最小化するようにパラメータを変更。  
-  ![Figure 7](https://raw.githubusercontent.com/shunk031/paper-survey/master/images/A_Comprehensive_Survey_on_Cross-modal_Retrieval/figure7.png)
+  ![Figure 7]({{ site.baseurl }}/assets/img/others/A-Comprehensive-Survey-on-Cross-modal-Retrieval/figure7.png)
 * Joint Video-Language Model
   * [Xu et al.](http://web.eecs.umich.edu/~jjcorso/pubs/xu_corso_AAAI2015_v2t.pdf)
   * 3つのモデルで構成されている。

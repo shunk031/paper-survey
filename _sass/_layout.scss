@@ -133,9 +133,25 @@
  */
 .site-footer {
     padding: $spacing-unit 0;
-    background: #37474F;
-    color: #90A4AE;
+    // background: #37474F;
+    // color: #90A4AE;
+    
+    .wrapper {
+	border-top: solid 1px #eff0f1;
+	padding-top: 2rem;
+	margin-top: 2rem;
+    }
 }
+
+.site-footer-owner {
+    display: block;
+    font-weight: bold;
+}
+
+.site-footer-credits {
+    color: #819198;
+}
+
 /**
  * Page content
  */

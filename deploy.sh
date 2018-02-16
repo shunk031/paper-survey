@@ -47,6 +47,8 @@ doCompile
 git config user.name "Shunsuke KITADA"
 git config user.email "septemtrio.ager@gmail.com"
 
+ls
+
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if git diff --quiet; then
     echo "No changes to the output on this push; exiting."

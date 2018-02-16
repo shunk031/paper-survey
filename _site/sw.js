@@ -1,4 +1,4 @@
-var CACHE_NAME = '20180217002716';
+var CACHE_NAME = '20180216154745';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)
@@ -6,12 +6,11 @@ self.addEventListener('install',event => {
     '/paper-survey/404.html',
     '/paper-survey/about/',
     
-    '/paper-survey/summary/',
-    '/paper-survey/category/nlp',
     '/paper-survey/category/cv',
+    '/paper-survey/category/nlp',
     '/paper-survey/category/others',
+    '/paper-survey/summary/',
     '/paper-survey/',
-    
     
     
     
@@ -37,6 +36,7 @@ self.addEventListener('install',event => {
     '/paper-survey/summary/20/',
     '/paper-survey/summary/21/',
     '/paper-survey/summary/22/',
+    
     
     
     '/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese','/paper-survey/summary/cv/Dynamic-Routing-Between-Capsules','/paper-survey/summary/cv/Unsupervised-Deep-Embedding-for-Clustering-Analysis','/paper-survey/summary/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference','/paper-survey/summary/cv/Random-Erasing-Data-Augmentation','/paper-survey/summary/nlp/Deconvolutional-Paragraph-Representation-Learning','/paper-survey/summary/cv/Visualizing-and-Understanding-Convolutional-Networks','/paper-survey/summary/nlp/Which-Encoding-is-the-Best-for-Text-Classification-in-Chinese-English-Japanese-and-Korean','/paper-survey/summary/cv/Noisy-Softmax-Improving-the-Generalization-Ability-of-DCNN-via-Postponing-the-Early-Softmax-Saturation',

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/deploy.key\n" >> ~/.ssh/config
-
 set -e # Exit with nonzero exit code if anything fails
 
 eval "$(ssh-agent -s)"
@@ -33,7 +31,7 @@ SHA=`git rev-parse --verify HEAD`
 
 # Clone the existing gh-pages for this repo into out/
 # Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
-git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+git checkout -b $TARGET_BRANCH origin/$TARGET_BRANCH
 
 # Run our compile script
 doCompile

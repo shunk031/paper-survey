@@ -54,4 +54,4 @@ git add -A .
 git commit -m "[Travis CI] Deploy to GitHub Pages: ${SHA}"
 
 echo "git push $SSH_REPO $TARGET_BRANCH"
-git push $SSH_REPO $TARGET_BRANCH
+git push --force $SSH_REPO $TARGET_BRANCH

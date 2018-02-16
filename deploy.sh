@@ -12,7 +12,9 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
-    jekyll build
+    
+    bundle exec jekyll build
+    
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify

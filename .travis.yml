@@ -1,12 +1,17 @@
 language: ruby
+
 rvm:
 - 2.4.0
+
 branches:
   only:
   - master
+
 before_script:
-- chmod +x ./scripts/deploy.sh
-script: "./scripts/deploy.sh"
+- chmod +x deploy.sh
+
+script: "./deploy.sh"
+
 sudo: false
 notifications:
   slack:

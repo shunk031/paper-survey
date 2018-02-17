@@ -58,3 +58,19 @@ categories: CV NLP Others
 - [先端技術とメディア表現1 #FTMA15](http://www.slideshare.net/Ochyai/1-ftma15) from [Yoichi Ochiai](http://www.slideshare.net/Ochyai)
 
 ![](https://github.com/shunk031/paper-survey/assets/img/FTMA15-1-page-65.png)
+
+## Build
+
+- Use rbenv and ruby-build for build this repo locally
+
+``` shell
+$ rbenv install 2.4.0
+$ mkdir ~/.rbenv/versions/paper-survey-dev
+$ ruby-build 2.4.0 ~/.rbenv/versions/paper-survey-dev
+$ cd paper-survey
+$ rbenv local paper-survey-dev
+$ gem install bundle
+$ bundle install
+$ jekyll server
+# then visit http://127.0.0.1:4000/paper-survey/ in your browser to preview the repo
+```

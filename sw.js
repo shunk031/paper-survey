@@ -1,4 +1,4 @@
-var CACHE_NAME = '20180217121554';
+var CACHE_NAME = '20180218100942';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)
@@ -39,7 +39,7 @@ self.addEventListener('install',event => {
     
     
     
-    '/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese','/paper-survey/summary/cv/Dynamic-Routing-Between-Capsules','/paper-survey/summary/cv/Unsupervised-Deep-Embedding-for-Clustering-Analysis','/paper-survey/summary/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference','/paper-survey/summary/cv/Random-Erasing-Data-Augmentation','/paper-survey/summary/nlp/Deconvolutional-Paragraph-Representation-Learning','/paper-survey/summary/cv/Visualizing-and-Understanding-Convolutional-Networks','/paper-survey/summary/nlp/Which-Encoding-is-the-Best-for-Text-Classification-in-Chinese-English-Japanese-and-Korean','/paper-survey/summary/cv/Noisy-Softmax-Improving-the-Generalization-Ability-of-DCNN-via-Postponing-the-Early-Softmax-Saturation',
+    '/paper-survey/summary/cv/SpectralNet-Spectral-Clustering-Using-Deep-Neural-Networks','/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese','/paper-survey/summary/cv/Dynamic-Routing-Between-Capsules','/paper-survey/summary/cv/Unsupervised-Deep-Embedding-for-Clustering-Analysis','/paper-survey/summary/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference','/paper-survey/summary/cv/Random-Erasing-Data-Augmentation','/paper-survey/summary/nlp/Deconvolutional-Paragraph-Representation-Learning','/paper-survey/summary/cv/Visualizing-and-Understanding-Convolutional-Networks','/paper-survey/summary/nlp/Which-Encoding-is-the-Best-for-Text-Classification-in-Chinese-English-Japanese-and-Korean',
   ]))
 );
 });

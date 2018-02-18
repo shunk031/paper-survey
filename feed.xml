@@ -1,5 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-02-17T12:15:54+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Radical-level Ideograph Encoder for RNN-based Sentiment Analysis of Chinese and Japanese</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese" rel="alternate" type="text/html" title="Radical-level Ideograph Encoder for RNN-based Sentiment Analysis of Chinese and Japanese" /><published>2017-12-04T00:00:00+00:00</published><updated>2017-12-04T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-02-18T10:09:42+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">SpectralNet: Spectral Clustering Using Deep Neural Networks</title><link href="https://shunk031.github.io/paper-survey/summary/cv/SpectralNet-Spectral-Clustering-Using-Deep-Neural-Networks" rel="alternate" type="text/html" title="SpectralNet: Spectral Clustering Using Deep Neural Networks" /><published>2018-02-18T00:00:00+00:00</published><updated>2018-02-18T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/SpectralNet-Spectral-Clustering-Using-Deep-Neural-Networks</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/SpectralNet-Spectral-Clustering-Using-Deep-Neural-Networks">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;Spectral clusteringのためのDeep learning手法を用いて大規模データセットの適用と埋め込みの一般化を可能にしたSpectralNetを提案した。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;Spectral clusteringはとても有力なクラスタリングアルゴリズムとして知られているが、
+大規模なデータセットに対して適用する場合計算量の観点で適用が難しく、
+&lt;a href=&quot;https://papers.nips.cc/paper/2461-out-of-sample-extensions-for-lle-isomap-mds-eigenmaps-and-spectral-clustering.pdf&quot;&gt;out-of-sample-extension (OOSE)&lt;/a&gt; といった問題がある。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/SpectralNet-Spectral-Clustering-Using-Deep-Neural-Networks/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;先行研究ではdeep learningを用いたクラスタリング手法が多数提案されている。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;k-meansベースのdeep learningアプローチ
+    &lt;ul&gt;
+      &lt;li&gt;DCN&lt;/li&gt;
+      &lt;li&gt;DEC&lt;/li&gt;
+      &lt;li&gt;DEPICT&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;variational autoencoderベースのアプローチ
+    &lt;ul&gt;
+      &lt;li&gt;VaDE&lt;/li&gt;
+      &lt;li&gt;GMVAE&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;data augmentationベースのアプローチ
+    &lt;ul&gt;
+      &lt;li&gt;IMSAT&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これらはk-meansや混合ガウス分布を事前分布としているため、僅かなバイアスがかかってしまっており、&lt;em&gt;Figure 1&lt;/em&gt;の下段のようにクラスタリングされてしまっている。
+対して本研究のSpectralNetのクラスタリング結果 (&lt;em&gt;Figure 1&lt;/em&gt;上段) から、これらのバイアスに対して頑健であることが分かる。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;spectral clusteringベースのアプローチ
+    &lt;ul&gt;
+      &lt;li&gt;autoencoder + graph Laplacian matrix + k-means clustering&lt;/li&gt;
+      &lt;li&gt;kernel spectral method&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これらは入力データポイントを直接spectral embeddingを学習するものであり、また入力としてgraph Laplacian全体を使うものである。
+よってOOSEを解決することができない。&lt;/p&gt;
+
+&lt;p&gt;本研究のSpectralNetではstochastic optimizationを用いた大規模データセットの学習を可能とし、
+未知のデータポイントに対するspectral embeddingを可能としている。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;目的関数最適化によるマップ関数 &lt;script type=&quot;math/tex&quot;&gt;F_{\theta}&lt;/script&gt; の教師なし学習
+    &lt;ul&gt;
+      &lt;li&gt;直交性を考慮したスペクトルクラスタリング&lt;/li&gt;
+      &lt;li&gt;大規模なデータセットのミニバッチに分けて学習を行うstochastic training&lt;/li&gt;
+      &lt;li&gt;未知のデータに対しても適用可能&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Siamese Networkを用いた距離関数の教師なし学習
+    &lt;ul&gt;
+      &lt;li&gt;Siamese Netを用いることでガウシアンカーネルやユークリッド距離よりも複雑な関係性を捉えることが可能&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;埋め込み空間におけるk-meansクラスタリングによるクラスタ割り当ての学習
+    &lt;ul&gt;
+      &lt;li&gt;学習済みautoencoderを用いて入力をcode spaceに射影したものを使うと性能が向上&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;MNISTデータセット(k=10)とReutersデータセット(k=4)に対して、&lt;em&gt;unsupervised clustering accuracy&lt;/em&gt; (ACC)と&lt;em&gt;normalized mutual information&lt;/em&gt; (NMI)を評価指標として評価を行っている。
+提案手法であるSpectralNetと先行研究であるDEC、DCN、VaDE、JULE、DEPICT、IMSATを比較している。SpectralNetでは距離関数としてユークリッド距離とSiamese距離それぞれについて評価を行っている。&lt;/p&gt;
+
+&lt;p&gt;提案手法であるSpectralNetはDEC、DCN、VaDE、DEPICT、JULEより優れたパフォーマンスを示し、IMSATと同程度の性能を発揮したことが示されている。
+また未知のデータに対しても高い精度を示している。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SpectralNetに半教師あり学習を導入
+    &lt;ul&gt;
+      &lt;li&gt;&lt;em&gt;Figure 3&lt;/em&gt; (左側) のようにクラスタリングが失敗していた場合においても、2%程度教師データを混ぜることで正しくクラスタリングされるようになった (右側)&lt;/li&gt;
+      &lt;li&gt;クロスエントロピーをSpectralNetのlossに追加することによって実現できる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/SpectralNet-Spectral-Clustering-Using-Deep-Neural-Networks/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DCNについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1610.04794&quot;&gt;Yang, Bo, et al. “Towards k-means-friendly spaces: Simultaneous deep learning and clustering.” arXiv preprint arXiv:1610.04794 (2016).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DECについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.jmlr.org/proceedings/papers/v48/xieb16.pdf&quot;&gt;Xie, Junyuan, Ross Girshick, and Ali Farhadi. “Unsupervised deep embedding for clustering analysis.” International conference on machine learning. 2016.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DEPICTについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ICCV_2017/papers/Dizaji_Deep_Clustering_via_ICCV_2017_paper.pdf&quot;&gt;Dizaji, Kamran Ghasedi, et al. “Deep clustering via joint convolutional autoencoder embedding and relative entropy minimization.” 2017 IEEE International Conference on Computer Vision (ICCV). IEEE, 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;VaDEについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.05148&quot;&gt;Zheng, Yin, et al. “Variational deep embedding: A generative approach to clustering. arXiv preprint.” arXiv preprint arXiv:1611.05148 1.2 (2016): 5.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GMVAEについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.02648&quot;&gt;Dilokthanakul, Nat, et al. “Deep unsupervised clustering with gaussian mixture variational autoencoders.” arXiv preprint arXiv:1611.02648 (2016).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;IMSATについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1702.08720&quot;&gt;Hu, Weihua, et al. “Learning Discrete Representations via Information Maximizing Self Augmented Training.” arXiv preprint arXiv:1702.08720 (2017).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1801.01587&quot;&gt;Shaham, Uri, et al. “SpectralNet: Spectral Clustering using Deep Neural Networks.” arXiv preprint arXiv:1801.01587 (2018).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Radical-level Ideograph Encoder for RNN-based Sentiment Analysis of Chinese and Japanese</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese" rel="alternate" type="text/html" title="Radical-level Ideograph Encoder for RNN-based Sentiment Analysis of Chinese and Japanese" /><published>2017-12-04T00:00:00+00:00</published><updated>2017-12-04T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;漢字を構成する部首レベル(Radical-level)の特徴から、CNNおよびBi-directional RNNを用いて少ないパラメータ数で文書分類を行うモデルを提案している。&lt;/p&gt;
 
@@ -1070,93 +1205,4 @@ VGGライクなネットワークに対してノイズを付加する各手法�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1708.03769&quot;&gt;Chen, Binghui, Weihong Deng, and Junping Du. “Noisy Softmax: Improving the Generalization Ability of DCNN via Postponing the Early Softmax Saturation.” arXiv preprint arXiv:1708.03769 (2017).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Learning Chinese Word Representations From Glyphs Of Characters</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters" rel="alternate" type="text/html" title="Learning Chinese Word Representations From Glyphs Of Characters" /><published>2017-08-27T00:00:00+00:00</published><updated>2017-08-27T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;漢字の文字画像からConvolutional AutoEncoder(convAE)を利用して文字表現を獲得し，その文字表現を用いた中国語の単語表現を獲得する手法を提案している．&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;先行研究における単語の分散表現の学習はCBOWやSkipgram，GloVeといったものがある．また中国語における単語の分散表現の学習は「漢字」の形状的特徴を活用する，Character-enhanced word embedding(CWE)やMulti-granularity Embedding(MGE)といったものが提案されている．&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;本研究ではCWEやMGEといった先行研究と同様に，漢字の形状に着目し文字の形状情報を抽出したのち，単語表現の学習に利用する2つの手法を提案している．&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;文字表現の獲得
-    &lt;ul&gt;
-      &lt;li&gt;漢字の形状的特徴を考慮した文字表現を抽出するconvAE&lt;br /&gt;
-&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure6.png&quot; alt=&quot;Figure 6&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;単語表現の獲得
-    &lt;ul&gt;
-      &lt;li&gt;Glyph-Enchanced Word Embedding(GWE)
-        &lt;ul&gt;
-          &lt;li&gt;Enhanced by Context Word Glyphs(ctxG)
-            &lt;ul&gt;
-              &lt;li&gt;文字表現を組み合わせた単語表現ctxGからターゲット単語の表現を学習する&lt;br /&gt;
-&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure7.png&quot; alt=&quot;Figure 7&quot; /&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Enhanced by Target Word Glyphs(tarG)
-            &lt;ul&gt;
-              &lt;li&gt;ターゲット単語の文字表現の平均値を用いてターゲット単語の表現を学習する&lt;br /&gt;
-&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure8.png&quot; alt=&quot;Figure 8&quot; /&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Directly Learn From Character Glyph Features
-        &lt;ul&gt;
-          &lt;li&gt;RNN-Skipgram
-            &lt;ul&gt;
-              &lt;li&gt;GRUを用いて直接文字表現を並べた単語からターゲット単語の表現を学習する&lt;br /&gt;
-&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure9.png&quot; alt=&quot;Figure 9&quot; /&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;RNN-GloVe
-            &lt;ul&gt;
-              &lt;li&gt;ターゲット単語と異なる単語を用いて共起からターゲット単語の表現を学習する&lt;br /&gt;
-&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure10.png&quot; alt=&quot;Figure 10&quot; /&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;提案手法で学習した単語表現を用いて，単語の類似度，単語の類推タスクを行っている．&lt;/p&gt;
-
-&lt;p&gt;学習した文字表現をt-SNEを用いて2次元まで落とし，可視化したものが以下のようになっている．形状の似ている漢字が集まっていることが分かる．&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters/figure12.png&quot; alt=&quot;Figure 12&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;単語の類似度を検証する際に利用したデータセットであるWordSim-240とWordSim-296，SimLex-999は英語から中国語に翻訳したものを利用しており，翻訳したデータセットは公開している．&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;p&gt;CWEについて&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.aaai.org/ocs/index.php/IJCAI/IJCAI15/paper/download/11000/10834&quot;&gt;Chen, Xinxiong, et al. “Joint Learning of Character and Word Embeddings.” IJCAI. 2015.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;MGEについて&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/D/D16/D16-1100.pdf&quot;&gt;Yin, Rongchao, et al. “Multi-Granularity Chinese Word Embedding.” EMNLP. 2016.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1708.04755&quot;&gt;Su, Tzu-Ray, et al. “Learning Chinese Word Representations From Glyphs Of Characters.”, arXiv preprint arXiv:1708.04755 (2017).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

@@ -7,7 +7,7 @@ categories: CV
 
 ## 1. どんなもの？
 
-Spectral clusteringのためのDeep learning手法を用いて大規模データセットの適用と埋め込みの一般化を可能にしたSpectralNetを提案した。
+Spectral clusteringのためのDeep learning手法を用いて大規模データセットへの適用と埋め込みの一般化を可能にしたSpectralNetを提案した。
 
 ## 2. 先行研究と比べてどこがすごいの？
 

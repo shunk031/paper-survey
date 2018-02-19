@@ -91,13 +91,13 @@ Convolutional Neural Network(CNN)は画像認識において最先端のアプ�
 ## 6. 次に読むべき論文はあるか？
 
 - Capsuleについて
-[Hinton, Geoffrey E., Alex Krizhevsky, and Sida D. Wang. "Transforming auto-encoders." International Conference on Artificial Neural Networks. Springer Berlin Heidelberg, 2011.](https://link.springer.com/chapter/10.1007/978-3-642-21735-7_6)
+  - [Hinton, Geoffrey E., Alex Krizhevsky, and Sida D. Wang. "Transforming auto-encoders." International Conference on Artificial Neural Networks. Springer Berlin Heidelberg, 2011.](https://link.springer.com/chapter/10.1007/978-3-642-21735-7_6)
 
 - MNIST/affNISTデータセットの精度比較におけるベースラインのモデルについて
-[Wan, Li, et al. "Regularization of neural networks using dropconnect." Proceedings of the 30th international conference on machine learning (ICML-13). 2013.](http://machinelearning.wustl.edu/mlpapers/paper_files/icml2013_wan13.pdf)
+  - [Wan, Li, et al. "Regularization of neural networks using dropconnect." Proceedings of the 30th international conference on machine learning (ICML-13). 2013.](http://machinelearning.wustl.edu/mlpapers/paper_files/icml2013_wan13.pdf)
 
 - MultiMNISTデータセットの精度比較におけるベースラインのモデルについて
-[Jimmy Ba, Volodymyr Mnih, and Koray Kavukcuoglu. Multiple object recognition with visual attention. arXiv preprint arXiv:1412.7755, 2014.](https://arxiv.org/abs/1412.7755)
+  - [Jimmy Ba, Volodymyr Mnih, and Koray Kavukcuoglu. Multiple object recognition with visual attention. arXiv preprint arXiv:1412.7755, 2014.](https://arxiv.org/abs/1412.7755)
 
 ### 論文情報・リンク
 

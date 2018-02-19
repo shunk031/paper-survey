@@ -149,6 +149,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
       <a class="page-link" href="/paper-survey/summary/">Summary</a>
       <a class="page-link" href="/paper-survey/category/cv/">CV</a>
       <a class="page-link" href="/paper-survey/category/nlp/">NLP</a>
@@ -172,6 +180,14 @@
         
           
           <a class="page-link" href="/paper-survey/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -267,29 +283,11 @@
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/cv/Improving-neural-networks-by-preventing-co-adaption-of-feature-detectors">Improving neural networks by preventing co-adaptation of feature detectors</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization">Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Dec 27, 2016
-	    in 
-	    <a href="/paper-survey/category/CV">CV</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？大規模なニューラルネットワークの隠れ層をランダムにドロップアウトさせることで過学習を大幅に抑える。2. 先行研究と比べてどこがすごいの？様々なベンチマークタスクに対してランダムなドロップアウトを採用することで、大きな改善をもたらし、多くの新記録を生み出した。3. 技術や手法の”キモ”はどこにある？  学習率を10からスタートさせ、学習毎に0.998を掛けて減少させている。これにより重みの初期値が小さく、なおかつ学習率も小さい場合のニューラルネットワークに比べて、重みの探索...
-            </p>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Very-Deep-Convolutional-Networks-for-Natural-Language-Processing">Very Deep Convolutional Networks for Natural Language Processing</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Dec 23, 2016
+	    Jan 22, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -297,17 +295,35 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？先行研究について、29層以上の畳み込み層を持ったネットワークをテキスト分類に適用し、検証を行った。2. 先行研究と比べてどこがすごいの？畳み込み層の数を飛躍的に増やすことで、先行研究より良い結果を出すことができている。3. 技術や手法の”キモ”はどこにある？  ResNetのようなショートカットを用いたアーキテクチャを採用している。  先行研究で用いていたシソーラスによるData Augumentationを用いていない。Data Augumentationすることでより...
+                1. どんなもの？Backpropagation for Multi-Label Learning(BP-MLL)というマルチラベルに対応できるBackpropagationアルゴリズムを提案した。複数のカテゴリラベルが付いているテキストデータに対し、分類を行った。2. 先行研究と比べてどこがすごいの？マルチラベルでも学習できるようにした確率モデルを元にしたもの、Boosting手法、Decision Treeなどがあるが、本研究では初めてニューラルネットワークについてマルチラベルに対応し...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/cv/Stacked-Convolutional-Auto-Encoders-for-Hierarchical-Feature-Extraction">Stacked Convolutional Auto-Encoders for Hierarchical Feature Extraction</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/Language-Modeling-with-Gated-Convolutional-Networks">Language Modeling with Gated Convolutional Networks</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Dec 19, 2016
+	    Jan 6, 2017
+	    in 
+	    <a href="/paper-survey/category/NLP">NLP</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                1. どんなもの？言語モデリングを行う際はLong shot term memory(LSTM)を用いることが多かったが、Convolutional Neural Network(CNN)にGateを導入したネットワークを利用することにより、state-of-the-artなLSTMの結果と同程度の精度を達成することができた。同時に遥かに高い並行処理能力を獲得している。2. 先行研究と比べてどこがすごいの？LSTMといったRecurrentなネットワーク構造では、次の出力は前の隠れ層からの...
+            </p>
+      </li>
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/cv/Inductive-Bias-of-Deep-Convolutional-Networks-through-Pooling-Geometry">Inductive Bias of Deep Convolutional Networks through Pooling Geometry</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Jan 5, 2017
 	    in 
 	    <a href="/paper-survey/category/CV">CV</a>
 	    
@@ -315,7 +331,7 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？高次元の入力(特に画像のようなデータ)に対しても有効な、階層的な特徴量を抽出できるConvolutional Auto-Encoderを導入する。2. 先行研究と比べてどこがすごいの？全結合のAuto-EncoderやDenoising Auto-Encoderは2次元の画像情報を無視してしまう。提案手法ではCNNを用いて画像情報の損失を防ぎつつ、特徴量を抽出できるようにし、これらの構造をStackしてDeep Featureを獲得する。3. 技術や手法の”キモ”はどこに...
+                1. どんなもの？  コンピュータビジョンのタスクを成功へと導くCNNのバイアスについては未だよくわかっていない。  畳み込み+プーリングによって生成される空間が、画像の特徴をよく表す理由は不明。  以上の事柄について、入力領域間の相関をモデル化するCNNを用いて考察している。2. 先行研究と比べてどこがすごいの？3. 技術や手法の”キモ”はどこにある？4. どうやって有効だと検証した？5. 議論はあるか？6. 次に読むべき論文はあるか？論文情報・リンク  N. Cohen and A. ...
             </p>
       </li>
     

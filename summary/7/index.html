@@ -149,6 +149,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
       <a class="page-link" href="/paper-survey/summary/">Summary</a>
       <a class="page-link" href="/paper-survey/category/cv/">CV</a>
       <a class="page-link" href="/paper-survey/category/nlp/">NLP</a>
@@ -172,6 +180,14 @@
         
           
           <a class="page-link" href="/paper-survey/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -267,11 +283,11 @@
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Component-Enhanced-Chinese-Character-Embeddings">Component-Enhanced Chinese Character Embeddings</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/Which-Encoding-is-the-Best-for-Text-Classification-in-Chinese-English-Japanese-and-Korean">Which Encoding is the Best for Text Classification in Chinese, English, Japanese and Korean?</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Jul 9, 2017
+	    Sep 24, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -279,35 +295,17 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？中国語における漢字の部首を元に、文字単位の埋め込み表現を学習する。2. 先行研究と比べてどこがすごいの？先行研究では単語単位で埋め込み表現を学習するContinuous Bag-of-Words(CBOW)モデルやSkip-gramモデルが有名である。英語と異なり「漢字」は表意文字であり、「1文字」が意味をなす最小の意味単位であることに注目し、漢字の文字構成から意味表現を獲得しよう考えたのが本研究である。3. 技術や手法の”キモ”はどこにある？  CBOWやSkip-gr...
+                1. どんなもの？中国語・日本語・韓国語においてテキストのエンコーディング単位(UTF-8 bytes，文字，単語，ローマ字化した単語)が文書分類でそれぞれどのような効果を出すか実証的に比較を行った．2. 先行研究と比べてどこがすごいの？英語の文では単語同士の区切りが明確であるが，中国語や日本語，韓国語(CJK)といった言語では単語と単語の境界線が不明瞭である．これは単語をベースとした様々な自然言語処理の手法を適用しようとする際に困難となる．先行研究では文字単位のエンコーディングを用いてC...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/others/A-Comprehensive-Survey-on-Cross-modal-Retrieval">A Comprehensive Survey on Cross-Modal Retrieval</a>
+          <a class="post-link" href="/paper-survey/summary/cv/Noisy-Softmax-Improving-the-Generalization-Ability-of-DCNN-via-Postponing-the-Early-Softmax-Saturation">Noisy Softmax: Improving the Generalization Ability of DCNN via Postponing the Early Softmax Saturation</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Jul 6, 2017
-	    in 
-	    <a href="/paper-survey/category/Others">Others</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？画像やテキストといった複数の要素を用いた「クロスモーダル検索」について、最新の研究にフォーカスをして調査を行っている。2. 先行研究と比べてどこがすごいの？近年の携帯端末やSNSの発展により、写真を中心とした画像やテキスト、動画といったマルチモーダルなデータが多数生成されている。こういったデータを検索する方法は、ほとんどが「テキストからテキストを検索する」「画像から画像を検索する」といった同じタイプのデータに対してのみに行われてきている。本調査では違うタイプのメディア同士...
-            </p>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/cv/Annealed-Dropout-Training-of-Deep-Networks">Annealed Dropout Training of Deep Networks</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Jul 3, 2017
+	    Sep 20, 2017
 	    in 
 	    <a href="/paper-survey/category/CV">CV</a>
 	    
@@ -315,7 +313,25 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？学習が進むに連れてネットワーク内ノードのDropout率を徐々に減少させる「Annealed Dropout」を提案．2. 先行研究と比べてどこがすごいの？Dropoutを用いた学習は，複数のニューロンが繰り返し同じ特徴を識別してしまう「co-adapting」を抑制する．またネットワークの表現能力を制限することで過学習を避けることができる．本研究ではデータ量が豊富な場合の学習において，高いDropout率(e.g. 0.5)からゼロまで徐々に減少させることで，予測精度を...
+                1. どんなもの？学習時にsoftmaxへの入力に対して効果的にノイズを加えることで活性化状態の飽和を防ぎ，モデルの汎化性能を上げるNoisy Softmaxを提案．2. 先行研究と比べてどこがすごいの？Convoluional Neural Networks(CNN)といった層の深いモデルを学習させる場合，勾配消失などが原因で出力が飽和してしまい，悪い局所解に落ちてしまう問題がある．先行研究では活性化関数のSigmoidやReLUに対してノイズを追加したり，パラメータに対してノイズを加え...
+            </p>
+      </li>
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/nlp/Learning-Chinese-Word-Representations-From-Glyphs-Of-Characters">Learning Chinese Word Representations From Glyphs Of Characters</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Aug 27, 2017
+	    in 
+	    <a href="/paper-survey/category/NLP">NLP</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                1. どんなもの？漢字の文字画像からConvolutional AutoEncoder(convAE)を利用して文字表現を獲得し，その文字表現を用いた中国語の単語表現を獲得する手法を提案している．2. 先行研究と比べてどこがすごいの？先行研究における単語の分散表現の学習はCBOWやSkipgram，GloVeといったものがある．また中国語における単語の分散表現の学習は「漢字」の形状的特徴を活用する，Character-enhanced word embedding(CWE)やMulti-g...
             </p>
       </li>
     

@@ -149,6 +149,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
       <a class="page-link" href="/paper-survey/summary/">Summary</a>
       <a class="page-link" href="/paper-survey/category/cv/">CV</a>
       <a class="page-link" href="/paper-survey/category/nlp/">NLP</a>
@@ -172,6 +180,14 @@
         
           
           <a class="page-link" href="/paper-survey/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -267,11 +283,11 @@
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Language-Modeling-with-Gated-Convolutional-Networks">Language Modeling with Gated Convolutional Networks</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/A-Convolutional-Neural-Network-for-Modelling-Sentences">A Convolutional Neural Network for Modelling Sentences</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Jan 6, 2017
+	    Mar 1, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -279,17 +295,17 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？言語モデリングを行う際はLong shot term memory(LSTM)を用いることが多かったが、Convolutional Neural Network(CNN)にGateを導入したネットワークを利用することにより、state-of-the-artなLSTMの結果と同程度の精度を達成することができた。同時に遥かに高い並行処理能力を獲得している。2. 先行研究と比べてどこがすごいの？LSTMといったRecurrentなネットワーク構造では、次の出力は前の隠れ層からの...
+                1. どんなもの？可変長である文を扱うことができるDynamic Convolutional Neural Network(DCNN)を用いて感情分析や質問応答分類などを行う。2. 先行研究と比べてどこがすごいの？画像認識で素晴らしい結果を残しているConvolutional Neural Network(CNN)は固定長である画像の入力を想定している。自然言語処理においては、入力となる文を構成している単語数は可変であり、可変長のベクトルをCNNに入力することはできない。先行研究ではこうし...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/cv/Inductive-Bias-of-Deep-Convolutional-Networks-through-Pooling-Geometry">Inductive Bias of Deep Convolutional Networks through Pooling Geometry</a>
+          <a class="post-link" href="/paper-survey/summary/cv/Wide-Residual-Networks">Wide Residual Networks</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Jan 5, 2017
+	    Feb 24, 2017
 	    in 
 	    <a href="/paper-survey/category/CV">CV</a>
 	    
@@ -297,17 +313,17 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？  コンピュータビジョンのタスクを成功へと導くCNNのバイアスについては未だよくわかっていない。  畳み込み+プーリングによって生成される空間が、画像の特徴をよく表す理由は不明。  以上の事柄について、入力領域間の相関をモデル化するCNNを用いて考察している。2. 先行研究と比べてどこがすごいの？3. 技術や手法の”キモ”はどこにある？4. どうやって有効だと検証した？5. 議論はあるか？6. 次に読むべき論文はあるか？論文情報・リンク  N. Cohen and A. ...
+                1. どんなもの？近年発展を見せるResidual Network(ResNet)アーキテクチャについて、層の深さを浅くしフィルタ数を増やしてネットワークの幅を「広くする」手法やResNet Blockのパラメータをいくつか変更して検証を行った。2. 先行研究と比べてどこがすごいの？ResNetは層を数千まで増やしても、それに合わせてパフォーマンスが向上することで知られている。これとは逆に層の深さを浅くしてフィルタ数を増やし、ネットワークの「幅」を広くすることで、層が深く幅の狭い従来のRe...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/ABCNN-Attention-Based-Convolutional-Neural-Network-or-Modeling-Sentence-Pairs">ABCNN: Attention-Based Convolutional Neural Network for Modeling Sentence Pairs</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/Text-Classification-in-Asian-Languages-without-Word-Segmentation">Text Classification in Asian Languages without Word Segmentation</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Jan 5, 2017
+	    Feb 24, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -315,7 +331,7 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？NLPの主なタスクとして、「AS(Answer Selection: 回答を選択するタスク)」、「PI(Paraphrase Identification: 言い換えを識別するタスク)」、「TE(Textual Entailment: 含意関係を識別するタスク)」といったものがある。これらは対となるセンテンスを扱うモデルであり、AttentionをベースとしたConvolutional Neural Network(CNN)を構築してこれらのタスクを解いてみたところ、各々...
+                1. どんなもの？アジアの言語に対して、分かち書きを必要としない文字ベースのn-gramとそれを用いた言語モデルを用いて文書分類を行う。2. 先行研究と比べてどこがすごいの？英語は単語と単語の間にスペースがあり、分かち書きがしやすい。しかしながら日本語や中国語といったアジアの言語は単語の切れ目が明確ではなく、分かち書きを行っても結果が正しいとは限らない。本研究では分かち書きを必要としない文字レベルのn-gramを用いたベイズベースの言語モデルを文書分類に適用することで、単語レベルのベクトル...
             </p>
       </li>
     

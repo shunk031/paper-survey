@@ -1,4 +1,4 @@
-var CACHE_NAME = '20180219031941';
+var CACHE_NAME = '20180219054626';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)
@@ -36,10 +36,14 @@ self.addEventListener('install',event => {
     '/paper-survey/summary/20/',
     '/paper-survey/summary/21/',
     '/paper-survey/summary/22/',
+    '/paper-survey/summary/23/',
+    '/paper-survey/summary/24/',
+    '/paper-survey/summary/25/',
+    '/paper-survey/summary/26/',
     
     
     
-    '/paper-survey/summary/cv/SpectralNet-Spectral-Clustering-Using-Deep-Neural-Networks','/paper-survey/summary/nlp/Radical-level-Ideograph-Encoder-for-RNN-based-Sentiment-Analysis-of-Chinese-and-Japanese','/paper-survey/summary/cv/Dynamic-Routing-Between-Capsules','/paper-survey/summary/cv/Unsupervised-Deep-Embedding-for-Clustering-Analysis','/paper-survey/summary/nlp/Character-level-Intra-Attention-Network-for-Natural-Language-Inference','/paper-survey/summary/cv/Random-Erasing-Data-Augmentation','/paper-survey/summary/nlp/Deconvolutional-Paragraph-Representation-Learning','/paper-survey/summary/cv/Visualizing-and-Understanding-Convolutional-Networks','/paper-survey/summary/nlp/Which-Encoding-is-the-Best-for-Text-Classification-in-Chinese-English-Japanese-and-Korean',
+    '/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees','/paper-survey/summary/others/Unsupervised-Learning-of-Disentangled-and-Interpretable-Representations-from-Sequential-Data','/paper-survey/summary/cv/Sparse-Embedded-k-Means-Clustering','/paper-survey/summary/cv/SVD-Softmax-Fast-Sotfmax-Approximation-on-Large-Vocabulary-Neural-Networks','/paper-survey/summary/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization','/paper-survey/summary/cv/Few-Shot-Adversarial-Domain-Adaptation','/paper-survey/summary/cv/DropoutNet-Addressing-Cold-Start-in-Recommender-System','/paper-survey/summary/nlp/Dilated-Recurrent-Neural-Networks','/paper-survey/summary/cv/Deep-Subspace-Clustering-Networks',
   ]))
 );
 });

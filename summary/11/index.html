@@ -149,6 +149,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
       <a class="page-link" href="/paper-survey/summary/">Summary</a>
       <a class="page-link" href="/paper-survey/category/cv/">CV</a>
       <a class="page-link" href="/paper-survey/category/nlp/">NLP</a>
@@ -172,6 +180,14 @@
         
           
           <a class="page-link" href="/paper-survey/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -267,55 +283,55 @@
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Dependency-based-Convolutional-Neural-Networks-for-Sentence-Embedding">Dependency-based Convolutional Neural Networks for Sentence Embedding</a>
+          <a class="post-link" href="/paper-survey/summary/cv/Annealed-Dropout-Training-of-Deep-Networks">Annealed Dropout Training of Deep Networks</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Apr 9, 2017
+	    Jul 3, 2017
 	    in 
-	    <a href="/paper-survey/category/NLP">NLP</a>
+	    <a href="/paper-survey/category/CV">CV</a>
 	    
 	  </p>
 	</span>
         <p class="description">
             
-                1. どんなもの？単語と単語の親子関係から木構造を構築し、それらの影響を考慮したDependency-based Convolutional Neural Network(DCNN)を提案している。2. 先行研究と比べてどこがすごいの？先行研究ではword2vecでベクトル化した文をシンプルなアーキテクチャのCNNに入力し、学習を行っている。このモデルでは感情分析や文書分類などのタスクにおいて優れたパフォーマンスを出している。しかしながら先行研究のモデルではn-gramのような直近の語の関...
+                1. どんなもの？学習が進むに連れてネットワーク内ノードのDropout率を徐々に減少させる「Annealed Dropout」を提案．2. 先行研究と比べてどこがすごいの？Dropoutを用いた学習は，複数のニューロンが繰り返し同じ特徴を識別してしまう「co-adapting」を抑制する．またネットワークの表現能力を制限することで過学習を避けることができる．本研究ではデータ量が豊富な場合の学習において，高いDropout率(e.g. 0.5)からゼロまで徐々に減少させることで，予測精度を...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Effective-Use-of-Word-Order-for-Text-Categorization-with-Convolutional-Neural-Networks">Effective Use of Word Order for Text Categorization with Convolutional Neural Networks</a>
+          <a class="post-link" href="/paper-survey/summary/cv/Max-Pooling-Dropout-for-Regularization-of-Convolutional-Neural-Networks">Max-Pooling Dropout for Regularization of Convolutional Neural Networks</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Apr 4, 2017
+	    Jun 26, 2017
 	    in 
-	    <a href="/paper-survey/category/NLP">NLP</a>
+	    <a href="/paper-survey/category/CV">CV</a>
 	    
 	  </p>
 	</span>
         <p class="description">
             
-                1. どんなもの？高次元のone-hotベクトルをConvolutional Neural Network(CNN)に入力し、語順を考慮した文書分類を行う。2. 先行研究と比べてどこがすごいの？従来の文書分類のアプローチとして、文書をBag-of-Wordsベクトルで表現し、SVMなどのモデルを用いて分類することが多い。しかしながらBag-of-Wordsは現れる語の順序を考慮しないベクトルとなっている。自然言語処理の評判分析といったタスクでは、語の順番を考慮しない場合は高いパフォーマンス...
+                1. どんなもの？Max-pooling層の前にDropoutする「Max-Pooling Dropout」を提案し，学習時に活性化後の特徴量を多項分布に従ってサンプリングしていることと同等であることを示した．2. 先行研究と比べてどこがすごいの？Dropoutは最近Deep Learningに導入された正則化技術であり，通常全結合層に対して適用される．先行研究ではStochastic poolingやMaxout Networkといった，Dropoutにインスパイアされた正則化技術が提案...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Natural-Language-Processing-almost-from-Scratch">Natural Language Processing (almost) from Scratch</a>
+          <a class="post-link" href="/paper-survey/summary/cv/Multi-Modal-Fashion-Product-Retrieval">Multi-Modal Fashion Product Retrieval</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Apr 3, 2017
+	    Jun 20, 2017
 	    in 
-	    <a href="/paper-survey/category/NLP">NLP</a>
+	    <a href="/paper-survey/category/CV">CV</a>
 	    
 	  </p>
 	</span>
         <p class="description">
             
-                1. どんなもの？自然言語処理の様々なタスクに対してタスク依存しないようなロバストな特徴を、ニューラルネットワーク(NN)をベースとしたアーキテクチャで学習する。2. 先行研究と比べてどこがすごいの？自然言語処理の主なタスクとして、品詞タグ付け(Part-of-Speech Tagging)・チャンキング(Chunking)・固有表現抽出(Named Entity Recognition)・意味役割付与(Semantic Role Labeling)などがある。従来これらのタスクを解くには...
+                1. どんなもの？ファッション商品の「画像情報」と「テキスト情報」を用いた、マルチモーダルな商品検索を可能にする。2. 先行研究と比べてどこがすごいの？従来の商品検索は画像のみにフォーカスされていて、なおかつ学習のためのデータセットを取得するのが難しかった。本研究では、テキストデータのようなメタデータを併用し、画像とテキストを共通の特徴空間にマッピングしている。3. 技術や手法の”キモ”はどこにある？  2つのNeural Network(NN)構造          画像用NN     ...
             </p>
       </li>
     

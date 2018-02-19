@@ -149,6 +149,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
       <a class="page-link" href="/paper-survey/summary/">Summary</a>
       <a class="page-link" href="/paper-survey/category/cv/">CV</a>
       <a class="page-link" href="/paper-survey/category/nlp/">NLP</a>
@@ -172,6 +180,14 @@
         
           
           <a class="page-link" href="/paper-survey/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -267,11 +283,11 @@
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Tweet2Vec-Character-Based-Distributed-Representations-for-Social-Media">Tweet2Vec: Character-Based Distributed Representations for Social Media</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/UNITN-Training-Deep-Convolutional-Neural-Network-for-Twitter-Sentiment-Classification">UNITN: Training Deep Convolutional Neural Network for Twitter Sentiment Classification</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Feb 5, 2017
+	    Mar 5, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -279,17 +295,17 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？Twitterのツイートからそのツイートに付与されているハッシュタグを、文字ベースのニューラルネットワーク(Bi-GRU)を用いて予測を行う。2. 先行研究と比べてどこがすごいの？Twitterを主としたソーシャルメディアのテキストデータに対して従来のNLP手法を用いた場合、良い結果が得られないことが多い。特にTwitterのような短文投稿サイトでは、短い文の中に砕けた表現やスペルミス、絵文字といった様々な表現が含まれており、単語ベース(辞書ベース)では対応できないことが...
+                1. どんなもの？Convolutional Neural Network(CNN)の重みパラメータの初期化を工夫し、Twitterデータにおける感情分析で公式ランキング1位を獲得。2. 先行研究と比べてどこがすごいの？先行研究では畳み込み層に単語ベクトルを入力する際はskip-gramをベースとするword2vecでの学習済みベクトルを入力することが多い。本研究ではDistant Supervisionと呼ばれる手法で獲得したembeddingを用いることで、Twitterコーパスの感情...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Deep-Convolutional-Neural-Networks-for-Sentiment-Analysis-of-Short-Texts">Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/Character-Based-Parsing-with-Convolutional-Neural-Network">Character-Based Parsing with Convolutional Neural Network</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Feb 4, 2017
+	    Mar 5, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -297,17 +313,17 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？映画のレビューやTwitterのデータについて、CharSCNNという新しいCNNのアーキテクチャを適用することで、感情分析を行う。2. 先行研究と比べてどこがすごいの？感情分析においては、再帰的な手法がメインとなっている。先行研究では再帰的なAutoencoderを用いた半教師あり学習やMatrix-Vectorを用いた再帰的ニューラルネットワーク、Recursive Neural Tensor Network(RNTN)などが提案されている。今回提案しているCharS...
+                1. どんなもの？Character-levelのConvolutional Neural Network(CNN)を用いて中国語の「語の切れ目」を捉え、その情報を元に構文木を構築する。2. 先行研究と比べてどこがすごいの？CNNをベースとして言語のモデリングを行っている先行研究のDynamic Convolutional Neural Networkは文単位でのタスクに対しとても素晴らしい結果を残している。しかしながら中国語や日本語と行ったアジアの言語は、英語のように語の切れ目が曖昧であ...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization">Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/CHARAGRAM-Embedding-Words-and-Sentences-via-Character-n-grams">CHARAGRAM: Embedding Words and Sentences via Character n-grams</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Jan 22, 2017
+	    Mar 3, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -315,7 +331,7 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？Backpropagation for Multi-Label Learning(BP-MLL)というマルチラベルに対応できるBackpropagationアルゴリズムを提案した。複数のカテゴリラベルが付いているテキストデータに対し、分類を行った。2. 先行研究と比べてどこがすごいの？マルチラベルでも学習できるようにした確率モデルを元にしたもの、Boosting手法、Decision Treeなどがあるが、本研究では初めてニューラルネットワークについてマルチラベルに対応し...
+                1. どんなもの？文字レベルのn-gramを用いて低次元のembeddingへと変換するCHARAGRAMという手法を提案する。2. 先行研究と比べてどこがすごいの？自然言語処理タスクにおいて、「単語」が最小の単位として扱われ、そのword embeddingを用いた研究がほとんどである。いくつかの先行研究では文字ベースの特徴を扱うRecurrent Neural Network(RNN)やConvolutional Neural Network(CNN)などがあり、とても良い結果を出して...
             </p>
       </li>
     

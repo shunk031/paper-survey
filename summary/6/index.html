@@ -149,6 +149,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
       <a class="page-link" href="/paper-survey/summary/">Summary</a>
       <a class="page-link" href="/paper-survey/category/cv/">CV</a>
       <a class="page-link" href="/paper-survey/category/nlp/">NLP</a>
@@ -172,6 +180,14 @@
         
           
           <a class="page-link" href="/paper-survey/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -267,29 +283,11 @@
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Dropout-Training-as-Adaptive-Regularization">Dropout Training as Adaptive Regularization</a>
+          <a class="post-link" href="/paper-survey/summary/cv/Random-Erasing-Data-Augmentation">Random Erasing Data Augmentation</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Aug 6, 2017
-	    in 
-	    <a href="/paper-survey/category/NLP">NLP</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？  Dropoutは学習データに対して人工的にノイズを加えることで過学習を抑える働きがある．  一般化線形モデル(GLM)の場合，Dropoutは適応的な正則化の働きをする．  この観点を利用して，Dropout機構はフィッシャー情報行列の逆行列の推定値によって特徴量をスケールした後に適応したL2正則化機構と等価であることを示している．  適応的なDropoutとAdaGradとの関係性について言及している．  Dropoutを用いて適応的な正則化を行う，半教師ありのフレ...
-            </p>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/cv/A-Discriminative-Feature-Learning-Approach-for-Deep-Face-Recognition">A Discriminative Feature Learning Approach for Deep Face Recognition</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Jul 27, 2017
+	    Oct 29, 2017
 	    in 
 	    <a href="/paper-survey/category/CV">CV</a>
 	    
@@ -297,17 +295,17 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？特徴空間上で効果的に各クラスを分離するよう学習を行う，「Center Loss」を提案．2. 先行研究と比べてどこがすごいの？Convolutional Neural Networks(CNN)を用いた一般的な画像認識ではSoftmax Lossを用いたクラスラベルの予測を行うことが多い．この方法は最後の全結合層で線形分類器のような振る舞いでDeep Featureを分類している．顔認識の場合，Deep Featureを単純に分離するのではなく，より際立って区別する必要が...
+                1. どんなもの？入力画像に対してランダムに矩形領域をノイズでマスクするRandom Erasingを提案し，モデルの識別精度を向上させる．2. 先行研究と比べてどこがすごいの？画像認識分野で素晴らしい結果を残しているConvolutional Neural Network(CNN)は多数の複雑なパラメータが存在しているため，トレーニングデータに対しては良い精度を表し，テストデータに対しては精度が悪くなってしまう「過学習」が問題になっている．こうした問題に対して先行研究では以下のようなDa...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Convolutional-Sequence-to-Sequence-Learning">Convolutional Sequence to Sequence Learning</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/Deconvolutional-Paragraph-Representation-Learning">Deconvolutional Paragraph Representation Learning</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Jul 9, 2017
+	    Oct 28, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -315,7 +313,25 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？2. 先行研究と比べてどこがすごいの？3. 技術や手法の”キモ”はどこにある？4. どうやって有効だと検証した？5. 議論はあるか？6. 次に読むべき論文はあるか？論文情報・リンク  Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, Yann N. Dauphin. “Convolutional Sequence to Sequence Learning.” arXiv preprint arXiv:17...
+                1. どんなもの？ConvolutionおよびDeconvolutionを用いて，長い文章の潜在的表現を計算効率よく学習する枠組みを提案している．2. 先行研究と比べてどこがすごいの？文章の特徴を学習するようなタスクに対しては，これまで時系列情報を扱えるRecurrent Neural Networks(RNN)ベースのencoder-decoderが提案されてきた．しかしながらRNNベースのモデルを用いた文章のデコード(再構成)では文章の長さが長くなるほど性能が落ちてしまうことが確認され...
+            </p>
+      </li>
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/cv/Visualizing-and-Understanding-Convolutional-Networks">Visualizing and Understanding Convolutional Networks</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Oct 15, 2017
+	    in 
+	    <a href="/paper-survey/category/CV">CV</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                1. どんなもの？学習済みのConvolutional Neural Networks(CNN)における中間層の機能とモデルの動作を洞察することができる可視化手法を提案．2. 先行研究と比べてどこがすごいの？CNNは画像認識の分野で素晴らしい成果を上げているが，なぜそのようなパフォーマンスが発揮されているか，またどのような過程を経て予測を行っているのかが明らかになっていない．先行研究ではCNNではないDeepなNeural Networkについて可視化を行っているものや，ネットワークのパラ...
             </p>
       </li>
     

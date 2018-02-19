@@ -149,6 +149,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
       <a class="page-link" href="/paper-survey/summary/">Summary</a>
       <a class="page-link" href="/paper-survey/category/cv/">CV</a>
       <a class="page-link" href="/paper-survey/category/nlp/">NLP</a>
@@ -172,6 +180,14 @@
         
           
           <a class="page-link" href="/paper-survey/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
           
         
           
@@ -267,11 +283,11 @@
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Very-Deep-Convolutional-Networks-for-Natural-Language-Processing">Very Deep Convolutional Networks for Natural Language Processing</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/Semi-supervised-Convolutional-Neural-Networks-for-Text-Categorization-via-Region-Embedding">Semi-supervised Convolutional Neural Networks for Text Categorization via Region Embedding</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Jan 5, 2017
+	    Feb 20, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -279,35 +295,17 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？先行研究について、29層以上の畳み込み層を持ったネットワークをテキスト分類に適用し、検証を行った。2. 先行研究と比べてどこがすごいの？畳み込み層の数を飛躍的に増やすことで、先行研究より良い結果を出すことができている。3. 技術や手法の”キモ”はどこにある？  ResNetのようなショートカットを用いたアーキテクチャを採用している。  先行研究で用いていたシソーラスによるData Augumentationを用いていない。Data Augumentationすることでより...
+                1. どんなもの？文書分類のためのConvolutional Neural Networks(CNNs)を用いた半教師あり学習フレームワークを提案する。2. 先行研究と比べてどこがすごいの？CNNsを用いた文書分類における先行研究では、word2vecなどを利用し事前に学習を行ったword embeddingを入力していた。本研究では教師なしのテキストデータからtv-embeddingという手法を用いてembeddingを学習したのち、教師あり学習時の入力の一部として利用している。実験結果...
             </p>
       </li>
     
       <li>
         <h2>
-          <a class="post-link" href="/paper-survey/summary/cv/You-Only-Look-Onece-Unified-Real-Time-Object-Detection">You Only Look Once: Unified, Real-Time Object Detection</a>
+          <a class="post-link" href="/paper-survey/summary/nlp/Convolutional-Neural-Networks-for-Text-categorization-Shallow-Word-level-vs-Deep-Character-level">Convolutional Neural Networks for Text Categorization: Shallow Word-level vs. Deep Character-level</a>
         </h2>
         <span class="post-meta">
 	  <p>
-	    Jan 4, 2017
-	    in 
-	    <a href="/paper-survey/category/CV">CV</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？入力された画像に対して、物体がどこにあるか、また認識の信頼度はどれくらいかを高速に認識する物体認識のネットワークを構築した。2. 先行研究と比べてどこがすごいの？物体認識の領域においてはR-CNNやFaster R-CNNが良い精度を出していることが知られている。YOLOはこれらのネットワークに比べてとても高速に物体認識を行うことができている。またリアルタイムでの物体認識においては高速に動作するYOLOが先行研究に比べてとてもよい結果を出した。R-CNNは解像度の高い画像...
-            </p>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Distributed-Representations-of-Words-and-Phrases-and-their-Compositionally">Distributed Representations of Words and Phrases and their Compositionally</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Jan 4, 2017
+	    Feb 20, 2017
 	    in 
 	    <a href="/paper-survey/category/NLP">NLP</a>
 	    
@@ -315,7 +313,25 @@
 	</span>
         <p class="description">
             
-                1. どんなもの？word2vecの手法において、複数の手法を提案して高速化した。2. 先行研究と比べてどこがすごいの？Mikolovの先行研究で提案されているword2vecの手法は、語彙数が多い場合に計算時間が膨大になってしまう。Hierarchical SoftmaxやNegative Sampling、Subsamplingといったものを適用し、先行研究の提案手法を高速化することに成功した。3. 技術や手法の”キモ”はどこにある？  Hierarchical Softmaxは単語を...
+                1. どんなもの？層の浅いword-levelのConvolutional Neural Networks(word-CNN)と層の深いcharacter-levelのCNN(char-CNN)の性能を比較した。2. 先行研究と比べてどこがすごいの？先行研究では層が深いCNNのアーキテクチャにcharacter-levelのベクトルを入力することで従来手法よりとても良い結果を出している。しかしながら本研究の著者が提案している、tv-embeddingを用いた層の浅いword-CNNが、先行...
+            </p>
+      </li>
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/nlp/Large-Scale-Multi-label-Text-Classification-with-Semantic-Word-Vectors">Large Scale Multi-Label Text Classification with Semantic Word Vectors</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Feb 19, 2017
+	    in 
+	    <a href="/paper-survey/category/NLP">NLP</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                1. どんなもの？Convolutional Neural Network(CNN)とGated Recurrent Unit(GRU)を導入したRecurrent Neural Networkにそれぞれword embeddingを入力し、マルチラベル分類問題で用いられるBinary Relevanceで複数ラベルが付与されている大規模な文書を分類する。2. 先行研究と比べてどこがすごいの？ニューラルネットワークにおけるマルチラベル分類では、Backpropagation for Mul...
             </p>
       </li>
     

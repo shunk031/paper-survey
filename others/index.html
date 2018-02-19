@@ -6,7 +6,8 @@ permalink: /category/others
 ---
 <h2>Others ({{ site.categories.Others | size }})</h2>
 <ul class="posts">
-  {% for post in site.categories.Others %}
+  {% assign sortedPosts = site.categories.Others | sort: 'title' %}
+  {% for post in sortedPosts %}
   <li>
     <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
   </li>

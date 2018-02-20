@@ -1,5 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-02-20T07:09:21+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Variable Importance Using Decision Tree</title><link href="https://shunk031.github.io/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees" rel="alternate" type="text/html" title="Variable Importance Using Decision Tree" /><published>2018-02-19T00:00:00+00:00</published><updated>2018-02-19T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-02-20T15:32:15+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">A New Method of Region Embedding for Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification" rel="alternate" type="text/html" title="A New Method of Region Embedding for Text Classification" /><published>2018-02-20T00:00:00+00:00</published><updated>2018-02-20T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;CNNやRNNを必要とせずに語順を考慮することができるLocal Context Unitを利用し、タスク固有の単語埋め込み表現を学習するRegion Embeddingを提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;文書分類などのタスクにおいて単語の語順を考慮した単語表現にn-gramが用いられることが多いが、
+特に &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; の値が大きいn-gramの場合、モデルが大きくなってしまったり、データスパースネス問題が起こる恐れがある。&lt;/p&gt;
+
+&lt;p&gt;近年ではn-gramを考慮した単語の分散表現を獲得するFastTextが提案されている。
+また&lt;a href=&quot;/paper-survey/summry/nlp/Semi-supervised-Convolutional-Neural-Networks-for-Text-Categorization-via-Region-Embedding&quot;&gt;Johnson &amp;amp; Zhang (2015)&lt;/a&gt;では
+CNNベースのモデルを用いて単語表現を獲得するregion embeddingという手法を提案しているが、本研究のregion embeddingとは異なり、タスク依存でない点や、教師なし学習の枠組みで学習されている点で異なっている。&lt;/p&gt;
+
+&lt;p&gt;Attentionのみを使用したニューラル機械翻訳モデルであるTransformerは、CNNやRNNを用いずに語順を考慮し、文脈の特徴を学習できていることが示されている。&lt;/p&gt;
+
+&lt;p&gt;本研究ではTransformer参考に、ある単語の周辺のコンテキストを考慮できるLocal context unitを用いて単語の埋め込み表現を獲得するRegion Embeddingを提案し、文書分類タスクで精度が上がることを示している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Region Embedding
+    &lt;ul&gt;
+      &lt;li&gt;テキスト中の小さな範囲(region)から、局所的な特徴を保持した表現を獲得したい&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Local Context Unit
+    &lt;ul&gt;
+      &lt;li&gt;ある単語の語順と周辺のコンテキストを学習するパラメータ&lt;/li&gt;
+      &lt;li&gt;通常のlook up tableを用いたword embedding &lt;script type=&quot;math/tex&quot;&gt;{\bf e}_{w_i}&lt;/script&gt; とlocal context unit &lt;script type=&quot;math/tex&quot;&gt;{\bf K}_{W_i}&lt;/script&gt;を組み合わせた埋め込み表現 &lt;script type=&quot;math/tex&quot;&gt;p^{i}_{w_i}&lt;/script&gt; を学習する&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align*}
+  p^{i}_{w_i + t} = {\bf K}_{w_i, t} \odot {\bf e}_{w_i + t}
+\end{align*}&lt;/script&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Word-Context Region Embedding
+    &lt;ul&gt;
+      &lt;li&gt;regionの中心の語が前後のコンテキストから受ける影響に焦点を当てたemnedding手法&lt;/li&gt;
+      &lt;li&gt;語の出現順によって(特に否定語や強調語など)、意味が逆転する場合を上手く学習することを期待&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Context-Word Region Embedding
+    &lt;ul&gt;
+      &lt;li&gt;Word-Context Region Embeddingとは逆に、コンテキストがregionの中心語から受ける影響に焦点を当てている&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Region Embeddingを全結合層で分類&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;8つのデータセットを用いて感情分析、新聞記事分類、QAなどのタスクに対して精度を比較している。
+ベースラインのn-gram・TFIDFなどの従来の単語表現を用いたモデル、Char-CNN、Char-CRNN、VDCNN、D-LSTM、bigram-FastTextと先行研究のRegion Embeddingを用いた分類器を比較している。
+8つのデータセットのうち6つのデータセットで最先端の結果を達成していることが示されている。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;region size / embedding sizeを変えた場合について
+    &lt;ul&gt;
+      &lt;li&gt;本研究ではregion sizeを7、embedding sizeを128に設定している&lt;/li&gt;
+      &lt;li&gt;複数サイズのregion embeddingを組み合わせることで僅かに精度が向上している&lt;/li&gt;
+      &lt;li&gt;emnedding sizeを大きくすると従来のFastTextやCNNなどは過学習が見られるが、Region Embeddingはほかと比べてロバストであることが示されている
+&lt;img src=&quot;/paper-survey/assets/img/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ある単語における周辺単語の共起について
+    &lt;ul&gt;
+      &lt;li&gt;“however”についてはhoweverの後が文書分類に重要であることを示している&lt;/li&gt;
+      &lt;li&gt;“very”についてはveryの直後の語が重要である etc&lt;/li&gt;
+      &lt;li&gt;local context unitが局所的な潜在意味を捉えていることが分かる
+&lt;img src=&quot;/paper-survey/assets/img/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;感情分析におけるlocal context unitの効果の可視化
+    &lt;ul&gt;
+      &lt;li&gt;context unitがある場合、正しく形容詞が正しく係り、positive/negativeの判定が正しく行われるようになったことが示されている
+&lt;img src=&quot;/paper-survey/assets/img/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification/table4.png&quot; alt=&quot;Table 4&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;FastTextを用いたembeddingについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1607.01759&quot;&gt;Joulin, Armand, et al. “Bag of tricks for efficient text classification.” arXiv preprint arXiv:1607.01759 (2016).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CNNを用いたembeddingについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1412.1058&quot;&gt;Johnson, Rie, and Tong Zhang. “Effective use of word order for text categorization with convolutional neural networks.” arXiv preprint arXiv:1412.1058 (2014).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Transformerについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need&quot;&gt;Vaswani, Ashish, et al. “Attention is all you need.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ベースラインのモデルについて
+    &lt;ul&gt;
+      &lt;li&gt;Char-CNNについて
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classifica&quot;&gt;Zhang, Xiang, Junbo Zhao, and Yann LeCun. “Character-level convolutional networks for text classification.” Advances in neural information processing systems. 2015.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Char-CRNNについて
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1602.00367&quot;&gt;Xiao, Yijun, and Kyunghyun Cho. “Efficient character-level document classification by combining convolution and recurrent layers.” arXiv preprint arXiv:1602.00367 (2016).&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;VDCNNについて
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1606.01781&quot;&gt;Conneau, Alexis, et al. “Very deep convolutional networks for natural language processing.” arXiv preprint arXiv:1606.01781 (2016).&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;D-LSTMについて
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.01898&quot;&gt;Yogatama, Dani, et al. “Generative and discriminative text classification with recurrent neural networks.” arXiv preprint arXiv:1703.01898 (2017).&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;予測における寄与単語の可視化について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1506.01066&quot;&gt;Li, Jiwei, et al. “Visualizing and understanding neural models in NLP.” arXiv preprint arXiv:1506.01066 (2015).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=BkSDMA36Z&quot;&gt;Chao Qiao, Bo Huang, Guocheng Niu, Daren Li, Daxiang Dong, Wei He, Dianhai Yu, Hua Wu, “A New Method of Region Embedding for Text Classification,” International Conference on Learning Representations, 2018&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Variable Importance Using Decision Tree</title><link href="https://shunk031.github.io/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees" rel="alternate" type="text/html" title="Variable Importance Using Decision Tree" /><published>2018-02-19T00:00:00+00:00</published><updated>2018-02-19T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;決定木とランダムフォレストは優れたパフォーマンスと示すだけでなく、Feature importanceといった情報が分かる、確立されたモデルである。 不純度ベースで変数の重要度を知ることができるため使われることが多いモデルであるが、これらの重要度は理論的に不明な点が多い。&lt;/p&gt;
 
@@ -197,26 +334,4 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6608-deep-subspace-clustering-network&quot;&gt;Ji, Pan, et al. “Deep subspace clustering networks.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Deanonymization in the Bitcoin P2P Network</title><link href="https://shunk031.github.io/paper-survey/summary/others/Deanonymization-in-the-Bitcoin-P2P-Network" rel="alternate" type="text/html" title="Deanonymization in the Bitcoin P2P Network" /><published>2018-02-19T00:00:00+00:00</published><updated>2018-02-19T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Deanonymization-in-the-Bitcoin-P2P-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Deanonymization-in-the-Bitcoin-P2P-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;ビットコインにおけるP2Pネットワークに対する近年の攻撃では、ネットワーク一貫性を確保するために使用されるTransaction-floodingプロトコルを悪用することによって、ユーザの匿名性を奪うことがが可能となってしまっていた。2015年にビットコインコミュニティでは、このプロトコルをDiffusionと呼ばれるプロトコルに変更することで、こうした攻撃に対応した。&lt;/p&gt;
-
-&lt;p&gt;しかしながらこのDiffusionプロトコルが実際にシステムに対して匿名性を向上させるかどうかは明確には分かっていない。本論文ではビットコインのネットワークをモデル化し、2015年前後の匿名性について分析を行っている。中心となる問題はグラフ上での流行源の推論/特定の1つとなっている。観測モデルと拡散メカニズムについてはビットコインの実装から分かるが、注目すべきはこうしたモデルは先行研究で研究されていない点である。本研究では最適な流行源推定量を特定し、分析する内容となっている。&lt;/p&gt;
-
-&lt;p&gt;分析結果として、2015年前後のビットコインネットワークプロトコルは通常のネットワーク上で脆弱な匿名性を提供していたことが判明している。実際に2015年のビットコインP2Pネットワークのスナップショットでシュミレーションを行い、本研究での主張を確認している。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6735-deanonymization-in-the-bitcoin-p2p-network&quot;&gt;Fanti, Giulia, and Pramod Viswanath. “Deanonymization in the bitcoin p2p network.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

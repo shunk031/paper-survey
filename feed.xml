@@ -1,5 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-03-26T07:26:58+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">A New Method of Region Embedding for Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification" rel="alternate" type="text/html" title="A New Method of Region Embedding for Text Classification" /><published>2018-02-20T00:00:00+00:00</published><updated>2018-02-20T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-03-26T09:37:20+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Glyph-aware Embedding of Chinese Characters</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters" rel="alternate" type="text/html" title="Glyph-aware Embedding of Chinese Characters" /><published>2018-03-26T00:00:00+00:00</published><updated>2018-03-26T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;漢字特有の文字の表意性を明示的に組み込み，文字形状を意識した文字の埋め込み手法を提案．&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;英語と比べて中国語は多数の文字が使用され，なおかつ単語と単語の境目が明確ではない．
+漢字には形状的な特徴があり，特に”へん”や”つくり”などの部分的な構造が集まり，それら自身が文字の意味・構文的役割・発音などの情報を有している．&lt;/p&gt;
+
+&lt;p&gt;本研究ではこれら漢字の文字形状に着目することで，優れた文字表現の獲得を目指す &lt;em&gt;glyph-aware embedding&lt;/em&gt; を提案している．&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Glyph-aware-Embedding-of-Chinese-Characters/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CNN embedder
+    &lt;ul&gt;
+      &lt;li&gt;文字形状を考慮した文字の埋め込みをCNNを用いて実現&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ID embedder
+    &lt;ul&gt;
+      &lt;li&gt;文脈を考慮した文字の埋め込みをLookup tableを用いて実現&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;文字形状のみ考慮した場合，「土」⇆「士」や「人」⇆「入」といった文字形状が似ている文字が近い表現となってしまう場合が考えられる．
+そこで文脈を考慮できるLookup tableによるID embeddingを併せて用いることで，この問題を解消している．&lt;/p&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;中国語の言語モデリングタスクと中国語の単語分割タスクについて提案手法の精度を検証している．&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;言語モデリングタスク
+    &lt;ul&gt;
+      &lt;li&gt;embedderで文字表現を得た後，後段のGRUで言語モデルタスクを解いている&lt;/li&gt;
+      &lt;li&gt;ベースラインとして全結合層のみからなるlinear embedderを設定&lt;/li&gt;
+      &lt;li&gt;Microsoft Research dataset (MSR) を用いて，CNN embedder・ID embedder・ID+CNN embedderそれぞれのperplexityを比較している&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;単語分割タスク
+    &lt;ul&gt;
+      &lt;li&gt;embedderで文字表現を得た後，後段のGRU/Bidirectional LSTMで単語分割タスクを解いている&lt;/li&gt;
+      &lt;li&gt;Peking University dataset (PKU) および MSRを用いて，CNN embedder・ID embedder・ID+CNN embedderそれぞれの精度を比較している&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;各タスクともCNN embedderが優れた性能を示している．&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;入力文字画像にdata augmentationを加えることで精度が向上&lt;/li&gt;
+  &lt;li&gt;CNN embedder / ID embedderのパラメータ数について
+    &lt;ul&gt;
+      &lt;li&gt;埋め込み次元 &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; ，ボキャブラリサイズ &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; の場合&lt;/li&gt;
+      &lt;li&gt;CNN embedder: &lt;script type=&quot;math/tex&quot;&gt;\mathcal{O}(N+K)&lt;/script&gt;&lt;/li&gt;
+      &lt;li&gt;ID embedder: &lt;script type=&quot;math/tex&quot;&gt;\mathcal{O}(NK)&lt;/script&gt;&lt;/li&gt;
+      &lt;li&gt;CNN embedderのほうがID embdderよりも少ないパラメータ数で良いパフォーマンスを出していることが分かる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/P15-2098&quot;&gt;Shi, Xinlei, et al. “Radical embedding: Delving deeper to chinese radicals.” Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 2: Short Papers). Vol. 2. 2015.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1704.04859&quot;&gt;Liu, Frederick, et al. “Learning character-level compositionality with visual features.” arXiv preprint arXiv:1704.04859 (2017).&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.springer.com/article/10.1007/s10590-017-9196-0&quot;&gt;Costa-Jussà, Marta R., David Aldón, and José AR Fonollosa. “Chinese–spanish neural machine translation enhanced with character and word bitmap fonts.” Machine Translation 31.1-2 (2017): 35-47.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1709.00028&quot;&gt;Dai, Falcon Z., and Zheng Cai. “Glyph-aware Embedding of Chinese Characters.” arXiv preprint arXiv:1709.00028 (2017).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">A New Method of Region Embedding for Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification" rel="alternate" type="text/html" title="A New Method of Region Embedding for Text Classification" /><published>2018-02-20T00:00:00+00:00</published><updated>2018-02-20T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;CNNやRNNを必要とせずに語順を考慮することができるLocal Context Unitを利用し、タスク固有の単語埋め込み表現を学習するRegion Embeddingを提案。&lt;/p&gt;
 
@@ -312,26 +391,4 @@ CNNベースのモデルを用いて単語表現を獲得するregion embedding�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6613-dilated-recurrent-neural-networks&quot;&gt;Chang, Shiyu, et al. “Dilated recurrent neural networks.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Deep Subspace Clustering Netoworks</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Deep-Subspace-Clustering-Networks" rel="alternate" type="text/html" title="Deep Subspace Clustering Netoworks" /><published>2018-02-19T00:00:00+00:00</published><updated>2018-02-19T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Deep-Subspace-Clustering-Networks</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Deep-Subspace-Clustering-Networks">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;本研究では教師なしサブスペースクラスタリングのためのDeep neural networkアーキテクチャを提案している。本アーキテクチャは入力データを潜在空間に非線形で写像するDeep auto-encoderをベースとしている。本研究での重要なポイントとして、従来のサブスペースクラスタリングで効果的であると証明されている「Self-expressiveness」という特性を模倣するため、EncoderとDecoderとの間に新しくSelf expressiveレイヤーを導入している点が挙げられる。&lt;/p&gt;
-
-&lt;p&gt;本研究で導入されたSelf expressiveレイヤーは、一般的なBackpropagationを通じてすべてのデータ点間の類似性をシンプルかつ効果的に学習するものとなっている。またこのレイヤーは非線形であるため、本研究のアーキテクチャは複雑な構造を持つデータ点を容易にクラスタリングできる。加えて、Subspace clutering networkのパラメータを効率的に学習させるためのPre-trainingとFine-tuningを提案している。Subspace clustering networkが先行研究の教師なしサブスペースクラスタリング手法よりも遥かに優れていることを示している。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Deep-Subspace-Clustering-Networks/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6608-deep-subspace-clustering-network&quot;&gt;Ji, Pan, et al. “Deep subspace clustering networks.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

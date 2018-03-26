@@ -218,6 +218,13 @@
 .post-content {
     margin-bottom: $spacing-unit;
 
+    img {
+	max-width: 100%;
+	vertical-align: middle;
+	display: block;
+	margin: auto;
+    }
+    
     h2 {
         // font-size: 28px;
 	font-size: 1.5em;

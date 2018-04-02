@@ -1,5 +1,116 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-03-26T12:45:37+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Glyph-aware Embedding of Chinese Characters</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters" rel="alternate" type="text/html" title="Glyph-aware Embedding of Chinese Characters" /><published>2018-03-26T00:00:00+00:00</published><updated>2018-03-26T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-04-02T09:08:17+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Learning to Compute Word Embeddings On the Fly</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly" rel="alternate" type="text/html" title="Learning to Compute Word Embeddings On the Fly" /><published>2018-04-01T00:00:00+00:00</published><updated>2018-04-01T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;OOV問題に対してWordNetの単語定義文をエンコードし未知語に対処する，On the Fly Embdddingsを提案．&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;自然言語では頻繁に出現する単語もあるが，ほとんどがZipfian分布に従うような，あまり現れない単語から形成されている．
+こうした単語の低頻度の単語はout-of-vocabulary (OOV) 問題として扱われる．&lt;/p&gt;
+
+&lt;p&gt;先行研究ではボキャブラリ外の単語を固定のランダムベクトルで代用する研究があり，効果を示している．
+またスペル情報からBi-directional LSTMを用いて，ボキャブラリ外の単語を一般化する先行研究がある．
+本研究に最も近い先行研究では，対象となる単語埋め込みに近い辞書定義埋め込みを生成するものがある．&lt;/p&gt;
+
+&lt;p&gt;本研究では特定のタスク対して辞書定義エンコーダをend-to-endで学習を行い，
+エンコードした定義文と補助ベクトルを用いてボキャブラリ外の未知語に対応するモデルを提案する．&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Learning-to-Compute-Word-Embeddings-On-The-Fly/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;On the Fly embeddings
+    &lt;ul&gt;
+      &lt;li&gt;辞書 (WordNet) 定義文をエンコードする &lt;em&gt;definition reader&lt;/em&gt;
+        &lt;ul&gt;
+          &lt;li&gt;simple mean pooling (MP)&lt;/li&gt;
+          &lt;li&gt;mean pooling (MP-L)
+            &lt;ul&gt;
+              &lt;li&gt;学習可能な行列を辞書内単語ベクトルに掛ける&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;LSTMの最終ステート&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;補助ベクトル
+        &lt;ul&gt;
+          &lt;li&gt;WordNetの定義分からなるベクトル表現&lt;/li&gt;
+          &lt;li&gt;単語の文字列情報 (&lt;code class=&quot;highlighter-rouge&quot;&gt;word&lt;/code&gt; -&amp;gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;o&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;r&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt;)&lt;/li&gt;
+          &lt;li&gt;大規模なデータセットで学習済みのGloVeベクトル&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;p&gt;提案手法に対して Question Answering，Semantic Entailment Classification，Language Modellingの3つのタスクで評価を行っている．&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Question Answering
+    &lt;ul&gt;
+      &lt;li&gt;Stanford Question Answering Dataset (SQuAD)を用いて提案手法の評価を行っている．&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Semantic Entailment Classification
+    &lt;ul&gt;
+      &lt;li&gt;Stanford Natural Language Inference (SNLI) コーパスとMulti-Genre Natural Language Inference (MultiNLI) コーパスを用いて提案手法の評価を行っている．&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Language Modelling
+    &lt;ul&gt;
+      &lt;li&gt;One Billion Words (OBW) language modellingタスクで提案手法の評価を行っている．&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Future work
+    &lt;ul&gt;
+      &lt;li&gt;複数単語からなる熟語は考慮されていない
+        &lt;ul&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;give up&lt;/code&gt; などの熟語&lt;/li&gt;
+          &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;San Francisco&lt;/code&gt; のような地名&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;辞書定義中の未知語への対応&lt;/li&gt;
+      &lt;li&gt;循環参照してしまっている単語への対応
+        &lt;ul&gt;
+          &lt;li&gt;(例 &lt;code class=&quot;highlighter-rouge&quot;&gt;hoge&lt;/code&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;fuga&lt;/code&gt;のこと，&lt;code class=&quot;highlighter-rouge&quot;&gt;fuga&lt;/code&gt;: &lt;code class=&quot;highlighter-rouge&quot;&gt;hoge&lt;/code&gt;のこと)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OOV単語に対して固定のランダムベクトルを適用
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.00993&quot;&gt;Dhingra, Bhuwan, et al. “A comparative study of word embeddings for reading comprehension.” arXiv preprint arXiv:1703.00993 (2017).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;スペルからOOV単語を一般化する試み
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1508.02096&quot;&gt;Ling, Wang, et al. “Finding function in form: Compositional character models for open vocabulary word representation.” arXiv preprint arXiv:1508.02096 (2015).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;対象となる単語埋め込みに近い辞書定義埋め込みを生成
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/Q16-1002&quot;&gt;Hill, Felix, et al. “Learning to Understand Phrases by Embedding the Dictionary.” Transactions of the Association for Computational Linguistics 4 (2016): 17-30.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1706.00286&quot;&gt;Bahdanau, Dzmitry, et al. “Learning to Compute Word Embeddings On the Fly.” arXiv preprint arXiv:1706.00286 (2017).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Glyph-aware Embedding of Chinese Characters</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters" rel="alternate" type="text/html" title="Glyph-aware Embedding of Chinese Characters" /><published>2018-03-26T00:00:00+00:00</published><updated>2018-03-26T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;漢字特有の文字の表意性を明示的に組み込み，文字形状を意識した文字の埋め込み手法を提案．&lt;/p&gt;
 
@@ -369,26 +480,4 @@ CNNベースのモデルを用いて単語表現を獲得するregion embedding�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7081-dropoutnet-addressing-cold-start-in-recommender-systems.pdf&quot;&gt;Volkovs, Maksims, Guangwei Yu, and Tomi Poutanen. “DropoutNet: Addressing Cold Start in Recommender Systems.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Dilated Recurrent Neural Networks</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Dilated-Recurrent-Neural-Networks" rel="alternate" type="text/html" title="Dilated Recurrent Neural Networks" /><published>2018-02-19T00:00:00+00:00</published><updated>2018-02-19T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Dilated-Recurrent-Neural-Networks</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Dilated-Recurrent-Neural-Networks">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;長い文章等に対してRNNを学習させることはとても難しい問題となっている。特に複雑な依存関係、勾配消失/爆発問題、並列化が難しい点が挙げられている。本研究ではシンプルで効率的なRNNのアーキテクチャであるDilatedRNNを提案している。本アーキテクチャは複数のDilated recurrent skip connectionを組み合わせており、さまざまなRNNセルとフレキシブルに組み合わせることができる。またDilatedRNNは必要なパラメータ数を減らしつつ学習効率を大幅に向上させることができ、とても長いスパンで依存性のあるデータやタスクで優れたパフォーマンスを発揮している。&lt;/p&gt;
-
-&lt;p&gt;提案モデルの利点を理論的に定量化するため、Memory capacity measureを導入している。これは長いスキップコネクションを持つRNNに対して既存の指標よりも適していることが示されており、LSTMなど他のRNNアーキテクチャのMemory capacity measureを比較することでDilatedRNNが優れていること証明している。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Dilated-Recurrent-Neural-Networks/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6613-dilated-recurrent-neural-networks&quot;&gt;Chang, Shiyu, et al. “Dilated recurrent neural networks.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

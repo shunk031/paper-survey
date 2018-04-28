@@ -8,20 +8,20 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>Aggregated Residual Transformation for Deep Neural Networks - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
-<meta property="og:title" content="Aggregated Residual Transformation for Deep Neural Networks" />
+  <title>Word Embedding Perturbation for Sentence Classification - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Word Embedding Perturbation for Sentence Classification" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. どんなもの？" />
 <meta property="og:description" content="1. どんなもの？" />
-<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks" />
-<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification" />
 <meta property="og:site_name" content="Paper Survey" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-08-13T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-04-27T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks","publisher":null,"image":null,"headline":"Aggregated Residual Transformation for Deep Neural Networks","dateModified":"2017-08-13T00:00:00+00:00","datePublished":"2017-08-13T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification","publisher":null,"image":null,"headline":"Word Embedding Perturbation for Sentence Classification","dateModified":"2018-04-27T00:00:00+00:00","datePublished":"2018-04-27T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -275,126 +275,160 @@
       <div class="wrapper">
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Aggregated Residual Transformation for Deep Neural Networks</h1>
-    <p class="post-meta"><time datetime="2017-08-13T00:00:00+00:00" itemprop="datePublished">Aug 13, 2017</time>
+    <h1 class="post-title" itemprop="name headline">Word Embedding Perturbation for Sentence Classification</h1>
+    <p class="post-meta"><time datetime="2018-04-27T00:00:00+00:00" itemprop="datePublished">Apr 27, 2018</time>
       in 
-      <a href="/paper-survey/category/CV">CV</a>
+      <a href="/paper-survey/category/NLP">NLP</a>
       <p>
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">
     <h2 id="1-どんなもの">1. どんなもの？</h2>
 
-<p>入力に対し”cardinality”を元に様々な変換処理を施し，それらを集約するブロックを重ねることでハイパーパラメータを減らしたResNeXtを提案．ILSVRCでは2位という成績を残した．</p>
+<p>入力される単語embeddingに対していくつかのノイズで摂動を与え、文書分類における精度の検証する</p>
 
 <h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
 
-<p>VGGやResNetといったネットワークは同じ形状のブロックを複数重ねることでハイパーパラメータを減らすことができている．ResNeXtではこれらのブロックで入力に対し変換処理とembeddingの集約を行うことで，同一のトポロジを維持している．</p>
+<p>自然言語処理では単語は離散的であり、連続空間では単語表現を変更できないため、一般的にdata augmentationは利用されてこなかった。</p>
 
-<p>また本研究では”cardinality”と呼ばれる変換処理のサイズを定義している．先行研究のResNet-50と同等の演算量を維持しつつcardinalityを増やすことで，画像分類の精度を向上させることができている．加えてcardinalityがネットワークの深さや幅より重要な要素であることを実験結果を元に主張している．</p>
+<p>近年ではシソーラスを用いた単語の置換や、2つの単語間の依存関係の向きを逆にすることで学習データを2倍に増やす手法が提案されている。これらは外部の知識体系が必要であったり、洗練されたNLPツールが必要である。</p>
+
+<p>またBag-of-Wordsに対してランダムにdropoutさせる手法を用いて、文書分類で性能を向上させたものがある。しかしながらノイズの与え方を比較していなかったり、単語の分散表現空間に対して適用していない問題がある。</p>
+
+<p>本研究では連続空間上の単語embeddingに対して複数種類のノイズで摂動を与え、文書分類における精度の検証を行っている。</p>
 
 <h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
 
-<p><img src="/paper-survey/assets/img/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks/table1.png" alt="Table 1" /></p>
+<p>Word embeddingレイヤーに対して <code class="highlighter-rouge">word embedding perturbation</code> を適用。</p>
 
 <ul>
-  <li>VGG/ResNetライクなブロック構成で同一トポロジの維持とハイパーパラメータの削減を行う．
+  <li>Gaussian Noise
     <ul>
-      <li>ブロックは同じトポロジを有している．<br />
-<img src="/paper-survey/assets/img/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks/figure1.png" alt="Figure 1" /></li>
-      <li>ブロック構造の2つのルール
-        <ul>
-          <li>同じサイズのマップを出力するブロックでは，幅やフィルタサイズといったハイパーパラメータを共通化する．</li>
-          <li>マップが1/2にダウンサンプリングされた場合は，ブロックの幅を2倍にする．</li>
-        </ul>
-      </li>
+      <li>入力される単語embeddingに対して、ガウスノイズ <script type="math/tex">e</script> を適用する</li>
     </ul>
   </li>
-  <li>シンプルなニューロンで行われる重みと入力の積をそれぞれ足し合わせた集約を行うが，ResNeXtブロックではこの変換と集約を一般化している．</li>
-  <li>変換処理のサイズとして”cardinality”を定義している．cardinalityはより複雑な変換処理の回数をコントロールしており，ネットワークの幅や深さよりも効果的なパラメータとなっている．<br />
-<img src="/paper-survey/assets/img/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks/figure3.png" alt="Figure 3" /></li>
-  <li><em>Fig 1(右)</em> のResNeXtブロックは <em>Fig 3(b)や(c)</em> と等価である．
+</ul>
+
+<script type="math/tex; mode=display">X_{emb} \leftarrow X_{emb} \odot e, e \sim \mathcal{N}(I, \sigma^{2}I)</script>
+
+<ul>
+  <li>Bernoulli Noise Augmentation
     <ul>
-      <li><em>Fig 3(b)</em> のResNeXtブロックはInception-ResNetブロックに似た構造をしているが，ResNeXtブロックはすべてのパスにおいて同一のトポロジを共有している．</li>
-      <li><em>Fig 3(c)</em> のようにGrouped Convolutionを用いることでResNeXtブロックを簡潔に記述することができる．</li>
+      <li>先行研究で提案されているDropoutを参考に、確率 <script type="math/tex">p</script> で単語embeddingを0にする</li>
+    </ul>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display">X_{emb} \leftarrow \frac{1}{p} X_{emb} \odot e, e \sim \mathcal{B}(n, p)</script>
+
+<ul>
+  <li>Adversarial Training
+    <ul>
+      <li>loss関数が最大になるような方向にノイズを加える</li>
+    </ul>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display">e \leftarrow e + \sigma \frac{g}{||g||}, g = \nabla_{e} L(X:\theta)</script>
+
+<p>文書の意味を考慮したrandom perturbationについて。</p>
+
+<ul>
+  <li>Word Dropout
+    <ul>
+      <li>ベルヌーイ分布に従ってランダムに単語 <script type="math/tex">X</script> をdropoutさせる</li>
+      <li>dropoutさせた単語は <code class="highlighter-rouge">UNK</code> と同じ表現にする</li>
+    </ul>
+  </li>
+</ul>
+
+<script type="math/tex; mode=display">X \leftarrow X \odot \overrightarrow{e}, \overrightarrow{e} \sim \mathcal{B}(n, p)</script>
+
+<ul>
+  <li>Semantic Dropout
+    <ul>
+      <li>単語embeddingの各次元はそれぞれセマンティックな意味を持っていると考えられる</li>
+      <li>単語間の共起を覚えさせるのではなく意味的な特徴を捉えてほしいため、単語embeddingの各次元をランダムにdropoutさせる</li>
+    </ul>
+  </li>
+  <li>Adversarial Noise
+    <ul>
+      <li>Gaussian adversarial noise
+        <ul>
+          <li>ガウス分布から <script type="math/tex">e</script> をサンプルして、adversarial trainingを適用</li>
+        </ul>
+      </li>
+      <li>Bernoulli adversarial noise
+        <ul>
+          <li>ベルヌーイ分布から <script type="math/tex">e</script> をサンプルして、adversarial trainingを適用</li>
+          <li>Adversarial dropoutを適用</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
 
 <h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
 
-<p>ImageNet-1/ImageNet-5K，CIFAR-10/CIFAR-100，COCO object detection setを利用し，ResNet-50/100をベースラインとしてResNeXt-50およびResNeXt-101の精度を比較している．各データセットでResNeXt-50・ResNeXt-100がベースラインよりよい精度を記録している．</p>
+<p>Moview review (MR)、The Stanford Sentiment Treebank (SST2)、Customer revirew (CR)、Question type (TREC)、SemEval2010 Task8 (RE)、Answer selection (TreeQA) の
+データセットを用いてノイズを用いた各data augmentationの効果を確認している。</p>
 
-<p>より層を深くしたResNet-200とResNeXt-101を比較した場合においても提案手法のResNeXt101がよいスコアを出している．</p>
-
-<p>より幅を広くしたWide ResNetと同等のモデルサイズであるResNeXt-29を比較したところ，ResNeXt-29がよいスコアを出している．</p>
+<p>モデルはmulti-channel CNN (Kim, 2014)を利用しており、300次元の学習済みword2vecを単語embeddingとして用いている。</p>
 
 <h2 id="5-議論はあるか">5. 議論はあるか？</h2>
 
 <ul>
-  <li>実装の詳細について
+  <li>連続性ノイズと離散性ノイズ
     <ul>
-      <li>ImageNet-1K/ImageNet-5K
-        <ul>
-          <li>fb.resnet.torch をベースに実装</li>
-          <li>入力画像は拡大縮小およびaspect ratio augmentationを使用し，リサイズしたのちランダムに224x224サイズにクロップした画像を使用</li>
-          <li>conv3, 4, 5のダウンサンプリングは，各ステージの最初のブロックでstride 2の3x3畳み込みで実行</li>
-          <li>バッチサイズは256で8GPU上で学習を実行(GPUあたりバッチサイズ32)</li>
-          <li>SGDを使用し，momentumは0.9</li>
-          <li>Weight decayは0.0001に設定</li>
-          <li>学習率は0.1から開始し，3度学習率*0.1する</li>
-          <li>He+2015に従ったweight initialization</li>
-          <li>error率の評価時には短辺が256になるようリサイズし，224x224を中心からクロップ</li>
-          <li>今回使用したアーキテクチャは <em>Fig 3(c)</em> のものである．Fig 3のアーキテクチャすべてで同様の結果が得られるが，簡潔でより高速な <em>Fig 3(c)</em> のアーキテクチャを使用</li>
-        </ul>
-      </li>
-      <li>CIFAR
-        <ul>
-          <li>ゼロパディングした40x40をフリップ処理したのちランダムに32x32にクロップした画像を使用</li>
-          <li>最初の層はフィルタ数64の3x3畳み込み層</li>
-          <li>3つのステージがあり，それぞれResNeXtブロックが3つ．各ステージの出力マップサイズ各32，16，8</li>
-          <li>global average poolngから全結合層へと接続</li>
-          <li>バッチサイズは128で8GPU上で学習を実行</li>
-          <li>Weight decayは0.0005</li>
-          <li>SGDを使用し，momentumは0.9</li>
-          <li>学習率は0.1から開始し，300epochのうち150epochと225epochで学習率を下げる</li>
-        </ul>
-      </li>
+      <li>連続性ノイズ (Gaussian noise, Gaussian adversarial noise) のほうが僅かに離散性ノイズ (Bernoulli noise, Adversarial dropout) より良い結果になった</li>
+      <li>離散性ノイズは効果が強すぎたと考えられる</li>
+      <li>連続性ノイズのほうがエントロピーが大きく、学習に効果があると考えられる</li>
     </ul>
   </li>
-  <li>cardinalityとbase widthについて
+  <li>学習データを少なくしたときの効果
     <ul>
-      <li>ブロック構造の2つのルールを適用するため，cardinalityとそれに伴うbase widthの関係は以下のようになる．<br />
-<img src="/paper-survey/assets/img/cv/Aggregated-Residual-Transformations-for-Deep-Neural-Networks/table2.png" alt="Table 2" />
-        <ul>
-          <li>ネットワークの層をより深くする/より広くするより，cardinalityを増やすほうが精度が良くなっている．</li>
-        </ul>
-      </li>
+      <li>データセットが少ない場合に、ベースラインよりもノイズの摂動が効果を発揮していることが分かる</li>
     </ul>
   </li>
 </ul>
+
+<p><img src="/paper-survey/assets/img/nlp/Word-Embedding-Perturbation-for-Sentence-Classification/figure1.png" alt="Figure 1" /></p>
 
 <h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
 
-<p>ResNetについて</p>
 <ul>
-  <li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html">He, Kaiming, et al. “Deep residual learning for image recognition.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.</a></li>
-</ul>
-
-<p>Wide ResNetについて</p>
-<ul>
-  <li><a href="https://arxiv.org/abs/1605.07146">Zagoruyko, Sergey, and Nikos Komodakis. “Wide residual networks.” arXiv preprint arXiv:1605.07146 (2016).</a></li>
-</ul>
-
-<p>Weight initializationについて</p>
-<ul>
-  <li><a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/html/He_Delving_Deep_into_ICCV_2015_paper.html">He, Kaiming, et al. “Delving deep into rectifiers: Surpassing human-level performance on imagenet classification.” Proceedings of the IEEE international conference on computer vision. 2015.</a></li>
+  <li>シソーラスを用いた単語の置換
+    <ul>
+      <li><a href="https://arxiv.org/abs/1502.01710">Zhang, Xiang, and Yann LeCun. “Text understanding from scratch.” arXiv preprint arXiv:1502.01710 (2015).</a></li>
+    </ul>
+  </li>
+  <li>単語間の依存関係に着目したdata augmentation
+    <ul>
+      <li><a href="https://arxiv.org/abs/1601.03651">Xu, Yan, et al. “Improved relation classification by deep recurrent neural networks with data augmentation.” arXiv preprint arXiv:1601.03651 (2016).</a></li>
+    </ul>
+  </li>
+  <li>BoWに対してdropoutを適用
+    <ul>
+      <li><a href="http://www.aclweb.org/anthology/P15-1162">Iyyer, Mohit, et al. “Deep unordered composition rivals syntactic methods for text classification.” Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). Vol. 1. 2015.</a></li>
+      <li><a href="https://link.springer.com/chapter/10.1007/978-3-319-50496-4_59">Zhang, Dongxu, Tianyi Luo, and Dong Wang. “Learning from LDA using deep neural networks.” Natural Language Understanding and Intelligent Applications. Springer, Cham, 2016. 657-664.</a></li>
+    </ul>
+  </li>
+  <li>Adversarial Dropout
+    <ul>
+      <li><a href="https://arxiv.org/abs/1707.03631">Park, Sungrae, et al. “Adversarial Dropout for Supervised and Semi-supervised Learning.” arXiv preprint arXiv:1707.03631 (2017).</a></li>
+    </ul>
+  </li>
+  <li>ベースラインの multi-channel CNN
+    <ul>
+      <li><a href="https://arxiv.org/abs/1408.5882">Kim, Yoon. “Convolutional neural networks for sentence classification.” arXiv preprint arXiv:1408.5882 (2014).</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="論文情報リンク">論文情報・リンク</h3>
 
 <ul>
-  <li><a href="https://arxiv.org/pdf/1611.05431">Xie, Saining, et al. “Aggregated residual transformations for deep neural networks.” arXiv preprint arXiv:1611.05431 (2016).</a></li>
+  <li><a href="https://arxiv.org/pdf/1804.08166">Zhang, Dongxu, and Zhichao Yang. “Word Embedding Perturbation for Sentence Classification.” arXiv preprint arXiv:1804.08166 (2018).</a></li>
 </ul>
 
   </div>
@@ -410,8 +444,8 @@
 </article>
 <!-- Post Navigation -->
 <div class="pagination">
-  <a class="prev" href="/paper-survey/summary/cv/Adaptive-Dropout-for-Training-Deep-Neural-Networks">←&nbsp; Previous post</a>
-  <a class="next" href="/paper-survey/summary/cv/Deep-Networks-with-Stochastic-Depth">Next post&nbsp;→</a>
+  <a class="prev" href="/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly">←&nbsp; Previous post</a>
+  
 </div>
 
       </div>

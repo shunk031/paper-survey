@@ -1,5 +1,151 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-04-02T09:08:17+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Learning to Compute Word Embeddings On the Fly</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly" rel="alternate" type="text/html" title="Learning to Compute Word Embeddings On the Fly" /><published>2018-04-01T00:00:00+00:00</published><updated>2018-04-01T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-04-28T06:37:21+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Word Embedding Perturbation for Sentence Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification" rel="alternate" type="text/html" title="Word Embedding Perturbation for Sentence Classification" /><published>2018-04-27T00:00:00+00:00</published><updated>2018-04-27T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;入力される単語embeddingに対していくつかのノイズで摂動を与え、文書分類における精度の検証する&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;自然言語処理では単語は離散的であり、連続空間では単語表現を変更できないため、一般的にdata augmentationは利用されてこなかった。&lt;/p&gt;
+
+&lt;p&gt;近年ではシソーラスを用いた単語の置換や、2つの単語間の依存関係の向きを逆にすることで学習データを2倍に増やす手法が提案されている。これらは外部の知識体系が必要であったり、洗練されたNLPツールが必要である。&lt;/p&gt;
+
+&lt;p&gt;またBag-of-Wordsに対してランダムにdropoutさせる手法を用いて、文書分類で性能を向上させたものがある。しかしながらノイズの与え方を比較していなかったり、単語の分散表現空間に対して適用していない問題がある。&lt;/p&gt;
+
+&lt;p&gt;本研究では連続空間上の単語embeddingに対して複数種類のノイズで摂動を与え、文書分類における精度の検証を行っている。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;Word embeddingレイヤーに対して &lt;code class=&quot;highlighter-rouge&quot;&gt;word embedding perturbation&lt;/code&gt; を適用。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Gaussian Noise
+    &lt;ul&gt;
+      &lt;li&gt;入力される単語embeddingに対して、ガウスノイズ &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; を適用する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;X_{emb} \leftarrow X_{emb} \odot e, e \sim \mathcal{N}(I, \sigma^{2}I)&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bernoulli Noise Augmentation
+    &lt;ul&gt;
+      &lt;li&gt;先行研究で提案されているDropoutを参考に、確率 &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; で単語embeddingを0にする&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;X_{emb} \leftarrow \frac{1}{p} X_{emb} \odot e, e \sim \mathcal{B}(n, p)&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Adversarial Training
+    &lt;ul&gt;
+      &lt;li&gt;loss関数が最大になるような方向にノイズを加える&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;e \leftarrow e + \sigma \frac{g}{||g||}, g = \nabla_{e} L(X:\theta)&lt;/script&gt;
+
+&lt;p&gt;文書の意味を考慮したrandom perturbationについて。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Word Dropout
+    &lt;ul&gt;
+      &lt;li&gt;ベルヌーイ分布に従ってランダムに単語 &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; をdropoutさせる&lt;/li&gt;
+      &lt;li&gt;dropoutさせた単語は &lt;code class=&quot;highlighter-rouge&quot;&gt;UNK&lt;/code&gt; と同じ表現にする&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;X \leftarrow X \odot \overrightarrow{e}, \overrightarrow{e} \sim \mathcal{B}(n, p)&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Semantic Dropout
+    &lt;ul&gt;
+      &lt;li&gt;単語embeddingの各次元はそれぞれセマンティックな意味を持っていると考えられる&lt;/li&gt;
+      &lt;li&gt;単語間の共起を覚えさせるのではなく意味的な特徴を捉えてほしいため、単語embeddingの各次元をランダムにdropoutさせる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adversarial Noise
+    &lt;ul&gt;
+      &lt;li&gt;Gaussian adversarial noise
+        &lt;ul&gt;
+          &lt;li&gt;ガウス分布から &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; をサンプルして、adversarial trainingを適用&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Bernoulli adversarial noise
+        &lt;ul&gt;
+          &lt;li&gt;ベルヌーイ分布から &lt;script type=&quot;math/tex&quot;&gt;e&lt;/script&gt; をサンプルして、adversarial trainingを適用&lt;/li&gt;
+          &lt;li&gt;Adversarial dropoutを適用&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;Moview review (MR)、The Stanford Sentiment Treebank (SST2)、Customer revirew (CR)、Question type (TREC)、SemEval2010 Task8 (RE)、Answer selection (TreeQA) の
+データセットを用いてノイズを用いた各data augmentationの効果を確認している。&lt;/p&gt;
+
+&lt;p&gt;モデルはmulti-channel CNN (Kim, 2014)を利用しており、300次元の学習済みword2vecを単語embeddingとして用いている。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;連続性ノイズと離散性ノイズ
+    &lt;ul&gt;
+      &lt;li&gt;連続性ノイズ (Gaussian noise, Gaussian adversarial noise) のほうが僅かに離散性ノイズ (Bernoulli noise, Adversarial dropout) より良い結果になった&lt;/li&gt;
+      &lt;li&gt;離散性ノイズは効果が強すぎたと考えられる&lt;/li&gt;
+      &lt;li&gt;連続性ノイズのほうがエントロピーが大きく、学習に効果があると考えられる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;学習データを少なくしたときの効果
+    &lt;ul&gt;
+      &lt;li&gt;データセットが少ない場合に、ベースラインよりもノイズの摂動が効果を発揮していることが分かる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Word-Embedding-Perturbation-for-Sentence-Classification/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;シソーラスを用いた単語の置換
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1502.01710&quot;&gt;Zhang, Xiang, and Yann LeCun. “Text understanding from scratch.” arXiv preprint arXiv:1502.01710 (2015).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;単語間の依存関係に着目したdata augmentation
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1601.03651&quot;&gt;Xu, Yan, et al. “Improved relation classification by deep recurrent neural networks with data augmentation.” arXiv preprint arXiv:1601.03651 (2016).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;BoWに対してdropoutを適用
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/P15-1162&quot;&gt;Iyyer, Mohit, et al. “Deep unordered composition rivals syntactic methods for text classification.” Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 1: Long Papers). Vol. 1. 2015.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://link.springer.com/chapter/10.1007/978-3-319-50496-4_59&quot;&gt;Zhang, Dongxu, Tianyi Luo, and Dong Wang. “Learning from LDA using deep neural networks.” Natural Language Understanding and Intelligent Applications. Springer, Cham, 2016. 657-664.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adversarial Dropout
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1707.03631&quot;&gt;Park, Sungrae, et al. “Adversarial Dropout for Supervised and Semi-supervised Learning.” arXiv preprint arXiv:1707.03631 (2017).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ベースラインの multi-channel CNN
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1408.5882&quot;&gt;Kim, Yoon. “Convolutional neural networks for sentence classification.” arXiv preprint arXiv:1408.5882 (2014).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1804.08166&quot;&gt;Zhang, Dongxu, and Zhichao Yang. “Word Embedding Perturbation for Sentence Classification.” arXiv preprint arXiv:1804.08166 (2018).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Learning to Compute Word Embeddings On the Fly</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly" rel="alternate" type="text/html" title="Learning to Compute Word Embeddings On the Fly" /><published>2018-04-01T00:00:00+00:00</published><updated>2018-04-01T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;OOV問題に対してWordNetの単語定義文をエンコードし未知語に対処する，On the Fly Embdddingsを提案．&lt;/p&gt;
 
@@ -458,26 +604,4 @@ CNNベースのモデルを用いて単語表現を獲得するregion embedding�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7244-few-shot-adversarial-domain-adaptation&quot;&gt;Motiian, Saeid, et al. “Few-Shot Adversarial Domain Adaptation.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">DropoutNet: Addressing Cold Start in Recommender Systems</title><link href="https://shunk031.github.io/paper-survey/summary/cv/DropoutNet-Addressing-Cold-Start-in-Recommender-System" rel="alternate" type="text/html" title="DropoutNet: Addressing Cold Start in Recommender Systems" /><published>2018-02-19T00:00:00+00:00</published><updated>2018-02-19T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/DropoutNet-Addressing-Cold-Start-in-Recommender-System</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/DropoutNet-Addressing-Cold-Start-in-Recommender-System">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;潜在的な意味を捉えるモデルは、精度の良さやスケーラビリティを有するため、レコメンドシステムを導入する際にデフォルトの選択肢の1つとなっている。しかしながらレコメンドといった分野の先行研究では、主にユーザーとアイテムの関係をモデル化したものが多く、データが少ない場合に起こる「コールドスタート問題」に対する解決策を提示しているモデルは少ない。Deep learningは近年様々な入力に対して優れた成功を収めている。そういったモデルを利用し、レコメンドシステムにおけるコールドスタート問題を解決するため、ニューラルネットワークベースのDropoutNetを提案している。&lt;/p&gt;
-
-&lt;p&gt;コンテンツベースの目的関数を追加した既存の手法と異なり、本研究では最適化手法に焦点を当てたのと、Dropoutを応用して明示的にコールドスタートに対してモデルのトレーニングを行う方法を示している。提案モデルは既存のモデルに対して適用することができ、コールドスタートに対して効果を発揮している。コールドスタート問題を解決しているかを評価できるCiteULikeデータセットやACM RecSys 2017 challengeデータセットを用いて、提案モデルが優れた結果を出していることを確認している。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/DropoutNet-Addressing-Cold-Start-in-Recommender-System/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7081-dropoutnet-addressing-cold-start-in-recommender-systems.pdf&quot;&gt;Volkovs, Maksims, Guangwei Yu, and Tomi Poutanen. “DropoutNet: Addressing Cold Start in Recommender Systems.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

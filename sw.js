@@ -1,4 +1,4 @@
-var CACHE_NAME = '20180428063802';
+var CACHE_NAME = '20180430032506';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)
@@ -44,7 +44,7 @@ self.addEventListener('install',event => {
     
     
     
-    '/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification','/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly','/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters','/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification','/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees','/paper-survey/summary/others/Unsupervised-Learning-of-Disentangled-and-Interpretable-Representations-from-Sequential-Data','/paper-survey/summary/cv/Sparse-Embedded-k-Means-Clustering','/paper-survey/summary/cv/SVD-Softmax-Fast-Sotfmax-Approximation-on-Large-Vocabulary-Neural-Networks','/paper-survey/summary/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization',
+    '/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms','/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification','/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly','/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters','/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification','/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees','/paper-survey/summary/others/Unsupervised-Learning-of-Disentangled-and-Interpretable-Representations-from-Sequential-Data','/paper-survey/summary/cv/Sparse-Embedded-k-Means-Clustering','/paper-survey/summary/cv/SVD-Softmax-Fast-Sotfmax-Approximation-on-Large-Vocabulary-Neural-Networks',
   ]))
 );
 });

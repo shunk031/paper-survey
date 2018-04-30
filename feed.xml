@@ -1,5 +1,173 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-04-28T06:38:02+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Word Embedding Perturbation for Sentence Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification" rel="alternate" type="text/html" title="Word Embedding Perturbation for Sentence Classification" /><published>2018-04-27T00:00:00+00:00</published><updated>2018-04-27T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-04-30T03:25:06+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Realistic Evaluation of Semi-Supervised Learning Algorithms</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms" rel="alternate" type="text/html" title="Realistic Evaluation of Semi-Supervised Learning Algorithms" /><published>2018-04-28T00:00:00+00:00</published><updated>2018-04-28T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;現在SoTAである半教師あり学習のアルゴリズムについて、平等なテスト環境で性能を比較した。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;Deep neural networkを学習させるためには大量の教師データが必要になるが、実際はデータが取りづらかったり、コストがかかる。
+そこで教師ラベルのないデータセットも有効に活用する、半教師あり学習(SSL)が提案されている。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;先行研究で成果を上げているモデルは実際の使用環境を想定したモデルになっているかが疑問点としてあげられている。
+本研究では現在デファクトスタンダートである半教師あり学習アルゴリズムに対して、それぞれ現実世界を想定した平等なテスト環境で性能を比較している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;従来の半教師あり学習の評価方法を見直し、現実世界での適用を想定した以下の評価方法を用いて先行研究のモデルを評価した。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Shared Implementation
+    &lt;ul&gt;
+      &lt;li&gt;パラメータの初期化方法やデータの前処理、augmentation、正則化等を標準化する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;High-Quality Supervised Baseline
+    &lt;ul&gt;
+      &lt;li&gt;SSLのゴールは &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}&lt;/script&gt; と &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}_{UL}&lt;/script&gt; を用いて学習させたモデルが、 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}&lt;/script&gt; のみを用いて学習したモデルより良い精度を出すことである&lt;/li&gt;
+      &lt;li&gt;そこで比較対象であるベースラインのモデルは &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}&lt;/script&gt; のみを用いて学習させるべき&lt;/li&gt;
+      &lt;li&gt;ベースラインのモデルのパラメータ探索もSSLモデルと同様の回数探索するように設定&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Comparison to Transfer Learning
+    &lt;ul&gt;
+      &lt;li&gt;学習済みモデルをfine-tuningした結果はあまり報告されないので、本研究ではベースラインとして精度を報告する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Consider Class Distribution Mismatch
+    &lt;ul&gt;
+      &lt;li&gt;ラベル付きデータとラベルなしデータの分布の違いによる影響について報告する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Varying the Amount of Labeled and Unlabeled Data
+    &lt;ul&gt;
+      &lt;li&gt;ラベルなしデータは巨大である(インターネット上から取得)場合か、医療画像のようにデータの規模が小さい場合が考えられる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Realistically Small Validation Set
+    &lt;ul&gt;
+      &lt;li&gt;先行研究ではtrainingセットの中から一部ラベルを落としたデータを用いて学習させ、validationセットでモデルのチューニングをしていた。このときラベル有りデータの数はvalidationセットのほうが遥かに多い&lt;/li&gt;
+      &lt;li&gt;現実世界ではラベルを多く含むデータセットで学習を行うため、先行研究の評価方法では実践的な評価ができていないため、本研究ではtrainingセットより小さいvalidationセットを用いてパラメータをチューニングする&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;h3 id=&quot;使用したsslアルゴリズムについて&quot;&gt;使用したSSLアルゴリズムについて&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Method&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Author&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Stochastic Perturbations&lt;/td&gt;
+      &lt;td&gt;Consistency Regularization&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6332-regularization-with-stochastic-transformations-and-perturbations-for-deep-semi-supervised-learning&quot;&gt;Sajjadi et al., 2016&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ⅱ-Model&lt;/td&gt;
+      &lt;td&gt;Consistency Regularization&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1610.02242&quot;&gt;Laine &amp;amp; Aila, 2017&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Temporal Embsembling&lt;/td&gt;
+      &lt;td&gt;Consistency Regularization&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1610.02242&quot;&gt;Laine &amp;amp; Aila, 2017&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Mean Teacher&lt;/td&gt;
+      &lt;td&gt;Consistency Regularization&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results&quot;&gt;Tarvainen &amp;amp; Valpola, 2017&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Virtual Adversarial Training&lt;/td&gt;
+      &lt;td&gt;Consistency Regularization&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1704.03976&quot;&gt;Miyato et al., 2017&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Entropy-Based&lt;/td&gt;
+      &lt;td&gt;Entropy-Based&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://papers.nips.cc/paper/2740-semi-supervised-learning-by-entropy-minimization.pdf&quot;&gt;Grandvalet &amp;amp; Bengio, 2005&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pseudo-Labeling&lt;/td&gt;
+      &lt;td&gt;Pseudo-Labeling&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.kaggle.com/blobs/download/forum-message-attachment-files/746/pseudo_label_final.pdf&quot;&gt;Lee, 2013&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;評価方法について&quot;&gt;評価方法について&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Reproduction
+    &lt;ul&gt;
+      &lt;li&gt;ベースモデルにWide ResNet (WRN-28-2) を使用&lt;/li&gt;
+      &lt;li&gt;Google Cloud Machine Learning’s hyperparameter tuning serviceを用いてGaussian Process-based black box optimizationを行った&lt;/li&gt;
+      &lt;li&gt;評価用データセットとしてSVHNとCIFAR-10を使用&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Fully-Supervised Baselines&lt;/li&gt;
+  &lt;li&gt;Transfer Learning&lt;/li&gt;
+  &lt;li&gt;Class Distribution Mismatch&lt;/li&gt;
+  &lt;li&gt;Varying Data Amounts&lt;/li&gt;
+  &lt;li&gt;Small Validation Sets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SSLの各アルゴリズムに対して分布が違うラベルなしデータを学習に使うと学習が上手く進まなかった&lt;/li&gt;
+  &lt;li&gt;ラベルありデータと同様の分布からサンプリングされるラベルなしデータをしようすべきである&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Stochastic Perturbationsについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6332-regularization-with-stochastic-transformations-and-perturbations-for-deep-semi-supervised-learning&quot;&gt;Sajjadi, Mehdi, Mehran Javanmardi, and Tolga Tasdizen. “Regularization with stochastic transformations and perturbations for deep semi-supervised learning.” Advances in Neural Information Processing Systems. 2016.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Ⅱ-Model / Temporal Ensemblingについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1610.02242&quot;&gt;Laine, Samuli, and Timo Aila. “Temporal ensembling for semi-supervised learning.” arXiv preprint arXiv:1610.02242 (2016).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mean Teacherについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results&quot;&gt;Tarvainen, Antti, and Harri Valpola. “Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results.” Advances in neural information processing systems. 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Virtual Adversarial Trainingについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1704.03976&quot;&gt;Miyato, Takeru, et al. “Virtual adversarial training: a regularization method for supervised and semi-supervised learning.” arXiv preprint arXiv:1704.03976 (2017).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Entropy-basedな手法について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/2740-semi-supervised-learning-by-entropy-minimization.pdf&quot;&gt;Grandvalet, Yves, and Yoshua Bengio. “Semi-supervised learning by entropy minimization.” Advances in neural information processing systems. 2005.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Pseudo-Labelingについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/blobs/download/forum-message-attachment-files/746/pseudo_label_final.pdf&quot;&gt;Lee, Dong-Hyun. “Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks.” Workshop on Challenges in Representation Learning, ICML. Vol. 3. 2013.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1804.09170&quot;&gt;Oliver, Avital, et al. “Realistic Evaluation of Semi-Supervised Learning Algorithms.” arXiv preprint arXiv:1804.09170 (2018).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Word Embedding Perturbation for Sentence Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification" rel="alternate" type="text/html" title="Word Embedding Perturbation for Sentence Classification" /><published>2018-04-27T00:00:00+00:00</published><updated>2018-04-27T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;入力される単語embeddingに対していくつかのノイズで摂動を与え、文書分類における精度の検証する&lt;/p&gt;
 
@@ -582,26 +750,4 @@ CNNベースのモデルを用いて単語表現を獲得するregion embedding�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7096-regularizing-deep-neural-networks-by-noise-its-interpretation-and-optimization&quot;&gt;Noh, Hyeonwoo, et al. “Regularizing Deep Neural Networks by Noise: Its Interpretation and Optimization.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Few-Shot Adversarial Domain Adaption</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Few-Shot-Adversarial-Domain-Adaptation" rel="alternate" type="text/html" title="Few-Shot Adversarial Domain Adaption" /><published>2018-02-19T00:00:00+00:00</published><updated>2018-02-19T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Few-Shot-Adversarial-Domain-Adaptation</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Few-Shot-Adversarial-Domain-Adaptation">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;本研究ではDeepモデルを用いた教師ありのドメイン適応の問題に対して対処するフレームワークを提案している。主なアイディアは埋め込み表現を学習する際にAdversarialな学習を導入し、2つの異なるドメインの特徴を保持するように埋め込みつつ、同時に埋め込み表現が意味をなすように配置させるところである。教師ありタスクの場合、一般的には大量のラベル付与済みデータが必要であるが、ラベルを付与すべきデータが少なく済むことでより扱いやすい問題となる。こういったFew-shotな学習の場合にデータ欠損があると、埋め込み空間に対して埋め込み表現の配置と分離というのは困難を極める。&lt;/p&gt;
-
-&lt;p&gt;提案モデルでは典型的な2値のAdversarial discriminatorが4つの異なるクラスを分離するためにData augmentationに工夫することで、教師ありのドメイン適応問題対して有効であることを見つけている。加えて本手法ではラベル付与済みデータがとても少ない場合、特にカテゴリあたり1サンプルであったとしても高速に適応できていることが示されている。MNISTやSVHNデータセット等を用いて本手法のドメイン適応の効果を確認している。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Few-Shot-Adversarial-Domain-Adaptation/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7244-few-shot-adversarial-domain-adaptation&quot;&gt;Motiian, Saeid, et al. “Few-Shot Adversarial Domain Adaptation.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

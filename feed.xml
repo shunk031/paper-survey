@@ -1,5 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-04-30T03:25:06+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Realistic Evaluation of Semi-Supervised Learning Algorithms</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms" rel="alternate" type="text/html" title="Realistic Evaluation of Semi-Supervised Learning Algorithms" /><published>2018-04-28T00:00:00+00:00</published><updated>2018-04-28T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-04-30T13:29:57+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Utilizing Visual Forms of Japanese Characters for Neural Review Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification" rel="alternate" type="text/html" title="Utilizing Visual Forms of Japanese Characters for Neural Review Classification" /><published>2018-04-30T00:00:00+00:00</published><updated>2018-04-30T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;文字の見た目を考慮した文字embeddingを用いて日本語の評判分析を行う&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;日本語や中国語の文字は表意文字であり、文字自身が意味を持っている。通常の自然言語処理の手法では、文字の見た目の情報は無視し、文字IDの羅列として扱う。
+本研究では表意文字や記号の形状を考慮した日本語の評判分析を行うモデルを提案している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Character-based Hierarchal Attention Networks (HAN) をベースとしたモデル
+    &lt;ul&gt;
+      &lt;li&gt;HANと比べて文字embeddingのパラメータ数が大幅に減少している&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;文字を文字画像に変換し、そこからConvolutional Neural Networks (CNN) を通して文字の形状情報を捉えた文字embeddingを取り出す&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;6段階の評価と7カテゴリが付与されている&lt;a href=&quot;https://www.nii.ac.jp/dsc/idr/en/rakuten/rakuten.html&quot;&gt;Raluten Travel review&lt;/a&gt;を用いて提案手法の性能を評価している。
+ベースラインとして先行研究のHANを利用し、前処理として&lt;a href=&quot;https://github.com/ikegami-yukino/neologdn&quot;&gt;neologdn&lt;/a&gt;を用いてNFKCのユニコード標準化を行っている。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Visual attentionを適用して評判分析の際に文字のどの部分に着目しているのか可視化したい&lt;/li&gt;
+  &lt;li&gt;従来の部首の辞書を用いた特徴を利用すれば未知の文字に対しても有効に特徴を取得できるのではないだろうか&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HANについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/N16-1174&quot;&gt;Yang, Zichao, et al. “Hierarchical attention networks for document classification.” Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2016.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/I17-2064&quot;&gt;Toyama, Yota, Makoto Miwa, and Yutaka Sasaki. “Utilizing Visual Forms of Japanese Characters for Neural Review Classification.” Proceedings of the Eighth International Joint Conference on Natural Language Processing (Volume 2: Short Papers). Vol. 2. 2017.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Realistic Evaluation of Semi-Supervised Learning Algorithms</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms" rel="alternate" type="text/html" title="Realistic Evaluation of Semi-Supervised Learning Algorithms" /><published>2018-04-28T00:00:00+00:00</published><updated>2018-04-28T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;現在SoTAである半教師あり学習のアルゴリズムについて、平等なテスト環境で性能を比較した。&lt;/p&gt;
 
@@ -728,26 +776,4 @@ CNNベースのモデルを用いて単語表現を獲得するregion embedding�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7130-svd-softmax-fast-softmax-approximation-on-large-vocabulary-neural-networks&quot;&gt;Shim, Kyuhong, et al. “SVD-Softmax: Fast Softmax Approximation on Large Vocabulary Neural Networks.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Regularizing Deep Neural Networks by Noise: Its Interpretation and Optimization</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization" rel="alternate" type="text/html" title="Regularizing Deep Neural Networks by Noise: Its Interpretation and Optimization" /><published>2018-02-19T00:00:00+00:00</published><updated>2018-02-19T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;過学習はDeep neural networkの学習における課題の1つであり、汎化性能を向上させるためにさまざまな正則化手法が提案されてきた。中でも学習中にHidden unitに対してノイズを乗せるDropoutは有名な正則化手法として知られているが、こうした正則化手法がなぜ効果があるのかは不明である。&lt;/p&gt;
-
-&lt;p&gt;本研究では従来のノイズ付加による正則化手法が真の目的関数の下限に対して最適化すること、Stochastic gradient descentにおいて、より制約の強い下限にフィットするよう複数のノイズを導入する手法を提案している。CIFAR10等のデータセットを用いて提案手法の効果を確かめている。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7096-regularizing-deep-neural-networks-by-noise-its-interpretation-and-optimization&quot;&gt;Noh, Hyeonwoo, et al. “Regularizing Deep Neural Networks by Noise: Its Interpretation and Optimization.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

@@ -37,6 +37,7 @@ include:
 exclude:
   - CNAME
   - README.md
+  - format.md
   - Gemfile
   - Gemfile.lock
   - vendor

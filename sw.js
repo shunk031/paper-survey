@@ -1,4 +1,4 @@
-var CACHE_NAME = '20180506150949';
+var CACHE_NAME = '20180507055920';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)
@@ -41,10 +41,11 @@ self.addEventListener('install',event => {
     '/paper-survey/summary/25/',
     '/paper-survey/summary/26/',
     '/paper-survey/summary/27/',
+    '/paper-survey/summary/28/',
     
     
     
-    '/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification','/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms','/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification','/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly','/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters','/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification','/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees','/paper-survey/summary/others/Unsupervised-Learning-of-Disentangled-and-Interpretable-Representations-from-Sequential-Data','/paper-survey/summary/cv/Sparse-Embedded-k-Means-Clustering',
+    '/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification','/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification','/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms','/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification','/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly','/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters','/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification','/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees','/paper-survey/summary/others/Unsupervised-Learning-of-Disentangled-and-Interpretable-Representations-from-Sequential-Data',
   ]))
 );
 });

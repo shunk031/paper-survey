@@ -7,21 +7,20 @@
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>ImageNet Classification with Deep Convolutional Neural Networks - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
-<meta property="og:title" content="ImageNet Classification with Deep Convolutional Neural Networks" />
+    
+  <title>Summary - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Summary" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="1. どんなもの？" />
-<meta property="og:description" content="1. どんなもの？" />
-<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks" />
-<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks" />
+<meta name="description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
+<meta property="og:description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/28/" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/28/" />
 <meta property="og:site_name" content="Paper Survey" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-04-09T00:00:00+00:00" />
+<link rel="prev" href="https://shunk031.github.io/paper-survey/summary/27">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks","publisher":null,"image":null,"headline":"ImageNet Classification with Deep Convolutional Neural Networks","dateModified":"2017-04-09T00:00:00+00:00","datePublished":"2017-04-09T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese","author":null,"@type":"WebPage","url":"https://shunk031.github.io/paper-survey/summary/28/","publisher":null,"image":null,"headline":"Summary","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -63,7 +62,7 @@
 </head>
 
   <body>
-     <amp-sidebar id='sidebar'
+    <amp-sidebar id='sidebar'
     layout="nodisplay"
     side="right">
   <amp-img class='amp-close-image'
@@ -167,8 +166,8 @@
       <a class="page-link" href="/paper-survey/category/others/">Others</a>
 </amp-sidebar>
 
-<header class="site-header">
-    <div class="wrapper"><a class="site-title" href="/paper-survey/">Paper Survey</a>
+<header class="site-header header-nav">
+    
 
     <nav class="site-nav">
       <button on='tap:sidebar.toggle' class="menu-icon">
@@ -272,105 +271,51 @@
 	<a class="page-link" href="/paper-survey/category/others">Others</a>
       </div>
     </nav>
-  </div>
+    <div class="wrapper">
+        <div class="author">
+          <a href="/paper-survey/">
+            <!-- <amp-img class="avatar" src="/paper-survey/assets/avatar.png" width="90" height="90" layout="responsive" alt="Paper Survey" ></amp-img> -->
+            <h1 class="name">Paper Survey</h1>
+          </a>
+          <h2 class="description">Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</h2>
+        </div>
+    </div>
+  
 </header>
  
     <div class="page-content ">
       <div class="wrapper">
-	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">ImageNet Classification with Deep Convolutional Neural Networks</h1>
-    <p class="post-meta"><time datetime="2017-04-09T00:00:00+00:00" itemprop="datePublished">Apr 9, 2017</time>
-      in 
-      <a href="/paper-survey/category/CV">CV</a>
-      <p>
-    </p>
-  </header>
-  <div class="post-content" itemprop="articleBody">
-    <h2 id="1-どんなもの">1. どんなもの？</h2>
-
-<p>ImageNetデータセットについてDeepなConvolutional Neural Network(CNN)をトレーニングし、今までに報告されていた最高精度を達成した。</p>
-
-<h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
-
-<p>ImageNetデータセットでは22000カテゴリ、全1500万枚の高画質の画像が収録されている。このような大規模なデータセットに対して従来の機械学習手法を適用するのは困難だと考えられている。特に従来の機械学習手法はデータに対して最適な特徴量を選択する必要があるが、大規模で複雑なデータから普遍的な特徴量を選択するのは難しい。</p>
-
-<p>本研究ではCNNを用いて自動的に最適な特徴量を抽出することができる。またCNNのアーキテクチャをより深いネットワークとすることでモデルの表現能力を上げ、様々なデータに対して適応させていくことができている。</p>
-
-<p>GPUの発展により効率的にモデルの学習を行うことができる。特に2次元の畳み込み操作がGPUで最適化されているため、とても大きなデータセットに対しても少ない計算時間で結果を出すことができる。</p>
-
-<h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
-
-<p><img src="/paper-survey/assets/img/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/figure2.png" alt="Figure 2" /></p>
-
-<ul>
-  <li>畳み込み層5層、全結合層3層の計8層のCNN</li>
-  <li>活性化関数にReLUを使用することで、学習の収束を早めることができた</li>
-  <li>モデルを複数GPUでトレーニングを行う</li>
-  <li>Local Response Normalization(局所的応答正規化)</li>
-  <li>Max Pooling</li>
-  <li>過学習を防ぐテクニック
-    <ul>
-      <li>Data Augmentation
-        <ul>
-          <li>256x256の画像からランダムに224x224サイズにクロップ</li>
-          <li>水平方向にフリップした画像を生成</li>
-          <li>PCAを用いたColor Augmentation</li>
-        </ul>
+	  <ul class="post-list">
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/jekyll/update/test/welcome-to-jekyll">Welcome to Jekyll!</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Sep 2, 2016
+	    in 
+	    <a href="/paper-survey/category/jekyll">jekyll</a>, 
+	    
+	    <a href="/paper-survey/category/update">update</a>, 
+	    
+	    <a href="/paper-survey/category/test">test</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-r...
+            </p>
       </li>
-      <li>Dropout<br />
-いくつかの隠れ層を確率的にドロップさせることで、特定のニューロンに依存せず汎化性能が上がる</li>
-    </ul>
-  </li>
-  <li>バッチサイズ128でSGDを使用</li>
-  <li>Momentumは0.9</li>
-  <li>Weight Decayは0.0005</li>
-  <li>各層のパラメータの初期化方法
-    <ul>
-      <li>各層の重みは平均0標準偏差0.01のガウス分布に従って初期化</li>
-      <li>2・4・5層目畳み込み層と全結合層のバイアスは1で初期化</li>
-      <li>その他の層のバイアスは0で初期化</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
-
-<p>ImageNet Large-Scale Visual Recognition Challenge(ILSVRC)という1000カテゴリの画像が含まれているデータセットを使用してtop-1 error rateとtop-5 error rateの2つのエラー率を報告している。top-5 error rateはモデルによって算出された最も可能性が高いと考えられる5つのラベルのうち、正しいラベルが含まれていない割合である。</p>
-
-<p>ベストな結果であった従来のSparse codingやSIFT特徴量を用いたFisher Vectorを提案手法が遥かに凌駕するパフォーマンスを出していることがわかる。</p>
-
-<h2 id="5-議論はあるか">5. 議論はあるか？</h2>
-
-<ul>
-  <li>教師なしのプレトレーニングは行っていないが、十分な計算資源があれば有効であると示唆されている。</li>
-  <li>このネットワーク構造はのちに筆頭著者のAlex Krizhevskyの名前をとって「AlexNet」と呼ばれている。</li>
-</ul>
-
-<h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
-
-<h3 id="論文情報リンク">論文情報・リンク</h3>
-
-<ul>
-  <li><a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. “Imagenet classification with deep convolutional neural networks.” Advances in neural information processing systems. 2012.</a></li>
-</ul>
-
+    
+  </ul>
+<!-- Pagination links -->
+  <div class="pagination">
+     <a href="/paper-survey/summary/27" class="prev">← Newer Posts</a> 
+    
   </div>
-  <div>
-    <amp-social-share type="twitter"
-        width="60"
-        height="44"> </amp-social-share>
-    <amp-social-share type="gplus"
-        width="60"
-        height="44"></amp-social-share>
-  </div>
-
-</article>
-<!-- Post Navigation -->
-<div class="pagination">
-  <a class="prev" href="/paper-survey/summary/nlp/Dependency-based-Convolutional-Neural-Networks-for-Sentence-Embedding">←&nbsp; Previous post</a>
-  <a class="next" href="/paper-survey/summary/cv/Signature-Verification-using-a-Siamese-Time-Delay-Neural-Network">Next post&nbsp;→</a>
-</div>
 
       </div>
     </div>

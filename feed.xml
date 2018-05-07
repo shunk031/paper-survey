@@ -1,5 +1,155 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-05-06T15:09:49+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Utilizing Visual Forms of Japanese Characters for Neural Review Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification" rel="alternate" type="text/html" title="Utilizing Visual Forms of Japanese Characters for Neural Review Classification" /><published>2018-04-30T00:00:00+00:00</published><updated>2018-04-30T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-05-07T05:59:20+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Hierarchical Attention Networks for Document Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification" rel="alternate" type="text/html" title="Hierarchical Attention Networks for Document Classification" /><published>2018-05-06T00:00:00+00:00</published><updated>2018-05-06T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;Attentionを用いてより重要な単語・文に注目させ、同時に文書の階層的構造を捉えることができるHierarchal Attention Network (HAN) を提案&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;一般的にテキスト分類をする場合、全ての単語が文書の意味を捉えるのに重要であるとは限らない。&lt;/p&gt;
+
+&lt;p&gt;本研究では単語レベル、文レベルでAttentionを適用することにより重要な単語および文を抽出し、
+同時に文書の階層的な構造を捉えることができるHierarchal Attention Network (HAN) を提案している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Hierarchical-Attention-Networks-for-Document-Classification/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GRUによってエンコードされたembeddingに対して、単語レベル、文レベルの2つのレベルでAttentionを適用する。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Hierarchal Attention Network (HAN)
+    &lt;ul&gt;
+      &lt;li&gt;GRU-based sequence encoder
+        &lt;ul&gt;
+          &lt;li&gt;Word Encoder&lt;/li&gt;
+          &lt;li&gt;Sentence Attention&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Hierarchal Attention
+        &lt;ul&gt;
+          &lt;li&gt;Word Attention&lt;/li&gt;
+          &lt;li&gt;Sentence Encoder&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Attentionの計算はエンコードされたベクトルに対して1層のMLPを用いて隠れ層ベクトルの重要度を算出する。&lt;/p&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;複数のデータセットと複数のベースラインを用いて提案手法であるHANの性能を評価している。
+Attentionの効果を見るため、Hierarchal Network(HN)にaverage-poolingを使うHN-AVE、およびmax-poolingを使うHN-MAX、そして提案手法であるHNにAttentionを組み込んだHN-ATTの性能についても比較している。&lt;/p&gt;
+
+&lt;h3 id=&quot;データセットについて&quot;&gt;データセットについて&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Data set&lt;/th&gt;
+      &lt;th&gt;# of classes&lt;/th&gt;
+      &lt;th&gt;# of documents&lt;/th&gt;
+      &lt;th&gt;Author&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Yelp 2013&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;335,018&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/D15-1167&quot;&gt;Tang et al., 2015&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Yelp 2014&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;1,125,457&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/D15-1167&quot;&gt;Tang et al., 2015&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Yelp 2015&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;1,569,264&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/D15-1167&quot;&gt;Tang et al., 2015&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;IMDB review&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;348,415&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2623758&quot;&gt;Diao et al., 2014&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Yahoo Answer&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;1,450,000&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1509.01626&quot;&gt;Zhang et al., 2015&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Amazon review&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;3,650,000&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1509.01626&quot;&gt;Zhang et al., 2015&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;ベースラインについて&quot;&gt;ベースラインについて&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Linear methods
+    &lt;ul&gt;
+      &lt;li&gt;BoW and BoW + TFIDF&lt;/li&gt;
+      &lt;li&gt;n-grams and n-grams + TFIDF&lt;/li&gt;
+      &lt;li&gt;Bag-of-means&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;SVMs
+    &lt;ul&gt;
+      &lt;li&gt;Text Features&lt;/li&gt;
+      &lt;li&gt;Average SG&lt;/li&gt;
+      &lt;li&gt;SSWE&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Neural Network methods
+    &lt;ul&gt;
+      &lt;li&gt;CNN-word&lt;/li&gt;
+      &lt;li&gt;CNN_char&lt;/li&gt;
+      &lt;li&gt;LSTM&lt;/li&gt;
+      &lt;li&gt;Conv-GRNN&lt;/li&gt;
+      &lt;li&gt;LSTM-GRNN&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hierarchal Network
+    &lt;ul&gt;
+      &lt;li&gt;HN-AVE&lt;/li&gt;
+      &lt;li&gt;HN-MAX&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Hierarchical-Attention-Networks-for-Document-Classification/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Figure 5の最初の文書でホタテを気に入らないような文章がある場合、単文だけを見ると、これは否定的なコメントだと感じられる。
+しかし、提案手法ではこの文章の文脈を見て、これが肯定的な評価であり、この文を無視することを選択していることが示されている。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Attentionについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1409.0473&quot;&gt;Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014).&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf&quot;&gt;Xu, Kelvin, et al. “Show, attend and tell: Neural image caption generation with visual attention.” International Conference on Machine Learning. 2015.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/N16-1174&quot;&gt;Yang, Zichao, et al. “Hierarchical attention networks for document classification.” Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2016.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Utilizing Visual Forms of Japanese Characters for Neural Review Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification" rel="alternate" type="text/html" title="Utilizing Visual Forms of Japanese Characters for Neural Review Classification" /><published>2018-04-30T00:00:00+00:00</published><updated>2018-04-30T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;文字の見た目を考慮した文字embeddingを用いて日本語の評判分析を行う&lt;/p&gt;
 
@@ -754,26 +904,4 @@ CNNベースのモデルを用いて単語表現を獲得するregion embedding�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6924-sparse-embedded-k-means-clustering.pdf&quot;&gt;Liu, Weiwei, Xiaobo Shen, and Ivor Tsang. “Sparse Embedded $ k $-Means Clustering.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">SVD-Softmax: Fast Softmax Approximation on Large Vocabulary Neural Networks</title><link href="https://shunk031.github.io/paper-survey/summary/cv/SVD-Softmax-Fast-Sotfmax-Approximation-on-Large-Vocabulary-Neural-Networks" rel="alternate" type="text/html" title="SVD-Softmax: Fast Softmax Approximation on Large Vocabulary Neural Networks" /><published>2018-02-19T00:00:00+00:00</published><updated>2018-02-19T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/SVD-Softmax-Fast-Sotfmax-Approximation-on-Large-Vocabulary-Neural-Networks</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/SVD-Softmax-Fast-Sotfmax-Approximation-on-Large-Vocabulary-Neural-Networks">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;本研究では特異値分解を利用した、とても大きいボキャブラリを持つSoftmax関数を高速に近似する手法を提案している。SVD-Softmaxはニューラル言語モデルの推論時に最上位となりうる単語について、高速かつ正確に確率推定を行うことを目的としている。提案手法ではSVDを使って出力ベクトルの計算に用いた重み行列を変換する。各単語の近似確率については、いくつかの大きな特異値を使用することで単語の大部分の性質を持たせることができ、これを利用して重み行列を推定できると主張している。&lt;/p&gt;
-
-&lt;p&gt;本研究の手法を言語モデリングとニューラル機械翻訳に適用することで、提案手法で導入されている近似手法が効果を発揮していることを検証している。本アルゴリズムでは800,000個の語彙の場合においても、約20%程度の算術演算しか必要とせず、GPUを利用することで3倍以上スピードアップしていることが分かっている。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/SVD-Softmax-Fast-Sotfmax-Approximation-on-Large-Vocabulary-Neural-Networks/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7130-svd-softmax-fast-softmax-approximation-on-large-vocabulary-neural-networks&quot;&gt;Shim, Kyuhong, et al. “SVD-Softmax: Fast Softmax Approximation on Large Vocabulary Neural Networks.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

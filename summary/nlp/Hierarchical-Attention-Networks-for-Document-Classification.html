@@ -8,20 +8,20 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>ImageNet Classification with Deep Convolutional Neural Networks - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
-<meta property="og:title" content="ImageNet Classification with Deep Convolutional Neural Networks" />
+  <title>Hierarchical Attention Networks for Document Classification - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Hierarchical Attention Networks for Document Classification" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. どんなもの？" />
 <meta property="og:description" content="1. どんなもの？" />
-<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks" />
-<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification" />
 <meta property="og:site_name" content="Paper Survey" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-04-09T00:00:00+00:00" />
+<meta property="article:published_time" content="2018-05-06T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks","publisher":null,"image":null,"headline":"ImageNet Classification with Deep Convolutional Neural Networks","dateModified":"2017-04-09T00:00:00+00:00","datePublished":"2017-04-09T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification","publisher":null,"image":null,"headline":"Hierarchical Attention Networks for Document Classification","dateModified":"2018-05-06T00:00:00+00:00","datePublished":"2018-05-06T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -279,80 +279,164 @@
       <div class="wrapper">
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">ImageNet Classification with Deep Convolutional Neural Networks</h1>
-    <p class="post-meta"><time datetime="2017-04-09T00:00:00+00:00" itemprop="datePublished">Apr 9, 2017</time>
+    <h1 class="post-title" itemprop="name headline">Hierarchical Attention Networks for Document Classification</h1>
+    <p class="post-meta"><time datetime="2018-05-06T00:00:00+00:00" itemprop="datePublished">May 6, 2018</time>
       in 
-      <a href="/paper-survey/category/CV">CV</a>
+      <a href="/paper-survey/category/NLP">NLP</a>
       <p>
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">
     <h2 id="1-どんなもの">1. どんなもの？</h2>
 
-<p>ImageNetデータセットについてDeepなConvolutional Neural Network(CNN)をトレーニングし、今までに報告されていた最高精度を達成した。</p>
+<p>Attentionを用いてより重要な単語・文に注目させ、同時に文書の階層的構造を捉えることができるHierarchal Attention Network (HAN) を提案</p>
 
 <h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
 
-<p>ImageNetデータセットでは22000カテゴリ、全1500万枚の高画質の画像が収録されている。このような大規模なデータセットに対して従来の機械学習手法を適用するのは困難だと考えられている。特に従来の機械学習手法はデータに対して最適な特徴量を選択する必要があるが、大規模で複雑なデータから普遍的な特徴量を選択するのは難しい。</p>
+<p>一般的にテキスト分類をする場合、全ての単語が文書の意味を捉えるのに重要であるとは限らない。</p>
 
-<p>本研究ではCNNを用いて自動的に最適な特徴量を抽出することができる。またCNNのアーキテクチャをより深いネットワークとすることでモデルの表現能力を上げ、様々なデータに対して適応させていくことができている。</p>
-
-<p>GPUの発展により効率的にモデルの学習を行うことができる。特に2次元の畳み込み操作がGPUで最適化されているため、とても大きなデータセットに対しても少ない計算時間で結果を出すことができる。</p>
+<p>本研究では単語レベル、文レベルでAttentionを適用することにより重要な単語および文を抽出し、
+同時に文書の階層的な構造を捉えることができるHierarchal Attention Network (HAN) を提案している。</p>
 
 <h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
 
-<p><img src="/paper-survey/assets/img/cv/ImageNet-Classification-with-Deep-Convolutional-Neural-Networks/figure2.png" alt="Figure 2" /></p>
+<p><img src="/paper-survey/assets/img/nlp/Hierarchical-Attention-Networks-for-Document-Classification/figure2.png" alt="Figure 2" /></p>
+
+<p>GRUによってエンコードされたembeddingに対して、単語レベル、文レベルの2つのレベルでAttentionを適用する。</p>
 
 <ul>
-  <li>畳み込み層5層、全結合層3層の計8層のCNN</li>
-  <li>活性化関数にReLUを使用することで、学習の収束を早めることができた</li>
-  <li>モデルを複数GPUでトレーニングを行う</li>
-  <li>Local Response Normalization(局所的応答正規化)</li>
-  <li>Max Pooling</li>
-  <li>過学習を防ぐテクニック
+  <li>Hierarchal Attention Network (HAN)
     <ul>
-      <li>Data Augmentation
+      <li>GRU-based sequence encoder
         <ul>
-          <li>256x256の画像からランダムに224x224サイズにクロップ</li>
-          <li>水平方向にフリップした画像を生成</li>
-          <li>PCAを用いたColor Augmentation</li>
+          <li>Word Encoder</li>
+          <li>Sentence Attention</li>
         </ul>
       </li>
-      <li>Dropout<br />
-いくつかの隠れ層を確率的にドロップさせることで、特定のニューロンに依存せず汎化性能が上がる</li>
-    </ul>
-  </li>
-  <li>バッチサイズ128でSGDを使用</li>
-  <li>Momentumは0.9</li>
-  <li>Weight Decayは0.0005</li>
-  <li>各層のパラメータの初期化方法
-    <ul>
-      <li>各層の重みは平均0標準偏差0.01のガウス分布に従って初期化</li>
-      <li>2・4・5層目畳み込み層と全結合層のバイアスは1で初期化</li>
-      <li>その他の層のバイアスは0で初期化</li>
+      <li>Hierarchal Attention
+        <ul>
+          <li>Word Attention</li>
+          <li>Sentence Encoder</li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
+
+<p>Attentionの計算はエンコードされたベクトルに対して1層のMLPを用いて隠れ層ベクトルの重要度を算出する。</p>
 
 <h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
 
-<p>ImageNet Large-Scale Visual Recognition Challenge(ILSVRC)という1000カテゴリの画像が含まれているデータセットを使用してtop-1 error rateとtop-5 error rateの2つのエラー率を報告している。top-5 error rateはモデルによって算出された最も可能性が高いと考えられる5つのラベルのうち、正しいラベルが含まれていない割合である。</p>
+<p>複数のデータセットと複数のベースラインを用いて提案手法であるHANの性能を評価している。
+Attentionの効果を見るため、Hierarchal Network(HN)にaverage-poolingを使うHN-AVE、およびmax-poolingを使うHN-MAX、そして提案手法であるHNにAttentionを組み込んだHN-ATTの性能についても比較している。</p>
 
-<p>ベストな結果であった従来のSparse codingやSIFT特徴量を用いたFisher Vectorを提案手法が遥かに凌駕するパフォーマンスを出していることがわかる。</p>
+<h3 id="データセットについて">データセットについて</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data set</th>
+      <th># of classes</th>
+      <th># of documents</th>
+      <th>Author</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Yelp 2013</td>
+      <td>5</td>
+      <td>335,018</td>
+      <td><a href="http://www.aclweb.org/anthology/D15-1167">Tang et al., 2015</a></td>
+    </tr>
+    <tr>
+      <td>Yelp 2014</td>
+      <td>5</td>
+      <td>1,125,457</td>
+      <td><a href="http://www.aclweb.org/anthology/D15-1167">Tang et al., 2015</a></td>
+    </tr>
+    <tr>
+      <td>Yelp 2015</td>
+      <td>5</td>
+      <td>1,569,264</td>
+      <td><a href="http://www.aclweb.org/anthology/D15-1167">Tang et al., 2015</a></td>
+    </tr>
+    <tr>
+      <td>IMDB review</td>
+      <td>10</td>
+      <td>348,415</td>
+      <td><a href="https://dl.acm.org/citation.cfm?id=2623758">Diao et al., 2014</a></td>
+    </tr>
+    <tr>
+      <td>Yahoo Answer</td>
+      <td>10</td>
+      <td>1,450,000</td>
+      <td><a href="https://arxiv.org/abs/1509.01626">Zhang et al., 2015</a></td>
+    </tr>
+    <tr>
+      <td>Amazon review</td>
+      <td>5</td>
+      <td>3,650,000</td>
+      <td><a href="https://arxiv.org/abs/1509.01626">Zhang et al., 2015</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ベースラインについて">ベースラインについて</h3>
+
+<ul>
+  <li>Linear methods
+    <ul>
+      <li>BoW and BoW + TFIDF</li>
+      <li>n-grams and n-grams + TFIDF</li>
+      <li>Bag-of-means</li>
+    </ul>
+  </li>
+  <li>SVMs
+    <ul>
+      <li>Text Features</li>
+      <li>Average SG</li>
+      <li>SSWE</li>
+    </ul>
+  </li>
+  <li>Neural Network methods
+    <ul>
+      <li>CNN-word</li>
+      <li>CNN_char</li>
+      <li>LSTM</li>
+      <li>Conv-GRNN</li>
+      <li>LSTM-GRNN</li>
+    </ul>
+  </li>
+  <li>Hierarchal Network
+    <ul>
+      <li>HN-AVE</li>
+      <li>HN-MAX</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="5-議論はあるか">5. 議論はあるか？</h2>
 
-<ul>
-  <li>教師なしのプレトレーニングは行っていないが、十分な計算資源があれば有効であると示唆されている。</li>
-  <li>このネットワーク構造はのちに筆頭著者のAlex Krizhevskyの名前をとって「AlexNet」と呼ばれている。</li>
-</ul>
+<p><img src="/paper-survey/assets/img/nlp/Hierarchical-Attention-Networks-for-Document-Classification/figure5.png" alt="Figure 5" /></p>
+
+<p>Figure 5の最初の文書でホタテを気に入らないような文章がある場合、単文だけを見ると、これは否定的なコメントだと感じられる。
+しかし、提案手法ではこの文章の文脈を見て、これが肯定的な評価であり、この文を無視することを選択していることが示されている。</p>
 
 <h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
+
+<ul>
+  <li>Attentionについて
+    <ul>
+      <li><a href="https://arxiv.org/abs/1409.0473">Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014).</a></li>
+      <li><a href="http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf">Xu, Kelvin, et al. “Show, attend and tell: Neural image caption generation with visual attention.” International Conference on Machine Learning. 2015.</a></li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="論文情報リンク">論文情報・リンク</h3>
 
 <ul>
-  <li><a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">Krizhevsky, Alex, Ilya Sutskever, and Geoffrey E. Hinton. “Imagenet classification with deep convolutional neural networks.” Advances in neural information processing systems. 2012.</a></li>
+  <li><a href="http://www.aclweb.org/anthology/N16-1174">Yang, Zichao, et al. “Hierarchical attention networks for document classification.” Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2016.</a></li>
 </ul>
 
   </div>
@@ -368,8 +452,8 @@
 </article>
 <!-- Post Navigation -->
 <div class="pagination">
-  <a class="prev" href="/paper-survey/summary/nlp/Dependency-based-Convolutional-Neural-Networks-for-Sentence-Embedding">←&nbsp; Previous post</a>
-  <a class="next" href="/paper-survey/summary/cv/Signature-Verification-using-a-Siamese-Time-Delay-Neural-Network">Next post&nbsp;→</a>
+  <a class="prev" href="/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification">←&nbsp; Previous post</a>
+  
 </div>
 
       </div>

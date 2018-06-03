@@ -7,21 +7,20 @@
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>Regularizing Deep Neural Networks by Noise: Its Interpretation and Optimization - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
-<meta property="og:title" content="Regularizing Deep Neural Networks by Noise: Its Interpretation and Optimization" />
+    
+  <title>Summary - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Summary" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="1. どんなもの？" />
-<meta property="og:description" content="1. どんなもの？" />
-<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization" />
-<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization" />
+<meta name="description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
+<meta property="og:description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/29/" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/29/" />
 <meta property="og:site_name" content="Paper Survey" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-02-19T00:00:00+00:00" />
+<link rel="prev" href="https://shunk031.github.io/paper-survey/summary/28">
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization","publisher":null,"image":null,"headline":"Regularizing Deep Neural Networks by Noise: Its Interpretation and Optimization","dateModified":"2018-02-19T00:00:00+00:00","datePublished":"2018-02-19T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese","author":null,"@type":"WebPage","url":"https://shunk031.github.io/paper-survey/summary/29/","publisher":null,"image":null,"headline":"Summary","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -63,7 +62,7 @@
 </head>
 
   <body>
-     <amp-sidebar id='sidebar'
+    <amp-sidebar id='sidebar'
     layout="nodisplay"
     side="right">
   <amp-img class='amp-close-image'
@@ -169,8 +168,8 @@
       <a class="page-link" href="/paper-survey/category/others/">Others</a>
 </amp-sidebar>
 
-<header class="site-header">
-    <div class="wrapper"><a class="site-title" href="/paper-survey/">Paper Survey</a>
+<header class="site-header header-nav">
+    
 
     <nav class="site-nav">
       <button on='tap:sidebar.toggle' class="menu-icon">
@@ -276,61 +275,51 @@
 	<a class="page-link" href="/paper-survey/category/others">Others</a>
       </div>
     </nav>
-  </div>
+    <div class="wrapper">
+        <div class="author">
+          <a href="/paper-survey/">
+            <!-- <amp-img class="avatar" src="/paper-survey/assets/avatar.png" width="90" height="90" layout="responsive" alt="Paper Survey" ></amp-img> -->
+            <h1 class="name">Paper Survey</h1>
+          </a>
+          <h2 class="description">Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</h2>
+        </div>
+    </div>
+  
 </header>
  
     <div class="page-content ">
       <div class="wrapper">
-	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Regularizing Deep Neural Networks by Noise: Its Interpretation and Optimization</h1>
-    <p class="post-meta"><time datetime="2018-02-19T00:00:00+00:00" itemprop="datePublished">Feb 19, 2018</time>
-      in 
-      <a href="/paper-survey/category/CV">CV</a>
-      <p>
-    </p>
-  </header>
-  <div class="post-content" itemprop="articleBody">
-    <h2 id="1-どんなもの">1. どんなもの？</h2>
-
-<p>過学習はDeep neural networkの学習における課題の1つであり、汎化性能を向上させるためにさまざまな正則化手法が提案されてきた。中でも学習中にHidden unitに対してノイズを乗せるDropoutは有名な正則化手法として知られているが、こうした正則化手法がなぜ効果があるのかは不明である。</p>
-
-<p>本研究では従来のノイズ付加による正則化手法が真の目的関数の下限に対して最適化すること、Stochastic gradient descentにおいて、より制約の強い下限にフィットするよう複数のノイズを導入する手法を提案している。CIFAR10等のデータセットを用いて提案手法の効果を確かめている。</p>
-
-<p><img src="/paper-survey/assets/img/cv/Regularizing-Deep-Neural-Networks-by-Noise-Its-Interpretation-and-Optimization/figure1.png" alt="Figure 1" /></p>
-
-<h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
-
-<h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
-
-<h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
-
-<h2 id="5-議論はあるか">5. 議論はあるか？</h2>
-
-<h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
-
-<h3 id="論文情報リンク">論文情報・リンク</h3>
-
-<ul>
-  <li><a href="http://papers.nips.cc/paper/7096-regularizing-deep-neural-networks-by-noise-its-interpretation-and-optimization">Noh, Hyeonwoo, et al. “Regularizing Deep Neural Networks by Noise: Its Interpretation and Optimization.” Advances in Neural Information Processing Systems. 2017.</a></li>
-</ul>
-
+	  <ul class="post-list">
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/jekyll/update/test/welcome-to-jekyll">Welcome to Jekyll!</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Sep 2, 2016
+	    in 
+	    <a href="/paper-survey/category/jekyll">jekyll</a>, 
+	    
+	    <a href="/paper-survey/category/update">update</a>, 
+	    
+	    <a href="/paper-survey/category/test">test</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-r...
+            </p>
+      </li>
+    
+  </ul>
+<!-- Pagination links -->
+  <div class="pagination">
+     <a href="/paper-survey/summary/28" class="prev">← Newer Posts</a> 
+    
   </div>
-  <div>
-    <amp-social-share type="twitter"
-        width="60"
-        height="44"> </amp-social-share>
-    <amp-social-share type="gplus"
-        width="60"
-        height="44"></amp-social-share>
-  </div>
-
-</article>
-<!-- Post Navigation -->
-<div class="pagination">
-  <a class="prev" href="/paper-survey/summary/cv/Few-Shot-Adversarial-Domain-Adaptation">←&nbsp; Previous post</a>
-  <a class="next" href="/paper-survey/summary/cv/SVD-Softmax-Fast-Sotfmax-Approximation-on-Large-Vocabulary-Neural-Networks">Next post&nbsp;→</a>
-</div>
 
       </div>
     </div>

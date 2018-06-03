@@ -1,4 +1,4 @@
-var CACHE_NAME = '20180528031151';
+var CACHE_NAME = '20180603071824';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)
@@ -42,10 +42,11 @@ self.addEventListener('install',event => {
     '/paper-survey/summary/26/',
     '/paper-survey/summary/27/',
     '/paper-survey/summary/28/',
+    '/paper-survey/summary/29/',
     
     
     
-    '/paper-survey/summary/nip/Contextual-Augmentation-Data-Augmentation-by-Words-with-Paradigmatic-Relations','/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification','/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification','/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms','/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification','/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly','/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters','/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification','/paper-survey/summary/others/Variable-Importance-Using-Decision-Trees',
+    '/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC','/paper-survey/summary/others/RECOD-Titans-at-ISIC-Challenge-2017','/paper-survey/summary/nip/Contextual-Augmentation-Data-Augmentation-by-Words-with-Paradigmatic-Relations','/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification','/paper-survey/summary/nlp/Utilizing-Visual-Forms-of-Japanese-Characters-for-Neural-Review-Classification','/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms','/paper-survey/summary/nlp/Word-Embedding-Perturbation-for-Sentence-Classification','/paper-survey/summary/nlp/Learning-to-Compute-Word-Embeddings-On-the-Fly','/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters',
   ]))
 );
 });

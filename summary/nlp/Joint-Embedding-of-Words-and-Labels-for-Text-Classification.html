@@ -308,6 +308,7 @@
   <li>単語embedding <script type="math/tex">{\bf V}</script> と label embedding <script type="math/tex">{\bf C}</script> から <code class="highlighter-rouge">compatibility</code> <script type="math/tex">{\bf G}</script> を計算</li>
   <li>softmaxを用いて <script type="math/tex">{\bf G}</script> をnormalizeしたattention <script type="math/tex">\beta</script> を計算</li>
   <li>単語embeddingとattentionの重み付け平均を計算したdocument embedding <script type="math/tex">z</script> を用いてテキスト分類を行う</li>
+  <li>テスト時にはlabel embedding <script type="math/tex">{\bf C}</script> において、すべてのクラスのembeddingを利用する</li>
 </ul>
 
 <h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>

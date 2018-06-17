@@ -21,6 +21,7 @@ categories: NLP
 - 単語embedding $${\bf V}$$ と label embedding $${\bf C}$$ から `compatibility` $${\bf G}$$ を計算
 - softmaxを用いて $${\bf G}$$ をnormalizeしたattention $$\beta$$ を計算
 - 単語embeddingとattentionの重み付け平均を計算したdocument embedding $$z$$ を用いてテキスト分類を行う
+- テスト時にはlabel embedding $${\bf C}$$ において、すべてのクラスのembeddingを利用する
 
 ## 4. どうやって有効だと検証した？
 

@@ -1,5 +1,228 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-06-03T07:18:24+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Skin Lesion Analysis Toward Melanoma Detection: A Challenge at the 2017 International Symposium on Biomedical Imaging (ISBI), Hosted by the International Skin Imaging Collaboration (ISIC)</title><link href="https://shunk031.github.io/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC" rel="alternate" type="text/html" title="Skin Lesion Analysis Toward Melanoma Detection: A Challenge at the 2017 International Symposium on Biomedical Imaging (ISBI), Hosted by the International Skin Imaging Collaboration (ISIC) " /><published>2018-06-03T00:00:00+00:00</published><updated>2018-06-03T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-06-17T08:25:49+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Joint Embedding of Words and Labels for Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification" rel="alternate" type="text/html" title="Joint Embedding of Words and Labels for Text Classification" /><published>2018-06-17T00:00:00+00:00</published><updated>2018-06-17T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;テキスト分類の際に教師ラベルのembeddingと単語のembeddingを組み合わせたattentionの枠組みを用いる、Label-Embedding Attentive Model (LEAM) を提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;画像認識分野および自然言語処理分野において、label embeddingを用いたさまざまな枠組みが提案されてきた。近年の自然言語処理分野では単語embeddingやattentionを用いることで、テキスト分類等のタスクの精度向上が示されてきた。
+本研究では効果的なattentionモデル構築のためにlabel embeddingを学習する、LEAMを提案している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;単語embedding &lt;script type=&quot;math/tex&quot;&gt;{\bf V}&lt;/script&gt; と label embedding &lt;script type=&quot;math/tex&quot;&gt;{\bf C}&lt;/script&gt; から &lt;code class=&quot;highlighter-rouge&quot;&gt;compatibility&lt;/code&gt; &lt;script type=&quot;math/tex&quot;&gt;{\bf G}&lt;/script&gt; を計算&lt;/li&gt;
+  &lt;li&gt;softmaxを用いて &lt;script type=&quot;math/tex&quot;&gt;{\bf G}&lt;/script&gt; をnormalizeしたattention &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; を計算&lt;/li&gt;
+  &lt;li&gt;単語embeddingとattentionの重み付け平均を計算したdocument embedding &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt; を用いてテキスト分類を行う&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;AGNews、Yelp Review Full、Yelp Review Polarity、DBPedia、Yahoo! Answers Topicの5つのデータセットを用いている。
+ベースラインのモデルとしてBag-of-words、Shallow/Large word CNN、LSTM、SA-LSTM、Deep CNN、SWEM、fastText、HAN、Bi-BloSANとテキスト分類の精度を比較している。&lt;/p&gt;
+
+&lt;p&gt;上記に加えて医療テキストデータセットであるMIMIC-IIIを用いた実践的な評価を行っている。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;モデルのパラメータ数と学習時間について
+    &lt;ul&gt;
+      &lt;li&gt;SWEMに次いで少ないパラメータ数と学習時間を実現している&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;label embeddingの有効性について
+    &lt;ul&gt;
+      &lt;li&gt;学習から得られたlabel embeddingとdocument embeddingをt-SNEで可視化すると、クラスに対応するlabel embeddingとdocument embeddingに強い相関が見られた
+&lt;img src=&quot;/paper-survey/assets/img/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;医療テキストに対する有効性について
+    &lt;ul&gt;
+      &lt;li&gt;attentionを可視化すると、医療に関連する語がハイライトされていることが示されている。
+&lt;img src=&quot;/paper-survey/assets/img/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;画像認識分野におけるlabel embedding
+    &lt;ul&gt;
+      &lt;li&gt;画像分類
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://ieeexplore.ieee.org/abstract/document/7293699/&quot;&gt;Akata, Zeynep, et al. “Label-embedding for image classification.” IEEE transactions on pattern analysis and machine intelligence 38.7 (2016): 1425-1438.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;マルチモーダル
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5204-devise-a-deep-visual-semantic-embedding-model&quot;&gt;Frome, Andrea, et al. “Devise: A deep visual-semantic embedding model.” Advances in neural information processing systems. 2013.&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1411.2539&quot;&gt;Kiros, Ryan, Ruslan Salakhutdinov, and Richard S. Zemel. “Unifying visual-semantic embeddings with multimodal neural language models.” arXiv preprint arXiv:1411.2539 (2014).&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;画像中のテキスト認識
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.433.2642&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Rodriguez-Serrano, Jose A., Florent Perronnin, and France Meylan. “Label embedding for text recognition.” Proceedings of the British Machine Vision Conference. 2013.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Zero-shot learning
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/3650-zero-shot-learning-with-semantic-output-codes&quot;&gt;Palatucci, Mark, et al. “Zero-shot learning with semantic output codes.” Advances in neural information processing systems. 2009.&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/P15-2048&quot;&gt;Yogatama, Dani, Daniel Gillick, and Nevena Lazic. “Embedding methods for fine grained entity type classification.” Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 2: Short Papers). Vol. 2. 2015.&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/C16-1017&quot;&gt;Ma, Yukun, Erik Cambria, and Sa Gao. “Label embedding for zero-shot fine-grained named entity typing.” Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers. 2016.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;自然言語処理におけるlabel embedding
+    &lt;ul&gt;
+      &lt;li&gt;Heterogeneous networkによるlabel embedding
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2783307&quot;&gt;Tang, Jian, Meng Qu, and Qiaozhu Mei. “Pte: Predictive text embedding through large-scale heterogeneous text networks.” Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 2015.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;マルチタスク学習
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7005-deconvolutional-paragraph-representation-learning&quot;&gt;Zhang, Yizhe, et al. “Deconvolutional paragraph representation learning.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ベースラインのモデルについて
+    &lt;ul&gt;
+      &lt;li&gt;Bag-of-words、Shallow/Large word CNN、LSTM
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classifica&quot;&gt;Zhang, Xiang, Junbo Zhao, and Yann LeCun. “Character-level convolutional networks for text classification.” Advances in neural information processing systems. 2015.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;SA-LSTM
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5949-semi-supervised-sequence-learning&quot;&gt;Dai, Andrew M., and Quoc V. Le. “Semi-supervised sequence learning.” Advances in Neural Information Processing Systems. 2015.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Deep CNN
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/E17-1104&quot;&gt;Conneau, Alexis, et al. “Very deep convolutional networks for text classification.” Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 1, Long Papers. Vol. 1. 2017.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;SWEM
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1805.09843&quot;&gt;Shen, Dinghan, et al. “Baseline needs more love: On simple word-embedding-based models and associated pooling mechanisms.” arXiv preprint arXiv:1805.09843 (2018).&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;HAN
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/N16-1174&quot;&gt;Yang, Zichao, et al. “Hierarchical attention networks for document classification.” Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2016.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Bi-BloSAN
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1804.00857&quot;&gt;Shen, Tao, et al. “Bi-directional block self-attention for fast and memory-efficient sequence modeling.” arXiv preprint arXiv:1804.00857 (2018).&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1805.04174&quot;&gt;Wang, Guoyin, et al. “Joint Embedding of Words and Labels for Text Classification.” arXiv preprint arXiv:1805.04174 (2018).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Learn to Pay Attention</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention" rel="alternate" type="text/html" title="Learn to Pay Attention" /><published>2018-06-16T00:00:00+00:00</published><updated>2018-06-16T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;画像認識に対して学習可能なattention機構をCNNに導入し、baseline手法を超える精度を実現&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;Convolutional Neural Network (CNN) は画像処理分野で素晴らしい結果を残しているが、こうした問題に対してモデルが推論する過程が不透明であり、結果の考察が難しい。
+そこで先行研究ではモデルの解釈性の向上のために、推論する画像のどの部分に注目しているかを可視化する手法が複数提案されている。
+しかしながらこれらの手法は学習済みのモデルに対してのみ適用可能という制限がある。&lt;/p&gt;
+
+&lt;p&gt;Attention機構は学習時に入力のどの部分に注視するかを学習することが可能であり、機械翻訳や画像に対する説明文自動生成(キャプショニング)、VQAなどにおいて精度向上に寄与している。&lt;/p&gt;
+
+&lt;p&gt;Attentionを計算する場合にクエリが必要な画像キャプションやVQAに対して、本研究ではattentionを推定するためにglobalな画像表現を利用し、分類問題においてもattention機構を導入することに成功している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;local feature vector&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;global feature vector&lt;/code&gt; を用いたattention機構を実現した。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;畳み込み層から活性化関数を通して得られるlocal feature vector &lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}&lt;/script&gt; と最終全結合層の出力であるglobal feature vector &lt;script type=&quot;math/tex&quot;&gt;\mathcal{G}&lt;/script&gt; から、&lt;code class=&quot;highlighter-rouge&quot;&gt;compatibility score&lt;/code&gt; &lt;script type=&quot;math/tex&quot;&gt;C\left(\hat{\mathcal{L}}, \mathcal{G} \right)&lt;/script&gt; を計算し、各local feature vectorの重要度 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}&lt;/script&gt; (attention) を算出する&lt;/li&gt;
+  &lt;li&gt;重要度 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}&lt;/script&gt; とlocal feature vectorとの重み付き平均 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{G}_a&lt;/script&gt; を計算する&lt;/li&gt;
+  &lt;li&gt;各畳み込み層から得られる複数の &lt;script type=&quot;math/tex&quot;&gt;\mathcal{G}_a&lt;/script&gt; をconcatしたベクトルを用いて分類を行う&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;compatibility socre&lt;/code&gt; を計算する際に用いる &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt; は ドット積 を利用した&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;ベースラインとして、先行研究のVGG-GAPおよびVGG-PAN、ResNet164と、VGG/ResNetに対して本研究のattention機構を導入できるようパラメータを調整したネットワークを比較している。
+global feature vectorとlocal feature vectorに対してcompatibility scoreを計算する際にドット積を用いた&lt;code class=&quot;highlighter-rouge&quot;&gt;dp&lt;/code&gt;と、パラメータを用いた&lt;code class=&quot;highlighter-rouge&quot;&gt;pc&lt;/code&gt;を比較している。&lt;/p&gt;
+
+&lt;p&gt;評価に用いるデータセットはCIFAR10/100、CUB-200-2011、SVHN等を利用している。また導入したattention機構がadversarialなサンプルに対してもロバストであることを示す実験も行っている。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;提案手法 (proposed) と既存手法 (existing) それぞれのattention mapを可視化した結果である。提案手法がよりdiscriminativeな形で物体を認識していることが示されている。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;CUB-200データセットで学習した提案手法の結果である。10層目は目の特徴を捉えており、13層目は体全体を捉えていることが示されている。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;モデルの解釈性向上のための可視化手法
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1312.6034&quot;&gt;Simonyan, Karen, Andrea Vedaldi, and Andrew Zisserman. “Deep inside convolutional networks: Visualising image classification models and saliency maps.” arXiv preprint arXiv:1312.6034 (2013).&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_iccv_2015/papers/Cao_Look_and_Think_ICCV_2015_paper.pdf&quot;&gt;Cao, Chunshui, et al. “Look and think twice: Capturing top-down visual attention with feedback convolutional neural networks.” Proceedings of the IEEE International Conference on Computer Vision. 2015.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Global average pooling (GAP)
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf&quot;&gt;Zhou, Bolei, et al. “Learning deep features for discriminative Computer.” localization Vision and Pattern Recognition (CVPR), 2016 IEEE Conference on. IEEE, 2016.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Attention機構が用いられている先行研究
+    &lt;ul&gt;
+      &lt;li&gt;属性予測 (Progressive Attention Networks (PAN))
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://adsabs.harvard.edu/abs/2016arXiv160602393H&quot;&gt;Hongsuck Seo, Paul, et al. “Progressive Attention Networks for Visual Attribute Prediction.” arXiv preprint arXiv:1606.02393 (2016).&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;機械翻訳
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1409.0473&quot;&gt;Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014).&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;画像に対する説明文自動生成
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf&quot;&gt;Xu, Kelvin, et al. “Show, attend and tell: Neural image caption generation with visual attention.” International Conference on Machine Learning. 2015.&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_cvpr_2016/papers/You_Image_Captioning_With_CVPR_2016_paper.pdf&quot;&gt;You, Quanzeng, et al. “Image captioning with semantic attention.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14888/14305&quot;&gt;Mun, Jonghwan, Minsu Cho, and Bohyung Han. “Text-Guided Attention Model for Image Captioning.” AAAI. 2017.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Visual question answering (VQA)
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;https://link.springer.com/chapter/10.1007/978-3-319-46478-7_28&quot;&gt;Xu, Huijuan, and Kate Saenko. “Ask, attend and answer: Exploring question-guided spatial attention for visual question answering.” European Conference on Computer Vision. Springer, Cham, 2016.&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;https://www.cv-foundation.org/openaccess/content_cvpr_2016/app/S01-03.pdf&quot;&gt;Yang, Zichao, et al. “Stacked attention networks for image question answering.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1804.02391&quot;&gt;Jetley, Saumya, et al. “Learn to pay attention.” arXiv preprint arXiv:1804.02391 (2018).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Skin Lesion Analysis Toward Melanoma Detection: A Challenge at the 2017 International Symposium on Biomedical Imaging (ISBI), Hosted by the International Skin Imaging Collaboration (ISIC)</title><link href="https://shunk031.github.io/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC" rel="alternate" type="text/html" title="Skin Lesion Analysis Toward Melanoma Detection: A Challenge at the 2017 International Symposium on Biomedical Imaging (ISBI), Hosted by the International Skin Imaging Collaboration (ISIC) " /><published>2018-06-03T00:00:00+00:00</published><updated>2018-06-03T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;ISIC2017で行われたメラノーマ画像の分析チャレンジの内容をまとめたもの&lt;/p&gt;
 
@@ -1027,220 +1250,4 @@ Attentionの効果を見るため、Hierarchal Network(HN)にaverage-poolingを�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1706.00286&quot;&gt;Bahdanau, Dzmitry, et al. “Learning to Compute Word Embeddings On the Fly.” arXiv preprint arXiv:1706.00286 (2017).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Glyph-aware Embedding of Chinese Characters</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters" rel="alternate" type="text/html" title="Glyph-aware Embedding of Chinese Characters" /><published>2018-03-26T00:00:00+00:00</published><updated>2018-03-26T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Glyph-aware-Embedding-of-Chinese-Characters">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;漢字特有の文字の表意性を明示的に組み込み，文字形状を意識した文字の埋め込み手法を提案．&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;英語と比べて中国語は多数の文字が使用され，なおかつ単語と単語の境目が明確ではない．
-漢字には形状的な特徴があり，特に”へん”や”つくり”などの部分的な構造が集まり，それら自身が文字の意味・構文的役割・発音などの情報を有している．&lt;/p&gt;
-
-&lt;p&gt;本研究ではこれら漢字の文字形状に着目することで，優れた文字表現の獲得を目指す &lt;em&gt;glyph-aware embedding&lt;/em&gt; を提案している．&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Glyph-aware-Embedding-of-Chinese-Characters/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;CNN embedder
-    &lt;ul&gt;
-      &lt;li&gt;文字形状を考慮した文字の埋め込みをCNNを用いて実現&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ID embedder
-    &lt;ul&gt;
-      &lt;li&gt;文脈を考慮した文字の埋め込みをLookup tableを用いて実現&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;文字形状のみ考慮した場合，「土」⇆「士」や「人」⇆「入」といった文字形状が似ている文字が近い表現となってしまう場合が考えられる．
-そこで文脈を考慮できるLookup tableによるID embeddingを併せて用いることで，この問題を解消している．&lt;/p&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;中国語の言語モデリングタスクと中国語の単語分割タスクについて提案手法の精度を検証している．&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;言語モデリングタスク
-    &lt;ul&gt;
-      &lt;li&gt;embedderで文字表現を得た後，後段のGRUで言語モデルタスクを解いている&lt;/li&gt;
-      &lt;li&gt;ベースラインとして全結合層のみからなるlinear embedderを設定&lt;/li&gt;
-      &lt;li&gt;Microsoft Research dataset (MSR) を用いて，CNN embedder・ID embedder・ID+CNN embedderそれぞれのperplexityを比較している&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;単語分割タスク
-    &lt;ul&gt;
-      &lt;li&gt;embedderで文字表現を得た後，後段のGRU/Bidirectional LSTMで単語分割タスクを解いている&lt;/li&gt;
-      &lt;li&gt;Peking University dataset (PKU) および MSRを用いて，CNN embedder・ID embedder・ID+CNN embedderそれぞれの精度を比較している&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;各タスクともCNN embedderが優れた性能を示している．&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;入力文字画像にdata augmentationを加えることで精度が向上&lt;/li&gt;
-  &lt;li&gt;CNN embedder / ID embedderのパラメータ数について
-    &lt;ul&gt;
-      &lt;li&gt;埋め込み次元 &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; ，ボキャブラリサイズ &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; の場合&lt;/li&gt;
-      &lt;li&gt;CNN embedder: &lt;script type=&quot;math/tex&quot;&gt;\mathcal{O}(N+K)&lt;/script&gt;&lt;/li&gt;
-      &lt;li&gt;ID embedder: &lt;script type=&quot;math/tex&quot;&gt;\mathcal{O}(NK)&lt;/script&gt;&lt;/li&gt;
-      &lt;li&gt;CNN embedderのほうがID embdderよりも少ないパラメータ数で良いパフォーマンスを出していることが分かる&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/P15-2098&quot;&gt;Shi, Xinlei, et al. “Radical embedding: Delving deeper to chinese radicals.” Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 2: Short Papers). Vol. 2. 2015.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1704.04859&quot;&gt;Liu, Frederick, et al. “Learning character-level compositionality with visual features.” arXiv preprint arXiv:1704.04859 (2017).&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://link.springer.com/article/10.1007/s10590-017-9196-0&quot;&gt;Costa-Jussà, Marta R., David Aldón, and José AR Fonollosa. “Chinese–spanish neural machine translation enhanced with character and word bitmap fonts.” Machine Translation 31.1-2 (2017): 35-47.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1709.00028&quot;&gt;Dai, Falcon Z., and Zheng Cai. “Glyph-aware Embedding of Chinese Characters.” arXiv preprint arXiv:1709.00028 (2017).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">A New Method of Region Embedding for Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification" rel="alternate" type="text/html" title="A New Method of Region Embedding for Text Classification" /><published>2018-02-20T00:00:00+00:00</published><updated>2018-02-20T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;CNNやRNNを必要とせずに語順を考慮することができるLocal Context Unitを利用し、タスク固有の単語埋め込み表現を学習するRegion Embeddingを提案。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;文書分類などのタスクにおいて単語の語順を考慮した単語表現にn-gramが用いられることが多いが、
-特に &lt;script type=&quot;math/tex&quot;&gt;n&lt;/script&gt; の値が大きいn-gramの場合、モデルが大きくなってしまったり、データスパースネス問題が起こる恐れがある。&lt;/p&gt;
-
-&lt;p&gt;近年ではn-gramを考慮した単語の分散表現を獲得するFastTextが提案されている。
-また&lt;a href=&quot;/paper-survey/summry/nlp/Semi-supervised-Convolutional-Neural-Networks-for-Text-Categorization-via-Region-Embedding&quot;&gt;Johnson &amp;amp; Zhang (2015)&lt;/a&gt;では
-CNNベースのモデルを用いて単語表現を獲得するregion embeddingという手法を提案しているが、本研究のregion embeddingとは異なり、タスク依存でない点や、教師なし学習の枠組みで学習されている点で異なっている。&lt;/p&gt;
-
-&lt;p&gt;Attentionのみを使用したニューラル機械翻訳モデルであるTransformerは、CNNやRNNを用いずに語順を考慮し、文脈の特徴を学習できていることが示されている。&lt;/p&gt;
-
-&lt;p&gt;本研究ではTransformer参考に、ある単語の周辺のコンテキストを考慮できるLocal context unitを用いて単語の埋め込み表現を獲得するRegion Embeddingを提案し、文書分類タスクで精度が上がることを示している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Region Embedding
-    &lt;ul&gt;
-      &lt;li&gt;テキスト中の小さな範囲(region)から、局所的な特徴を保持した表現を獲得したい&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Local Context Unit
-    &lt;ul&gt;
-      &lt;li&gt;ある単語の語順と周辺のコンテキストを学習するパラメータ&lt;/li&gt;
-      &lt;li&gt;通常のlook up tableを用いたword embedding &lt;script type=&quot;math/tex&quot;&gt;{\bf e}_{w_i}&lt;/script&gt; とlocal context unit &lt;script type=&quot;math/tex&quot;&gt;{\bf K}_{W_i}&lt;/script&gt;を組み合わせた埋め込み表現 &lt;script type=&quot;math/tex&quot;&gt;p^{i}_{w_i}&lt;/script&gt; を学習する&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;\begin{align*}
-  p^{i}_{w_i + t} = {\bf K}_{w_i, t} \odot {\bf e}_{w_i + t}
-\end{align*}&lt;/script&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Word-Context Region Embedding
-    &lt;ul&gt;
-      &lt;li&gt;regionの中心の語が前後のコンテキストから受ける影響に焦点を当てたemnedding手法&lt;/li&gt;
-      &lt;li&gt;語の出現順によって(特に否定語や強調語など)、意味が逆転する場合を上手く学習することを期待&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Context-Word Region Embedding
-    &lt;ul&gt;
-      &lt;li&gt;Word-Context Region Embeddingとは逆に、コンテキストがregionの中心語から受ける影響に焦点を当てている&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Region Embeddingを全結合層で分類&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;8つのデータセットを用いて感情分析、新聞記事分類、QAなどのタスクに対して精度を比較している。
-ベースラインのn-gram・TFIDFなどの従来の単語表現を用いたモデル、Char-CNN、Char-CRNN、VDCNN、D-LSTM、bigram-FastTextと先行研究のRegion Embeddingを用いた分類器を比較している。
-8つのデータセットのうち6つのデータセットで最先端の結果を達成していることが示されている。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;region size / embedding sizeを変えた場合について
-    &lt;ul&gt;
-      &lt;li&gt;本研究ではregion sizeを7、embedding sizeを128に設定している&lt;/li&gt;
-      &lt;li&gt;複数サイズのregion embeddingを組み合わせることで僅かに精度が向上している&lt;/li&gt;
-      &lt;li&gt;emnedding sizeを大きくすると従来のFastTextやCNNなどは過学習が見られるが、Region Embeddingはほかと比べてロバストであることが示されている
-&lt;img src=&quot;/paper-survey/assets/img/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ある単語における周辺単語の共起について
-    &lt;ul&gt;
-      &lt;li&gt;“however”についてはhoweverの後が文書分類に重要であることを示している&lt;/li&gt;
-      &lt;li&gt;“very”についてはveryの直後の語が重要である etc&lt;/li&gt;
-      &lt;li&gt;local context unitが局所的な潜在意味を捉えていることが分かる
-&lt;img src=&quot;/paper-survey/assets/img/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;感情分析におけるlocal context unitの効果の可視化
-    &lt;ul&gt;
-      &lt;li&gt;context unitがある場合、正しく形容詞が正しく係り、positive/negativeの判定が正しく行われるようになったことが示されている
-&lt;img src=&quot;/paper-survey/assets/img/nlp/A-New-Method-of-Region-Embedding-for-Text-Classification/table4.png&quot; alt=&quot;Table 4&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;FastTextを用いたembeddingについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1607.01759&quot;&gt;Joulin, Armand, et al. “Bag of tricks for efficient text classification.” arXiv preprint arXiv:1607.01759 (2016).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;CNNを用いたembeddingについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1412.1058&quot;&gt;Johnson, Rie, and Tong Zhang. “Effective use of word order for text categorization with convolutional neural networks.” arXiv preprint arXiv:1412.1058 (2014).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Transformerについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need&quot;&gt;Vaswani, Ashish, et al. “Attention is all you need.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ベースラインのモデルについて
-    &lt;ul&gt;
-      &lt;li&gt;Char-CNNについて
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classifica&quot;&gt;Zhang, Xiang, Junbo Zhao, and Yann LeCun. “Character-level convolutional networks for text classification.” Advances in neural information processing systems. 2015.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Char-CRNNについて
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1602.00367&quot;&gt;Xiao, Yijun, and Kyunghyun Cho. “Efficient character-level document classification by combining convolution and recurrent layers.” arXiv preprint arXiv:1602.00367 (2016).&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;VDCNNについて
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1606.01781&quot;&gt;Conneau, Alexis, et al. “Very deep convolutional networks for natural language processing.” arXiv preprint arXiv:1606.01781 (2016).&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;D-LSTMについて
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.01898&quot;&gt;Yogatama, Dani, et al. “Generative and discriminative text classification with recurrent neural networks.” arXiv preprint arXiv:1703.01898 (2017).&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;予測における寄与単語の可視化について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1506.01066&quot;&gt;Li, Jiwei, et al. “Visualizing and understanding neural models in NLP.” arXiv preprint arXiv:1506.01066 (2015).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://openreview.net/forum?id=BkSDMA36Z&quot;&gt;Chao Qiao, Bo Huang, Guocheng Niu, Daren Li, Daxiang Dong, Wei He, Dianhai Yu, Hua Wu, “A New Method of Region Embedding for Text Classification,” International Conference on Learning Representations, 2018&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

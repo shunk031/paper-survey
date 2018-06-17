@@ -7,21 +7,21 @@
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    
-  <title>Summary - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
-<meta property="og:title" content="Summary" />
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <title>Learn to Pay Attention - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Learn to Pay Attention" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
-<meta property="og:description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
-<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/14/" />
-<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/14/" />
+<meta name="description" content="1. どんなもの？" />
+<meta property="og:description" content="1. どんなもの？" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention" />
 <meta property="og:site_name" content="Paper Survey" />
-<link rel="prev" href="https://shunk031.github.io/paper-survey/summary/13">
-<link rel="next" href="https://shunk031.github.io/paper-survey/summary/15">
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-06-16T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"name":null,"description":"Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese","author":null,"@type":"WebPage","url":"https://shunk031.github.io/paper-survey/summary/14/","publisher":null,"image":null,"headline":"Summary","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention","publisher":null,"image":null,"headline":"Learn to Pay Attention","dateModified":"2018-06-16T00:00:00+00:00","datePublished":"2018-06-16T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -63,7 +63,7 @@
 </head>
 
   <body>
-    <amp-sidebar id='sidebar'
+     <amp-sidebar id='sidebar'
     layout="nodisplay"
     side="right">
   <amp-img class='amp-close-image'
@@ -169,8 +169,8 @@
       <a class="page-link" href="/paper-survey/category/others/">Others</a>
 </amp-sidebar>
 
-<header class="site-header header-nav">
-    
+<header class="site-header">
+    <div class="wrapper"><a class="site-title" href="/paper-survey/">Paper Survey</a>
 
     <nav class="site-nav">
       <button on='tap:sidebar.toggle' class="menu-icon">
@@ -276,83 +276,130 @@
 	<a class="page-link" href="/paper-survey/category/others">Others</a>
       </div>
     </nav>
-    <div class="wrapper">
-        <div class="author">
-          <a href="/paper-survey/">
-            <!-- <amp-img class="avatar" src="/paper-survey/assets/avatar.png" width="90" height="90" layout="responsive" alt="Paper Survey" ></amp-img> -->
-            <h1 class="name">Paper Survey</h1>
-          </a>
-          <h2 class="description">Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</h2>
-        </div>
-    </div>
-  
+  </div>
 </header>
  
     <div class="page-content ">
       <div class="wrapper">
-	  <ul class="post-list">
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Convolutional-Sequence-to-Sequence-Learning">Convolutional Sequence to Sequence Learning</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Jul 9, 2017
-	    in 
-	    <a href="/paper-survey/category/NLP">NLP</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？2. 先行研究と比べてどこがすごいの？3. 技術や手法の”キモ”はどこにある？4. どうやって有効だと検証した？5. 議論はあるか？6. 次に読むべき論文はあるか？論文情報・リンク  Jonas Gehring, Michael Auli, David Grangier, Denis Yarats, Yann N. Dauphin. “Convolutional Sequence to Sequence Learning.” arXiv preprint arXiv:17...
-            </p>
+	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Learn to Pay Attention</h1>
+    <p class="post-meta"><time datetime="2018-06-16T00:00:00+00:00" itemprop="datePublished">Jun 16, 2018</time>
+      in 
+      <a href="/paper-survey/category/CV">CV</a>
+      <p>
+    </p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="1-どんなもの">1. どんなもの？</h2>
+
+<p>画像認識に対して学習可能なattention機構をCNNに導入し、baseline手法を超える精度を実現</p>
+
+<h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
+
+<p>Convolutional Neural Network (CNN) は画像処理分野で素晴らしい結果を残しているが、こうした問題に対してモデルが推論する過程が不透明であり、結果の考察が難しい。
+そこで先行研究ではモデルの解釈性の向上のために、推論する画像のどの部分に注目しているかを可視化する手法が複数提案されている。
+しかしながらこれらの手法は学習済みのモデルに対してのみ適用可能という制限がある。</p>
+
+<p>Attention機構は学習時に入力のどの部分に注視するかを学習することが可能であり、機械翻訳や画像に対する説明文自動生成(キャプショニング)、VQAなどにおいて精度向上に寄与している。</p>
+
+<p>Attentionを計算する場合にクエリが必要な画像キャプションやVQAに対して、本研究ではattentionを推定するためにglobalな画像表現を利用し、分類問題においてもattention機構を導入することに成功している。</p>
+
+<h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
+
+<p><img src="/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure2.png" alt="Figure 2" /></p>
+
+<p><code class="highlighter-rouge">local feature vector</code> と <code class="highlighter-rouge">global feature vector</code> を用いたattention機構を実現した。</p>
+
+<ul>
+  <li>畳み込み層から活性化関数を通して得られるlocal feature vector <script type="math/tex">\mathcal{L}</script> と最終全結合層の出力であるglobal feature vector <script type="math/tex">\mathcal{G}</script> から、<code class="highlighter-rouge">compatibility score</code> <script type="math/tex">C\left(\hat{\mathcal{L}}, \mathcal{G} \right)</script> を計算し、各local feature vectorの重要度 <script type="math/tex">\mathcal{A}</script> (attention) を算出する</li>
+  <li>重要度 <script type="math/tex">\mathcal{A}</script> とlocal feature vectorとの重み付き平均 <script type="math/tex">\mathcal{G}_a</script> を計算する</li>
+  <li>各畳み込み層から得られる複数の <script type="math/tex">\mathcal{G}_a</script> をconcatしたベクトルを用いて分類を行う</li>
+  <li><code class="highlighter-rouge">compatibility socre</code> を計算する際に用いる <script type="math/tex">\mathcal{C}</script> は ドット積 を利用した</li>
+</ul>
+
+<h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
+
+<p>ベースラインとして、先行研究のVGG-GAPおよびVGG-PAN、ResNet164と、VGG/ResNetに対して本研究のattention機構を導入できるようパラメータを調整したネットワークを比較している。
+global feature vectorとlocal feature vectorに対してcompatibility scoreを計算する際にドット積を用いた<code class="highlighter-rouge">dp</code>と、パラメータを用いた<code class="highlighter-rouge">pc</code>を比較している。</p>
+
+<p>評価に用いるデータセットはCIFAR10/100、CUB-200-2011、SVHN等を利用している。また導入したattention機構がadversarialなサンプルに対してもロバストであることを示す実験も行っている。</p>
+
+<h2 id="5-議論はあるか">5. 議論はあるか？</h2>
+
+<p><img src="/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure3.png" alt="Figure 3" /></p>
+
+<p>提案手法 (proposed) と既存手法 (existing) それぞれのattention mapを可視化した結果である。提案手法がよりdiscriminativeな形で物体を認識していることが示されている。</p>
+
+<p><img src="/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure4.png" alt="Figure 4" /></p>
+
+<p>CUB-200データセットで学習した提案手法の結果である。10層目は目の特徴を捉えており、13層目は体全体を捉えていることが示されている。</p>
+
+<h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
+
+<ul>
+  <li>モデルの解釈性向上のための可視化手法
+    <ul>
+      <li><a href="https://arxiv.org/abs/1312.6034">Simonyan, Karen, Andrea Vedaldi, and Andrew Zisserman. “Deep inside convolutional networks: Visualising image classification models and saliency maps.” arXiv preprint arXiv:1312.6034 (2013).</a></li>
+      <li><a href="http://openaccess.thecvf.com/content_iccv_2015/papers/Cao_Look_and_Think_ICCV_2015_paper.pdf">Cao, Chunshui, et al. “Look and think twice: Capturing top-down visual attention with feedback convolutional neural networks.” Proceedings of the IEEE International Conference on Computer Vision. 2015.</a></li>
+      <li>Global average pooling (GAP)
+        <ul>
+          <li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf">Zhou, Bolei, et al. “Learning deep features for discriminative Computer.” localization Vision and Pattern Recognition (CVPR), 2016 IEEE Conference on. IEEE, 2016.</a></li>
+        </ul>
       </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/nlp/Component-Enhanced-Chinese-Character-Embeddings">Component-Enhanced Chinese Character Embeddings</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Jul 9, 2017
-	    in 
-	    <a href="/paper-survey/category/NLP">NLP</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？中国語における漢字の部首を元に、文字単位の埋め込み表現を学習する。2. 先行研究と比べてどこがすごいの？先行研究では単語単位で埋め込み表現を学習するContinuous Bag-of-Words(CBOW)モデルやSkip-gramモデルが有名である。英語と異なり「漢字」は表意文字であり、「1文字」が意味をなす最小の意味単位であることに注目し、漢字の文字構成から意味表現を獲得しよう考えたのが本研究である。3. 技術や手法の”キモ”はどこにある？  CBOWやSkip-gr...
-            </p>
+    </ul>
+  </li>
+  <li>Attention機構が用いられている先行研究
+    <ul>
+      <li>属性予測 (Progressive Attention Networks (PAN))
+        <ul>
+          <li><a href="http://adsabs.harvard.edu/abs/2016arXiv160602393H">Hongsuck Seo, Paul, et al. “Progressive Attention Networks for Visual Attribute Prediction.” arXiv preprint arXiv:1606.02393 (2016).</a></li>
+        </ul>
       </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/others/A-Comprehensive-Survey-on-Cross-modal-Retrieval">A Comprehensive Survey on Cross-Modal Retrieval</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Jul 6, 2017
-	    in 
-	    <a href="/paper-survey/category/Others">Others</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？画像やテキストといった複数の要素を用いた「クロスモーダル検索」について、最新の研究にフォーカスをして調査を行っている。2. 先行研究と比べてどこがすごいの？近年の携帯端末やSNSの発展により、写真を中心とした画像やテキスト、動画といったマルチモーダルなデータが多数生成されている。こういったデータを検索する方法は、ほとんどが「テキストからテキストを検索する」「画像から画像を検索する」といった同じタイプのデータに対してのみに行われてきている。本調査では違うタイプのメディア同士...
-            </p>
+      <li>機械翻訳
+        <ul>
+          <li><a href="https://arxiv.org/abs/1409.0473">Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014).</a></li>
+        </ul>
       </li>
-    
-  </ul>
-<!-- Pagination links -->
-  <div class="pagination">
-     <a href="/paper-survey/summary/13" class="prev">← Newer Posts</a> 
-     <a href="/paper-survey/summary/15" class="next">Older Posts →</a>
+      <li>画像に対する説明文自動生成
+        <ul>
+          <li><a href="http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf">Xu, Kelvin, et al. “Show, attend and tell: Neural image caption generation with visual attention.” International Conference on Machine Learning. 2015.</a></li>
+          <li><a href="http://openaccess.thecvf.com/content_cvpr_2016/papers/You_Image_Captioning_With_CVPR_2016_paper.pdf">You, Quanzeng, et al. “Image captioning with semantic attention.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.</a></li>
+          <li><a href="http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14888/14305">Mun, Jonghwan, Minsu Cho, and Bohyung Han. “Text-Guided Attention Model for Image Captioning.” AAAI. 2017.</a></li>
+        </ul>
+      </li>
+      <li>Visual question answering (VQA)
+        <ul>
+          <li><a href="https://link.springer.com/chapter/10.1007/978-3-319-46478-7_28">Xu, Huijuan, and Kate Saenko. “Ask, attend and answer: Exploring question-guided spatial attention for visual question answering.” European Conference on Computer Vision. Springer, Cham, 2016.</a></li>
+          <li><a href="https://www.cv-foundation.org/openaccess/content_cvpr_2016/app/S01-03.pdf">Yang, Zichao, et al. “Stacked attention networks for image question answering.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="論文情報リンク">論文情報・リンク</h3>
+
+<ul>
+  <li><a href="https://arxiv.org/abs/1804.02391">Jetley, Saumya, et al. “Learn to pay attention.” arXiv preprint arXiv:1804.02391 (2018).</a></li>
+</ul>
+
   </div>
+  <div>
+    <amp-social-share type="twitter"
+        width="60"
+        height="44"> </amp-social-share>
+    <amp-social-share type="gplus"
+        width="60"
+        height="44"></amp-social-share>
+  </div>
+
+</article>
+<!-- Post Navigation -->
+<div class="pagination">
+  <a class="prev" href="/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC">←&nbsp; Previous post</a>
+  <a class="next" href="/paper-survey/summary/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification">Next post&nbsp;→</a>
+</div>
 
       </div>
     </div>

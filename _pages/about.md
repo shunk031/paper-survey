@@ -5,15 +5,15 @@ permalink: /about/
 avatar: true
 navigation: true
 ---
-This is the [emping](https://github.com/rmsubekti/emping) Jekyll theme based on the default( base ) jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+{% include icon-github.html username="shunk031" %} / [paper-survey](https://github.com/shunk031/paper-survey/) は
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+- {% include icon-github.html username="pages-themes" %} / [cayman](https://github.com/pages-themes/cayman) 
+- {% include icon-github.html username="rmsubekti" %} / [emping](https://github.com/rmsubekti/emping)
+
+を ベースにカスタマイズしたjekyllテーマを使っています。
+
+詳しくは[README](https://github.com/shunk031/paper-survey/blob/master/README.md)をご参照ください。
 
 ---
 

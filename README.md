@@ -1,4 +1,6 @@
-## 🚀 Paper Survey
+## Paper Survey
+
+![logo](assets/logo.png)
 
 [![Build Status](https://travis-ci.org/shunk031/paper-survey.svg?branch=master)](https://travis-ci.org/shunk031/paper-survey)
 [![GitHub issues](https://img.shields.io/github/issues/shunk031/paper-survey.svg)](https://github.com/shunk031/paper-survey/issues?q=is%3Aopen+is%3Aissue)

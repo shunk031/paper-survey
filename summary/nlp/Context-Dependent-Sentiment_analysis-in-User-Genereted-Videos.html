@@ -8,20 +8,21 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>Semi-supervised Deep Learning by Metric Embedding - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
-<meta property="og:title" content="Semi-supervised Deep Learning by Metric Embedding" />
+  <title>Context-Dependent Sentiment Analysis in User-Generated Videos - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Context-Dependent Sentiment Analysis in User-Generated Videos" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. どんなもの？" />
 <meta property="og:description" content="1. どんなもの？" />
-<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding" />
-<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos" />
 <meta property="og:site_name" content="Paper Survey" />
+<meta property="og:image" content="https://shunk031.github.io/paper-survey/assets/img/nlp/Context-Dependent-Sentiment-Analysis-in-User-Generated-Videos/figure2.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-08-25T00:00:00+00:00" />
-<meta name="twitter:card" content="summary" />
+<meta property="article:published_time" content="2018-10-22T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding","publisher":null,"image":null,"headline":"Semi-supervised Deep Learning by Metric Embedding","dateModified":"2018-08-25T00:00:00+00:00","datePublished":"2018-08-25T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos","publisher":null,"image":"https://shunk031.github.io/paper-survey/assets/img/nlp/Context-Dependent-Sentiment-Analysis-in-User-Generated-Videos/figure2.png","headline":"Context-Dependent Sentiment Analysis in User-Generated Videos","dateModified":"2018-10-22T00:00:00+00:00","datePublished":"2018-10-22T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -287,105 +288,235 @@
       <div class="wrapper">
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Semi-supervised Deep Learning by Metric Embedding</h1>
-    <p class="post-meta"><time datetime="2018-08-25T00:00:00+00:00" itemprop="datePublished">Aug 25, 2018</time>
+    <h1 class="post-title" itemprop="name headline">Context-Dependent Sentiment Analysis in User-Generated Videos</h1>
+    <p class="post-meta"><time datetime="2018-10-22T00:00:00+00:00" itemprop="datePublished">Oct 22, 2018</time>
       in 
-      <a href="/paper-survey/category/CV">CV</a>
+      <a href="/paper-survey/category/NLP">NLP</a>
       <p>
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">
     <h2 id="1-どんなもの">1. どんなもの？</h2>
 
-<p>少ないラベル付きデータとラベルなしデータを元に距離埋め込み (neighbor embedding) を学習する、半教師あり学習を提案</p>
+<p>マルチモーダル (テキスト・音声・動画) における発音レベルの特徴量を用いた感情分析を行うモデルを提案</p>
 
 <h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
 
-<p>従来のニューラルネットワークの学習では学習データに対してラベルを推定する枠組みであったが、ラベル付きの学習データが少ない場合に容易に過学習を引き起こす。
-本研究ではラベル付きの学習データに対して距離埋め込み (neighbor embedding) を推定する枠組みを導入することで、ラベルなしデータも含めて学習を行い精度を向上させた。</p>
+<p>マルチモーダルを用いた感情分析を行うモデルは複数提案されてきたが、先行研究では発話レベルでの依存関係を無視したモデルのみしか提案されていなかった。
+本研究では発話中の呼吸や小休止で区切り 1 つの単位とする <code class="highlighter-rouge">utterance-level</code> (発話レベル) の特徴量にフォーカスを当て、これらの系列を元にマルチモーダルの特徴を用いて感情分析を行った。</p>
 
 <h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
+<p>マルチモーダル(テキスト・音声・動画)から <code class="highlighter-rouge">utterance-level</code> の特徴を抽出し、<code class="highlighter-rouge">Contextual-LSTM</code> を用いてこれらの系列を考慮した感情分析モデルを構築</p>
 
+<h3 id="発話レベルの特徴量抽出">発話レベルの特徴量抽出</h3>
 <ul>
-  <li>Embedding同士の距離比較による学習 (neighbor embedding)
+  <li>テキストからの特徴抽出
     <ul>
-      <li>学習データ <script type="math/tex">x \in \mathcal{X}</script> バッチサイズ分サンプリング</li>
-      <li><script type="math/tex">c</script> クラスのラベル付きデータ <script type="math/tex">z_1, \cdots, z_c \in X_L</script> を各クラス1サンプルずつサンプリング</li>
-      <li>学習データをembeddingした <script type="math/tex">F(x)</script> と ラベル付きデータをembeddingした <script type="math/tex">F(z_1), \cdots, F(z_c)</script> に対してそれぞれ <code class="highlighter-rouge">L2 norm squared</code> の逆数を計算</li>
-      <li>計算した距離の逆数に対して <code class="highlighter-rouge">softmax</code> 値を計算</li>
-    </ul>
-
-    <script type="math/tex; mode=display">P(x; z_1, \cdots, z_c)_{i} = \frac{e^{-||F(x) - F(z_i)||^2}}{\sum_{j=1}^{c} e^{-||F(x) - F(z_i)||^2}}, i \in \{1 \cdots c \}</script>
-
-    <ul>
-      <li><code class="highlighter-rouge">softmax</code> 値と学習データの教師ラベルとの <code class="highlighter-rouge">cross entropy</code> を計算する。</li>
+      <li><code class="highlighter-rouge">text-CNN</code>
+        <ul>
+          <li>学習済み word2vec を入力し、複数種類のカーネルを持つ 2 層の CNN でテキストのセマンティクスを抽出</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li>半教師あり学習への応用
+  <li>音声からの特徴抽出
     <ul>
-      <li>ラベルなしデータ群 <script type="math/tex">X_U</script> からサンプリングして以下を計算</li>
+      <li><code class="highlighter-rouge">openSMILE</code>
+        <ul>
+          <li>オープンソースのソフトウェアである openSMILE を用いて、音声のピッチや強度といった特徴量を抽出</li>
+        </ul>
+      </li>
     </ul>
+  </li>
+  <li>動画からの特徴抽出
+    <ul>
+      <li><code class="highlighter-rouge">3D-CNN</code>
+        <ul>
+          <li>通常の 2D の CNN に対して時間軸方向を考慮した 3D の CNN を使用</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-    <script type="math/tex; mode=display">L(x, z_1, \cdots, z_c)_U = - \sum_{i=1}^{c} \frac{ e^{-||F(x) - F(z_i)||^2} }{ \sum_{j=1}^{c} e^{-||F(x) - F(z_j)||^2} } \cdot \log{\frac{ e^{-||F(x) - F(z_i)||^2} }{ \sum_{j=1}^{c} e^{-||F(x) - F(z_j)||^2}}}</script>
+<h3 id="コンテキストを考慮した特徴抽出">コンテキストを考慮した特徴抽出</h3>
+<p>抽出した <code class="highlighter-rouge">utterance-level</code> の特徴量に対して、発話ごとの関係性を学習する LSTM (<code class="highlighter-rouge">Contextual-LSTM</code>) を用いる。</p>
+
+<p><img src="/paper-survey/assets/img/nlp/Context-Dependent-Sentiment-Analysis-in-User-Generated-Videos/figure1.png" alt="Figure 1" /></p>
+
+<p>Contextual-LSTM は複数種類の LSTM を比較</p>
+<ul>
+  <li><code class="highlighter-rouge">sc-LSTM</code> (simple contextual LSTM)
+    <ul>
+      <li>順方向のみのシンプルな LSTM を使用</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">h-LSTM</code> (hidden LSTM)
+    <ul>
+      <li>LSTM の後に全結合層を入れずにそのまま隠れ状態を後段に渡す</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">bc-LSTM</code> (bi-directional LSTM)
+    <ul>
+      <li>発話に対して双方向の特徴を考慮できる bi-directional LSTM を使用</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">uni-SVM</code>
+    <ul>
+      <li>ベースラインとして SVM を使用</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="複数のモダリティ特徴を用いた感情分析">複数のモダリティ特徴を用いた感情分析</h3>
+<ul>
+  <li>複数のモダリティに対して階層構造を考慮する (Hierarchical Framework)
+    <ul>
+      <li>Level-1
+        <ul>
+          <li>各モダリティ (テキスト・音声・動画) の特徴量に対してそれぞれ独立で LSTM に通し、対象モダリティ独自のコンテキストをを学習</li>
+        </ul>
+      </li>
+      <li>Level-2
+        <ul>
+          <li>Level-1 で学習した各モダリティ独立した特徴を concat して LSTM に通すことでマルチモーダルなコンテキストを学習</li>
+        </ul>
+      </li>
+      <li>Level-1 と Level-2 は end-to-end での学習ではない</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/paper-survey/assets/img/nlp/Context-Dependent-Sentiment-Analysis-in-User-Generated-Videos/figure2.png" alt="Figure 2" /></p>
+
+<ul>
+  <li>階層構造を考慮しない枠組み (Non-hierarchical Framework) についても比較
+    <ul>
+      <li>単一のモダリティ特徴を contextual-LSTM (sc-LSTM や bc-LSTM) に入力</li>
+    </ul>
   </li>
 </ul>
 
 <h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
+<p>マルチモーダルな感情分析を行う先行研究の大部分の検証実験において、学習データとテストデータに同じ話者が入っている場合が多い。
+話者が同じ場合であっても、感情表現やセマンティクスはデータによって異なると考えられているためである。
+しかしながら感情分析に対して一般性・話者に依存しないモデリングを行うことは重要である。</p>
 
-<p>MNISTおよびCIFAR10に対して先行研究のモデル(EmbedCNN, SWWAE, Ladder network, Conv-CatGAN / Spike-and-Slab Sparse Coding, View-Invariant k-means, Exampler-CNN, Ladder network, Conv-CatGan, Improved GAN)と提案手法の比較を行っている。</p>
+<p>本研究での検証実験では現実世界に即したアプリケーションを目指すため、未知の話者に対してもモデルがロバストになるように、
+話者独立でデータセットの train/test 分割を行っている。</p>
 
-<p>MNISTに対しては各クラス100枚ずつにのみ教師ラベルを付与し、CIFAR10に対しては各クラス400枚ずつにのみ教師ラベルを付与し実験を行っている。</p>
+<h3 id="マルチモーダルな感情分析を検証するためのデータセットについて">マルチモーダルな感情分析を検証するためのデータセットについて</h3>
+<h4 id="mosi">MOSI</h4>
+<ul>
+  <li>93 人が英語である話題についてレビューしている動画が含まれる</li>
+  <li>5 人のアノテーターが <code class="highlighter-rouge">-3</code>〜<code class="highlighter-rouge">+3</code> の感情値を付与
+    <ul>
+      <li>ラベルの平均値を計算し、 <code class="highlighter-rouge">positive</code> と <code class="highlighter-rouge">negative</code> の 2 クラスとして使用</li>
+    </ul>
+  </li>
+</ul>
 
-<p>学習時にdata agumentationは行わず、テスト時には出力したembeddingに対してk-NNを用いてk={1, 3, 5}の場合の予測結果をaveragingしている。</p>
+<h4 id="moud">MOUD</h4>
+<ul>
+  <li>55 人がスペイン語である製品についてレビューしている動画が含まれる</li>
+  <li>Google Translate API を用いてスペイン語から英語に変換</li>
+  <li>positive, negative, neutral のラベルが付与されているが、<code class="highlighter-rouge">positive</code>と<code class="highlighter-rouge">negative</code>のみ使用</li>
+</ul>
+
+<h4 id="iemocap">IEMOCAP</h4>
+<ul>
+  <li>10 人が英語で対話している動画データセット</li>
+  <li>データセットには以下 9 つのラベルが付与されている: <code class="highlighter-rouge">anger</code>、<code class="highlighter-rouge">happiness</code>、<code class="highlighter-rouge">sadness</code>、<code class="highlighter-rouge">neutral</code>、<code class="highlighter-rouge">excitement</code>、<code class="highlighter-rouge">frustration</code>、<code class="highlighter-rouge">fear</code>、<code class="highlighter-rouge">surprise</code>、<code class="highlighter-rouge">other</code>
+    <ul>
+      <li>先行研究と比較するために上記最初の 4 つのクラスだけをラベルとして使用</li>
+    </ul>
+  </li>
+  <li>8 人を学習データ、2 人をテストデータとして使用</li>
+</ul>
+
+<p>また汎化性能を確認するため、MOSI データセットで学習したモデルを MOUD データセットで評価する <code class="highlighter-rouge">cross-dataset</code> の枠組みを導入している。</p>
+
+<h3 id="モデルのパフォーマンス比較">モデルのパフォーマンス比較</h3>
+<h4 id="階層的-vs-非階層的な学習フレームワーク">階層的 vs 非階層的な学習フレームワーク</h4>
+<ul>
+  <li>非階層的なフレームワークはベースラインの uni-SVM を超えたが、階層的フレームワークが一番良かった</li>
+</ul>
+
+<h4 id="lstm-の種類の違いによる比較">LSTM の種類の違いによる比較</h4>
+<ul>
+  <li>sc-LSTM、bc-LSTM ともに良い結果を出している</li>
+  <li>bc-LSTM は順方向・逆方向のコンテキストを考慮できるため sc-LSTM より優れていた</li>
+  <li>全結合層がない場合 (h-LSTM) よりある場合のほうが性能は高い</li>
+</ul>
+
+<h4 id="ベースラインとの比較">ベースラインとの比較</h4>
+<ul>
+  <li>LSTM を用いたネットワークはすべてのデータセットに対してベースラインの uni-SVM を超える性能を出した
+    <ul>
+      <li>発話間の文脈依存性をモデリングすることで感情分類性のを高めている</li>
+    </ul>
+  </li>
+  <li>IEMOCAP データセットでは特にベースラインとの性能差が現れた
+    <ul>
+      <li>より広い依存関係を適切に捉える必要があるため、LSTM ネットワークが効果的であった</li>
+    </ul>
+  </li>
+  <li>SoTA のモデルとの比較
+    <ul>
+      <li>SoTA モデルは実験の際に話者が独立するように train/test の分割をしていない</li>
+      <li>発話の文脈依存を考慮していない</li>
+      <li>提案手法は SoTA モデルを上回る性能を示した</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="各モダリティの重要度">各モダリティの重要度</h4>
+
+<ul>
+  <li>unimodal な特徴より bimodal や trimodal な特徴を用いたほうが性能は良かった</li>
+  <li>音声特徴は視覚特徴よりも効果があった</li>
+  <li>MOSI データセットと IEMOCAP データセットにおいてはテキスト特徴が有効であった</li>
+  <li>MOUD データセットにおいてはスペイン語から英語に翻訳した影響により、テキスト特徴より音声特徴のほうが有効であった
+    <ul>
+      <li>スペイン語の word vector を用いることでテキスト特徴における性能が向上</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="モデルの汎化性能について">モデルの汎化性能について</h4>
+<p>MOSI データセットで学習を行い、MOUD データセットを用いて評価を行った。</p>
+
+<ul>
+  <li>音声およびテキスト特徴を用いた場合性能が低下した
+    <ul>
+      <li>英語のモデルでスペイン語を予測していたから</li>
+    </ul>
+  </li>
+  <li>視覚特徴を用いた場合、音声・テキスト特徴よりも性能が良かった
+    <ul>
+      <li>クロスリンガルであっても視覚特徴は一般的な特徴を学習できる</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="5-議論はあるか">5. 議論はあるか？</h2>
 
-<p>MNISTデータセットに対して、実験で使用したモデルに2次元のembeddingを出力する全結合層を追加し、可視化を行った結果である。色付きの点は教師ラベルありのサンプルであり、グレーの点は教師ラベルなしのサンプルである。
-ラベルありデータは1つのクラスタを形成しており、ラベルなしデータは大部分において各クラスタに属するような形で分布していることがわかる。</p>
-
-<p><img src="/paper-survey/assets/img/cv/Semi-supervised-deep-learning-by-metric-embedding/figure1.png" alt="Figure 1" /></p>
+<ul>
+  <li>発話の文脈依存を考慮できることで対象の発話を正確に分析することができている</li>
+  <li>音声特徴では正しく分類できない場合でも、テキスト特徴で正しく分類する例がある
+    <ul>
+      <li>逆に、テキストではポジティブな文脈でも、怒りっぽい音声特徴から感情を捉えてネガティブであると正しく分類する例もある</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
 
 <ul>
-  <li>EmbedCNNについて
+  <li>ベースラインについて
     <ul>
-      <li><a href="https://link.springer.com/chapter/10.1007/978-3-642-35289-8_34">Weston, Jason, et al. “Deep learning via semi-supervised embedding.” Neural Networks: Tricks of the Trade. Springer, Berlin, Heidelberg, 2012. 639-655.</a></li>
-    </ul>
-  </li>
-  <li>SWWAEについて
-    <ul>
-      <li><a href="https://arxiv.org/abs/1506.02351">Zhao, J., et al. “Stacked What-Where Auto-encoders. arXiv 2015.” arXiv preprint arXiv:1506.02351.</a></li>
-    </ul>
-  </li>
-  <li>Ladder networkについて
-    <ul>
-      <li><a href="http://papers.nips.cc/paper/5947-semi-supervised-learning-with-ladder-networks">Rasmus, Antti, et al. “Semi-supervised learning with ladder networks.” Advances in Neural Information Processing Systems. 2015.</a></li>
-    </ul>
-  </li>
-  <li>Conv-CatGANについて
-    <ul>
-      <li><a href="https://arxiv.org/abs/1511.06390">Springenberg, Jost Tobias. “Unsupervised and semi-supervised learning with categorical generative adversarial networks.” arXiv preprint arXiv:1511.06390 (2015).</a></li>
-    </ul>
-  </li>
-  <li>Spike-and-Slab Sparse Codingについて
-    <ul>
-      <li><a href="https://arxiv.org/abs/1206.6407">Goodfellow, Ian, Aaron Courville, and Yoshua Bengio. “Large-scale feature learning with spike-and-slab sparse coding.” arXiv preprint arXiv:1206.6407 (2012).</a></li>
-    </ul>
-  </li>
-  <li>View-Invatiant k-meansについて
-    <ul>
-      <li><a href="http://www.jmlr.org/proceedings/papers/v28/yuhui13.pdf">Hui, Ka Yu. “Direct modeling of complex invariances for visual object features.” International Conference on Machine Learning. 2013.</a></li>
-    </ul>
-  </li>
-  <li>Exampler-CNNについて
-    <ul>
-      <li><a href="https://ieeexplore.ieee.org/abstract/document/7312476/">Dosovitskiy, Alexey, et al. “Discriminative unsupervised feature learning with exemplar convolutional neural networks.” IEEE transactions on pattern analysis and machine intelligence 38.9 (2016): 1734-1747.</a></li>
-    </ul>
-  </li>
-  <li>ImprovedGanについて
-    <ul>
-      <li><a href="https://arxiv.org/abs/1606.03498">Salimans, Tim, et al. “Improved techniques for training gans.” Advances in Neural Information Processing Systems. 2016.</a></li>
+      <li><a href="http://www.aclweb.org/anthology/D15-1303">Poria, Soujanya, Erik Cambria, and Alexander Gelbukh. “Deep convolutional neural network textual features and multiple kernel learning for utterance-level multimodal sentiment analysis.” Proceedings of the 2015 conference on empirical methods in natural language processing. 2015.</a></li>
+      <li><a href="https://ieeexplore.ieee.org/abstract/document/6411794/">Rozgic, Viktor, et al. “Ensemble of svm trees for multimodal emotion recognition.” Signal &amp; Information Processing Association Annual Summit and Conference (APSIPA ASC), 2012 Asia-Pacific. IEEE, 2012.</a></li>
     </ul>
   </li>
 </ul>
@@ -393,12 +524,12 @@
 <h3 id="論文情報リンク">論文情報・リンク</h3>
 
 <ul>
-  <li><a href="https://arxiv.org/abs/1611.01449">Hoffer, Elad, and Nir Ailon. “Semi-supervised deep learning by metric embedding.” arXiv preprint arXiv:1611.01449 (2016).</a></li>
+  <li><a href="http://www.aclweb.org/anthology/P17-1081">Poria, Soujanya, et al. “Context-dependent sentiment analysis in user-generated videos.” Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). Vol. 1. 2017.</a></li>
 </ul>
 
   </div>
   <div class="social-button-item">
-  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding" data-via="shunk031" data-related="" data-show-count="false">Tweet</a>
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos" data-via="shunk031" data-related="" data-show-count="false">Tweet</a>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
@@ -418,14 +549,14 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));</script>
 
-  <div class="fb-like" data-href="/summary/cv/Semi-supervised-deep-learning-by-metric-embedding" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+  <div class="fb-like" data-href="/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 </div>
 
 </article>
 <!-- Post Navigation -->
 <div class="pagination">
-  <a class="prev" href="/paper-survey/summary/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification">←&nbsp; Previous post</a>
-  <a class="next" href="/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos">Next post&nbsp;→</a>
+  <a class="prev" href="/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding">←&nbsp; Previous post</a>
+  
 </div>
 
       </div>

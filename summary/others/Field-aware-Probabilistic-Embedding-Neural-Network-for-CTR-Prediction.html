@@ -7,21 +7,22 @@
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    
-  <title>Summary - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
-<meta property="og:title" content="Summary" />
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <title>Field-aware Probabilistic Embedding Neural Network for CTR Prediction - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.3.0 -->
+<meta property="og:title" content="Field-aware Probabilistic Embedding Neural Network for CTR Prediction" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
-<meta property="og:description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
-<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/16/" />
-<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/16/" />
+<meta name="description" content="1. どんなもの？" />
+<meta property="og:description" content="1. どんなもの？" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction" />
 <meta property="og:site_name" content="Paper Survey" />
-<link rel="prev" href="https://shunk031.github.io/paper-survey/summary/15">
-<link rel="next" href="https://shunk031.github.io/paper-survey/summary/17">
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://shunk031.github.io/paper-survey/assets/img/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction/figure1.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-06T00:00:00+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"name":null,"description":"Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese","author":null,"@type":"WebPage","url":"https://shunk031.github.io/paper-survey/summary/16/","publisher":null,"image":null,"headline":"Summary","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"1. どんなもの？","author":null,"@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction","publisher":null,"image":"https://shunk031.github.io/paper-survey/assets/img/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction/figure1.png","headline":"Field-aware Probabilistic Embedding Neural Network for CTR Prediction","dateModified":"2018-12-06T00:00:00+00:00","datePublished":"2018-12-06T00:00:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -63,7 +64,7 @@
 </head>
 
   <body>
-    <amp-sidebar id='sidebar'
+     <amp-sidebar id='sidebar'
     layout="nodisplay"
     side="right">
   <amp-img class='amp-close-image'
@@ -171,8 +172,8 @@
       <a class="page-link" href="/paper-survey/category/others/">Others</a>
 </amp-sidebar>
 
-<header class="site-header header-nav">
-    
+<header class="site-header">
+    <div class="wrapper"><a class="site-title" href="/paper-survey/">Paper Survey</a>
 
     <nav class="site-nav">
       <button on='tap:sidebar.toggle' class="menu-icon">
@@ -280,83 +281,139 @@
 	<a class="page-link" href="/paper-survey/category/others">Others</a>
       </div>
     </nav>
-    <div class="wrapper">
-        <div class="author">
-          <a href="/paper-survey/">
-            <!-- <amp-img class="avatar" src="/paper-survey/assets/avatar.png" width="90" height="90" layout="responsive" alt="Paper Survey" ></amp-img> -->
-            <h1 class="name">Paper Survey</h1>
-          </a>
-          <h2 class="description">Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</h2>
-        </div>
-    </div>
-  
+  </div>
 </header>
  
     <div class="page-content ">
       <div class="wrapper">
-	  <ul class="post-list">
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/cv/Annealed-Dropout-Training-of-Deep-Networks">Annealed Dropout Training of Deep Networks</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Jul 3, 2017
-	    in 
-	    <a href="/paper-survey/category/CV">CV</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？学習が進むに連れてネットワーク内ノードのDropout率を徐々に減少させる「Annealed Dropout」を提案．2. 先行研究と比べてどこがすごいの？Dropoutを用いた学習は，複数のニューロンが繰り返し同じ特徴を識別してしまう「co-adapting」を抑制する．またネットワークの表現能力を制限することで過学習を避けることができる．本研究ではデータ量が豊富な場合の学習において，高いDropout率(e.g. 0.5)からゼロまで徐々に減少させることで，予測精度を...
-            </p>
+	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Field-aware Probabilistic Embedding Neural Network for CTR Prediction</h1>
+    <p class="post-meta"><time datetime="2018-12-06T00:00:00+00:00" itemprop="datePublished">Dec 6, 2018</time>
+      in 
+      <a href="/paper-survey/category/Others">Others</a>
+      <p>
+    </p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="1-どんなもの">1. どんなもの？</h2>
+
+<p>確率的埋め込みを導入し特徴表現の確率的振る舞いを学習する CTR 予測のためのモデル Field-aware Probabilistic Embedding Neural Network を提案</p>
+
+<h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
+
+<p>Click Though Rate (CTR) 予測に通常用いられるロジスティック回帰 (LR) や Factorization Machine (FM) は一般的な線形の特徴を捉えることが可能でシンプルな実装であることが知られているが、高次元特徴の表現能力に乏しい。</p>
+
+<p>本件研究では特徴の embedding に対して点推定ではなく分布を推定する Probabilistic Embedding という新たな embedding 手法を提案し、事前知識を導入することで先行研究よりもロバストなモデルを構築した。</p>
+
+<h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
+
+<p><img src="/paper-survey/assets/img/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction/figure1.png" alt="Figure 1" /></p>
+
+<ul>
+  <li>Field-aware Probabilistic Embedding Neural Networks (FPENN)
+    <ul>
+      <li>Field-aware Probabilistic Embedding (FPE) による確率的埋め込みの学習
+        <ul>
+          <li>埋め込み行列 <script type="math/tex">V</script> の平均・分散からなる確率分布を用いて確率的な振る舞いを導入</li>
+        </ul>
       </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/cv/Max-Pooling-Dropout-for-Regularization-of-Convolutional-Neural-Networks">Max-Pooling Dropout for Regularization of Convolutional Neural Networks</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Jun 26, 2017
-	    in 
-	    <a href="/paper-survey/category/CV">CV</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？Max-pooling層の前にDropoutする「Max-Pooling Dropout」を提案し，学習時に活性化後の特徴量を多項分布に従ってサンプリングしていることと同等であることを示した．2. 先行研究と比べてどこがすごいの？Dropoutは最近Deep Learningに導入された正則化技術であり，通常全結合層に対して適用される．先行研究ではStochastic poolingやMaxout Networkといった，Dropoutにインスパイアされた正則化技術が提案...
-            </p>
+      <li>多様な特徴を学習するコンポーネント
+        <ul>
+          <li>Linear term (LT)
+            <ul>
+              <li>低次元の相互作用を捉える</li>
+            </ul>
+          </li>
+          <li>Quadratic term (QDR)
+            <ul>
+              <li>2 次の相互作用を捉える</li>
+            </ul>
+          </li>
+          <li>Deep NN term (DNN)
+            <ul>
+              <li>高次元の相互作用を捉える</li>
+            </ul>
+          </li>
+        </ul>
       </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/paper-survey/summary/cv/Multi-Modal-Fashion-Product-Retrieval">Multi-Modal Fashion Product Retrieval</a>
-        </h2>
-        <span class="post-meta">
-	  <p>
-	    Jun 20, 2017
-	    in 
-	    <a href="/paper-survey/category/CV">CV</a>
-	    
-	  </p>
-	</span>
-        <p class="description">
-            
-                1. どんなもの？ファッション商品の「画像情報」と「テキスト情報」を用いた、マルチモーダルな商品検索を可能にする。2. 先行研究と比べてどこがすごいの？従来の商品検索は画像のみにフォーカスされていて、なおかつ学習のためのデータセットを取得するのが難しかった。本研究では、テキストデータのようなメタデータを併用し、画像とテキストを共通の特徴空間にマッピングしている。3. 技術や手法の”キモ”はどこにある？  2つのNeural Network(NN)構造          画像用NN     ...
-            </p>
+      <li>埋め込みを確率分布としたときの学習手法の適用
+        <ul>
+          <li>Reparameterization trick
+            <ul>
+              <li>埋め込み行列 <script type="math/tex">V</script> の平均・分散を持つ正規分布から埋め込み表現をサンプリングする場合誤差逆伝播が不可能</li>
+              <li>Reparameterization trick でこの問題を解決</li>
+            </ul>
+          </li>
+        </ul>
       </li>
-    
-  </ul>
-<!-- Pagination links -->
-  <div class="pagination">
-     <a href="/paper-survey/summary/15" class="prev">← Newer Posts</a> 
-     <a href="/paper-survey/summary/17" class="next">Older Posts →</a>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
+
+<p>CTR 予測のデータセットとして Avazu dataset と Criteo dataset を用いて提案する FPENN とベースラインの LR や FM、CNN ベースの CCPM や DeepFM と比較を行っている。</p>
+
+<h2 id="5-議論はあるか">5. 議論はあるか？</h2>
+
+<ul>
+  <li>提案手法が 50 〜 100 ミリ秒以内に 200 〜 300 アプリの CTR 値を予測との記述あり</li>
+</ul>
+
+<h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
+
+<ul>
+  <li>CCPM について
+    <ul>
+      <li><a href="https://dl.acm.org/citation.cfm?id=2806603">Liu, Qiang, et al. “A convolutional click prediction model.” Proceedings of the 24th ACM International on Conference on Information and Knowledge Management. ACM, 2015.</a></li>
+    </ul>
+  </li>
+  <li>DeepFM について
+    <ul>
+      <li><a href="https://arxiv.org/abs/1703.04247">Guo, Huifeng, et al. “Deepfm: a factorization-machine based neural network for ctr prediction.” arXiv preprint arXiv:1703.04247 (2017).</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="論文情報リンク">論文情報・リンク</h3>
+
+<ul>
+  <li><a href="https://dl.acm.org/citation.cfm?id=3240396">Weiwen Liu, Ruiming Tang, Jiajin Li, Jinkai Yu, Huifeng Guo, Xiuqiang He, and Shengyu Zhang. 2018. Field-aware probabilistic embedding neural network for CTR prediction. In Proceedings of the 12th ACM Conference on Recommender Systems (RecSys ‘18). ACM, New York, NY, USA, 412-416.</a></li>
+  <li><a href="https://speakerdeck.com/shunk031/paper-summary-of-field-aware-probabilistic-embedding-neural-network-for-ctr-prediction">[論文紹介] Field-aware Probabilistic Embedding Neural Network for CTR Prediction [RecSys 2018] / Paper summary of Field-aware Probabilistic Embedding Neural Network for CTR Prediction</a></li>
+</ul>
+
   </div>
+  <div class="social-button-item">
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction" data-via="shunk031" data-related="" data-show-count="false">Tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<div class="social-button-item">
+  <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加">
+    <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
+  </a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+</div>
+
+<div class="social-button-item">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.1';
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="fb-like" data-href="/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+</div>
+
+</article>
+<!-- Post Navigation -->
+<div class="pagination">
+  <a class="prev" href="/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos">←&nbsp; Previous post</a>
+  
+</div>
 
       </div>
     </div>

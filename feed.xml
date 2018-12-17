@@ -1,5 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-11-11T12:53:42+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Context-Dependent Sentiment Analysis in User-Generated Videos</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos" rel="alternate" type="text/html" title="Context-Dependent Sentiment Analysis in User-Generated Videos" /><published>2018-10-22T00:00:00+00:00</published><updated>2018-10-22T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.6.2">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2018-12-17T10:58:14+00:00</updated><id>https://shunk031.github.io/paper-survey/</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Field-aware Probabilistic Embedding Neural Network for CTR Prediction</title><link href="https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction" rel="alternate" type="text/html" title="Field-aware Probabilistic Embedding Neural Network for CTR Prediction" /><published>2018-12-06T00:00:00+00:00</published><updated>2018-12-06T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;確率的埋め込みを導入し特徴表現の確率的振る舞いを学習する CTR 予測のためのモデル Field-aware Probabilistic Embedding Neural Network を提案&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;Click Though Rate (CTR) 予測に通常用いられるロジスティック回帰 (LR) や Factorization Machine (FM) は一般的な線形の特徴を捉えることが可能でシンプルな実装であることが知られているが、高次元特徴の表現能力に乏しい。&lt;/p&gt;
+
+&lt;p&gt;本件研究では特徴の embedding に対して点推定ではなく分布を推定する Probabilistic Embedding という新たな embedding 手法を提案し、事前知識を導入することで先行研究よりもロバストなモデルを構築した。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Field-aware Probabilistic Embedding Neural Networks (FPENN)
+    &lt;ul&gt;
+      &lt;li&gt;Field-aware Probabilistic Embedding (FPE) による確率的埋め込みの学習
+        &lt;ul&gt;
+          &lt;li&gt;埋め込み行列 &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; の平均・分散からなる確率分布を用いて確率的な振る舞いを導入&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;多様な特徴を学習するコンポーネント
+        &lt;ul&gt;
+          &lt;li&gt;Linear term (LT)
+            &lt;ul&gt;
+              &lt;li&gt;低次元の相互作用を捉える&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Quadratic term (QDR)
+            &lt;ul&gt;
+              &lt;li&gt;2 次の相互作用を捉える&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;Deep NN term (DNN)
+            &lt;ul&gt;
+              &lt;li&gt;高次元の相互作用を捉える&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;埋め込みを確率分布としたときの学習手法の適用
+        &lt;ul&gt;
+          &lt;li&gt;Reparameterization trick
+            &lt;ul&gt;
+              &lt;li&gt;埋め込み行列 &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; の平均・分散を持つ正規分布から埋め込み表現をサンプリングする場合誤差逆伝播が不可能&lt;/li&gt;
+              &lt;li&gt;Reparameterization trick でこの問題を解決&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;CTR 予測のデータセットとして Avazu dataset と Criteo dataset を用いて提案する FPENN とベースラインの LR や FM、CNN ベースの CCPM や DeepFM と比較を行っている。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;提案手法が 50 〜 100 ミリ秒以内に 200 〜 300 アプリの CTR 値を予測との記述あり&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;CCPM について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2806603&quot;&gt;Liu, Qiang, et al. “A convolutional click prediction model.” Proceedings of the 24th ACM International on Conference on Information and Knowledge Management. ACM, 2015.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DeepFM について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.04247&quot;&gt;Guo, Huifeng, et al. “Deepfm: a factorization-machine based neural network for ctr prediction.” arXiv preprint arXiv:1703.04247 (2017).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3240396&quot;&gt;Weiwen Liu, Ruiming Tang, Jiajin Li, Jinkai Yu, Huifeng Guo, Xiuqiang He, and Shengyu Zhang. 2018. Field-aware probabilistic embedding neural network for CTR prediction. In Proceedings of the 12th ACM Conference on Recommender Systems (RecSys ‘18). ACM, New York, NY, USA, 412-416.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/shunk031/paper-summary-of-field-aware-probabilistic-embedding-neural-network-for-ctr-prediction&quot;&gt;[論文紹介] Field-aware Probabilistic Embedding Neural Network for CTR Prediction [RecSys 2018] / Paper summary of Field-aware Probabilistic Embedding Neural Network for CTR Prediction&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shunk031.github.io/paper-survey/assets/img/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction/figure1.png" /></entry><entry><title type="html">Context-Dependent Sentiment Analysis in User-Generated Videos</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos" rel="alternate" type="text/html" title="Context-Dependent Sentiment Analysis in User-Generated Videos" /><published>2018-10-22T00:00:00+00:00</published><updated>2018-10-22T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;マルチモーダル (テキスト・音声・動画) における発音レベルの特徴量を用いた感情分析を行うモデルを提案&lt;/p&gt;
 
@@ -1154,172 +1239,4 @@ Attentionの効果を見るため、Hierarchal Network(HN)にaverage-poolingを�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/I17-2064&quot;&gt;Toyama, Yota, Makoto Miwa, and Yutaka Sasaki. “Utilizing Visual Forms of Japanese Characters for Neural Review Classification.” Proceedings of the Eighth International Joint Conference on Natural Language Processing (Volume 2: Short Papers). Vol. 2. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Realistic Evaluation of Semi-Supervised Learning Algorithms</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms" rel="alternate" type="text/html" title="Realistic Evaluation of Semi-Supervised Learning Algorithms" /><published>2018-04-28T00:00:00+00:00</published><updated>2018-04-28T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;現在SoTAである半教師あり学習のアルゴリズムについて、平等なテスト環境で性能を比較した。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;Deep neural networkを学習させるためには大量の教師データが必要になるが、実際はデータが取りづらかったり、コストがかかる。
-そこで教師ラベルのないデータセットも有効に活用する、半教師あり学習(SSL)が提案されている。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Realistic-Evaluation-of-Semi-Supervised-Learning-Algorithms/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;先行研究で成果を上げているモデルは実際の使用環境を想定したモデルになっているかが疑問点としてあげられている。
-本研究では現在デファクトスタンダートである半教師あり学習アルゴリズムに対して、それぞれ現実世界を想定した平等なテスト環境で性能を比較している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;従来の半教師あり学習の評価方法を見直し、現実世界での適用を想定した以下の評価方法を用いて先行研究のモデルを評価した。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Shared Implementation
-    &lt;ul&gt;
-      &lt;li&gt;パラメータの初期化方法やデータの前処理、augmentation、正則化等を標準化する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;High-Quality Supervised Baseline
-    &lt;ul&gt;
-      &lt;li&gt;SSLのゴールは &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}&lt;/script&gt; と &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}_{UL}&lt;/script&gt; を用いて学習させたモデルが、 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}&lt;/script&gt; のみを用いて学習したモデルより良い精度を出すことである&lt;/li&gt;
-      &lt;li&gt;そこで比較対象であるベースラインのモデルは &lt;script type=&quot;math/tex&quot;&gt;\mathcal{D}&lt;/script&gt; のみを用いて学習させるべき&lt;/li&gt;
-      &lt;li&gt;ベースラインのモデルのパラメータ探索もSSLモデルと同様の回数探索するように設定&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Comparison to Transfer Learning
-    &lt;ul&gt;
-      &lt;li&gt;学習済みモデルをfine-tuningした結果はあまり報告されないので、本研究ではベースラインとして精度を報告する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Consider Class Distribution Mismatch
-    &lt;ul&gt;
-      &lt;li&gt;ラベル付きデータとラベルなしデータの分布の違いによる影響について報告する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Varying the Amount of Labeled and Unlabeled Data
-    &lt;ul&gt;
-      &lt;li&gt;ラベルなしデータは巨大である(インターネット上から取得)場合か、医療画像のようにデータの規模が小さい場合が考えられる&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Realistically Small Validation Set
-    &lt;ul&gt;
-      &lt;li&gt;先行研究ではtrainingセットの中から一部ラベルを落としたデータを用いて学習させ、validationセットでモデルのチューニングをしていた。このときラベル有りデータの数はvalidationセットのほうが遥かに多い&lt;/li&gt;
-      &lt;li&gt;現実世界ではラベルを多く含むデータセットで学習を行うため、先行研究の評価方法では実践的な評価ができていないため、本研究ではtrainingセットより小さいvalidationセットを用いてパラメータをチューニングする&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;h3 id=&quot;使用したsslアルゴリズムについて&quot;&gt;使用したSSLアルゴリズムについて&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Method&lt;/th&gt;
-      &lt;th&gt;Type&lt;/th&gt;
-      &lt;th&gt;Author&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Stochastic Perturbations&lt;/td&gt;
-      &lt;td&gt;Consistency Regularization&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6332-regularization-with-stochastic-transformations-and-perturbations-for-deep-semi-supervised-learning&quot;&gt;Sajjadi et al., 2016&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Ⅱ-Model&lt;/td&gt;
-      &lt;td&gt;Consistency Regularization&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1610.02242&quot;&gt;Laine &amp;amp; Aila, 2017&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Temporal Embsembling&lt;/td&gt;
-      &lt;td&gt;Consistency Regularization&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1610.02242&quot;&gt;Laine &amp;amp; Aila, 2017&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Mean Teacher&lt;/td&gt;
-      &lt;td&gt;Consistency Regularization&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results&quot;&gt;Tarvainen &amp;amp; Valpola, 2017&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Virtual Adversarial Training&lt;/td&gt;
-      &lt;td&gt;Consistency Regularization&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1704.03976&quot;&gt;Miyato et al., 2017&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Entropy-Based&lt;/td&gt;
-      &lt;td&gt;Entropy-Based&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://papers.nips.cc/paper/2740-semi-supervised-learning-by-entropy-minimization.pdf&quot;&gt;Grandvalet &amp;amp; Bengio, 2005&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Pseudo-Labeling&lt;/td&gt;
-      &lt;td&gt;Pseudo-Labeling&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.kaggle.com/blobs/download/forum-message-attachment-files/746/pseudo_label_final.pdf&quot;&gt;Lee, 2013&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;評価方法について&quot;&gt;評価方法について&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Reproduction
-    &lt;ul&gt;
-      &lt;li&gt;ベースモデルにWide ResNet (WRN-28-2) を使用&lt;/li&gt;
-      &lt;li&gt;Google Cloud Machine Learning’s hyperparameter tuning serviceを用いてGaussian Process-based black box optimizationを行った&lt;/li&gt;
-      &lt;li&gt;評価用データセットとしてSVHNとCIFAR-10を使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Fully-Supervised Baselines&lt;/li&gt;
-  &lt;li&gt;Transfer Learning&lt;/li&gt;
-  &lt;li&gt;Class Distribution Mismatch&lt;/li&gt;
-  &lt;li&gt;Varying Data Amounts&lt;/li&gt;
-  &lt;li&gt;Small Validation Sets&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SSLの各アルゴリズムに対して分布が違うラベルなしデータを学習に使うと学習が上手く進まなかった&lt;/li&gt;
-  &lt;li&gt;ラベルありデータと同様の分布からサンプリングされるラベルなしデータを使用すべきである&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Stochastic Perturbationsについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6332-regularization-with-stochastic-transformations-and-perturbations-for-deep-semi-supervised-learning&quot;&gt;Sajjadi, Mehdi, Mehran Javanmardi, and Tolga Tasdizen. “Regularization with stochastic transformations and perturbations for deep semi-supervised learning.” Advances in Neural Information Processing Systems. 2016.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ⅱ-Model / Temporal Ensemblingについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1610.02242&quot;&gt;Laine, Samuli, and Timo Aila. “Temporal ensembling for semi-supervised learning.” arXiv preprint arXiv:1610.02242 (2016).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Mean Teacherについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6719-mean-teachers-are-better-role-models-weight-averaged-consistency-targets-improve-semi-supervised-deep-learning-results&quot;&gt;Tarvainen, Antti, and Harri Valpola. “Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results.” Advances in neural information processing systems. 2017.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Virtual Adversarial Trainingについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1704.03976&quot;&gt;Miyato, Takeru, et al. “Virtual adversarial training: a regularization method for supervised and semi-supervised learning.” arXiv preprint arXiv:1704.03976 (2017).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Entropy-basedな手法について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/2740-semi-supervised-learning-by-entropy-minimization.pdf&quot;&gt;Grandvalet, Yves, and Yoshua Bengio. “Semi-supervised learning by entropy minimization.” Advances in neural information processing systems. 2005.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Pseudo-Labelingについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.kaggle.com/blobs/download/forum-message-attachment-files/746/pseudo_label_final.pdf&quot;&gt;Lee, Dong-Hyun. “Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks.” Workshop on Challenges in Representation Learning, ICML. Vol. 3. 2013.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1804.09170&quot;&gt;Oliver, Avital, et al. “Realistic Evaluation of Semi-Supervised Learning Algorithms.” arXiv preprint arXiv:1804.09170 (2018).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

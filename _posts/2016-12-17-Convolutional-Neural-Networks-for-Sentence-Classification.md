@@ -7,30 +7,29 @@ categories: NLP
 
 ## 1. どんなもの？
 
-word2vecを用いて単語をベクトル化し、そのベクトルをシンプルなアーキテクチャのCNNに入力し、センテンスの分類を行った。
+word2vec を用いて単語をベクトル化し、そのベクトルをシンプルなアーキテクチャの CNN に入力し、センテンスの分類を行った。
 
 ## 2. 先行研究と比べてどこがすごいの？
 
-画像認識分野でとてもよい結果を題しているConvolutional Neural NetworkをNLPの分野に適用した。
+画像認識分野でとてもよい結果を題している Convolutional Neural Network を NLP の分野に適用した。
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-* Google Newsのワードベクトルを用いてpre-trainingを行い、各タスクに対してfine-tuningをした
-* 重みのL2正則化
-* Dropoutの適用
+* Google News のワードベクトルを用いて pre-training を行い、各タスクに対して fine-tuning をした
+* 重みの L2 正則化
+* Dropout の適用
 
 ## 4. どうやって有効だと検証した？
 
-CNNの重みの初期化方法を変えたり、pre-trainingをしたり、チャンネル数を変えたりして実験を行っている。
+CNN の重みの初期化方法を変えたり、pre-training をしたり、チャンネル数を変えたりして実験を行っている。
 
 ## 5. 議論はあるか？
 
-* MultichannelかSingle Channelのモデルどちらがよいか
-  規模の小さいデータセットに対してはmultichannelのモデルは過学習を防ぐことができた。規模の大きいデータセットに対してはfine-tuningをしなくてはならない。
+* Multichannel か Single Channel のモデルどちらがよいか
+  * 規模の小さいデータセットに対しては multichannel のモデルは過学習を防ぐことができた。規模の大きいデータセットに対しては fine-tuning をしなくてはならない。
   
-* StaticかNon-staticの表現方法どちらがよいか
-  Non-staticなSingle channelモデルと同様に、Non-staticなmulticannelモデルでもfine-tuningすることで、タスクごとにより意味のある結果を出すことができる。
-  
+* Static か Non-static の表現方法どちらがよいか
+  * Non-static な Single channel モデルと同様に、Non-static な multicannel モデルでも fine-tuning することで、タスクごとにより意味のある結果を出すことができる。
   
 ## 6. 次に読むべき論文はあるか？
 

@@ -16,7 +16,7 @@ categories: NLP
 本研究ではこうしたサブキャラクターの情報を日本語に対して適用した場合の効果を調査している。
 
 中国語で効果のあるサブキャラクター情報が日本語においては限定的であり、
-多くの場合 character-level ngram や character-level のモデルよりも良い性能を示す結果となっている。
+多くの場合 character-level ngram や character-level のモデルが subcharacter-level のモデルよりも良い性能を示す結果となっている。
 
 ## 3. 技術や手法の"キモ"はどこにある？
 

@@ -7,22 +7,21 @@
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.5.0 -->
+    
+  <title>Summary - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.5.0 -->
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization" />
+<meta property="og:title" content="Summary" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="1. どんなもの？" />
-<meta property="og:description" content="1. どんなもの？" />
-<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization" />
-<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization" />
+<meta name="description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
+<meta property="og:description" content="Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/31/" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/31/" />
 <meta property="og:site_name" content="Paper Survey" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-01-22T00:00:00+00:00" />
+<link rel="prev" href="https://shunk031.github.io/paper-survey/summary/30" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization","headline":"Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization","dateModified":"2017-01-22T00:00:00+00:00","datePublished":"2017-01-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization"},"@context":"http://schema.org"}</script>
+{"description":"Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese","@type":"WebPage","url":"https://shunk031.github.io/paper-survey/summary/31/","headline":"Summary","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -64,7 +63,7 @@
 </head>
 
   <body>
-     <amp-sidebar id='sidebar'
+    <amp-sidebar id='sidebar'
     layout="nodisplay"
     side="right">
   <amp-img class='amp-close-image'
@@ -176,8 +175,8 @@
       <a class="page-link" href="/paper-survey/category/others">Others</a>
 </amp-sidebar>
 
-<header class="site-header">
-    <div class="wrapper"><a class="site-title" href="/paper-survey/">Paper Survey</a>
+<header class="site-header header-nav">
+    
 
     <nav class="site-nav">
       <button on='tap:sidebar.toggle' class="menu-icon">
@@ -289,100 +288,51 @@
 	<a class="page-link" href="/paper-survey/category/others">Others</a>
       </div>
     </nav>
-  </div>
+    <div class="wrapper">
+        <div class="author">
+          <a href="/paper-survey/">
+            <!-- <amp-img class="avatar" src="/paper-survey/assets/avatar.png" width="90" height="90" layout="responsive" alt="Paper Survey" ></amp-img> -->
+            <h1 class="name">Paper Survey</h1>
+          </a>
+          <h2 class="description">Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</h2>
+        </div>
+    </div>
+  
 </header>
  
     <div class="page-content ">
       <div class="wrapper">
-	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization</h1>
-    <p class="post-meta"><time datetime="2017-01-22T00:00:00+00:00" itemprop="datePublished">Jan 22, 2017</time>
-      in 
-      <a href="/paper-survey/category/NLP">NLP</a>
-      <p>
-    </p>
-  </header>
-  <div class="post-content" itemprop="articleBody">
-    <h2 id="1-どんなもの">1. どんなもの？</h2>
-
-<p>Backpropagation for Multi-Label Learning(BP-MLL)というマルチラベルに対応できるBackpropagationアルゴリズムを提案した。複数のカテゴリラベルが付いているテキストデータに対し、分類を行った。</p>
-
-<h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
-
-<p>マルチラベルでも学習できるようにした確率モデルを元にしたもの、Boosting手法、Decision Treeなどがあるが、本研究では初めてニューラルネットワークについてマルチラベルに対応したものとなっている。</p>
-
-<p>実験結果では先行研究に比べ、6つ以上のカテゴリデータに対して良い結果を出している。</p>
-
-<h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
-
-<ul>
-  <li>マルチラベルに対応できるように、新たに損失関数を定義し、その損失を最小化する。</li>
-  <li>通常のニューラルネットワークのトレーニングとテストを僅かに変更することで、マルチラベルを学習できるようになっている。</li>
-  <li>シングルラベルでの評価手法はAccuracyやPrecision、Recallといった指標があるが、マルチラベルでの評価手法は<a href="http://link.springer.com/article/10.1023/A:1007649029923">この</a>方法を採用している。
-    <ul>
-      <li>hamming loss</li>
-      <li>one-error</li>
-      <li>coverage</li>
-      <li>ranking loss</li>
-      <li>average precision</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
-
-<p>Reuters-21578データセットを用いてテキストのカテゴリ分類を行った。評価手法を元に評価した結果、先行研究に比べ、6つ以上のカテゴリデータに対して良い結果を出している。</p>
-
-<h2 id="5-議論はあるか">5. 議論はあるか？</h2>
-
-<ul>
-  <li>先行研究に比べ学習時間が大幅に増えてしまっている。</li>
-</ul>
-
-<h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
-
-<ul>
-  <li>Schapire, Robert E., and Yoram Singer. “BoosTexter: A boosting-based system for text categorization.” Machine learning 39.2-3 (2000): 135-168.</li>
-</ul>
-
-<h3 id="論文情報リンク">論文情報・リンク</h3>
-
-<ul>
-  <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.7318&amp;rep=rep1&amp;type=pdf">Zhang, Min-Ling, and Zhi-Hua Zhou. “Multilabel neural networks with applications to functional genomics and text categorization.” IEEE transactions on Knowledge and Data Engineering 18.10 (2006): 1338-1351.</a></li>
-</ul>
-
+	  <ul class="post-list">
+    
+      <li>
+        <h2>
+          <a class="post-link" href="/paper-survey/summary/jekyll/update/test/welcome-to-jekyll">Welcome to Jekyll!</a>
+        </h2>
+        <span class="post-meta">
+	  <p>
+	    Sep 2, 2016
+	    in 
+	    <a href="/paper-survey/category/jekyll">jekyll</a>, 
+	    
+	    <a href="/paper-survey/category/update">update</a>, 
+	    
+	    <a href="/paper-survey/category/test">test</a>
+	    
+	  </p>
+	</span>
+        <p class="description">
+            
+                You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-r...
+            </p>
+      </li>
+    
+  </ul>
+<!-- Pagination links -->
+  <div class="pagination">
+     <a href="/paper-survey/summary/30" class="prev">← Newer Posts</a> 
+    
   </div>
-  <div class="social-button-item">
-  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization" data-via="shunk031" data-related="" data-show-count="false">Tweet</a>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
-<div class="social-button-item">
-  <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加">
-    <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
-  </a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-</div>
-
-<div class="social-button-item">
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) return;
-     js = d.createElement(s); js.id = id;
-     js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.1';
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));</script>
-
-  <div class="fb-like" data-href="/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-</div>
-
-</article>
-<!-- Post Navigation -->
-<div class="pagination">
-  <a class="prev" href="/paper-survey/summary/nlp/Language-Modeling-with-Gated-Convolutional-Networks">←&nbsp; Previous post</a>
-  <a class="next" href="/paper-survey/summary/nlp/Deep-Convolutional-Neural-Networks-for-Sentiment-Analysis-of-Short-Texts">Next post&nbsp;→</a>
-</div>
 
       </div>
     </div>

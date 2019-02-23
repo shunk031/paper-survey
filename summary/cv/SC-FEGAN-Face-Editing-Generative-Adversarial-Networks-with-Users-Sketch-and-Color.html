@@ -8,21 +8,21 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <title>SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.5.0 -->
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization" />
+<meta property="og:title" content="SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="1. どんなもの？" />
 <meta property="og:description" content="1. どんなもの？" />
-<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization" />
-<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color" />
 <meta property="og:site_name" content="Paper Survey" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-01-22T00:00:00+00:00" />
+<meta property="article:published_time" content="2019-02-21T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization","headline":"Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization","dateModified":"2017-01-22T00:00:00+00:00","datePublished":"2017-01-22T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization"},"@context":"http://schema.org"}</script>
+{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color","headline":"SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color","dateModified":"2019-02-21T00:00:00+00:00","datePublished":"2019-02-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -296,65 +296,161 @@
       <div class="wrapper">
 	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Multi-Label Neural Networks with Applications to Functional Genomics and Text Categorization</h1>
-    <p class="post-meta"><time datetime="2017-01-22T00:00:00+00:00" itemprop="datePublished">Jan 22, 2017</time>
+    <h1 class="post-title" itemprop="name headline">SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color</h1>
+    <p class="post-meta"><time datetime="2019-02-21T00:00:00+00:00" itemprop="datePublished">Feb 21, 2019</time>
       in 
-      <a href="/paper-survey/category/NLP">NLP</a>
+      <a href="/paper-survey/category/CV">CV</a>
       <p>
     </p>
   </header>
   <div class="post-content" itemprop="articleBody">
     <h2 id="1-どんなもの">1. どんなもの？</h2>
 
-<p>Backpropagation for Multi-Label Learning(BP-MLL)というマルチラベルに対応できるBackpropagationアルゴリズムを提案した。複数のカテゴリラベルが付いているテキストデータに対し、分類を行った。</p>
+<p>ユーザーのインタラクティブなスケッチや色指定が可能なニューラルネットワークベースの顔画像編集システム SC-FEGAN を提案。</p>
 
 <h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
 
-<p>マルチラベルでも学習できるようにした確率モデルを元にしたもの、Boosting手法、Decision Treeなどがあるが、本研究では初めてニューラルネットワークについてマルチラベルに対応したものとなっている。</p>
+<p>従来の Generative Adversarial Network (GAN) を用いた顔画像編集システムは低画質でエッジを適切に捉えるのが難しかった。
+また顔編集を行う際のユーザの入力に対して質の高い応答を返すのは困難であった。</p>
 
-<p>実験結果では先行研究に比べ、6つ以上のカテゴリデータに対して良い結果を出している。</p>
+<p>Deepfillv2 や Guided inpainting はこうしたユーザーが入力するマスキングや他の画像を入力として編集を可能としたが、編集時の色の指定ができなかったり、詳細な細かい復元が可能ではなかった。</p>
+
+<p>本研究では UNet ベースのアーキテクチャに対して gated convolutional layer を導入したネットワークアーキテクチャをベースにユーザーのスケッチや色指定を可能とした、
+自由で高品質な顔編集システムである SC-FEGAN を提案した。</p>
 
 <h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
 
+<p><img src="/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure2.png" alt="Figure 2" /></p>
+
+<h3 id="学習データに対する処理">学習データに対する処理</h3>
 <ul>
-  <li>マルチラベルに対応できるように、新たに損失関数を定義し、その損失を最小化する。</li>
-  <li>通常のニューラルネットワークのトレーニングとテストを僅かに変更することで、マルチラベルを学習できるようになっている。</li>
-  <li>シングルラベルでの評価手法はAccuracyやPrecision、Recallといった指標があるが、マルチラベルでの評価手法は<a href="http://link.springer.com/article/10.1023/A:1007649029923">この</a>方法を採用している。
+  <li>高品質な瞳の編集
     <ul>
-      <li>hamming loss</li>
-      <li>one-error</li>
-      <li>coverage</li>
-      <li>ranking loss</li>
-      <li>average precision</li>
+      <li>学習時にランダムに目周辺にマスキングを適用することで細かい瞳の復元を可能とする</li>
+      <li>同時に generative face completion (GFC) を適用する</li>
+    </ul>
+  </li>
+  <li>ユーザーが入力するスケッチや色指定への対応
+    <ul>
+      <li>FaceShop と同様の手法を導入
+        <ul>
+          <li>スケッチデータをビットマップからベクターへと変換する<a href="http://autotrace.sourceforge.net/">AutoTrace</a>は用いていない</li>
+        </ul>
+      </li>
+      <li>HED によるエッジ検出器を使用して、ユーザーの入力からスケッチデータを生成</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="提案顔編集システムのアーキテクチャ">提案顔編集システムのアーキテクチャ</h3>
+
+<p><img src="/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure3.png" alt="Figure 3" /></p>
+
+<ul>
+  <li>Generator
+    <ul>
+      <li>U-net ベースの generator を採用
+        <ul>
+          <li>すべての畳み込み層に gated convolution を導入している</li>
+          <li>畳み込みの後に local signal normalization (LRN)を用いている</li>
+          <li>入力は<script type="math/tex">512 \times 512 \times 9</script>である
+            <ul>
+              <li><code class="highlighter-rouge">RGB (3 チャンネル)</code>、<code class="highlighter-rouge">マスク (1 チャンネル)</code>、<code class="highlighter-rouge">スケッチ(1 チャンネル)</code>、<code class="highlighter-rouge">色指定マップ(3 チャンネル)</code>、<code class="highlighter-rouge">ノイズ(1 チャンネル)</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Discriminator
+    <ul>
+      <li>SN-patchGAN ベースの discriminator を採用
+        <ul>
+          <li>複数の loss 関数を最小化する
+            <ul>
+              <li><code class="highlighter-rouge">per-pixcel loss</code>、<code class="highlighter-rouge">perceptual loss</code>、<code class="highlighter-rouge">style loss</code>、<code class="highlighter-rouge">total variance loss</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   </li>
 </ul>
 
 <h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
 
-<p>Reuters-21578データセットを用いてテキストのカテゴリ分類を行った。評価手法を元に評価した結果、先行研究に比べ、6つ以上のカテゴリデータに対して良い結果を出している。</p>
+<p>CelebA-HO データセットにおいてランダムに学習用とテスト用で分割したものに対して提案システムである SC-FEGAN による顔編集の質を検討している。</p>
 
 <h2 id="5-議論はあるか">5. 議論はあるか？</h2>
 
+<h3 id="generator-の違いによる瞳の編集精度">Generator の違いによる瞳の編集精度</h3>
+
+<p><img src="/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure4.png" alt="Figure 4" /></p>
 <ul>
-  <li>先行研究に比べ学習時間が大幅に増えてしまっている。</li>
+  <li>Generator を U-net と Coarse-Refined net で変えたときに、瞳領域をマスクして復元したときの結果。U-net 構造のほうが細かい瞳の復元に成功している</li>
+</ul>
+
+<h3 id="perceptual-loss-の有無による編集精度">Perceptual loss の有無による編集精度</h3>
+
+<p><img src="/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure5.png" alt="Figure 5" /></p>
+<ul>
+  <li>Perceptual loss である VGG loss を導入することにより、髪部分が正確に編集できている</li>
+</ul>
+
+<h3 id="先行研究との復元精度の比較">先行研究との復元精度の比較</h3>
+
+<p><img src="/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure6.png" alt="Figure 6" /></p>
+<ul>
+  <li>先行研究の Deepfillv1 に対して提案システムである SC-FEGAN による復元精度が高いことがわかる</li>
+</ul>
+
+<h3 id="アクセサリーなどの小さい物体に対する編集の可能性">アクセサリーなどの小さい物体に対する編集の可能性</h3>
+
+<p><img src="/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure8.png" alt="Figure 8" /></p>
+<ul>
+  <li>HED をもとにマスキング領域を拡張して学習することにより、イヤリングと共に顔の画像を生成するという特別な結果を得ることができた</li>
+  <li>ネットワークが小さな詳細を学習し、小さな入力に対しても妥当な結果を生み出すことができることを示している</li>
 </ul>
 
 <h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
 
 <ul>
-  <li>Schapire, Robert E., and Yoram Singer. “BoosTexter: A boosting-based system for text categorization.” Machine learning 39.2-3 (2000): 135-168.</li>
+  <li>Deepfillv2 (SN-patchGAN, gated convolutional layer) について
+    <ul>
+      <li><a href="https://arxiv.org/abs/1806.03589">Yu, Jiahui, et al. “Free-form image inpainting with gated convolution.” arXiv preprint arXiv:1806.03589 (2018).</a></li>
+    </ul>
+  </li>
+  <li>Guided inpainting について
+    <ul>
+      <li>[Zhao, Yinan, et al. “Guided image inpainting: Replacing an image region by pulling content from another image.” arXiv preprint arXiv:1803.08435 (2018).]</li>
+    </ul>
+  </li>
+  <li>Generative Face Completion (GFC) について
+    <ul>
+      <li><a href="http://openaccess.thecvf.com/content_cvpr_2017/html/Li_Generative_Face_Completion_CVPR_2017_paper.html">Li, Yijun, et al. “Generative face completion.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.</a></li>
+    </ul>
+  </li>
+  <li>FaceShop について
+    <ul>
+      <li><a href="https://arxiv.org/abs/1804.08972">Portenier, Tiziano, et al. “Faceshop: Deep sketch-based face image editing.” ACM Transactions on Graphics (TOG) 37.4 (2018): 99.</a></li>
+    </ul>
+  </li>
+  <li>U-net について
+    <ul>
+      <li><a href="http://www.cs.cmu.edu/~jeanoh/16-785/papers/ronnenberger-miccai2015-u-net.pdf">Ronneberger, Olaf, Philipp Fischer, and Thomas Brox. “U-net: Convolutional networks for biomedical image segmentation.” International Conference on Medical image computing and computer-assisted intervention. Springer, Cham, 2015.</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="論文情報リンク">論文情報・リンク</h3>
 
 <ul>
-  <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.7318&amp;rep=rep1&amp;type=pdf">Zhang, Min-Ling, and Zhi-Hua Zhou. “Multilabel neural networks with applications to functional genomics and text categorization.” IEEE transactions on Knowledge and Data Engineering 18.10 (2006): 1338-1351.</a></li>
+  <li><a href="https://arxiv.org/abs/1902.06838">Youngjoo Jo, Jongyoul Park. SC-FEGAN: Face Editing Generative Adversarial Network with User’s Sketch and Color. arXiv:1902.06838, 2019</a></li>
 </ul>
 
   </div>
   <div class="social-button-item">
-  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://shunk031.github.io/paper-survey/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization" data-via="shunk031" data-related="" data-show-count="false">Tweet</a>
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color" data-via="shunk031" data-related="" data-show-count="false">Tweet</a>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
@@ -374,14 +470,14 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));</script>
 
-  <div class="fb-like" data-href="/summary/nlp/Multi-Label-Neural-Networks-with-Applications-to-Functional-Genomics-and-Text-Categorization" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+  <div class="fb-like" data-href="/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
 </div>
 
 </article>
 <!-- Post Navigation -->
 <div class="pagination">
-  <a class="prev" href="/paper-survey/summary/nlp/Language-Modeling-with-Gated-Convolutional-Networks">←&nbsp; Previous post</a>
-  <a class="next" href="/paper-survey/summary/nlp/Deep-Convolutional-Neural-Networks-for-Sentiment-Analysis-of-Short-Texts">Next post&nbsp;→</a>
+  <a class="prev" href="/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction">←&nbsp; Previous post</a>
+  
 </div>
 
       </div>

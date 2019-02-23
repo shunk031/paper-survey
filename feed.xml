@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-02-23T05:42:36+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-02-23T15:48:33+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
 </subtitle><entry><title type="html">SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color</title><link href="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color" rel="alternate" type="text/html" title="SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color" /><published>2019-02-21T00:00:00+00:00</published><updated>2019-02-21T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;ユーザーのインタラクティブなスケッチや色指定が可能なニューラルネットワークベースの顔画像編集システム SC-FEGAN を提案。&lt;/p&gt;
@@ -455,7 +455,87 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/P17-1081&quot;&gt;Poria, Soujanya, et al. “Context-dependent sentiment analysis in user-generated videos.” Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). Vol. 1. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shunk031.github.io/paper-survey/assets/img/nlp/Context-Dependent-Sentiment-Analysis-in-User-Generated-Videos/figure2.png" /></entry><entry><title type="html">Semi-supervised Deep Learning by Metric Embedding</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding" rel="alternate" type="text/html" title="Semi-supervised Deep Learning by Metric Embedding" /><published>2018-08-25T00:00:00+00:00</published><updated>2018-08-25T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shunk031.github.io/paper-survey/assets/img/nlp/Context-Dependent-Sentiment-Analysis-in-User-Generated-Videos/figure2.png" /></entry><entry><title type="html">Subcharacter Information in Japanese Embeddings: When Is It Worth It?</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Subcharacter-Information-in-Japanese-Embeddings-When-Is-It-Worth-It" rel="alternate" type="text/html" title="Subcharacter Information in Japanese Embeddings: When Is It Worth It?" /><published>2018-09-28T00:00:00+00:00</published><updated>2018-09-28T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Subcharacter-Information-in-Japanese-Embeddings-When-Is-It-Worth-It</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Subcharacter-Information-in-Japanese-Embeddings-When-Is-It-Worth-It">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;漢字が有する部首のコンポーネントを分解し、サブキャラクターとして扱った際の言語タスクにおける性能を、新たに提案するデータセットも含めて調査を行った。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;漢字は自身に&lt;code class=&quot;highlighter-rouge&quot;&gt;へん&lt;/code&gt;や&lt;code class=&quot;highlighter-rouge&quot;&gt;つくり&lt;/code&gt;といった複数のコンポーネントを有している。
+これらサブキャラクターとして埋め込みを学習することで、中国語のいくつかの言語処理タスクで良い精度となることが報告されている。
+本研究ではこうしたサブキャラクターの情報を日本語に対して適用した場合の効果を調査している。&lt;/p&gt;
+
+&lt;p&gt;中国語で効果のあるサブキャラクター情報が日本語においては限定的であり、
+多くの場合 character-level ngram や character-level のモデルよりも良い性能を示す結果となっている。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Subcharacter-Information-in-Japanese-Embeddings-When-Is-It-Worth-It/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;前処理&quot;&gt;前処理&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;文字から部首を取り出す
+    &lt;ul&gt;
+      &lt;li&gt;部首データベースである&lt;a href=&quot;https://github.com/cjkvi/cjkvi-ids&quot;&gt;IDS&lt;/a&gt;を用いる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;使用モデル&quot;&gt;使用モデル&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Skip-gram + kanji モデル (character-level)
+    &lt;ul&gt;
+      &lt;li&gt;入力単語に対して skip-gram で得たベクトルと文字に分割して得たベクトルを用いる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Skip-gram + kanji + bushu モデル (subcharacter-level)
+    &lt;ul&gt;
+      &lt;li&gt;上記のモデルに対して漢字を部首に分割して得たベクトルを用いる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;評価データセット-jbats-の提案&quot;&gt;評価データセット jBATS の提案&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Subcharacter-Information-in-Japanese-Embeddings-When-Is-It-Worth-It/table1.png&quot; alt=&quot;Table 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;40 の言語的関連性が定義されたデータセットである jBATS を提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;単語の類似度、jBATS を用いたアナロジータスク、感情分析の 3 つの実験を行っている。&lt;/p&gt;
+
+&lt;p&gt;実験結果では subcharacter-level な入力より character-level の入力を用いたモデルのほうが良い精度となる場合が多かった。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Subcharacter-Information-in-Japanese-Embeddings-When-Is-It-Worth-It/table7.png&quot; alt=&quot;Table 7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;疒&lt;/code&gt;(やまいだれ)や&lt;code class=&quot;highlighter-rouge&quot;&gt;豸&lt;/code&gt;(なじなへん)に対して近いベクトル表現を得た場合の結果。
+やまいだれを持つ&lt;code class=&quot;highlighter-rouge&quot;&gt;症&lt;/code&gt;が近い表現になっていることはもちろんのこと、&lt;code class=&quot;highlighter-rouge&quot;&gt;患&lt;/code&gt;や&lt;code class=&quot;highlighter-rouge&quot;&gt;腫&lt;/code&gt;といった病気に関わる単語が近い表現になっている。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;日本語におけるサブキャラクターを用いた言語モデリングについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://aclanthology.info/papers/W17-4122/w17-4122&quot;&gt;Nguyen, Viet, Julian Brooke, and Timothy Baldwin. “Sub-character Neural Language Modelling in Japanese.” Proceedings of the First Workshop on Subword and Character Level Models in NLP. 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;jBATS について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://vecto.space/projects/jBATS/&quot;&gt;The Japanese Bigger Analogy Test Set (jBATS)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aclanthology.info/papers/W18-2905/w18-2905&quot;&gt;Karpinska, Marzena, et al. “Subcharacter Information in Japanese Embeddings: When Is It Worth It?.” Proceedings of the Workshop on the Relevance of Linguistic Structure in Neural Architectures for NLP. 2018.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Semi-supervised Deep Learning by Metric Embedding</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding" rel="alternate" type="text/html" title="Semi-supervised Deep Learning by Metric Embedding" /><published>2018-08-25T00:00:00+00:00</published><updated>2018-08-25T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;少ないラベル付きデータとラベルなしデータを元に距離埋め込み (neighbor embedding) を学習する、半教師あり学習を提案&lt;/p&gt;
 
@@ -1183,154 +1263,4 @@ Data augmentationは汎化性能を向上させるテクニックであり、画
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1805.06201&quot;&gt;Kobayashi, Sosuke. “Contextual Augmentation: Data Augmentation by Words with Paradigmatic Relations.” arXiv preprint arXiv:1805.06201 (2018).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Hierarchical Attention Networks for Document Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification" rel="alternate" type="text/html" title="Hierarchical Attention Networks for Document Classification" /><published>2018-05-06T00:00:00+00:00</published><updated>2018-05-06T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Hierarchical-Attention-Networks-for-Document-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;Attentionを用いてより重要な単語・文に注目させ、同時に文書の階層的構造を捉えることができるHierarchal Attention Network (HAN) を提案&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;一般的にテキスト分類をする場合、全ての単語が文書の意味を捉えるのに重要であるとは限らない。&lt;/p&gt;
-
-&lt;p&gt;本研究では単語レベル、文レベルでAttentionを適用することにより重要な単語および文を抽出し、
-同時に文書の階層的な構造を捉えることができるHierarchal Attention Network (HAN) を提案している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Hierarchical-Attention-Networks-for-Document-Classification/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;GRUによってエンコードされたembeddingに対して、単語レベル、文レベルの2つのレベルでAttentionを適用する。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Hierarchal Attention Network (HAN)
-    &lt;ul&gt;
-      &lt;li&gt;GRU-based sequence encoder
-        &lt;ul&gt;
-          &lt;li&gt;Word Encoder&lt;/li&gt;
-          &lt;li&gt;Sentence Attention&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Hierarchal Attention
-        &lt;ul&gt;
-          &lt;li&gt;Word Attention&lt;/li&gt;
-          &lt;li&gt;Sentence Encoder&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Attentionの計算はエンコードされたベクトルに対して1層のMLPを用いて隠れ層ベクトルの重要度を算出する。&lt;/p&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;複数のデータセットと複数のベースラインを用いて提案手法であるHANの性能を評価している。
-Attentionの効果を見るため、Hierarchal Network(HN)にaverage-poolingを使うHN-AVE、およびmax-poolingを使うHN-MAX、そして提案手法であるHNにAttentionを組み込んだHN-ATTの性能についても比較している。&lt;/p&gt;
-
-&lt;h3 id=&quot;データセットについて&quot;&gt;データセットについて&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Data set&lt;/th&gt;
-      &lt;th&gt;# of classes&lt;/th&gt;
-      &lt;th&gt;# of documents&lt;/th&gt;
-      &lt;th&gt;Author&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Yelp 2013&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;335,018&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/D15-1167&quot;&gt;Tang et al., 2015&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Yelp 2014&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;1,125,457&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/D15-1167&quot;&gt;Tang et al., 2015&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Yelp 2015&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;1,569,264&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/D15-1167&quot;&gt;Tang et al., 2015&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;IMDB review&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;348,415&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2623758&quot;&gt;Diao et al., 2014&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Yahoo Answer&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;1,450,000&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1509.01626&quot;&gt;Zhang et al., 2015&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Amazon review&lt;/td&gt;
-      &lt;td&gt;5&lt;/td&gt;
-      &lt;td&gt;3,650,000&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://arxiv.org/abs/1509.01626&quot;&gt;Zhang et al., 2015&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;ベースラインについて&quot;&gt;ベースラインについて&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Linear methods
-    &lt;ul&gt;
-      &lt;li&gt;BoW and BoW + TFIDF&lt;/li&gt;
-      &lt;li&gt;n-grams and n-grams + TFIDF&lt;/li&gt;
-      &lt;li&gt;Bag-of-means&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;SVMs
-    &lt;ul&gt;
-      &lt;li&gt;Text Features&lt;/li&gt;
-      &lt;li&gt;Average SG&lt;/li&gt;
-      &lt;li&gt;SSWE&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Neural Network methods
-    &lt;ul&gt;
-      &lt;li&gt;CNN-word&lt;/li&gt;
-      &lt;li&gt;CNN_char&lt;/li&gt;
-      &lt;li&gt;LSTM&lt;/li&gt;
-      &lt;li&gt;Conv-GRNN&lt;/li&gt;
-      &lt;li&gt;LSTM-GRNN&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Hierarchal Network
-    &lt;ul&gt;
-      &lt;li&gt;HN-AVE&lt;/li&gt;
-      &lt;li&gt;HN-MAX&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Hierarchical-Attention-Networks-for-Document-Classification/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Figure 5の最初の文書でホタテを気に入らないような文章がある場合、単文だけを見ると、これは否定的なコメントだと感じられる。
-しかし、提案手法ではこの文章の文脈を見て、これが肯定的な評価であり、この文を無視することを選択していることが示されている。&lt;/p&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Attentionについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1409.0473&quot;&gt;Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014).&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf&quot;&gt;Xu, Kelvin, et al. “Show, attend and tell: Neural image caption generation with visual attention.” International Conference on Machine Learning. 2015.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/N16-1174&quot;&gt;Yang, Zichao, et al. “Hierarchical attention networks for document classification.” Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2016.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

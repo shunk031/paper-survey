@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-02-23T15:48:33+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-02-23T15:53:37+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
 </subtitle><entry><title type="html">SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color</title><link href="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color" rel="alternate" type="text/html" title="SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color" /><published>2019-02-21T00:00:00+00:00</published><updated>2019-02-21T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;ユーザーのインタラクティブなスケッチや色指定が可能なニューラルネットワークベースの顔画像編集システム SC-FEGAN を提案。&lt;/p&gt;
@@ -466,7 +466,7 @@
 本研究ではこうしたサブキャラクターの情報を日本語に対して適用した場合の効果を調査している。&lt;/p&gt;
 
 &lt;p&gt;中国語で効果のあるサブキャラクター情報が日本語においては限定的であり、
-多くの場合 character-level ngram や character-level のモデルよりも良い性能を示す結果となっている。&lt;/p&gt;
+多くの場合 character-level ngram や character-level のモデルが subcharacter-level のモデルよりも良い性能を示す結果となっている。&lt;/p&gt;
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 

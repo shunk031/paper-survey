@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color"
+title:  "SC-FEGAN: Face Editing Generative Adversarial Networks with User's Sketch and Color"
 date:   2019-02-21
 categories: CV
 ---

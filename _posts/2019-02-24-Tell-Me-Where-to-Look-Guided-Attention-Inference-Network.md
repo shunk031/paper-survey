@@ -67,6 +67,7 @@ Grad-CAM は`海`とともに現れやすい`ボート`に過学習している�
 
 - SEC について
   - [Kolesnikov, Alexander, and Christoph H. Lampert. "Seed, expand and constrain: Three principles for weakly-supervised image segmentation." European Conference on Computer Vision. Springer, Cham, 2016.](https://arxiv.org/abs/1603.06098)
+
 ### 論文情報・リンク
 
 - [Li, Kunpeng, et al. "Tell me where to look: Guided attention inference network." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.](https://arxiv.org/abs/1802.10171)

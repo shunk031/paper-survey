@@ -1,5 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-02-23T15:53:37+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color</title><link href="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color" rel="alternate" type="text/html" title="SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color" /><published>2019-02-21T00:00:00+00:00</published><updated>2019-02-21T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-02-25T02:25:07+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Tell Me Where to Look: Guided Attention Inference Network</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network" rel="alternate" type="text/html" title="Tell Me Where to Look: Guided Attention Inference Network" /><published>2019-02-24T00:00:00+00:00</published><updated>2019-02-24T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;Attention map を用いた弱教師ありセマンティックセグメンテーションを高精度に行う guided attention inference networks (GAIN) を提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;クラスラベルをもとに学習し予測することで得られる attention map は局所的な特徴やセグメンテーションの情報を保持している場合が多い。
+こうした attention map を利用しセマンティックセグメンテーションといったタスクを解く弱教師あり学習 (weakly supervised learning) の枠組みは先行研究で複数手法が提案されてきた。
+しかしながらクラスラベルから classification loss で学習した attention map は分類に必要最低限の領域にのみフォーカスしており、対象となる物体全体をカバーすることは難しい。&lt;/p&gt;
+
+&lt;p&gt;また学習データセットのバイアスにより、未知のデータに対して正しくセグメンテーションを行うのは難しい。
+具体的には&lt;code class=&quot;highlighter-rouge&quot;&gt;ボート&lt;/code&gt;と&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;は同時に撮影される場合が多く、高い相関がある。
+したがって予測時に海面が移っていない&lt;code class=&quot;highlighter-rouge&quot;&gt;ボート&lt;/code&gt;のサンプルを正しくセグメンテーションするのは難しい場合が多い。&lt;/p&gt;
+
+&lt;p&gt;本研究では end-to-end で attention map を学習し、classification loss に加えて attention の妥当性を考慮する loss を同時に学習する guided attention inference networks (GAIN) を提案している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;h3 id=&quot;gain&quot;&gt;GAIN&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;共通する 2 つのストリーム (&lt;script type=&quot;math/tex&quot;&gt;S_{cl}&lt;/script&gt; と &lt;script type=&quot;math/tex&quot;&gt;S_{am}&lt;/script&gt;)
+    &lt;ul&gt;
+      &lt;li&gt;2 つのストリームにおける conv 層と一部の fc 層のパラメータは共通&lt;/li&gt;
+      &lt;li&gt;Classification stream &lt;script type=&quot;math/tex&quot;&gt;S_{cl}&lt;/script&gt;
+        &lt;ul&gt;
+          &lt;li&gt;クラスに分類するために役立つ領域を見つけるよう学習&lt;/li&gt;
+          &lt;li&gt;マルチラベル・マルチクラスの &lt;code class=&quot;highlighter-rouge&quot;&gt;classification loss&lt;/code&gt; を最小化する&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Attention mining stream &lt;script type=&quot;math/tex&quot;&gt;S_{am}&lt;/script&gt;
+        &lt;ul&gt;
+          &lt;li&gt;クラスの決定に寄与する可能性があるすべての領域が attention に含まれるよう学習&lt;/li&gt;
+          &lt;li&gt;対象クラスに対する attention 領域が大きくならないようにする &lt;code class=&quot;highlighter-rouge&quot;&gt;attention mining loss&lt;/code&gt; を最小化する&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gain_textrmext&quot;&gt;GAIN&lt;script type=&quot;math/tex&quot;&gt;_{\textrm{ext}}&lt;/script&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;追加で小規模のセグメンテーションマスクを学習に利用
+    &lt;ul&gt;
+      &lt;li&gt;External stream &lt;script type=&quot;math/tex&quot;&gt;S_{e}&lt;/script&gt; を追加
+        &lt;ul&gt;
+          &lt;li&gt;教師となるセグメンテーションマスクから attention map を学習&lt;/li&gt;
+          &lt;li&gt;Attention map とセグメンテーションマスクの二乗誤差である &lt;code class=&quot;highlighter-rouge&quot;&gt;attention loss&lt;/code&gt; を最小化する&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;PASCAL VOC を用いた弱教師ありセグメンテーションタスクで先行研究の SoTA モデルとの mean intersection-over-union (mIoU) のスコアを比較している。
+SoTA モデルである SEC に対して attention map を用いた提案手法を適用することにより精度向上が確認されている。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;SoTA モデルである SEC に対して GAIN を導入することにより、複数物体を正確に広い範囲で捉えることが可能となっている。
+また追加でセグメンテーションマスクを用いることで、より精度のよいセグメンテーションが行われている。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network/figure6.png&quot; alt=&quot;Figure 6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;学習データセットにバイアスがある場合にベースラインの Grad-CAM と提案手法の GAIN がどのような予測をするか可視化を行った結果。
+Grad-CAM は&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;とともに現れやすい&lt;code class=&quot;highlighter-rouge&quot;&gt;ボート&lt;/code&gt;に過学習している傾向があるが、GAIN は&lt;code class=&quot;highlighter-rouge&quot;&gt;ボート&lt;/code&gt;を適切に捉えていることがわかる。
+提案手法の GAIN がバイアスのあるデータセットに対してもロバストであることを示している。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SEC について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1603.06098&quot;&gt;Kolesnikov, Alexander, and Christoph H. Lampert. “Seed, expand and constrain: Three principles for weakly-supervised image segmentation.” European Conference on Computer Vision. Springer, Cham, 2016.&lt;/a&gt;
+        &lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1802.10171&quot;&gt;Li, Kunpeng, et al. “Tell me where to look: Guided attention inference network.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color</title><link href="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color" rel="alternate" type="text/html" title="SC-FEGAN:Face Editing Generative Adversarial Networks with Users Sketch and Color" /><published>2019-02-21T00:00:00+00:00</published><updated>2019-02-21T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;ユーザーのインタラクティブなスケッチや色指定が可能なニューラルネットワークベースの顔画像編集システム SC-FEGAN を提案。&lt;/p&gt;
 
@@ -1167,100 +1255,4 @@ global feature vectorとlocal feature vectorに対してcompatibility scoreを�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.04819&quot;&gt;Menegola, Afonso, et al. “RECOD titans at ISIC challenge 2017.” arXiv preprint arXiv:1703.04819 (2017).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Contextual Augmentation: Data Augmentation by Words with Paradigmatic Relations</title><link href="https://shunk031.github.io/paper-survey/summary/nip/Contextual-Augmentation-Data-Augmentation-by-Words-with-Paradigmatic-Relations" rel="alternate" type="text/html" title="Contextual Augmentation: Data Augmentation by Words with Paradigmatic Relations" /><published>2018-05-27T00:00:00+00:00</published><updated>2018-05-27T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nip/Contextual-Augmentation-Data-Augmentation-by-Words-with-Paradigmatic-Relations</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nip/Contextual-Augmentation-Data-Augmentation-by-Words-with-Paradigmatic-Relations">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;文脈および感情値などの条件を考慮した単語置き換えでdata augmentationを実現するContextual Augmentationを提案&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;ニューラルネットベースのモデルは高い精度を示すが過学習しやすい。
-Data augmentationは汎化性能を向上させるテクニックであり、画像認識分野では回転やフリップなどを用いてデータのかさ増しを行っている。&lt;/p&gt;
-
-&lt;p&gt;しかしながら自然言語処理に対するdata augmentationの適用法は限られている。
-一般的にはWordNetなどを用いた単語の置き換えやルールベースの手法が用いられるが、ドメインに特化している場合も多く、一般性が失われたものとなっている。&lt;/p&gt;
-
-&lt;p&gt;本研究ではbi-directional言語モデル(LM)を用いて、文脈を考慮した単語置き換えでdata augmentationを実現するContextual Augmentationを提案している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Contextual-Augmentation-Data-Augmentation-by-Words-with-Paradigmatic-Relations/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;文脈を考慮した単語予測
-    &lt;ul&gt;
-      &lt;li&gt;bi-directional LSTMを用いて、文脈に基づいて文中の位置 &lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt; におけるword probabilityを計算&lt;/li&gt;
-      &lt;li&gt;オンラインでdata augmentationするための単語をサンプリングする&lt;/li&gt;
-      &lt;li&gt;data augmentationを制御するパラメータとしてtemperature &lt;script type=&quot;math/tex&quot;&gt;\tau&lt;/script&gt; を導入する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;感情値などの条件を考慮
-    &lt;ul&gt;
-      &lt;li&gt;LMにおいて &lt;code class=&quot;highlighter-rouge&quot;&gt;good&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;bad&lt;/code&gt; は近い表現になりやすく、反義語がdata augmentationに使われてしまう場合がある
-        &lt;ul&gt;
-          &lt;li&gt;label-conditional LMを用いてpositive/negativeなどのラベルを考慮し、反義語を制御する&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;SST(SST2, SST5)、Subj、MPQA、RT、TRECの各データセットを用いている。モデルはLSTM、CNNをそれぞれ利用し、提案手法であるContextual Augmentationの効果を確認している。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Contextual-Augmentation-Data-Augmentation-by-Words-with-Paradigmatic-Relations/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;LMによって予測された単語は必ずしもシノニムになっていない&lt;/li&gt;
-  &lt;li&gt;label-conditional LMを用いると、ラベルの性質に沿った単語の予測がなされている&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;シノニムを利用した単語置換によるdata augmentation
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classifica&quot;&gt;Zhang, Xiang, Junbo Zhao, and Yann LeCun. “Character-level convolutional networks for text classification.” Advances in neural information processing systems. 2015.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/D15-1306&quot;&gt;Wang, William Yang, and Diyi Yang. “That’s So Annoying!!!: A Lexical and Frame-Semantic Embedding Based Data Augmentation Approach to Automatic Categorization of Annoying Behaviors using# petpeeve Tweets.” Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing. 2015.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;文法推論 (grammar induction)を用いたdata augmentation
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1606.03622&quot;&gt;Jia, Robin, and Percy Liang. “Data recombination for neural semantic parsing.” arXiv preprint arXiv:1606.03622 (2016).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;タスク固有のヒューリスティックを利用したdata augmentation
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=1609091&quot;&gt;Fürstenau, Hagen, and Mirella Lapata. “Semi-supervised semantic role labeling.” Proceedings of the 12th Conference of the European Chapter of the Association for Computational Linguistics. Association for Computational Linguistics, 2009.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/W17-3529&quot;&gt;Kafle, Kushal, Mohammed Yousefhussien, and Christopher Kanan. “Data augmentation for visual question answering.” Proceedings of the 10th International Conference on Natural Language Generation. 2017.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/K17-2010&quot;&gt;Silfverberg, Miikka, et al. “Data Augmentation for Morphological Reinflection.” Proceedings of the CoNLL SIGMORPHON 2017 Shared Task: Universal Morphological Reinflection (2017): 90-99.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Autoencoderを用いたdata augmentation
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/K17-2002&quot;&gt;Bergmanis, Toms, et al. “Training Data Augmentation for Low-Resource Morphological Inflection.” Proceedings of the CoNLL SIGMORPHON 2017 Shared Task: Universal Morphological Reinflection (2017): 31-39.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14299/14261&quot;&gt;Xu, Weidi, et al. “Variational Autoencoder for Semi-Supervised Text Classification.” AAAI. 2017.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://proceedings.mlr.press/v70/hu17e.html&quot;&gt;Hu, Zhiting, et al. “Toward controlled generation of text.” International Conference on Machine Learning. 2017.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Encoder-Decoderを用いたdata augmentation
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1606.07947&quot;&gt;Kim, Yoon, and Alexander M. Rush. “Sequence-level knowledge distillation.” arXiv preprint arXiv:1606.07947 (2016).&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1511.06709&quot;&gt;Sennrich, Rico, Barry Haddow, and Alexandra Birch. “Improving neural machine translation models with monolingual data.” arXiv preprint arXiv:1511.06709 (2015).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;本研究に一番近い立ち位置の先行研究
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2002793&quot;&gt;Kolomiyets, Oleksandr, Steven Bethard, and Marie-Francine Moens. “Model-portability experiments for textual temporal analysis.” Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies: short papers-Volume 2. Association for Computational Linguistics, 2011.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1705.00440&quot;&gt;Fadaee, Marzieh, Arianna Bisazza, and Christof Monz. “Data augmentation for low-resource neural machine translation.” arXiv preprint arXiv:1705.00440 (2017).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1805.06201&quot;&gt;Kobayashi, Sosuke. “Contextual Augmentation: Data Augmentation by Words with Paradigmatic Relations.” arXiv preprint arXiv:1805.06201 (2018).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

@@ -21,6 +21,7 @@ categories: NLP
 ## 3. 技術や手法の"キモ"はどこにある？
 ### 語彙選択に対する問題設定
 元の embedding $$W$$と語彙選択を行った後の embedding $$\hat{W}$$ を使用した場合に、予測精度の差が閾値以上である語彙数を最小にする。
+
 $$
 \mathop{\rm argmin}\limits_{\hat{W},\hat{\theta}} \textrm{#Row}(\hat{W})~~s.t. \textrm{Acc}(f_{\hat{\theta}}(x; \hat{W}), y) - \textrm{Acc}(f_{\theta}(x;W),y)\le \epsilon
 $$
@@ -30,9 +31,8 @@ AUC ベースの評価指標 `Vocab@-X%`
 - X ％のパフォーマンス低下が許される場合に必要な最小の語彙数を計算する
   - 本研究では `Vocab@-3%` および `Vocab@-5%` を用いている
 
-![Figure 2]({{ site.baseurl }}/assets/img/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection/figure2.png)
-
 ### Variational Vocabulary Dropout (VDD)
+
 - Bernouli Dropout
   - Onehot ベクトルに対してベルヌーイノイズ$$\textbf{b}$$を適用する
     - $$E(x|\textbf{b}) = (\textbf{b} \odot \textrm{OneHot}(x)) \cdot W$$
@@ -43,14 +43,16 @@ AUC ベースの評価指標 `Vocab@-X%`
       - Reparameterization trick に従うと、$$W$$ は多変量ガウス分布 $$B$$ を用いて以下のようになる
         - $$E(x|\textbf{z}) = \textrm{OneHot}(x) \cdot B$$
 
+![Figure 2]({{ site.baseurl }}/assets/img/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection/figure2.png)
+
 Dropout 率 $$\alpha_i$$ は 語彙の$$i$$番目の単語が必要かどうかを示す指標となる。
 ここで$$\alpha_i$$より数値が大きい場合は$$i$$番目の語彙をドロップしてもパフォーマンス低下の要因にならないことを意味する。
         
 ## 4. どうやって有効だと検証した？
 
-文書分類 (document classification: DC)、自然言語理解 (natural language understanding: NLU)、自然言語推論 (natural language inference) のデータセットを用いてそれぞれのタスクにおける VVD の効果を確認している。
+文書分類 (document classification: DC)、自然言語理解 (natural language understanding: NLU)、自然言語推論 (natural language inference: NLI) のデータセットを用いてそれぞれのタスクにおける VVD の効果を確認している。
 提案手法の VVD に対して、ベースラインとして頻度に基づいた語彙形成、TF-IDF に基づいた語彙形成、そして group lasso に基づいた語彙形成を比較している。
-各タスクで用いられるモデルは DC はで CNN ベースのモデル、NLU では attetion を導入した bi-directional LSTM モデル、NLI では ESIM モデルを用いている。
+各タスクではそれぞれ DC では CNN ベースのモデル、NLU では attetion を導入した bi-directional LSTM モデル、NLI では ESIM モデルを用いている。
 
 すべてのタスクに対して提案手法の語彙選択手法である VVD が outperform する結果となっている。
 また語彙選択を考慮した評価指標として Vocab@-X% を用いた場合では、特に提案手法のスコアが良くなっていることが示されており、効果的な語彙選択が行われていることがわかる。

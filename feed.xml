@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-03-02T10:13:49+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-03-02T10:19:08+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
 </subtitle><entry><title type="html">How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection" rel="alternate" type="text/html" title="How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection" /><published>2019-03-02T00:00:00+00:00</published><updated>2019-03-02T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
-&lt;p&gt;度を保ったまま最小限の語彙を選択する variational vocabulary dropout (VDD) を提案。&lt;/p&gt;
+&lt;p&gt;精度を保ったまま最小限の語彙を選択する variational vocabulary dropout (VDD) を提案。&lt;/p&gt;
 
 &lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 
-&lt;p&gt;自然言語処理 (NLP) のタスクに対して deep learning モデルを用いる場合、入力にあらかじめ定義されたボキャブラリを元に単語をベクトル化して入力する必要がある。
+&lt;p&gt;自然言語処理 (NLP) のタスクに対して deep learning モデルを用いる場合、入力にあらかじめ定義された語彙を元に単語をベクトル化して入力する必要がある。
 こうした語彙数は非常に大規模となる場合が多くパラメータ数も増大してしまうため、限られた計算リソース下での実行することは難しい。
 したがってタスクを解く精度を保ったまま必要な語彙を選択する必要がある。&lt;/p&gt;
 

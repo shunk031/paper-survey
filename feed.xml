@@ -1,5 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-02-25T07:06:55+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Tell Me Where to Look: Guided Attention Inference Network</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network" rel="alternate" type="text/html" title="Tell Me Where to Look: Guided Attention Inference Network" /><published>2019-02-24T00:00:00+00:00</published><updated>2019-02-24T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-03-02T10:13:49+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection" rel="alternate" type="text/html" title="How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection" /><published>2019-03-02T00:00:00+00:00</published><updated>2019-03-02T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;度を保ったまま最小限の語彙を選択する variational vocabulary dropout (VDD) を提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;自然言語処理 (NLP) のタスクに対して deep learning モデルを用いる場合、入力にあらかじめ定義されたボキャブラリを元に単語をベクトル化して入力する必要がある。
+こうした語彙数は非常に大規模となる場合が多くパラメータ数も増大してしまうため、限られた計算リソース下での実行することは難しい。
+したがってタスクを解く精度を保ったまま必要な語彙を選択する必要がある。&lt;/p&gt;
+
+&lt;p&gt;本研究ではこの語彙選択問題に対して、タスクを考慮した語彙選択手法である variational vocabulary dropoput (VDD) を提案している。
+また適切な語彙選択が行われているかを確認するため、AUC ベースの評価指標を導入し、提案手法の効果を確認している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+&lt;h3 id=&quot;語彙選択に対する問題設定&quot;&gt;語彙選択に対する問題設定&lt;/h3&gt;
+&lt;p&gt;元の embedding &lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt;と語彙選択を行った後の embedding &lt;script type=&quot;math/tex&quot;&gt;\hat{W}&lt;/script&gt; を使用した場合に、予測精度の差が閾値以上である語彙数を最小にする。
+&lt;script type=&quot;math/tex&quot;&gt;\mathop{\rm argmin}\limits_{\hat{W},\hat{\theta}} \textrm{#Row}(\hat{W})~~s.t. \textrm{Acc}(f_{\hat{\theta}}(x; \hat{W}), y) - \textrm{Acc}(f_{\theta}(x;W),y)\le \epsilon&lt;/script&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;語彙選択に対する評価指標&quot;&gt;語彙選択に対する評価指標&lt;/h3&gt;
+&lt;p&gt;AUC ベースの評価指標 &lt;code class=&quot;highlighter-rouge&quot;&gt;Vocab@-X%&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;X ％のパフォーマンス低下が許される場合に必要な最小の語彙数を計算する
+    &lt;ul&gt;
+      &lt;li&gt;本研究では &lt;code class=&quot;highlighter-rouge&quot;&gt;Vocab@-3%&lt;/code&gt; および &lt;code class=&quot;highlighter-rouge&quot;&gt;Vocab@-5%&lt;/code&gt; を用いている&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;variational-vocabulary-dropout-vdd&quot;&gt;Variational Vocabulary Dropout (VDD)&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Bernouli Dropout
+    &lt;ul&gt;
+      &lt;li&gt;Onehot ベクトルに対してベルヌーイノイズ&lt;script type=&quot;math/tex&quot;&gt;\textbf{b}&lt;/script&gt;を適用する
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;script type=&quot;math/tex; mode=display&quot;&gt;E(x|\textbf{b}) = (\textbf{b} \odot \textrm{OneHot}(x)) \cdot W&lt;/script&gt;
+            &lt;ul&gt;
+              &lt;li&gt;しかしながらベルヌーイ分布を reparameterize するのは難しい&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Gaussian Relaxation
+    &lt;ul&gt;
+      &lt;li&gt;ベルヌーイノイズの代わりにガウシアンノイズ &lt;script type=&quot;math/tex&quot;&gt;z_i \sim \mathcal{N}(1, \alpha_{i} = \frac{p_i}{1 - p_i})&lt;/script&gt; を適用する
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;script type=&quot;math/tex; mode=display&quot;&gt;E(x|\textbf{z}) = (\textbf{z} \odot \textrm{OneHot}(x) \cdot W)&lt;/script&gt;
+            &lt;ul&gt;
+              &lt;li&gt;Reparameterization trick に従うと、&lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt; は多変量ガウス分布 &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt; を用いて以下のようになる
+                &lt;ul&gt;
+                  &lt;li&gt;
+                    &lt;script type=&quot;math/tex; mode=display&quot;&gt;E(x|\textbf{z}) = \textrm{OneHot}(x) \cdot B&lt;/script&gt;
+                  &lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dropout 率 &lt;script type=&quot;math/tex&quot;&gt;\alpha_i&lt;/script&gt; は 語彙の&lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;番目の単語が必要かどうかを示す指標となる。
+ここで&lt;script type=&quot;math/tex&quot;&gt;\alpha_i&lt;/script&gt;より数値が大きい場合は&lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;番目の語彙をドロップしてもパフォーマンス低下の要因にならないことを意味する。&lt;/p&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;文書分類 (document classification: DC)、自然言語理解 (natural language understanding: NLU)、自然言語推論 (natural language inference) のデータセットを用いてそれぞれのタスクにおける VVD の効果を確認している。
+提案手法の VVD に対して、ベースラインとして頻度に基づいた語彙形成、TF-IDF に基づいた語彙形成、そして group lasso に基づいた語彙形成を比較している。
+各タスクで用いられるモデルは DC はで CNN ベースのモデル、NLU では attetion を導入した bi-directional LSTM モデル、NLI では ESIM モデルを用いている。&lt;/p&gt;
+
+&lt;p&gt;すべてのタスクに対して提案手法の語彙選択手法である VVD が outperform する結果となっている。
+また語彙選択を考慮した評価指標として Vocab@-X% を用いた場合では、特に提案手法のスコアが良くなっていることが示されており、効果的な語彙選択が行われていることがわかる。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;h3 id=&quot;学習時の速度について&quot;&gt;学習時の速度について&lt;/h3&gt;
+&lt;p&gt;VVD は確率的な振る舞いを扱うため、テキスト分類に対して学習を行う場合通常の cross entropy よりも時間がかかった。
+フルサイズの語彙に対して VVD を適用すると計算時間がかかるため、前段階で精度低下が怒らない程度に語彙を制限したほうがよい。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Deep learning モデルに対するベイジアンベースのモデル圧縮について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6921-bayesian-compression-for-deep-learning&quot;&gt;Louizos, Christos, Karen Ullrich, and Max Welling. “Bayesian compression for deep learning.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.10339&quot;&gt;Wenhu Chen, Yu Su, Yilin Shen, Zhiyu Chen, Xifeng Yan, William Wang. How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection. arXiv:1902.10339, 2019&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Tell Me Where to Look: Guided Attention Inference Network</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network" rel="alternate" type="text/html" title="Tell Me Where to Look: Guided Attention Inference Network" /><published>2019-02-24T00:00:00+00:00</published><updated>2019-02-24T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;Attention map を用いた弱教師ありセマンティックセグメンテーションを高精度に行う guided attention inference networks (GAIN) を提案。&lt;/p&gt;
 
@@ -1049,213 +1149,4 @@ global feature vectorとlocal feature vectorに対してcompatibility scoreを�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1710.05006&quot;&gt;Codella, Noel CF, et al. “Skin lesion analysis toward melanoma detection: A challenge at the 2017 international symposium on biomedical imaging (isbi), hosted by the international skin imaging collaboration (isic).” arXiv preprint arXiv:1710.05006 (2017).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">RECOD Titans at ISIC Challenge 2017</title><link href="https://shunk031.github.io/paper-survey/summary/others/RECOD-Titans-at-ISIC-Challenge-2017" rel="alternate" type="text/html" title="RECOD Titans at ISIC Challenge 2017" /><published>2018-06-02T00:00:00+00:00</published><updated>2018-06-02T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/RECOD-Titans-at-ISIC-Challenge-2017</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/RECOD-Titans-at-ISIC-Challenge-2017">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;ISIC2017メラノーマ画像分析でSeborrheic keratosis分類タスクでベストな精度を出したモデルの解説&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごい&quot;&gt;2. 先行研究と比べてどこがすごい？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;以前までの問題点
-    &lt;ul&gt;
-      &lt;li&gt;学習データ量が足りない&lt;/li&gt;
-      &lt;li&gt;モデルの深さ&lt;/li&gt;
-      &lt;li&gt;計算コスト&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;これらに対して、外部の追加データの使用・ResNet等の深いネットワークの使用・クラウドベースの計算機を使用している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこ&quot;&gt;3. 技術や手法のキモはどこ？&lt;/h2&gt;
-
-&lt;h3 id=&quot;外部データを用いて学習データを増やす&quot;&gt;外部データを用いて学習データを増やす&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Dataset&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;# of melanoma&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;# of seborrheic keratoses&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;# of benign nevi&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ISIC 2017 Challenge&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;374&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;254&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;1372&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ISIC Archive&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;(13000 dermoscopic images)&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;—&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;—&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Interactive Atlas of Dermoscopy&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;270&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;49&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;—&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Dermofit Image Library&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;76&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;257&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;—&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;IRMA Skin Lesion Dataset&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;187&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;—&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;—&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;PH2 Datset&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;40&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;—&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;—&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;すべてのデータについて、アノテーションされているラベルを考慮してマージする
-    &lt;ul&gt;
-      &lt;li&gt;以下のデータについては除いている
-        &lt;ul&gt;
-          &lt;li&gt;ISIC Archiveの診断結果がない画像&lt;/li&gt;
-          &lt;li&gt;Atlasの &lt;code class=&quot;highlighter-rouge&quot;&gt;miscellaneous&lt;/code&gt; クラス&lt;/li&gt;
-          &lt;li&gt;IRMAの &lt;code class=&quot;highlighter-rouge&quot;&gt;benign&lt;/code&gt; クラス&lt;/li&gt;
-          &lt;li&gt;PH2の &lt;code class=&quot;highlighter-rouge&quot;&gt;atypical nevi&lt;/code&gt; クラス&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ISIC Archiveにおいて、benignのデータの多くが15歳の患者だった
-    &lt;ul&gt;
-      &lt;li&gt;これらを取り除いたらスコアが微増&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;各データセット間で重複してるデータが存在している
-    &lt;ul&gt;
-      &lt;li&gt;trainとvalidationに分けるときに注意しないといけない&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;deploy&lt;/code&gt; データ群と &lt;code class=&quot;highlighter-rouge&quot;&gt;semi&lt;/code&gt; データ群を学習用に作成
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;deploy&lt;/code&gt;
-        &lt;ul&gt;
-          &lt;li&gt;6つのデータセットからなる9640枚の学習画像
-            &lt;ul&gt;
-              &lt;li&gt;keratosis分類ではこのデータ群で学習したほうがAUCスコアが良かった&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;semi&lt;/code&gt;
-        &lt;ul&gt;
-          &lt;li&gt;3つのデータセット (ISIC2017, ISIC Archive, Interactive Atlas) からなる7544枚の学習画像
-            &lt;ul&gt;
-              &lt;li&gt;melanoma分類ではこのデータ群で学習したほうがAUCスコアが良かった&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;使用モデル&quot;&gt;使用モデル&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ImageNetモデルのfine-tuning
-    &lt;ul&gt;
-      &lt;li&gt;ResNet-101&lt;/li&gt;
-      &lt;li&gt;Inception-v4&lt;/li&gt;
-      &lt;li&gt;~Inception-ResNet~
-        &lt;ul&gt;
-          &lt;li&gt;計算コストが大きいがスコアは微増しただけだったため使用を見送った&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;各クラス独立に学習を行っていたが、3クラス分類に変更した&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ベースラインのVGG16とResNet101やInception-v4を比べる&lt;/li&gt;
-  &lt;li&gt;標準的なサイズの画像 (224x224) とより大きな高解像度の画像を入力したときの精度の比較&lt;/li&gt;
-  &lt;li&gt;class-weightやsample-weightの考慮&lt;/li&gt;
-  &lt;li&gt;curriculum-learningの有無
-    &lt;ul&gt;
-      &lt;li&gt;最初は簡単なデータで学習させ、学習が進んだら難しいデータで学習させる&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;最終conv層をそのままニューラルネットにするかSVMにするか&lt;/li&gt;
-  &lt;li&gt;年齢や性別といった患者データを使うかどうか&lt;/li&gt;
-  &lt;li&gt;用いるoptimizerの比較&lt;/li&gt;
-  &lt;li&gt;異なるper-sample normalizationnの実施&lt;/li&gt;
-  &lt;li&gt;アンサンブルやスタッキングの有無&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5-議論はある&quot;&gt;5. 議論はある？&lt;/h2&gt;
-&lt;h3 id=&quot;効果がなかったこと&quot;&gt;効果がなかったこと&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;画像の解像度について
-    &lt;ul&gt;
-      &lt;li&gt;高解像度は効果なし&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;class-weightやsample-weightについて
-    &lt;ul&gt;
-      &lt;li&gt;no weighting was the best weighting&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;validationデータにおけるearly stoppingについて
-    &lt;ul&gt;
-      &lt;li&gt;特にスコアに対するインパクトはなかった&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;患者データの利用
-    &lt;ul&gt;
-      &lt;li&gt;効果があるときと無い時がある&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;curriculum learningの使用
-    &lt;ul&gt;
-      &lt;li&gt;シンプルなトレーニングのほうがよかった&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;セグメンテーションの情報の利用
-    &lt;ul&gt;
-      &lt;li&gt;今回は使えなかったけど、使うと効果が出るのではと考えられている&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;効果があったこと&quot;&gt;効果があったこと&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;deepなモデルと規模の大きいデータセットを用いると効果が大きい&lt;/li&gt;
-  &lt;li&gt;data augmentationは必須
-    &lt;ul&gt;
-      &lt;li&gt;テスト時にもdata augmentationするとよい (test time augmentation 的な)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;mean subtractionは有効
-    &lt;ul&gt;
-      &lt;li&gt;標準偏差で割るnormalizationはスコアを悪化させた&lt;/li&gt;
-      &lt;li&gt;Inception-v4では確認できた。ResNetについては不明&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Stackingは有効&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.04819&quot;&gt;Menegola, Afonso, et al. “RECOD titans at ISIC challenge 2017.” arXiv preprint arXiv:1703.04819 (2017).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

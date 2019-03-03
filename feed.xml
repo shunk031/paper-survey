@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-03-02T10:22:35+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-03-03T07:10:38+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
 </subtitle><entry><title type="html">How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection" rel="alternate" type="text/html" title="How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection" /><published>2019-03-02T00:00:00+00:00</published><updated>2019-03-02T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;精度を保ったまま最小限の語彙を選択する variational vocabulary dropout (VDD) を提案。&lt;/p&gt;
@@ -101,6 +101,115 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.10339&quot;&gt;Wenhu Chen, Yu Su, Yilin Shen, Zhiyu Chen, Xifeng Yan, William Wang. How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection. arXiv:1902.10339, 2019&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Attentional Encoder Network for Targeted Sentiment Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification" rel="alternate" type="text/html" title="Attentional Encoder Network for Targeted Sentiment Classification" /><published>2019-03-01T00:00:00+00:00</published><updated>2019-03-01T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;ターゲットに対する感情分析で使われてきた LSTM に変わる self-attention ベースの attentional encoder network (AEN) を提案した。
+また付与されている感情ラベルに対する非信頼性に対して label smoothing を行う損失関数を導入した。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;自然言語処理 (NLP) のタスクに対して RNN ベースの LSTM モデルが広く用いられてきたが、
+コンテキスト内のターゲットに対する感情を分析する fine-grained なターゲットに対する感情分類 (targeted sentiment classification) に対しては依然として改善の余地が残されている。
+先行研究の問題点としてはテキストのモデリングにおいて RNN ベースのモデルに比重がおかれており、また学習速度も遅いことが挙げられる。
+感情分類タスクにおいて attention は重要な役割を果たすが、モデルの後段部分でのみしか使用されてこなかった。
+また感情分類タスクにおいて付与されている感情ラベルは信頼性が低い場合がある。特に &lt;em&gt;neutral&lt;/em&gt; な感情ラベルはとてもファジーでモデルの学習を難しくしている。&lt;/p&gt;
+
+&lt;p&gt;本研究では fine-grained なターゲットに対する感情分析にタスクに対してターゲットとコンテキストの交互作用を self-attention で捉え、ファジーな感情ラベルに対して効果的な label smoothing を行う損失関数を導入した。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;Attentional Encoder Network &lt;code class=&quot;highlighter-rouge&quot;&gt;(AEN)&lt;/code&gt; を提案&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;attentional-encoder-layer&quot;&gt;Attentional Encoder Layer&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;LSTM に代わる並列計算可能なレイヤー
+    &lt;ul&gt;
+      &lt;li&gt;コンテキストとターゲットの embedding に対して隠れ状態の表現を計算&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Multi-Head Attention&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;Point-wise Convolutional Transformation&lt;/code&gt; から構成される&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;multi-head-attention-mha&quot;&gt;Multi-Head Attention (MHA)&lt;/h4&gt;
+&lt;p&gt;入力されるコンテキストとターゲットに対して異なる MHA を適用する。
+MHA は RNN と比較して短いネットワークで離れた単語のコンテキストを捉えることが可能。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Intra-MHA
+    &lt;ul&gt;
+      &lt;li&gt;コンテキスト embedding &lt;script type=&quot;math/tex&quot;&gt;\textbf{e}^c&lt;/script&gt; を MHA に入力&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{e}^{\textrm{intra}} = MHA(\textbf{e}^c, \textbf{e}^c)&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Inter-MHA
+    &lt;ul&gt;
+      &lt;li&gt;コンテキスト embedding &lt;script type=&quot;math/tex&quot;&gt;\textbf{e}^c&lt;/script&gt; と ターゲット embedding &lt;script type=&quot;math/tex&quot;&gt;\textbf{e}^t&lt;/script&gt; を MHA に入力&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{e}^{\textrm{inter}} = MHA(\textbf{e}^c, \textbf{e}^t)&lt;/script&gt;
+
+&lt;h4 id=&quot;point-wise-convolution-transformation-pct&quot;&gt;Point-wise Convolution Transformation (PCT)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2 つの 1D convolution と活性化関数から構成される&lt;/li&gt;
+  &lt;li&gt;MHA で得られた表現に対して位置ごとにコンテキストを学習することが可能&lt;/li&gt;
+  &lt;li&gt;Intra-MHA と inter-MHA それぞれに対して PCT を適用し、コンテキスト表現を得る&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;label-smoothing-regularization-lsr&quot;&gt;Label Smoothing Regularization (LSR)&lt;/h3&gt;
+
+&lt;p&gt;感情分類タスクに対して &lt;em&gt;neutral&lt;/em&gt; というラベルはとてもファジーであるため、LSR を導入し、過学習を抑制している。
+LSR は感情ラベルの分布とモデル予測の分布との KL 距離に等しいため、LSR 項は以下のように表せる。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_{lsr} = - D_{\textrm{KL}} (u(k)||p_{\theta})&lt;/script&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;SemEval 2014 Task4 (レストランのレビューデータセット、ラップトップのレビューデータセット)、ACL 14 Twitter データセットの 3 つで比較を行っている。
+これらのデータセットには 3 つの感情ラベル (positive/neutral/negative) が付与されている。&lt;/p&gt;
+
+&lt;p&gt;ベースラインのモデルとして SVM、Rec-NN、TD-LSTM、ATAE-LSTM、IAN、MemNet、RAM を用いて提案手法の AEN との比較を行っている。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;h3 id=&quot;label-smoothing-regularization-の効果&quot;&gt;Label smoothing regularization の効果&lt;/h3&gt;
+&lt;p&gt;Label smoothing regularization を導入することで、導入していないモデルよりも良い精度であった。
+信頼性の低いラベルに対して効果的に過学習を抑制できたと考えられる。&lt;/p&gt;
+
+&lt;h3 id=&quot;recurrence-vsattention&quot;&gt;Recurrence vs.Attention&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification/table3.png&quot; width=&quot;400px&quot; alt=&quot;Table 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;AEN に対して Attention encoder layer を LSTM に代えたネットワークと比較すると同等程度の精度を記録している。
+よって LSTM に比べて半数程度の少ないパラメータで同程度の予測精度を達成できるメリットがある。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Multi-Head Atteition について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need&quot;&gt;Vaswani, Ashish, et al. “Attention is all you need.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Label Smoothing Regularization について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.html&quot;&gt;Szegedy, Christian, et al. “Rethinking the inception architecture for computer vision.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.09314&quot;&gt;Song, Youwei, et al. “Attentional Encoder Network for Targeted Sentiment Classification.” arXiv preprint arXiv:1902.09314 (2019).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Tell Me Where to Look: Guided Attention Inference Network</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network" rel="alternate" type="text/html" title="Tell Me Where to Look: Guided Attention Inference Network" /><published>2019-02-24T00:00:00+00:00</published><updated>2019-02-24T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;Attention map を用いた弱教師ありセマンティックセグメンテーションを高精度に行う guided attention inference networks (GAIN) を提案。&lt;/p&gt;
@@ -1051,104 +1160,4 @@ global feature vectorとlocal feature vectorに対してcompatibility scoreを�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1804.02391&quot;&gt;Jetley, Saumya, et al. “Learn to pay attention.” arXiv preprint arXiv:1804.02391 (2018).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Skin Lesion Analysis Toward Melanoma Detection: A Challenge at the 2017 International Symposium on Biomedical Imaging (ISBI), Hosted by the International Skin Imaging Collaboration (ISIC)</title><link href="https://shunk031.github.io/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC" rel="alternate" type="text/html" title="Skin Lesion Analysis Toward Melanoma Detection: A Challenge at the 2017 International Symposium on Biomedical Imaging (ISBI), Hosted by the International Skin Imaging Collaboration (ISIC) " /><published>2018-06-03T00:00:00+00:00</published><updated>2018-06-03T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Skin-Lesion-Analysis-Toward-Melanoma-Detection-A-Challenge-at-the-2017-International-Symposium-on-Biomedical-Imaging-ISBI-Hosted-by-the-International-Skin-Imaging-Collaboration-ISIC">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;ISIC2017で行われたメラノーマ画像の分析チャレンジの内容をまとめたもの&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごい&quot;&gt;2. 先行研究と比べてどこがすごい？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ISIC2017では3種類のタスクが公開された
-    &lt;ul&gt;
-      &lt;li&gt;Lesion Segmentation Task&lt;/li&gt;
-      &lt;li&gt;Dermoscopic Feature Classification&lt;/li&gt;
-      &lt;li&gt;Disease Classification Task
-        &lt;ul&gt;
-          &lt;li&gt;3カテゴリ (melanoma, nevus, seborrheic keratosis) をそれぞれ分類するタスク&lt;/li&gt;
-          &lt;li&gt;melanoma (train: 374, val: 30, test: 117)&lt;/li&gt;
-          &lt;li&gt;nevus (train: 1372, val: 78, test: 393)&lt;/li&gt;
-          &lt;li&gt;seborrheic keratosis (train: 254, val: 42, test: 90)&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;データセットは以下から入手できる
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://challenge2017.isic-archive.com/&quot;&gt;http://challenge2017.isic-archive.com/&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこ&quot;&gt;3. 技術や手法のキモはどこ？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;平均スコアがベストだったモデル
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.03108&quot;&gt;Matsunaga, Kazuhisa, et al. “Image classification of melanoma, nevus and seborrheic keratosis by deep neural network ensemble.” arXiv preprint arXiv:1703.03108 (2017).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Melanoma予測精度がベストだったモデル
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.01976&quot;&gt;Díaz, Iván González. “Incorporating the knowledge of dermatologists to convolutional neural networks for the diagnosis of skin lesions.” arXiv preprint arXiv:1703.01976 (2017).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Seborrheic keratosis予測精度がベストだったモデル
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.04819&quot;&gt;Menegola, Afonso, et al. “RECOD titans at ISIC challenge 2017.” arXiv preprint arXiv:1703.04819 (2017).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;予測モデルのトレンド&quot;&gt;予測モデルのトレンド&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;深層学習モデルを複数アンサンブルしている
-    &lt;ul&gt;
-      &lt;li&gt;学習データに追加で外部データを用いている&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Seborrheic keratosiの分類はMelanomaの分類に比べて容易な傾向だった
-    &lt;ul&gt;
-      &lt;li&gt;病気の性質・データの偏りから生じたものでは&lt;/li&gt;
-      &lt;li&gt;一番ベストなモデルを作ったチームは追加でヒューリスティックなラベリングを追加で行っている&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;平均スコアがベストだったモデルは、各カテゴリ分類ではベストなモデルではなかった&lt;/li&gt;
-  &lt;li&gt;一番複雑なモデルはパフォーマンスを下げており、シンプルなモデルは全体のパフォーマンスを上げている&lt;/li&gt;
-  &lt;li&gt;予測の閾値は重要そう。確率的なスコア標準化(Probablistic score normalization)はsensitivityおよびspecificityのスコアをあげるために効果がありそう [&lt;a href=&quot;http://ieeexplore.ieee.org/abstract/document/8030303/&quot;&gt;Codella+&lt;/a&gt;, &lt;a href=&quot;https://www.jaad.org/article/S0190-9622(17)32202-8/fulltext&quot;&gt;Marchetti+&lt;/a&gt;]。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;評価尺度
-    &lt;ul&gt;
-      &lt;li&gt;AUC, specificity (melanoma classification)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5-議論はある&quot;&gt;5. 議論はある？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Classficationタスクについて
-    &lt;ul&gt;
-      &lt;li&gt;モデルのアンサンブルと追加の外部データ使用が高いパフォーマンスを出すカギになる&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文は&quot;&gt;6. 次に読むべき論文は？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.03108&quot;&gt;Matsunaga, Kazuhisa, et al. “Image classification of melanoma, nevus and seborrheic keratosis by deep neural network ensemble.” arXiv preprint arXiv:1703.03108 (2017).&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.01976&quot;&gt;Díaz, Iván González. “Incorporating the knowledge of dermatologists to convolutional neural networks for the diagnosis of skin lesions.” arXiv preprint arXiv:1703.01976 (2017).&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.04819&quot;&gt;Menegola, Afonso, et al. “RECOD titans at ISIC challenge 2017.” arXiv preprint arXiv:1703.04819 (2017).&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ieeexplore.ieee.org/abstract/document/8030303/&quot;&gt;Codella, Noel CF, et al. “Deep learning ensembles for melanoma recognition in dermoscopy images.” IBM Journal of Research and Development 61.4 (2017): 5-1.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.jaad.org/article/S0190-9622(17)32202-8/fulltext&quot;&gt;Marchetti, Michael A., et al. “Results of the 2016 International Skin Imaging Collaboration International Symposium on Biomedical Imaging challenge: Comparison of the accuracy of computer algorithms to dermatologists for the diagnosis of melanoma from dermoscopic images.” Journal of the American Academy of Dermatology 78.2 (2018): 270-277.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1710.05006&quot;&gt;Codella, Noel CF, et al. “Skin lesion analysis toward melanoma detection: A challenge at the 2017 international symposium on biomedical imaging (isbi), hosted by the international skin imaging collaboration (isic).” arXiv preprint arXiv:1710.05006 (2017).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

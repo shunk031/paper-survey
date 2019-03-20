@@ -1,5 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-03-03T07:10:38+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection" rel="alternate" type="text/html" title="How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection" /><published>2019-03-02T00:00:00+00:00</published><updated>2019-03-02T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-03-20T05:30:17+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Beyond News Contents: The Role of Social Context for Fake News Detection</title><link href="https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection" rel="alternate" type="text/html" title="Beyond News Contents: The Role of Social Context for Fake News Detection" /><published>2019-03-20T00:00:00+00:00</published><updated>2019-03-20T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;出版社・ニュース記事・ユーザの 3 つの関係をモデリングすることでフェイクニュース検出の精度向上を目指す TriFN を提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;フェイクニュース検出は主にニュース記事にフォーカスしたものと、ユーザのソーシャルな行動にフォーカスしているものが多い。
+これらは偽の情報を判断する言語的な観点やフェイク画像に対する視覚的観点に基づいたモデルの構築を行っている。
+またユーザに対して行動ログベースやユーザ間のネットワークベースのモデリングを行っている事例も多い。&lt;/p&gt;
+
+&lt;p&gt;本研究では、先行研究では考慮されてこなかった、&lt;code class=&quot;highlighter-rouge&quot;&gt;出版社&lt;/code&gt;・&lt;code class=&quot;highlighter-rouge&quot;&gt;ニュース記事&lt;/code&gt;・&lt;code class=&quot;highlighter-rouge&quot;&gt;ユーザ行動&lt;/code&gt;の 3 つの関係 &lt;code class=&quot;highlighter-rouge&quot;&gt;tri-relationship&lt;/code&gt; を考慮することでフェイクニュース検出の精度向上を目指す TriFN を提案している。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection/figure1.png&quot; width=&quot;400px&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tri-relationship-を考慮したフェイクニュース検出モデル-trifn&quot;&gt;Tri-relationship を考慮したフェイクニュース検出モデル TriFN&lt;/h3&gt;
+&lt;p&gt;TriFN は主に non-negative matrix factorization (NMF) をベースとした 5 つのコンポーネントから構成される。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;News Contents Embedding
+    &lt;ul&gt;
+      &lt;li&gt;Bag-of-words 表現なニュース記事から NMF でニュース記事の潜在表現を学習する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;User Embedding
+    &lt;ul&gt;
+      &lt;li&gt;ユーザのソーシャルな関係から NMF でユーザの潜在表現を学習する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;User-News Interaction Embedding
+    &lt;ul&gt;
+      &lt;li&gt;ユーザの信頼度によって得られるニュース記事の潜在表現を学習する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Publisher-News Relation Embedding
+    &lt;ul&gt;
+      &lt;li&gt;出版社の党派的なバイアスを考慮したニュース記事の潜在表現を学習する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Semi-supervised Linear Classifier
+    &lt;ul&gt;
+      &lt;li&gt;ニュース記事に対してフェイクニュース予測を行うための学習器を学習する&lt;/li&gt;
+      &lt;li&gt;半教師あり学習の枠組みを同時に使用し、ラベルが付与されていないデータからも学習する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;FakeNewsNet データセットを用いて、&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;か&lt;code class=&quot;highlighter-rouge&quot;&gt;fake&lt;/code&gt;かの 2 値分類問題としてフェイクニュース検出に対する検出精度の比較を行っている。
+比較対象として先行研究で提案されている複数の特徴抽出手法 (RST, LIWC, Castillo とこれらを組み合わせた RST + Castillo, LIWC + Castillo) とベースラインのモデル (LogReg, NBayes, DTree, RForest, XGBoost, AdaBoost, Gradient Boosting) で比較している。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;早期のフェイクニュース検出におけるパフォーマンス
+    &lt;ul&gt;
+      &lt;li&gt;記事公開から 12 時間後 〜 96 時間後の各時間におけるフェイクニュース検出の精度比較を行った結果、提案手法の TriFN が一番良かった。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;モデルのパラメータ分析
+    &lt;ul&gt;
+      &lt;li&gt;ユーザのソーシャルな関係の寄与をコントロールするパラメータを大きくすると精度が向上した。
+        &lt;ul&gt;
+          &lt;li&gt;ユーザとニュース間の関係よりユーザのソーシャルな関係のほうが予測に寄与する。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;フェイクニュース検出における data augmentation
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/8594871/&quot;&gt;Shu, Kai, et al. “Deep headline generation for clickbait detection.” 2018 IEEE International Conference on Data Mining (ICDM). IEEE, 2018.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1712.07709&quot;&gt;Shu, Kai, Suhang Wang, and Huan Liu. “Beyond News Contents: The Role of Social Context for Fake News Detection.” Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining. ACM, 2019.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection" rel="alternate" type="text/html" title="How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection" /><published>2019-03-02T00:00:00+00:00</published><updated>2019-03-02T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;精度を保ったまま最小限の語彙を選択する variational vocabulary dropout (VDD) を提案。&lt;/p&gt;
 
@@ -1069,95 +1157,4 @@ Grad-CAM は&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;と�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1805.04174&quot;&gt;Wang, Guoyin, et al. “Joint Embedding of Words and Labels for Text Classification.” arXiv preprint arXiv:1805.04174 (2018).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Learn to Pay Attention</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention" rel="alternate" type="text/html" title="Learn to Pay Attention" /><published>2018-06-16T00:00:00+00:00</published><updated>2018-06-16T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;画像認識に対して学習可能なattention機構をCNNに導入し、baseline手法を超える精度を実現&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;Convolutional Neural Network (CNN) は画像処理分野で素晴らしい結果を残しているが、こうした問題に対してモデルが推論する過程が不透明であり、結果の考察が難しい。
-そこで先行研究ではモデルの解釈性の向上のために、推論する画像のどの部分に注目しているかを可視化する手法が複数提案されている。
-しかしながらこれらの手法は学習済みのモデルに対してのみ適用可能という制限がある。&lt;/p&gt;
-
-&lt;p&gt;Attention機構は学習時に入力のどの部分に注視するかを学習することが可能であり、機械翻訳や画像に対する説明文自動生成(キャプショニング)、VQAなどにおいて精度向上に寄与している。&lt;/p&gt;
-
-&lt;p&gt;Attentionを計算する場合にクエリが必要な画像キャプションやVQAに対して、本研究ではattentionを推定するためにglobalな画像表現を利用し、分類問題においてもattention機構を導入することに成功している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;local feature vector&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;global feature vector&lt;/code&gt; を用いたattention機構を実現した。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;畳み込み層から活性化関数を通して得られるlocal feature vector &lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}&lt;/script&gt; と最終全結合層の出力であるglobal feature vector &lt;script type=&quot;math/tex&quot;&gt;\mathcal{G}&lt;/script&gt; から、&lt;code class=&quot;highlighter-rouge&quot;&gt;compatibility score&lt;/code&gt; &lt;script type=&quot;math/tex&quot;&gt;C\left(\hat{\mathcal{L}}, \mathcal{G} \right)&lt;/script&gt; を計算し、各local feature vectorの重要度 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}&lt;/script&gt; (attention) を算出する&lt;/li&gt;
-  &lt;li&gt;重要度 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{A}&lt;/script&gt; とlocal feature vectorとの重み付き平均 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{G}_a&lt;/script&gt; を計算する&lt;/li&gt;
-  &lt;li&gt;各畳み込み層から得られる複数の &lt;script type=&quot;math/tex&quot;&gt;\mathcal{G}_a&lt;/script&gt; をconcatしたベクトルを用いて分類を行う&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;compatibility socre&lt;/code&gt; を計算する際に用いる &lt;script type=&quot;math/tex&quot;&gt;\mathcal{C}&lt;/script&gt; は ドット積 を利用した&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;ベースラインとして、先行研究のVGG-GAPおよびVGG-PAN、ResNet164と、VGG/ResNetに対して本研究のattention機構を導入できるようパラメータを調整したネットワークを比較している。
-global feature vectorとlocal feature vectorに対してcompatibility scoreを計算する際にドット積を用いた&lt;code class=&quot;highlighter-rouge&quot;&gt;dp&lt;/code&gt;と、パラメータを用いた&lt;code class=&quot;highlighter-rouge&quot;&gt;pc&lt;/code&gt;を比較している。&lt;/p&gt;
-
-&lt;p&gt;評価に用いるデータセットはCIFAR10/100、CUB-200-2011、SVHN等を利用している。また導入したattention機構がadversarialなサンプルに対してもロバストであることを示す実験も行っている。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;提案手法 (proposed) と既存手法 (existing) それぞれのattention mapを可視化した結果である。提案手法がよりdiscriminativeな形で物体を認識していることが示されている。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;CUB-200データセットで学習した提案手法の結果である。10層目は目の特徴を捉えており、13層目は体全体を捉えていることが示されている。&lt;/p&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;モデルの解釈性向上のための可視化手法
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1312.6034&quot;&gt;Simonyan, Karen, Andrea Vedaldi, and Andrew Zisserman. “Deep inside convolutional networks: Visualising image classification models and saliency maps.” arXiv preprint arXiv:1312.6034 (2013).&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_iccv_2015/papers/Cao_Look_and_Think_ICCV_2015_paper.pdf&quot;&gt;Cao, Chunshui, et al. “Look and think twice: Capturing top-down visual attention with feedback convolutional neural networks.” Proceedings of the IEEE International Conference on Computer Vision. 2015.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Global average pooling (GAP)
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Zhou_Learning_Deep_Features_CVPR_2016_paper.pdf&quot;&gt;Zhou, Bolei, et al. “Learning deep features for discriminative Computer.” localization Vision and Pattern Recognition (CVPR), 2016 IEEE Conference on. IEEE, 2016.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Attention機構が用いられている先行研究
-    &lt;ul&gt;
-      &lt;li&gt;属性予測 (Progressive Attention Networks (PAN))
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://adsabs.harvard.edu/abs/2016arXiv160602393H&quot;&gt;Hongsuck Seo, Paul, et al. “Progressive Attention Networks for Visual Attribute Prediction.” arXiv preprint arXiv:1606.02393 (2016).&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;機械翻訳
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1409.0473&quot;&gt;Bahdanau, Dzmitry, Kyunghyun Cho, and Yoshua Bengio. “Neural machine translation by jointly learning to align and translate.” arXiv preprint arXiv:1409.0473 (2014).&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;画像に対する説明文自動生成
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://www.jmlr.org/proceedings/papers/v37/xuc15.pdf&quot;&gt;Xu, Kelvin, et al. “Show, attend and tell: Neural image caption generation with visual attention.” International Conference on Machine Learning. 2015.&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_cvpr_2016/papers/You_Image_Captioning_With_CVPR_2016_paper.pdf&quot;&gt;You, Quanzeng, et al. “Image captioning with semantic attention.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;http://www.aaai.org/ocs/index.php/AAAI/AAAI17/paper/download/14888/14305&quot;&gt;Mun, Jonghwan, Minsu Cho, and Bohyung Han. “Text-Guided Attention Model for Image Captioning.” AAAI. 2017.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Visual question answering (VQA)
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://link.springer.com/chapter/10.1007/978-3-319-46478-7_28&quot;&gt;Xu, Huijuan, and Kate Saenko. “Ask, attend and answer: Exploring question-guided spatial attention for visual question answering.” European Conference on Computer Vision. Springer, Cham, 2016.&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;https://www.cv-foundation.org/openaccess/content_cvpr_2016/app/S01-03.pdf&quot;&gt;Yang, Zichao, et al. “Stacked attention networks for image question answering.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2016.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1804.02391&quot;&gt;Jetley, Saumya, et al. “Learn to pay attention.” arXiv preprint arXiv:1804.02391 (2018).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

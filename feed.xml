@@ -1,5 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-03-20T05:30:17+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Beyond News Contents: The Role of Social Context for Fake News Detection</title><link href="https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection" rel="alternate" type="text/html" title="Beyond News Contents: The Role of Social Context for Fake News Detection" /><published>2019-03-20T00:00:00+00:00</published><updated>2019-03-20T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-05-09T06:52:43+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Attention Convolutional Neural Network for Advertiser level Click through Rate Forcasting</title><link href="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting" rel="alternate" type="text/html" title="Attention Convolutional Neural Network for Advertiser level Click through Rate Forcasting" /><published>2019-05-09T00:00:00+00:00</published><updated>2019-05-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; という新たな視点で CTR 予測を行う Context-aware Attention Convolutional Neural Network を提案した。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;CTR 予測問題はオンライン広告における重要な問題の 1 つである。先行研究では &lt;code class=&quot;highlighter-rouge&quot;&gt;ユーザ単位&lt;/code&gt; の CTR 予測モデルの提案は複数行われているが、 &lt;code class=&quot;highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; での予測は本研究が著者が知りうる限りで初めてである。
+通常集計されたログデータをモデルに入力するが、本研究ではログデータを時系列データとみなししてモデルに入力し学習を行う。&lt;/p&gt;
+
+&lt;p&gt;本研究では、以下の特徴を持つ context-aware attention convolutional neural network (CACNN) を提案し、実世界のデータセットに対して CTR 予測を行った結果を報告している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;context-aware-attention-convolutional-neural-network-cacnn&quot;&gt;Context-aware Attention Convolutional Neural Network (CACNN)&lt;/h3&gt;
+&lt;p&gt;時系列の CTR データに対する Attention CNN とコンテキストデータ対する MLP からなるネットワーク構造を持つ。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;時系列の CTR データに対する Attention CNN
+    &lt;ul&gt;
+      &lt;li&gt;畳み込みで得られた特徴マップに対して attention weight を掛ける
+        &lt;ul&gt;
+          &lt;li&gt;局所的な非線形性や季節性の傾向を適切に捉えることが可能&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;コンテキストデータに対する MLP
+    &lt;ul&gt;
+      &lt;li&gt;本研究では配信対象の国とデバイスタイプを使用する
+        &lt;ul&gt;
+          &lt;li&gt;実際の CTR と国・デバイスタイプは相関関係にあるため、これらの情報を適切に捉えることが重要&lt;/li&gt;
+          &lt;li&gt;通常こうした特徴量は同一空間上には存在しないが、複数の全結合層を経て concat することにより、同一の潜在空間で扱うことが可能&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;インターネット企業の主要な広告プラットフォームから 30 日分の広告キャンペーンデータ 20 万件程度を取得し、これらを元に評価を行っている。
+ベースラインのモデルとして古典的な手法 (exponential moving average 系)と深層学習ベースの手法 (CNN, CNN with Attention 等)と提案手法である CACNN の比較を行っている。&lt;/p&gt;
+
+&lt;h3 id=&quot;学習方法と評価方法について&quot;&gt;学習方法と評価方法について&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;train として 29 日分のデータを使用した。
+    &lt;ul&gt;
+      &lt;li&gt;28 日目までのデータを使って 29 日目を予測するよう学習を行う。&lt;/li&gt;
+      &lt;li&gt;valid として train からランダムに 10%程度サンプリングして使用した。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;test として 30 日目のデータを使用した。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;h3 id=&quot;畳み込み操作の効果の確認&quot;&gt;畳み込み操作の効果の確認&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure12.png&quot; alt=&quot;Figure 12&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ランダムに時系列の CTR データをサンプリングし、それらに対する畳み込み後の特徴マップの状態を可視化したもの。
+    &lt;ul&gt;
+      &lt;li&gt;異なるカーネルサイズで異なる時系列の特徴を捉えていることが分かる。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;attention-の効果確認&quot;&gt;Attention の効果確認&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Figure 13 (a)&lt;/th&gt;
+      &lt;th&gt;Figure 13 (b)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure13a.png&quot; alt=&quot;Figure 13 (a)&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure13b.png&quot; alt=&quot;Figure 13 (b)&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Figure 13 (a) : ある特徴マップ 50 個を対象に、それらに対する attention の重みを可視化した図&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Figure 13 (b) : (a)の特徴マップ先頭 3 つを対象に、時系列データを入力したときの特徴マップ値の変化を可視化したもの。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Figure 13 (a) において、特徴マップ 1 と特徴マップ 3 は attention の重みが似ている。
+    &lt;ul&gt;
+      &lt;li&gt;Figure 13 (b) で特徴マップ 1 (赤) と 特徴マップ 3 (青) は時系列データに対して同様の反応をしている。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;特徴マップ 2 は、1 と 3 と同様の傾向の反応パターンを示しているが、元の時系列データ (黄) と大きさという点では離れている。
+    &lt;ul&gt;
+      &lt;li&gt;大きな誤差に対して学習された attention の重みが小さくなっているため、最終的な予測誤差は小さくなっていると考えられる。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+&lt;p&gt;特になし。&lt;/p&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3186184&quot;&gt;Gao, Hongchang, et al. “Attention Convolutional Neural Network for Advertiser-level Click-through Rate Forecasting.” Proceedings of the 2018 World Wide Web Conference on World Wide Web. International World Wide Web Conferences Steering Committee, 2018.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Beyond News Contents: The Role of Social Context for Fake News Detection</title><link href="https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection" rel="alternate" type="text/html" title="Beyond News Contents: The Role of Social Context for Fake News Detection" /><published>2019-03-20T00:00:00+00:00</published><updated>2019-03-20T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;出版社・ニュース記事・ユーザの 3 つの関係をモデリングすることでフェイクニュース検出の精度向上を目指す TriFN を提案。&lt;/p&gt;
 
@@ -1024,137 +1134,4 @@ Grad-CAM は&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;と�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.01449&quot;&gt;Hoffer, Elad, and Nir Ailon. “Semi-supervised deep learning by metric embedding.” arXiv preprint arXiv:1611.01449 (2016).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Joint Embedding of Words and Labels for Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification" rel="alternate" type="text/html" title="Joint Embedding of Words and Labels for Text Classification" /><published>2018-06-17T00:00:00+00:00</published><updated>2018-06-17T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;テキスト分類の際に教師ラベルのembeddingと単語のembeddingを組み合わせたattentionの枠組みを用いる、Label-Embedding Attentive Model (LEAM) を提案。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;画像認識分野および自然言語処理分野において、label embeddingを用いたさまざまな枠組みが提案されてきた。近年の自然言語処理分野では単語embeddingやattentionを用いることで、テキスト分類等のタスクの精度向上が示されてきた。
-本研究では効果的なattentionモデル構築のためにlabel embeddingを学習する、LEAMを提案している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;単語embedding &lt;script type=&quot;math/tex&quot;&gt;{\bf V}&lt;/script&gt; と label embedding &lt;script type=&quot;math/tex&quot;&gt;{\bf C}&lt;/script&gt; から &lt;code class=&quot;highlighter-rouge&quot;&gt;compatibility&lt;/code&gt; &lt;script type=&quot;math/tex&quot;&gt;{\bf G}&lt;/script&gt; を計算&lt;/li&gt;
-  &lt;li&gt;softmaxを用いて &lt;script type=&quot;math/tex&quot;&gt;{\bf G}&lt;/script&gt; をnormalizeしたattention &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; を計算&lt;/li&gt;
-  &lt;li&gt;単語embeddingとattentionの重み付け平均を計算したdocument embedding &lt;script type=&quot;math/tex&quot;&gt;z&lt;/script&gt; を用いてテキスト分類を行う&lt;/li&gt;
-  &lt;li&gt;テスト時にはlabel embedding &lt;script type=&quot;math/tex&quot;&gt;{\bf C}&lt;/script&gt; において、すべてのクラスのembeddingを利用する&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;AGNews、Yelp Review Full、Yelp Review Polarity、DBPedia、Yahoo! Answers Topicの5つのデータセットを用いている。
-ベースラインのモデルとしてBag-of-words、Shallow/Large word CNN、LSTM、SA-LSTM、Deep CNN、SWEM、fastText、HAN、Bi-BloSANとテキスト分類の精度を比較している。&lt;/p&gt;
-
-&lt;p&gt;上記に加えて医療テキストデータセットであるMIMIC-IIIを用いた実践的な評価を行っている。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;モデルのパラメータ数と学習時間について
-    &lt;ul&gt;
-      &lt;li&gt;SWEMに次いで少ないパラメータ数と学習時間を実現している&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;label embeddingの有効性について
-    &lt;ul&gt;
-      &lt;li&gt;学習から得られたlabel embeddingとdocument embeddingをt-SNEで可視化すると、クラスに対応するlabel embeddingとdocument embeddingに強い相関が見られた
-&lt;img src=&quot;/paper-survey/assets/img/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;医療テキストに対する有効性について
-    &lt;ul&gt;
-      &lt;li&gt;attentionを可視化すると、医療に関連する語がハイライトされていることが示されている。
-&lt;img src=&quot;/paper-survey/assets/img/nlp/Joint-Embedding-of-Words-and-Labels-for-Text-Classification/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;画像認識分野におけるlabel embedding
-    &lt;ul&gt;
-      &lt;li&gt;画像分類
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://ieeexplore.ieee.org/abstract/document/7293699/&quot;&gt;Akata, Zeynep, et al. “Label-embedding for image classification.” IEEE transactions on pattern analysis and machine intelligence 38.7 (2016): 1425-1438.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;マルチモーダル
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5204-devise-a-deep-visual-semantic-embedding-model&quot;&gt;Frome, Andrea, et al. “Devise: A deep visual-semantic embedding model.” Advances in neural information processing systems. 2013.&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1411.2539&quot;&gt;Kiros, Ryan, Ruslan Salakhutdinov, and Richard S. Zemel. “Unifying visual-semantic embeddings with multimodal neural language models.” arXiv preprint arXiv:1411.2539 (2014).&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;画像中のテキスト認識
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.433.2642&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Rodriguez-Serrano, Jose A., Florent Perronnin, and France Meylan. “Label embedding for text recognition.” Proceedings of the British Machine Vision Conference. 2013.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Zero-shot learning
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/3650-zero-shot-learning-with-semantic-output-codes&quot;&gt;Palatucci, Mark, et al. “Zero-shot learning with semantic output codes.” Advances in neural information processing systems. 2009.&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/P15-2048&quot;&gt;Yogatama, Dani, Daniel Gillick, and Nevena Lazic. “Embedding methods for fine grained entity type classification.” Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics and the 7th International Joint Conference on Natural Language Processing (Volume 2: Short Papers). Vol. 2. 2015.&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/C16-1017&quot;&gt;Ma, Yukun, Erik Cambria, and Sa Gao. “Label embedding for zero-shot fine-grained named entity typing.” Proceedings of COLING 2016, the 26th International Conference on Computational Linguistics: Technical Papers. 2016.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;自然言語処理におけるlabel embedding
-    &lt;ul&gt;
-      &lt;li&gt;Heterogeneous networkによるlabel embedding
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2783307&quot;&gt;Tang, Jian, Meng Qu, and Qiaozhu Mei. “Pte: Predictive text embedding through large-scale heterogeneous text networks.” Proceedings of the 21th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. ACM, 2015.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;マルチタスク学習
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7005-deconvolutional-paragraph-representation-learning&quot;&gt;Zhang, Yizhe, et al. “Deconvolutional paragraph representation learning.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ベースラインのモデルについて
-    &lt;ul&gt;
-      &lt;li&gt;Bag-of-words、Shallow/Large word CNN、LSTM
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5782-character-level-convolutional-networks-for-text-classifica&quot;&gt;Zhang, Xiang, Junbo Zhao, and Yann LeCun. “Character-level convolutional networks for text classification.” Advances in neural information processing systems. 2015.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;SA-LSTM
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5949-semi-supervised-sequence-learning&quot;&gt;Dai, Andrew M., and Quoc V. Le. “Semi-supervised sequence learning.” Advances in Neural Information Processing Systems. 2015.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Deep CNN
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/E17-1104&quot;&gt;Conneau, Alexis, et al. “Very deep convolutional networks for text classification.” Proceedings of the 15th Conference of the European Chapter of the Association for Computational Linguistics: Volume 1, Long Papers. Vol. 1. 2017.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;SWEM
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1805.09843&quot;&gt;Shen, Dinghan, et al. “Baseline needs more love: On simple word-embedding-based models and associated pooling mechanisms.” arXiv preprint arXiv:1805.09843 (2018).&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;HAN
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/N16-1174&quot;&gt;Yang, Zichao, et al. “Hierarchical attention networks for document classification.” Proceedings of the 2016 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies. 2016.&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Bi-BloSAN
-        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1804.00857&quot;&gt;Shen, Tao, et al. “Bi-directional block self-attention for fast and memory-efficient sequence modeling.” arXiv preprint arXiv:1804.00857 (2018).&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1805.04174&quot;&gt;Wang, Guoyin, et al. “Joint Embedding of Words and Labels for Text Classification.” arXiv preprint arXiv:1805.04174 (2018).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

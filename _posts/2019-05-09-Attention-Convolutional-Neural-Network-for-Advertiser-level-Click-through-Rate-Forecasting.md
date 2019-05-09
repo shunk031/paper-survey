@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Attention Convolutional Neural Network for Advertiser level Click through Rate Forcasting"
+title:  "Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting"
 date:   2019-05-09
 categories: Others
 ---
@@ -18,7 +18,7 @@ CTR 予測問題はオンライン広告における重要な問題の 1 つで�
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
-![Figure 1]({{ site.baseurl }}/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure1.png)
+![Figure 1]({{ site.baseurl }}/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure1.png)
 
 ### Context-aware Attention Convolutional Neural Network (CACNN)
 時系列の CTR データに対する Attention CNN とコンテキストデータ対する MLP からなるネットワーク構造を持つ。
@@ -45,7 +45,7 @@ CTR 予測問題はオンライン広告における重要な問題の 1 つで�
 ## 5. 議論はあるか？
 ### 畳み込み操作の効果の確認
 
-![Figure 12]({{ site.baseurl }}/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure12.png)
+![Figure 12]({{ site.baseurl }}/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure12.png)
 
 - ランダムに時系列の CTR データをサンプリングし、それらに対する畳み込み後の特徴マップの状態を可視化したもの。
   - 異なるカーネルサイズで異なる時系列の特徴を捉えていることが分かる。
@@ -54,7 +54,7 @@ CTR 予測問題はオンライン広告における重要な問題の 1 つで�
 
 | Figure 13 (a) | Figure 13 (b) |
 |---------------|---------------|
-| ![Figure 13 (a)]({{ site.baseurl }}/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure13a.png) | ![Figure 13 (b)]({{ site.baseurl }}/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure13b.png) |
+| ![Figure 13 (a)]({{ site.baseurl }}/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure13a.png) | ![Figure 13 (b)]({{ site.baseurl }}/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure13b.png) |
 
 - Figure 13 (a) : ある特徴マップ 50 個を対象に、それらに対する attention の重みを可視化した図
 - Figure 13 (b) : (a)の特徴マップ先頭 3 つを対象に、時系列データを入力したときの特徴マップ値の変化を可視化したもの。

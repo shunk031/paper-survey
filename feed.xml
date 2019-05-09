@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-05-09T06:52:43+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Attention Convolutional Neural Network for Advertiser level Click through Rate Forcasting</title><link href="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting" rel="alternate" type="text/html" title="Attention Convolutional Neural Network for Advertiser level Click through Rate Forcasting" /><published>2019-05-09T00:00:00+00:00</published><updated>2019-05-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-05-09T13:27:53+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting</title><link href="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting" rel="alternate" type="text/html" title="Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting" /><published>2019-05-09T00:00:00+00:00</published><updated>2019-05-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; という新たな視点で CTR 予測を行う Context-aware Attention Convolutional Neural Network を提案した。&lt;/p&gt;
 
@@ -12,7 +12,7 @@
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;context-aware-attention-convolutional-neural-network-cacnn&quot;&gt;Context-aware Attention Convolutional Neural Network (CACNN)&lt;/h3&gt;
 &lt;p&gt;時系列の CTR データに対する Attention CNN とコンテキストデータ対する MLP からなるネットワーク構造を持つ。&lt;/p&gt;
@@ -58,7 +58,7 @@
 &lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
 &lt;h3 id=&quot;畳み込み操作の効果の確認&quot;&gt;畳み込み操作の効果の確認&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure12.png&quot; alt=&quot;Figure 12&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure12.png&quot; alt=&quot;Figure 12&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;ランダムに時系列の CTR データをサンプリングし、それらに対する畳み込み後の特徴マップの状態を可視化したもの。
@@ -79,8 +79,8 @@
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure13a.png&quot; alt=&quot;Figure 13 (a)&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forcasting/figure13b.png&quot; alt=&quot;Figure 13 (b)&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure13a.png&quot; alt=&quot;Figure 13 (a)&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure13b.png&quot; alt=&quot;Figure 13 (b)&quot; /&gt;&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;

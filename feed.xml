@@ -1,5 +1,131 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-05-09T13:27:53+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting</title><link href="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting" rel="alternate" type="text/html" title="Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting" /><published>2019-05-09T00:00:00+00:00</published><updated>2019-05-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-05-25T11:38:35+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Class-Balanced Loss Based on Effective Number of Samples</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples" rel="alternate" type="text/html" title="Class-Balanced Loss Based on Effective Number of Samples" /><published>2019-05-25T00:00:00+00:00</published><updated>2019-05-25T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;Long-tail な不均衡データに対して、各クラス数の分布を適切に考慮した class-balanced loss を提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples/figure1.png&quot; width=&quot;400px&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;実世界のデータセットは long-tail な分布を持つ不均衡データであることが多い。
+こうした不均衡データに対して、先行研究では主に &lt;code class=&quot;highlighter-rouge&quot;&gt;re-sampling&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-sensitive learning&lt;/code&gt; の観点から解決が図られてきた。
+&lt;code class=&quot;highlighter-rouge&quot;&gt;Re-sampling&lt;/code&gt; における over-sampling では学習時に重複したデータを学習して過学習を引き起こしたり、under-sampling では学習に重要なデータを適切にサンプリングして学習することが難しい。
+そこで深層学習の文脈では損失関数に重み付けを行う &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-sensitive learning&lt;/code&gt; を採用する場合が多いが、こうした手法は実世界の long-tail な分布を持つ不均衡データに対してパフォーマンスが低下してしまう場合が多い。
+本研究では long-tail な不均衡データに対して、対象となるデータ数に効果的な &lt;code class=&quot;highlighter-rouge&quot;&gt;class-balanced loss&lt;/code&gt; を提案し、
+一般的に広く使われている softmax cross-entropy や sigmoid cross-entropy、focal loss などに適用し効果の検証を行っている。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;h3 id=&quot;class-balanced-loss&quot;&gt;Class-balanced loss&lt;/h3&gt;
+
+&lt;p&gt;各クラス数に反比例する重み係数を導入することによって、long-tail な不均衡データに対しても効率的に学習するよう損失関数を定義した。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm CB}({\bf p}, y) = \frac{1}{E_{n_y}} \mathcal{L}({\bf p}, y) = \frac{1 - \beta}{1 - \beta^{n_y}} \mathcal{L}({\bf p}, y)&lt;/script&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples/figure3.png&quot; width=&quot;600px&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Class-balanced loss を一般的な損失関数に適用した場合は以下の通りになる。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Class-balanced softmax cross-entropy
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm CB}_{\rm softmax}({\bf z}, y) = - \frac{1 - \beta}{1 - \beta^{n_y}} \log{\left( \frac{\exp{(z_y)}}{\sum_{j=1}^{C} \exp{(z_j)}} \right)}&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Class-balanced sigmoid cross-entropy
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm CB}_{\rm sigmoid}({\bf z}, y) = - \frac{1 - \beta}{1 - \beta^{n_y}} \sum_{i=1}^{C} \log{\left(\frac{1}{1+\exp{(-z_{i}^{t})}} \right)}&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Class-balanced focal loss
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;{\rm CB}_{\rm focal}({\bf z}, y) = \frac{1 - \beta}{1 - \beta^{n_y}} \sum_{i=1}^{C} (1 - p_{i}^{t})^{\gamma} \log{(p_{i}^{t})}&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;CIFAR10/100 に対して imbalanced factor を元にデータの分布を擬似的に不均衡にした &lt;code class=&quot;highlighter-rouge&quot;&gt;long-tailed CIFAR10/100&lt;/code&gt; 、&lt;code class=&quot;highlighter-rouge&quot;&gt;iNatiralist&lt;/code&gt; 、&lt;code class=&quot;highlighter-rouge&quot;&gt;ImageNet&lt;/code&gt; を用いて、ベースラインのモデルと class-balanced loss を導入したモデルの比較を行っている。&lt;/p&gt;
+
+&lt;p&gt;Sigmoid ベースの loss を用いる場合は、最終全結合層のバイアスに対してクラスの事前確率を &lt;script type=&quot;math/tex&quot;&gt;\pi = 1/C&lt;/script&gt; として、&lt;script type=&quot;math/tex&quot;&gt;b = - \log{((1 - \pi)/{\pi})}&lt;/script&gt; として初期化し、バイアス項にのみ weight decay を適用している。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;p&gt;画像認識タスクでは主に softmax cross-entropy が用いられるが、バイアス項を適切に初期化した sigmoid cross-entropy や focal loss が softmax cross-entropy を凌駕する結果を示した。&lt;/p&gt;
+
+&lt;p&gt;Class-balanced loss のハイパーパラーメタである &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; は CIFAR-10 の場合 &lt;script type=&quot;math/tex&quot;&gt;0.9999&lt;/script&gt; であったが、CIFAR-100 の場合は imbalanced factor ごとに異なる &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; の設定が必要であった。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;h3 id=&quot;re-sampling-ベースの手法&quot;&gt;Re-sampling ベースの手法&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.springer.com/chapter/10.1007/978-3-319-46478-7_29&quot;&gt;Shen, Li, Zhouchen Lin, and Qingming Huang. “Relay backpropagation for effective learning of deep convolutional neural networks.” European conference on computer vision. Springer, Cham, 2016.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1711.00941&quot;&gt;Geifman, Yonatan, and Ran El-Yaniv. “Deep active learning over the long tail.” arXiv preprint arXiv:1711.00941 (2017).&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0893608018302107&quot;&gt;Buda, Mateusz, Atsuto Maki, and Maciej A. Mazurowski. “A systematic study of the class imbalance problem in convolutional neural networks.” Neural Networks 106 (2018): 249-259.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1810.07911&quot;&gt;Zou, Yang, et al. “Domain adaptation for semantic segmentation via class-balanced self-training.” arXiv preprint arXiv:1810.07911 (2018).&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.68.6858&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Drummond, Chris, and Robert C. Holte. “C4. 5, class imbalance, and cost sensitivity: why under-sampling beats over-sampling.” Workshop on learning from imbalanced datasets II. Vol. 11. Washington, DC: Citeseer, 2003.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.jair.org/papers/paper953.html&quot;&gt;Chawla, Nitesh V., et al. “SMOTE: synthetic minority over-sampling technique.” Journal of artificial intelligence research 16 (2002): 321-357.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;cost-sensitive-learning-ベースの手法&quot;&gt;Cost-Sensitive Learning ベースの手法&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.37.8819&quot;&gt;Ting, Kai Ming. “A comparative study of cost-sensitive boosting algorithms.” In Proceedings of the 17th International Conference on Machine Learning. 2000.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.computer.org/csdl/trans/tk/2006/01/k0063-abs.html&quot;&gt;Zhou, Zhi-Hua, and Xu-Ying Liu. “Training cost-sensitive neural networks with methods addressing the class imbalance problem.” IEEE Transactions on Knowledge &amp;amp; Data Engineering 1 (2006): 63-77.&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/8012579/&quot;&gt;Khan, Salman H., et al. “Cost-sensitive learning of deep feature representations from imbalanced data.” IEEE transactions on neural networks and learning systems 29.8 (2018): 3573-3587.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ECCV_2018/html/Nikolaos_Sarafianos_Deep_Imbalanced_Attribute_ECCV_2018_paper.html&quot;&gt;Sarafianos, Nikolaos, Xiang Xu, and Ioannis A. Kakadiaris. “Deep imbalanced attribute classification using visual attention aggregation.” Proceedings of the European Conference on Computer Vision (ECCV). 2018.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;importance-sampling&quot;&gt;Importance sampling&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pubsonline.informs.org/doi/abs/10.1287/opre.1.5.263&quot;&gt;Kahn, Herman, and Andy W. Marshall. “Methods of reducing sample size in Monte Carlo computations.” Journal of the Operations Research Society of America 1.5 (1953): 263-278.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;決定境界を一定に調整&quot;&gt;決定境界を一定に調整&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cseweb.ucsd.edu/~elkan/rescale.pdf&quot;&gt;Elkan, Charles. “The foundations of cost-sensitive learning.” International joint conference on artificial intelligence. Vol. 17. No. 1. Lawrence Erlbaum Associates Ltd, 2001.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;クラス数の逆数で重み付け&quot;&gt;クラス数の逆数で重み付け&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7278-learning-to-model-the-tail&quot;&gt;Wang, Yu-Xiong, Deva Ramanan, and Martial Hebert. “Learning to model the tail.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Huang_Learning_Deep_Representation_CVPR_2016_paper.html&quot;&gt;Huang, Chen, et al. “Learning deep representation for imbalanced classification.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;クラス数の逆数の平方根で重み付け&quot;&gt;クラス数の逆数の平方根で重み付け&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5021-distributed-representations-of-words-andphrases&quot;&gt;Mikolov, Tomas, et al. “Distributed representations of words and phrases and their compositionality.” Advances in neural information processing systems. 2013.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_ECCV_2018/html/Dhruv_Mahajan_Exploring_the_Limits_ECCV_2018_paper.html&quot;&gt;Mahajan, Dhruv, et al. “Exploring the limits of weakly supervised pretraining.” Proceedings of the European Conference on Computer Vision (ECCV). 2018.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;難しいサンプルにフォーカスして学習&quot;&gt;難しいサンプルにフォーカスして学習&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S002200009791504X&quot;&gt;Freund, Yoav, and Robert E. Schapire. “A decision-theoretic generalization of on-line learning and an application to boosting.” Journal of computer and system sciences 55.1 (1997): 119-139.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.208.446&amp;amp;rep=rep1&amp;amp;type=pdf&quot;&gt;Malisiewicz, Tomasz, Abhinav Gupta, and Alexei A. Efros. “Ensemble of exemplar-SVMs for object detection and beyond.” Iccv. Vol. 1. No. 2. 2011.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_iccv_2017/html/Dong_Class_Rectification_Hard_ICCV_2017_paper.html&quot;&gt;Dong, Qi, Shaogang Gong, and Xiatian Zhu. “Class rectification hard mining for imbalanced deep learning.” Proceedings of the IEEE International Conference on Computer Vision. 2017.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_iccv_2017/html/Lin_Focal_Loss_for_ICCV_2017_paper.html&quot;&gt;Lin, Tsung-Yi, et al. “Focal loss for dense object detection.” Proceedings of the IEEE international conference on computer vision. 2017.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;ノイジーなデータやラベルミスなデータにフォーカスして学習&quot;&gt;ノイジーなデータやラベルミスなデータにフォーカスして学習&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3305576&quot;&gt;Koh, Pang Wei, and Percy Liang. “Understanding black-box predictions via influence functions.” Proceedings of the 34th International Conference on Machine Learning-Volume 70. JMLR. org, 2017.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1803.09050&quot;&gt;Ren, Mengye, et al. “Learning to reweight examples for robust deep learning.” arXiv preprint arXiv:1803.09050 (2018).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.05555&quot;&gt;Cui, Yin, et al. “Class-Balanced Loss Based on Effective Number of Samples.” arXiv preprint arXiv:1901.05555 (2019).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting</title><link href="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting" rel="alternate" type="text/html" title="Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting" /><published>2019-05-09T00:00:00+00:00</published><updated>2019-05-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; という新たな視点で CTR 予測を行う Context-aware Attention Convolutional Neural Network を提案した。&lt;/p&gt;
 
@@ -1035,103 +1161,4 @@ Grad-CAM は&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;と�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://aclanthology.info/papers/W18-2905/w18-2905&quot;&gt;Karpinska, Marzena, et al. “Subcharacter Information in Japanese Embeddings: When Is It Worth It?.” Proceedings of the Workshop on the Relevance of Linguistic Structure in Neural Architectures for NLP. 2018.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Semi-supervised Deep Learning by Metric Embedding</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding" rel="alternate" type="text/html" title="Semi-supervised Deep Learning by Metric Embedding" /><published>2018-08-25T00:00:00+00:00</published><updated>2018-08-25T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Semi-supervised-deep-learning-by-metric-embedding">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;少ないラベル付きデータとラベルなしデータを元に距離埋め込み (neighbor embedding) を学習する、半教師あり学習を提案&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;従来のニューラルネットワークの学習では学習データに対してラベルを推定する枠組みであったが、ラベル付きの学習データが少ない場合に容易に過学習を引き起こす。
-本研究ではラベル付きの学習データに対して距離埋め込み (neighbor embedding) を推定する枠組みを導入することで、ラベルなしデータも含めて学習を行い精度を向上させた。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Embedding同士の距離比較による学習 (neighbor embedding)
-    &lt;ul&gt;
-      &lt;li&gt;学習データ &lt;script type=&quot;math/tex&quot;&gt;x \in \mathcal{X}&lt;/script&gt; バッチサイズ分サンプリング&lt;/li&gt;
-      &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; クラスのラベル付きデータ &lt;script type=&quot;math/tex&quot;&gt;z_1, \cdots, z_c \in X_L&lt;/script&gt; を各クラス1サンプルずつサンプリング&lt;/li&gt;
-      &lt;li&gt;学習データをembeddingした &lt;script type=&quot;math/tex&quot;&gt;F(x)&lt;/script&gt; と ラベル付きデータをembeddingした &lt;script type=&quot;math/tex&quot;&gt;F(z_1), \cdots, F(z_c)&lt;/script&gt; に対してそれぞれ &lt;code class=&quot;highlighter-rouge&quot;&gt;L2 norm squared&lt;/code&gt; の逆数を計算&lt;/li&gt;
-      &lt;li&gt;計算した距離の逆数に対して &lt;code class=&quot;highlighter-rouge&quot;&gt;softmax&lt;/code&gt; 値を計算&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;P(x; z_1, \cdots, z_c)_{i} = \frac{e^{-||F(x) - F(z_i)||^2}}{\sum_{j=1}^{c} e^{-||F(x) - F(z_i)||^2}}, i \in \{1 \cdots c \}&lt;/script&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;softmax&lt;/code&gt; 値と学習データの教師ラベルとの &lt;code class=&quot;highlighter-rouge&quot;&gt;cross entropy&lt;/code&gt; を計算する。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;半教師あり学習への応用
-    &lt;ul&gt;
-      &lt;li&gt;ラベルなしデータ群 &lt;script type=&quot;math/tex&quot;&gt;X_U&lt;/script&gt; からサンプリングして以下を計算&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;script type=&quot;math/tex; mode=display&quot;&gt;L(x, z_1, \cdots, z_c)_U = - \sum_{i=1}^{c} \frac{ e^{-||F(x) - F(z_i)||^2} }{ \sum_{j=1}^{c} e^{-||F(x) - F(z_j)||^2} } \cdot \log{\frac{ e^{-||F(x) - F(z_i)||^2} }{ \sum_{j=1}^{c} e^{-||F(x) - F(z_j)||^2}}}&lt;/script&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;MNISTおよびCIFAR10に対して先行研究のモデル(EmbedCNN, SWWAE, Ladder network, Conv-CatGAN / Spike-and-Slab Sparse Coding, View-Invariant k-means, Exampler-CNN, Ladder network, Conv-CatGan, Improved GAN)と提案手法の比較を行っている。&lt;/p&gt;
-
-&lt;p&gt;MNISTに対しては各クラス100枚ずつにのみ教師ラベルを付与し、CIFAR10に対しては各クラス400枚ずつにのみ教師ラベルを付与し実験を行っている。&lt;/p&gt;
-
-&lt;p&gt;学習時にdata agumentationは行わず、テスト時には出力したembeddingに対してk-NNを用いてk={1, 3, 5}の場合の予測結果をaveragingしている。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;p&gt;MNISTデータセットに対して、実験で使用したモデルに2次元のembeddingを出力する全結合層を追加し、可視化を行った結果である。色付きの点は教師ラベルありのサンプルであり、グレーの点は教師ラベルなしのサンプルである。
-ラベルありデータは1つのクラスタを形成しており、ラベルなしデータは大部分において各クラスタに属するような形で分布していることがわかる。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Semi-supervised-deep-learning-by-metric-embedding/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;EmbedCNNについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://link.springer.com/chapter/10.1007/978-3-642-35289-8_34&quot;&gt;Weston, Jason, et al. “Deep learning via semi-supervised embedding.” Neural Networks: Tricks of the Trade. Springer, Berlin, Heidelberg, 2012. 639-655.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;SWWAEについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1506.02351&quot;&gt;Zhao, J., et al. “Stacked What-Where Auto-encoders. arXiv 2015.” arXiv preprint arXiv:1506.02351.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Ladder networkについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/5947-semi-supervised-learning-with-ladder-networks&quot;&gt;Rasmus, Antti, et al. “Semi-supervised learning with ladder networks.” Advances in Neural Information Processing Systems. 2015.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Conv-CatGANについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1511.06390&quot;&gt;Springenberg, Jost Tobias. “Unsupervised and semi-supervised learning with categorical generative adversarial networks.” arXiv preprint arXiv:1511.06390 (2015).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Spike-and-Slab Sparse Codingについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1206.6407&quot;&gt;Goodfellow, Ian, Aaron Courville, and Yoshua Bengio. “Large-scale feature learning with spike-and-slab sparse coding.” arXiv preprint arXiv:1206.6407 (2012).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;View-Invatiant k-meansについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.jmlr.org/proceedings/papers/v28/yuhui13.pdf&quot;&gt;Hui, Ka Yu. “Direct modeling of complex invariances for visual object features.” International Conference on Machine Learning. 2013.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Exampler-CNNについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/7312476/&quot;&gt;Dosovitskiy, Alexey, et al. “Discriminative unsupervised feature learning with exemplar convolutional neural networks.” IEEE transactions on pattern analysis and machine intelligence 38.9 (2016): 1734-1747.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ImprovedGanについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1606.03498&quot;&gt;Salimans, Tim, et al. “Improved techniques for training gans.” Advances in Neural Information Processing Systems. 2016.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.01449&quot;&gt;Hoffer, Elad, and Nir Ailon. “Semi-supervised deep learning by metric embedding.” arXiv preprint arXiv:1611.01449 (2016).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

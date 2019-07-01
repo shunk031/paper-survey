@@ -13,6 +13,8 @@ categories: CV NLP Others
 
 ![Figure 1]({{ site.baseurl }}/assets/img/(cv, nlp, others)/(title)/figure1.png)
 
+<img src="{{ site.baseurl }}/assets/img/(cv, nlp, others)/(title)/figure1.png" width="400px" alt="Figure 1">
+
 ## 4. どうやって有効だと検証した？
 
 ## 5. 議論はあるか？

@@ -1,5 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-07-01T13:43:19+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Content-Based Citation Recommendation</title><link href="https://shunk031.github.io/paper-survey/summary/others/Content-Based-Citation-Recommendation" rel="alternate" type="text/html" title="Content-Based Citation Recommendation" /><published>2019-06-25T00:00:00+00:00</published><updated>2019-06-25T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Content-Based-Citation-Recommendation</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Content-Based-Citation-Recommendation">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-07-10T15:48:08+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">From Small-scale to Large-scale Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification" rel="alternate" type="text/html" title="From Small-scale to Large-scale Text Classification" /><published>2019-07-09T00:00:00+00:00</published><updated>2019-07-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;カテゴリ数の多い大規模なテキスト分類と小規模なテキスト分類を同時に行うマルチタスクなモデルアーキテクチャを提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;Web 検索のパーソナライズやレコメンドシステムなど、カテゴリ数が非常に多い大規模なテキスト分類は学習時に各カテゴリを捉えられるよう大規模なデータセットが必要である。&lt;/p&gt;
+
+&lt;p&gt;先行研究ではカテゴリ数の多い大規模なデータに対する研究はあるが、これらの手法は単語間の意味的類似性の重要性を考慮せずに、用語重み付け手法のみを考慮している。
+また、十分なデータ数が確保できない場合に対してマルチタスク学習を適用する研究はあるが、カテゴリ数の非常に多い大規模なテキスト分類に対する研究はとても少ない。&lt;/p&gt;
+
+&lt;p&gt;本研究では大規模および小規模なテキスト分類のために、タスク間で有効な特徴を球友するマルチタスク学習と、各タスクに有効な特徴を選択する gate 構造を導入した
+convolutional neural network (CNN) ベースのネットワークを提案している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/From-Small-scale-to-Large-scale-Text-Classification/figure1.png&quot; width=&quot;600px&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;カテゴリ数の多い大規模なテキスト分類に対するマルチタスク学習&quot;&gt;カテゴリ数の多い大規模なテキスト分類に対するマルチタスク学習&lt;/h3&gt;
+
+&lt;h4 id=&quot;shared-layer-と-private-layer&quot;&gt;Shared layer と Private layer&lt;/h4&gt;
+
+&lt;p&gt;Large-scale および small-scale なテキスト分類に対して&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Shared layer
+    &lt;ul&gt;
+      &lt;li&gt;large-scale と small-scale でタスクに共通する特徴を捉える&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Private layer
+    &lt;ul&gt;
+      &lt;li&gt;large-scale と small-scale でタスクに独立なの特徴を捉える&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;gate-構造&quot;&gt;Gate 構造&lt;/h4&gt;
+
+&lt;h3 id=&quot;モデルの学習&quot;&gt;モデルの学習&lt;/h3&gt;
+&lt;h4 id=&quot;joint-traning&quot;&gt;Joint Traning&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;ランダムにタスクを選択する (;arge-scale or small-scale)&lt;/li&gt;
+  &lt;li&gt;選択したタスクに沿った学習データを選択する&lt;/li&gt;
+  &lt;li&gt;これら学習データをもとに勾配降下法でパラメータを更新する&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;fine-tuning&quot;&gt;Fine Tuning&lt;/h4&gt;
+
+&lt;h4 id=&quot;oversampling&quot;&gt;Oversampling&lt;/h4&gt;
+&lt;p&gt;大規模でカテゴリ数の多いデータセットの場合、カテゴリごとで分布に差があるので over-sampling を行う。&lt;/p&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Open Directory Project (ODP)
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Sports&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Health&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Computers&lt;/code&gt; といった大分類と、 &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Sports/Baseball/Major_League/Teams/Los_Angles_Dodgers/News_and_Media&lt;/code&gt; といった小分類から構成されている。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;NYT&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;評価指標&quot;&gt;評価指標&lt;/h3&gt;
+
+&lt;h3 id=&quot;ベースラインモデルとの比較&quot;&gt;ベースラインモデルとの比較&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;MC (Merge-Centroid)&lt;/li&gt;
+  &lt;li&gt;CNN&lt;/li&gt;
+  &lt;li&gt;LSTM&lt;/li&gt;
+  &lt;li&gt;BiLSTM&lt;/li&gt;
+  &lt;li&gt;PV&lt;/li&gt;
+  &lt;li&gt;fastText&lt;/li&gt;
+  &lt;li&gt;MT-DNN&lt;/li&gt;
+  &lt;li&gt;MT-CNN&lt;/li&gt;
+  &lt;li&gt;FS-LSTM&lt;/li&gt;
+  &lt;li&gt;SP-LSTM&lt;/li&gt;
+  &lt;li&gt;SPG-CNN&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;h3 id=&quot;gate-構造の比較&quot;&gt;Gate 構造の比較&lt;/h3&gt;
+&lt;h3 id=&quot;事前学習済み単語ベクトルの比較&quot;&gt;事前学習済み単語ベクトルの比較&lt;/h3&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;論文リンク&quot;&gt;著者，”タイトル，” ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Content-Based Citation Recommendation</title><link href="https://shunk031.github.io/paper-survey/summary/others/Content-Based-Citation-Recommendation" rel="alternate" type="text/html" title="Content-Based Citation Recommendation" /><published>2019-06-25T00:00:00+00:00</published><updated>2019-06-25T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Content-Based-Citation-Recommendation</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Content-Based-Citation-Recommendation">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;メタデータに依存しない論文内容に基づいた、学術論文の草案に対する引用文献の推薦システムの提案。&lt;/p&gt;
 
 &lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
@@ -971,233 +1061,4 @@ Grad-CAM は&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;と�
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3240396&quot;&gt;Weiwen Liu, Ruiming Tang, Jiajin Li, Jinkai Yu, Huifeng Guo, Xiuqiang He, and Shengyu Zhang. 2018. Field-aware probabilistic embedding neural network for CTR prediction. In Proceedings of the 12th ACM Conference on Recommender Systems (RecSys ‘18). ACM, New York, NY, USA, 412-416.&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/shunk031/paper-summary-of-field-aware-probabilistic-embedding-neural-network-for-ctr-prediction&quot;&gt;[論文紹介] Field-aware Probabilistic Embedding Neural Network for CTR Prediction [RecSys 2018] / Paper summary of Field-aware Probabilistic Embedding Neural Network for CTR Prediction&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shunk031.github.io/paper-survey/assets/img/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction/figure1.png" /></entry><entry><title type="html">Context-Dependent Sentiment Analysis in User-Generated Videos</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos" rel="alternate" type="text/html" title="Context-Dependent Sentiment Analysis in User-Generated Videos" /><published>2018-10-22T00:00:00+00:00</published><updated>2018-10-22T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Context-Dependent-Sentiment_analysis-in-User-Genereted-Videos">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;マルチモーダル (テキスト・音声・動画) における発音レベルの特徴量を用いた感情分析を行うモデルを提案&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;マルチモーダルを用いた感情分析を行うモデルは複数提案されてきたが、先行研究では発話レベルでの依存関係を無視したモデルのみしか提案されていなかった。
-本研究では発話中の呼吸や小休止で区切り 1 つの単位とする &lt;code class=&quot;highlighter-rouge&quot;&gt;utterance-level&lt;/code&gt; (発話レベル) の特徴量にフォーカスを当て、これらの系列を元にマルチモーダルの特徴を用いて感情分析を行った。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-&lt;p&gt;マルチモーダル(テキスト・音声・動画)から &lt;code class=&quot;highlighter-rouge&quot;&gt;utterance-level&lt;/code&gt; の特徴を抽出し、&lt;code class=&quot;highlighter-rouge&quot;&gt;Contextual-LSTM&lt;/code&gt; を用いてこれらの系列を考慮した感情分析モデルを構築&lt;/p&gt;
-
-&lt;h3 id=&quot;発話レベルの特徴量抽出&quot;&gt;発話レベルの特徴量抽出&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;テキストからの特徴抽出
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;text-CNN&lt;/code&gt;
-        &lt;ul&gt;
-          &lt;li&gt;学習済み word2vec を入力し、複数種類のカーネルを持つ 2 層の CNN でテキストのセマンティクスを抽出&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;音声からの特徴抽出
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;openSMILE&lt;/code&gt;
-        &lt;ul&gt;
-          &lt;li&gt;オープンソースのソフトウェアである openSMILE を用いて、音声のピッチや強度といった特徴量を抽出&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;動画からの特徴抽出
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;3D-CNN&lt;/code&gt;
-        &lt;ul&gt;
-          &lt;li&gt;通常の 2D の CNN に対して時間軸方向を考慮した 3D の CNN を使用&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;コンテキストを考慮した特徴抽出&quot;&gt;コンテキストを考慮した特徴抽出&lt;/h3&gt;
-&lt;p&gt;抽出した &lt;code class=&quot;highlighter-rouge&quot;&gt;utterance-level&lt;/code&gt; の特徴量に対して、発話ごとの関係性を学習する LSTM (&lt;code class=&quot;highlighter-rouge&quot;&gt;Contextual-LSTM&lt;/code&gt;) を用いる。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Context-Dependent-Sentiment-Analysis-in-User-Generated-Videos/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Contextual-LSTM は複数種類の LSTM を比較&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sc-LSTM&lt;/code&gt; (simple contextual LSTM)
-    &lt;ul&gt;
-      &lt;li&gt;順方向のみのシンプルな LSTM を使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;h-LSTM&lt;/code&gt; (hidden LSTM)
-    &lt;ul&gt;
-      &lt;li&gt;LSTM の後に全結合層を入れずにそのまま隠れ状態を後段に渡す&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bc-LSTM&lt;/code&gt; (bi-directional LSTM)
-    &lt;ul&gt;
-      &lt;li&gt;発話に対して双方向の特徴を考慮できる bi-directional LSTM を使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;uni-SVM&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;ベースラインとして SVM を使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;複数のモダリティ特徴を用いた感情分析&quot;&gt;複数のモダリティ特徴を用いた感情分析&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;複数のモダリティに対して階層構造を考慮する (Hierarchical Framework)
-    &lt;ul&gt;
-      &lt;li&gt;Level-1
-        &lt;ul&gt;
-          &lt;li&gt;各モダリティ (テキスト・音声・動画) の特徴量に対してそれぞれ独立で LSTM に通し、対象モダリティ独自のコンテキストをを学習&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Level-2
-        &lt;ul&gt;
-          &lt;li&gt;Level-1 で学習した各モダリティ独立した特徴を concat して LSTM に通すことでマルチモーダルなコンテキストを学習&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Level-1 と Level-2 は end-to-end での学習ではない&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Context-Dependent-Sentiment-Analysis-in-User-Generated-Videos/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;階層構造を考慮しない枠組み (Non-hierarchical Framework) についても比較
-    &lt;ul&gt;
-      &lt;li&gt;単一のモダリティ特徴を contextual-LSTM (sc-LSTM や bc-LSTM) に入力&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-&lt;p&gt;マルチモーダルな感情分析を行う先行研究の大部分の検証実験において、学習データとテストデータに同じ話者が入っている場合が多い。
-話者が同じ場合であっても、感情表現やセマンティクスはデータによって異なると考えられているためである。
-しかしながら感情分析に対して一般性・話者に依存しないモデリングを行うことは重要である。&lt;/p&gt;
-
-&lt;p&gt;本研究での検証実験では現実世界に即したアプリケーションを目指すため、未知の話者に対してもモデルがロバストになるように、
-話者独立でデータセットの train/test 分割を行っている。&lt;/p&gt;
-
-&lt;h3 id=&quot;マルチモーダルな感情分析を検証するためのデータセットについて&quot;&gt;マルチモーダルな感情分析を検証するためのデータセットについて&lt;/h3&gt;
-&lt;h4 id=&quot;mosi&quot;&gt;MOSI&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;93 人が英語である話題についてレビューしている動画が含まれる&lt;/li&gt;
-  &lt;li&gt;5 人のアノテーターが &lt;code class=&quot;highlighter-rouge&quot;&gt;-3&lt;/code&gt;〜&lt;code class=&quot;highlighter-rouge&quot;&gt;+3&lt;/code&gt; の感情値を付与
-    &lt;ul&gt;
-      &lt;li&gt;ラベルの平均値を計算し、 &lt;code class=&quot;highlighter-rouge&quot;&gt;positive&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;negative&lt;/code&gt; の 2 クラスとして使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;moud&quot;&gt;MOUD&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;55 人がスペイン語である製品についてレビューしている動画が含まれる&lt;/li&gt;
-  &lt;li&gt;Google Translate API を用いてスペイン語から英語に変換&lt;/li&gt;
-  &lt;li&gt;positive, negative, neutral のラベルが付与されているが、&lt;code class=&quot;highlighter-rouge&quot;&gt;positive&lt;/code&gt;と&lt;code class=&quot;highlighter-rouge&quot;&gt;negative&lt;/code&gt;のみ使用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;iemocap&quot;&gt;IEMOCAP&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;10 人が英語で対話している動画データセット&lt;/li&gt;
-  &lt;li&gt;データセットには以下 9 つのラベルが付与されている: &lt;code class=&quot;highlighter-rouge&quot;&gt;anger&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;happiness&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;sadness&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;neutral&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;excitement&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;frustration&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;fear&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;surprise&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;other&lt;/code&gt;
-    &lt;ul&gt;
-      &lt;li&gt;先行研究と比較するために上記最初の 4 つのクラスだけをラベルとして使用&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;8 人を学習データ、2 人をテストデータとして使用&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;また汎化性能を確認するため、MOSI データセットで学習したモデルを MOUD データセットで評価する &lt;code class=&quot;highlighter-rouge&quot;&gt;cross-dataset&lt;/code&gt; の枠組みを導入している。&lt;/p&gt;
-
-&lt;h3 id=&quot;モデルのパフォーマンス比較&quot;&gt;モデルのパフォーマンス比較&lt;/h3&gt;
-&lt;h4 id=&quot;階層的-vs-非階層的な学習フレームワーク&quot;&gt;階層的 vs 非階層的な学習フレームワーク&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;非階層的なフレームワークはベースラインの uni-SVM を超えたが、階層的フレームワークが一番良かった&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;lstm-の種類の違いによる比較&quot;&gt;LSTM の種類の違いによる比較&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;sc-LSTM、bc-LSTM ともに良い結果を出している&lt;/li&gt;
-  &lt;li&gt;bc-LSTM は順方向・逆方向のコンテキストを考慮できるため sc-LSTM より優れていた&lt;/li&gt;
-  &lt;li&gt;全結合層がない場合 (h-LSTM) よりある場合のほうが性能は高い&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;ベースラインとの比較&quot;&gt;ベースラインとの比較&lt;/h4&gt;
-&lt;ul&gt;
-  &lt;li&gt;LSTM を用いたネットワークはすべてのデータセットに対してベースラインの uni-SVM を超える性能を出した
-    &lt;ul&gt;
-      &lt;li&gt;発話間の文脈依存性をモデリングすることで感情分類性のを高めている&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;IEMOCAP データセットでは特にベースラインとの性能差が現れた
-    &lt;ul&gt;
-      &lt;li&gt;より広い依存関係を適切に捉える必要があるため、LSTM ネットワークが効果的であった&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;SoTA のモデルとの比較
-    &lt;ul&gt;
-      &lt;li&gt;SoTA モデルは実験の際に話者が独立するように train/test の分割をしていない&lt;/li&gt;
-      &lt;li&gt;発話の文脈依存を考慮していない&lt;/li&gt;
-      &lt;li&gt;提案手法は SoTA モデルを上回る性能を示した&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;各モダリティの重要度&quot;&gt;各モダリティの重要度&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;unimodal な特徴より bimodal や trimodal な特徴を用いたほうが性能は良かった&lt;/li&gt;
-  &lt;li&gt;音声特徴は視覚特徴よりも効果があった&lt;/li&gt;
-  &lt;li&gt;MOSI データセットと IEMOCAP データセットにおいてはテキスト特徴が有効であった&lt;/li&gt;
-  &lt;li&gt;MOUD データセットにおいてはスペイン語から英語に翻訳した影響により、テキスト特徴より音声特徴のほうが有効であった
-    &lt;ul&gt;
-      &lt;li&gt;スペイン語の word vector を用いることでテキスト特徴における性能が向上&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;モデルの汎化性能について&quot;&gt;モデルの汎化性能について&lt;/h4&gt;
-&lt;p&gt;MOSI データセットで学習を行い、MOUD データセットを用いて評価を行った。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;音声およびテキスト特徴を用いた場合性能が低下した
-    &lt;ul&gt;
-      &lt;li&gt;英語のモデルでスペイン語を予測していたから&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;視覚特徴を用いた場合、音声・テキスト特徴よりも性能が良かった
-    &lt;ul&gt;
-      &lt;li&gt;クロスリンガルであっても視覚特徴は一般的な特徴を学習できる&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;発話の文脈依存を考慮できることで対象の発話を正確に分析することができている&lt;/li&gt;
-  &lt;li&gt;音声特徴では正しく分類できない場合でも、テキスト特徴で正しく分類する例がある
-    &lt;ul&gt;
-      &lt;li&gt;逆に、テキストではポジティブな文脈でも、怒りっぽい音声特徴から感情を捉えてネガティブであると正しく分類する例もある&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ベースラインについて
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/D15-1303&quot;&gt;Poria, Soujanya, Erik Cambria, and Alexander Gelbukh. “Deep convolutional neural network textual features and multiple kernel learning for utterance-level multimodal sentiment analysis.” Proceedings of the 2015 conference on empirical methods in natural language processing. 2015.&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/6411794/&quot;&gt;Rozgic, Viktor, et al. “Ensemble of svm trees for multimodal emotion recognition.” Signal &amp;amp; Information Processing Association Annual Summit and Conference (APSIPA ASC), 2012 Asia-Pacific. IEEE, 2012.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/P17-1081&quot;&gt;Poria, Soujanya, et al. “Context-dependent sentiment analysis in user-generated videos.” Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers). Vol. 1. 2017.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shunk031.github.io/paper-survey/assets/img/nlp/Context-Dependent-Sentiment-Analysis-in-User-Generated-Videos/figure2.png" /></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shunk031.github.io/paper-survey/assets/img/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction/figure1.png" /></entry></feed>

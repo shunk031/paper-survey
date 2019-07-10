@@ -1,4 +1,4 @@
-var CACHE_NAME = '20190701134319';
+var CACHE_NAME = '20190710154808';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)
@@ -48,10 +48,11 @@ self.addEventListener('install',event => {
     '/paper-survey/summary/31/',
     '/paper-survey/summary/32/',
     '/paper-survey/summary/33/',
+    '/paper-survey/summary/34/',
     
     
     
-    '/paper-survey/summary/others/Content-Based-Citation-Recommendation','/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples','/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting','/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection','/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection','/paper-survey/summary/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification','/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network','/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color','/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction',
+    '/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification','/paper-survey/summary/others/Content-Based-Citation-Recommendation','/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples','/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting','/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection','/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection','/paper-survey/summary/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification','/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network','/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color',
   ]))
 );
 });

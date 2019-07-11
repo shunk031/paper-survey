@@ -8,7 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/shunk031/paper-survey.svg?style=flat-square)](https://github.com/shunk031/paper-survey/stargazers)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/shunk031/paper-survey.svg?style=social)](https://twitter.com/intent/tweet?text=shunk031/paper-survey:%20Survey%20of%20previous%20research%20on%20machine%20learning%20(especially%20Deep%20Learning)%20in%20Japanese&url=https%3A%2F%2Fgithub.com%2Fshunk031%2Fpaper-survey)
 
-機械学習 (特にDeep Learning) に関する先行研究および関連研究をまとめています。
+機械学習 (特に Deep Learning) に関する先行研究および関連研究をまとめています。
 
 ---
 
@@ -23,7 +23,7 @@
 ## Rules
 
 * 読もうと思っている論文は[Issue](https://github.com/shunk031/paper-survey/issues)に上げる
-* [ProjectsのRelated Works](https://github.com/shunk031/paper-survey/projects/2)に論文を読んだかどうかを管理する
+* [Projects の Related Works](https://github.com/shunk031/paper-survey/projects/2)に論文を読んだかどうかを管理する
 * [format.md](https://github.com/shunk031/paper-survey/blob/master/format.md)にしたがって論文の要旨をまとめる
 
 ## Abount Summary Format
@@ -59,7 +59,7 @@ categories: CV NLP Others
 
 ## Example
 
-- [先端技術とメディア表現1 #FTMA15](http://www.slideshare.net/Ochyai/1-ftma15) from [Yoichi Ochiai](http://www.slideshare.net/Ochyai)
+- [先端技術とメディア表現 1 #FTMA15](http://www.slideshare.net/Ochyai/1-ftma15) from [Yoichi Ochiai](http://www.slideshare.net/Ochyai)
 
 ![](https://raw.githubusercontent.com/shunk031/paper-survey/master/assets/img/FTMA15-1-page-65.png)
 

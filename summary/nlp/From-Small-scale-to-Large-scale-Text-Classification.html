@@ -318,94 +318,220 @@
   <div class="post-content" itemprop="articleBody">
     <h2 id="1-どんなもの">1. どんなもの？</h2>
 
-<p>カテゴリ数の多い大規模なテキスト分類と小規模なテキスト分類を同時に行うマルチタスクなモデルアーキテクチャを提案。</p>
+<p>カテゴリ数が非常に多いテキスト分類と比較的カテゴリ数の少ないテキスト分類を同時に行うマルチタスクなモデルアーキテクチャを提案。</p>
 
 <h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
 
-<p>Web 検索のパーソナライズやレコメンドシステムなど、カテゴリ数が非常に多い大規模なテキスト分類は学習時に各カテゴリを捉えられるよう大規模なデータセットが必要である。</p>
+<p>テキスト分類においてカテゴリ数が非常に多い <code class="highlighter-rouge">large-scale</code> な問題設定と、比較的カテゴリ数の少ない <code class="highlighter-rouge">small-scale</code> な問題設定がある。</p>
 
-<p>先行研究ではカテゴリ数の多い大規模なデータに対する研究はあるが、これらの手法は単語間の意味的類似性の重要性を考慮せずに、用語重み付け手法のみを考慮している。
+<p>Web 検索のパーソナライズやレコメンドシステムなど、カテゴリ数が非常に多いテキスト分類は学習時に各カテゴリを捉えられるよう大規模なデータセットが必要である。</p>
+
+<p>先行研究ではカテゴリ数の多いデータに対する研究はあるが、これらの手法は単語間の意味的類似性の重要度を考慮せずに、用語に対する重み付け手法のみを考慮している。
 また、十分なデータ数が確保できない場合に対してマルチタスク学習を適用する研究はあるが、カテゴリ数の非常に多い大規模なテキスト分類に対する研究はとても少ない。</p>
 
-<p>本研究では大規模および小規模なテキスト分類のために、タスク間で有効な特徴を球友するマルチタスク学習と、各タスクに有効な特徴を選択する gate 構造を導入した
-convolutional neural network (CNN) ベースのネットワークを提案している。</p>
+<p>本研究ではカテゴリ数が非常に大きいものと比較的小さいもののテキスト分類のために、タスク間で有効な特徴を共有するマルチタスク学習と、
+各タスクに有効な特徴を選択する gate 構造 を導入した convolutional neural network (CNN) ベースのネットワークを提案している。</p>
 
 <h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
 
 <p><img src="/paper-survey/assets/img/nlp/From-Small-scale-to-Large-scale-Text-Classification/figure1.png" width="600px" alt="Figure 1" /></p>
 
 <h3 id="カテゴリ数の多い大規模なテキスト分類に対するマルチタスク学習">カテゴリ数の多い大規模なテキスト分類に対するマルチタスク学習</h3>
-
 <h4 id="shared-layer-と-private-layer">Shared layer と Private layer</h4>
-
-<p>Large-scale および small-scale なテキスト分類に対して</p>
-
 <ul>
-  <li>Shared layer
+  <li>タスク間で不変な特徴とタスクで独立な特徴をそれぞれ捉えるモデルアーキテクチャ
     <ul>
-      <li>large-scale と small-scale でタスクに共通する特徴を捉える</li>
+      <li>Shared Layer
+        <ul>
+          <li>各タスクに対して共有の畳込み+プーリングを用いて、タスク間で共通の特徴を学習可能</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li>Private layer
+  <li>Private Layer
     <ul>
-      <li>large-scale と small-scale でタスクに独立なの特徴を捉える</li>
+      <li>タスク固有の畳み込み+プーリングを用いて、タスク独立な特徴を学習可能</li>
     </ul>
   </li>
 </ul>
 
 <h4 id="gate-構造">Gate 構造</h4>
+<p>小規模なテキスト分類タスクから大規模テキスト分類タスクへ効果的な特徴を選択する。</p>
+
+<script type="math/tex; mode=display">\textbf{g} = \sigma(\textbf{W}_{\textrm{small} \to \textrm{large}} \textbf{z}_{\textrm{small}} + \textbf{b}_{\textrm{small} \to \textrm{large}})</script>
+
+<ul>
+  <li><code class="highlighter-rouge">Large-scale</code> テキスト分類タスクにおいて、ゲート <script type="math/tex">{\bf g}</script> を用いて最終的な特徴量を得る
+    <ul>
+      <li>
+        <script type="math/tex; mode=display">\textbf{z}'_{\textrm{large}} = \textbf{z}_{\textrm{large}} + \textbf{z}_{\textrm{share}} + \textbf{g} \odot \textbf{z}_{\textrm{small}}</script>
+      </li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">Small-scale</code> テキスト分類タスクにおいては以下となる
+    <ul>
+      <li>
+        <script type="math/tex; mode=display">\textbf{z}'_{\textrm{small}} = \textbf{z}_{\textrm{small}} + \textbf{z}_{\textrm{share}}</script>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="モデルの学習">モデルの学習</h3>
 <h4 id="joint-traning">Joint Traning</h4>
 <ul>
-  <li>ランダムにタスクを選択する (;arge-scale or small-scale)</li>
+  <li>ランダムにタスクを選択する (<code class="highlighter-rouge">large-scale</code> or <code class="highlighter-rouge">small-scale</code>)</li>
   <li>選択したタスクに沿った学習データを選択する</li>
   <li>これら学習データをもとに勾配降下法でパラメータを更新する</li>
 </ul>
 
-<h4 id="fine-tuning">Fine Tuning</h4>
-
 <h4 id="oversampling">Oversampling</h4>
-<p>大規模でカテゴリ数の多いデータセットの場合、カテゴリごとで分布に差があるので over-sampling を行う。</p>
+<p>カテゴリ数の多いデータセットの場合、カテゴリごとで分布に差があるため、少ないカテゴリをオーバーサンプリングして対処する。</p>
 
 <h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
+<h3 id="データセット">データセット</h3>
 <ul>
   <li>Open Directory Project (ODP)
     <ul>
-      <li><code class="highlighter-rouge">Top/Sports</code>, <code class="highlighter-rouge">Top/Health</code>, <code class="highlighter-rouge">Top/Computers</code> といった大分類と、 <code class="highlighter-rouge">Top/Sports/Baseball/Major_League/Teams/Los_Angles_Dodgers/News_and_Media</code> といった小分類から構成されている。</li>
+      <li>大規模な木構造の web ページディレクトリ
+ 	- 15 階層に及び、前処理後には 3000 近くのカテゴリが含まれている。
+        <ul>
+          <li>大分類と小分類が含まれている。
+            <ul>
+              <li><code class="highlighter-rouge">Top/Sports</code>, <code class="highlighter-rouge">Top/Health</code>, <code class="highlighter-rouge">Top/Computers</code></li>
+              <li><code class="highlighter-rouge">Top/Sports/Baseball/Major_League/Teams/Los_Angles_Dogders/News_and_Media</code></li>
+            </ul>
+          </li>
+          <li>学習データとして 23,000 ページを対象
+ 	  - <code class="highlighter-rouge">Smal-scale</code> テキスト分類タスク用にトップレベルの 13 カテゴリを使用</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li>NYT</li>
+  <li>New York Times (NYT)
+    <ul>
+      <li>ODP の追加テストデータとして、new york times の記事から <code class="highlighter-rouge">art</code>, <code class="highlighter-rouge">business</code>, <code class="highlighter-rouge">food</code>, <code class="highlighter-rouge">health</code>, <code class="highlighter-rouge">politics</code>, <code class="highlighter-rouge">sports</code> なカテゴリをランダムに取得して評価に使用した。</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="評価指標">評価指標</h3>
+<ul>
+  <li>F1 score をベースに使用
+    <ul>
+      <li>Micro-averaging (Mi-) F1 score
+        <ul>
+          <li>テストデータ全体の F1 スコア
+            <ul>
+              <li>データ数の多いカテゴリを正確に当てられているか</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Macro-averaging (Ma-) F1 score
+        <ul>
+          <li>各カテゴリ数に応じた F1 スコア
+ 	  - データ数の少ないカテゴリを正確に当てられているか</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>NYT データセットに対しては precision@k を使用
+    <ul>
+      <li>記事に対してアノテータが ODP のカテゴリとマッチするように</li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="ベースラインモデルとの比較">ベースラインモデルとの比較</h3>
 <ul>
-  <li>MC (Merge-Centroid)</li>
-  <li>CNN</li>
-  <li>LSTM</li>
-  <li>BiLSTM</li>
-  <li>PV</li>
-  <li>fastText</li>
-  <li>MT-DNN</li>
-  <li>MT-CNN</li>
-  <li>FS-LSTM</li>
-  <li>SP-LSTM</li>
-  <li>SPG-CNN</li>
+  <li>ベースモデル
+    <ul>
+      <li>MC (Merge-Centroid)</li>
+      <li>CNN</li>
+      <li>LSTM</li>
+      <li>BiLSTM</li>
+    </ul>
+  </li>
+  <li>単語ベクトル系
+    <ul>
+      <li>PV</li>
+      <li>fastText</li>
+    </ul>
+  </li>
+  <li>マルチタスク系
+    <ul>
+      <li>MT-DNN</li>
+      <li>MT-CNN</li>
+    </ul>
+  </li>
+  <li>提案手法
+    <ul>
+      <li>SP-LSTM
+        <ul>
+          <li>Share layer + Private layer w/o Gate</li>
+        </ul>
+      </li>
+      <li>SPG-CNN
+        <ul>
+          <li>Share layer + Private layer w/ Gate</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="5-議論はあるか">5. 議論はあるか？</h2>
-
 <h3 id="gate-構造の比較">Gate 構造の比較</h3>
-<h3 id="事前学習済み単語ベクトルの比較">事前学習済み単語ベクトルの比較</h3>
+<ul>
+  <li>大規模分類タスクと小規模分類タスク間の gate 方向について
+    <ul>
+      <li>large → small 方向より、small → large 方向のほうが良かった</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="異なる事前学習済み単語ベクトルを使用したときの精度比較">異なる事前学習済み単語ベクトルを使用したときの精度比較</h3>
+<ul>
+  <li>word2vec や GloVe より fastText を用いたほうがよかった
+    <ul>
+      <li>fastText は OOV に強い</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="odp-データセットに対する精度比較">ODP データセットに対する精度比較</h3>
+<ul>
+  <li><code class="highlighter-rouge">Large-scale</code> テキスト分類タスクでは提案手法 SPG-CNN が outperform</li>
+  <li><code class="highlighter-rouge">Small-scale</code> テキスト分類タスクにおいては share layer + private layer のある LSTM が outperform
+    <ul>
+      <li>データが十分にあってカテゴリ間の分布が均衡なものは CNN より LSTM が強い傾向は先行研究でも確認されている</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="nyt-データセットに対する精度比較">NYT データセットに対する精度比較</h3>
+<ul>
+  <li>提案手法の SPG-CNN が outperform
+    <ul>
+      <li>そのほかのマルチタスクモデルもシングルタスクモデルよりも良い結果</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
+<ul>
+  <li>MC (Merge-Centroid) について
+    <ul>
+      <li><a href="https://dl.acm.org/citation.cfm?id=2529997">Lee, Jung-Hyun, et al. “Semantic contextual advertising based on the open directory project.” ACM Transactions on the Web (TWEB) 7.4 (2013): 24.p</a></li>
+    </ul>
+  </li>
+</ul>
 
 <h3 id="論文情報リンク">論文情報・リンク</h3>
 
 <ul>
-  <li><a href="論文リンク">著者，”タイトル，” ジャーナル名，voluem，no.，ページ，年</a></li>
+  <li><a href="https://dl.acm.org/citation.cfm?id=3313563">Kim, Kang-Min, et al. “From Small-scale to Large-scale Text Classification.” The World Wide Web Conference. ACM, 2019.</a></li>
 </ul>
 
   </div>

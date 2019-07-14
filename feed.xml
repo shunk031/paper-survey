@@ -1,94 +1,220 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-07-10T15:48:08+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-07-14T01:52:13+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
 </subtitle><entry><title type="html">From Small-scale to Large-scale Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification" rel="alternate" type="text/html" title="From Small-scale to Large-scale Text Classification" /><published>2019-07-09T00:00:00+00:00</published><updated>2019-07-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
-&lt;p&gt;カテゴリ数の多い大規模なテキスト分類と小規模なテキスト分類を同時に行うマルチタスクなモデルアーキテクチャを提案。&lt;/p&gt;
+&lt;p&gt;カテゴリ数が非常に多いテキスト分類と比較的カテゴリ数の少ないテキスト分類を同時に行うマルチタスクなモデルアーキテクチャを提案。&lt;/p&gt;
 
 &lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 
-&lt;p&gt;Web 検索のパーソナライズやレコメンドシステムなど、カテゴリ数が非常に多い大規模なテキスト分類は学習時に各カテゴリを捉えられるよう大規模なデータセットが必要である。&lt;/p&gt;
+&lt;p&gt;テキスト分類においてカテゴリ数が非常に多い &lt;code class=&quot;highlighter-rouge&quot;&gt;large-scale&lt;/code&gt; な問題設定と、比較的カテゴリ数の少ない &lt;code class=&quot;highlighter-rouge&quot;&gt;small-scale&lt;/code&gt; な問題設定がある。&lt;/p&gt;
 
-&lt;p&gt;先行研究ではカテゴリ数の多い大規模なデータに対する研究はあるが、これらの手法は単語間の意味的類似性の重要性を考慮せずに、用語重み付け手法のみを考慮している。
+&lt;p&gt;Web 検索のパーソナライズやレコメンドシステムなど、カテゴリ数が非常に多いテキスト分類は学習時に各カテゴリを捉えられるよう大規模なデータセットが必要である。&lt;/p&gt;
+
+&lt;p&gt;先行研究ではカテゴリ数の多いデータに対する研究はあるが、これらの手法は単語間の意味的類似性の重要度を考慮せずに、用語に対する重み付け手法のみを考慮している。
 また、十分なデータ数が確保できない場合に対してマルチタスク学習を適用する研究はあるが、カテゴリ数の非常に多い大規模なテキスト分類に対する研究はとても少ない。&lt;/p&gt;
 
-&lt;p&gt;本研究では大規模および小規模なテキスト分類のために、タスク間で有効な特徴を球友するマルチタスク学習と、各タスクに有効な特徴を選択する gate 構造を導入した
-convolutional neural network (CNN) ベースのネットワークを提案している。&lt;/p&gt;
+&lt;p&gt;本研究ではカテゴリ数が非常に大きいものと比較的小さいもののテキスト分類のために、タスク間で有効な特徴を共有するマルチタスク学習と、
+各タスクに有効な特徴を選択する gate 構造 を導入した convolutional neural network (CNN) ベースのネットワークを提案している。&lt;/p&gt;
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/From-Small-scale-to-Large-scale-Text-Classification/figure1.png&quot; width=&quot;600px&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;カテゴリ数の多い大規模なテキスト分類に対するマルチタスク学習&quot;&gt;カテゴリ数の多い大規模なテキスト分類に対するマルチタスク学習&lt;/h3&gt;
-
 &lt;h4 id=&quot;shared-layer-と-private-layer&quot;&gt;Shared layer と Private layer&lt;/h4&gt;
-
-&lt;p&gt;Large-scale および small-scale なテキスト分類に対して&lt;/p&gt;
-
 &lt;ul&gt;
-  &lt;li&gt;Shared layer
+  &lt;li&gt;タスク間で不変な特徴とタスクで独立な特徴をそれぞれ捉えるモデルアーキテクチャ
     &lt;ul&gt;
-      &lt;li&gt;large-scale と small-scale でタスクに共通する特徴を捉える&lt;/li&gt;
+      &lt;li&gt;Shared Layer
+        &lt;ul&gt;
+          &lt;li&gt;各タスクに対して共有の畳込み+プーリングを用いて、タスク間で共通の特徴を学習可能&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Private layer
+  &lt;li&gt;Private Layer
     &lt;ul&gt;
-      &lt;li&gt;large-scale と small-scale でタスクに独立なの特徴を捉える&lt;/li&gt;
+      &lt;li&gt;タスク固有の畳み込み+プーリングを用いて、タスク独立な特徴を学習可能&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;gate-構造&quot;&gt;Gate 構造&lt;/h4&gt;
+&lt;p&gt;小規模なテキスト分類タスクから大規模テキスト分類タスクへ効果的な特徴を選択する。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{g} = \sigma(\textbf{W}_{\textrm{small} \to \textrm{large}} \textbf{z}_{\textrm{small}} + \textbf{b}_{\textrm{small} \to \textrm{large}})&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Large-scale&lt;/code&gt; テキスト分類タスクにおいて、ゲート &lt;script type=&quot;math/tex&quot;&gt;{\bf g}&lt;/script&gt; を用いて最終的な特徴量を得る
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{z}'_{\textrm{large}} = \textbf{z}_{\textrm{large}} + \textbf{z}_{\textrm{share}} + \textbf{g} \odot \textbf{z}_{\textrm{small}}&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Small-scale&lt;/code&gt; テキスト分類タスクにおいては以下となる
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{z}'_{\textrm{small}} = \textbf{z}_{\textrm{small}} + \textbf{z}_{\textrm{share}}&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;モデルの学習&quot;&gt;モデルの学習&lt;/h3&gt;
 &lt;h4 id=&quot;joint-traning&quot;&gt;Joint Traning&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;ランダムにタスクを選択する (;arge-scale or small-scale)&lt;/li&gt;
+  &lt;li&gt;ランダムにタスクを選択する (&lt;code class=&quot;highlighter-rouge&quot;&gt;large-scale&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;small-scale&lt;/code&gt;)&lt;/li&gt;
   &lt;li&gt;選択したタスクに沿った学習データを選択する&lt;/li&gt;
   &lt;li&gt;これら学習データをもとに勾配降下法でパラメータを更新する&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;fine-tuning&quot;&gt;Fine Tuning&lt;/h4&gt;
-
 &lt;h4 id=&quot;oversampling&quot;&gt;Oversampling&lt;/h4&gt;
-&lt;p&gt;大規模でカテゴリ数の多いデータセットの場合、カテゴリごとで分布に差があるので over-sampling を行う。&lt;/p&gt;
+&lt;p&gt;カテゴリ数の多いデータセットの場合、カテゴリごとで分布に差があるため、少ないカテゴリをオーバーサンプリングして対処する。&lt;/p&gt;
 
 &lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;h3 id=&quot;データセット&quot;&gt;データセット&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Open Directory Project (ODP)
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Sports&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Health&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Computers&lt;/code&gt; といった大分類と、 &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Sports/Baseball/Major_League/Teams/Los_Angles_Dodgers/News_and_Media&lt;/code&gt; といった小分類から構成されている。&lt;/li&gt;
+      &lt;li&gt;大規模な木構造の web ページディレクトリ
+ 	- 15 階層に及び、前処理後には 3000 近くのカテゴリが含まれている。
+        &lt;ul&gt;
+          &lt;li&gt;大分類と小分類が含まれている。
+            &lt;ul&gt;
+              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Sports&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Health&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Computers&lt;/code&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Sports/Baseball/Major_League/Teams/Los_Angles_Dogders/News_and_Media&lt;/code&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;学習データとして 23,000 ページを対象
+ 	  - &lt;code class=&quot;highlighter-rouge&quot;&gt;Smal-scale&lt;/code&gt; テキスト分類タスク用にトップレベルの 13 カテゴリを使用&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;NYT&lt;/li&gt;
+  &lt;li&gt;New York Times (NYT)
+    &lt;ul&gt;
+      &lt;li&gt;ODP の追加テストデータとして、new york times の記事から &lt;code class=&quot;highlighter-rouge&quot;&gt;art&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;business&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;food&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;health&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;politics&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sports&lt;/code&gt; なカテゴリをランダムに取得して評価に使用した。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;評価指標&quot;&gt;評価指標&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;F1 score をベースに使用
+    &lt;ul&gt;
+      &lt;li&gt;Micro-averaging (Mi-) F1 score
+        &lt;ul&gt;
+          &lt;li&gt;テストデータ全体の F1 スコア
+            &lt;ul&gt;
+              &lt;li&gt;データ数の多いカテゴリを正確に当てられているか&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Macro-averaging (Ma-) F1 score
+        &lt;ul&gt;
+          &lt;li&gt;各カテゴリ数に応じた F1 スコア
+ 	  - データ数の少ないカテゴリを正確に当てられているか&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;NYT データセットに対しては precision@k を使用
+    &lt;ul&gt;
+      &lt;li&gt;記事に対してアノテータが ODP のカテゴリとマッチするように&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;ベースラインモデルとの比較&quot;&gt;ベースラインモデルとの比較&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;MC (Merge-Centroid)&lt;/li&gt;
-  &lt;li&gt;CNN&lt;/li&gt;
-  &lt;li&gt;LSTM&lt;/li&gt;
-  &lt;li&gt;BiLSTM&lt;/li&gt;
-  &lt;li&gt;PV&lt;/li&gt;
-  &lt;li&gt;fastText&lt;/li&gt;
-  &lt;li&gt;MT-DNN&lt;/li&gt;
-  &lt;li&gt;MT-CNN&lt;/li&gt;
-  &lt;li&gt;FS-LSTM&lt;/li&gt;
-  &lt;li&gt;SP-LSTM&lt;/li&gt;
-  &lt;li&gt;SPG-CNN&lt;/li&gt;
+  &lt;li&gt;ベースモデル
+    &lt;ul&gt;
+      &lt;li&gt;MC (Merge-Centroid)&lt;/li&gt;
+      &lt;li&gt;CNN&lt;/li&gt;
+      &lt;li&gt;LSTM&lt;/li&gt;
+      &lt;li&gt;BiLSTM&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;単語ベクトル系
+    &lt;ul&gt;
+      &lt;li&gt;PV&lt;/li&gt;
+      &lt;li&gt;fastText&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;マルチタスク系
+    &lt;ul&gt;
+      &lt;li&gt;MT-DNN&lt;/li&gt;
+      &lt;li&gt;MT-CNN&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;提案手法
+    &lt;ul&gt;
+      &lt;li&gt;SP-LSTM
+        &lt;ul&gt;
+          &lt;li&gt;Share layer + Private layer w/o Gate&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;SPG-CNN
+        &lt;ul&gt;
+          &lt;li&gt;Share layer + Private layer w/ Gate&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
 &lt;h3 id=&quot;gate-構造の比較&quot;&gt;Gate 構造の比較&lt;/h3&gt;
-&lt;h3 id=&quot;事前学習済み単語ベクトルの比較&quot;&gt;事前学習済み単語ベクトルの比較&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;大規模分類タスクと小規模分類タスク間の gate 方向について
+    &lt;ul&gt;
+      &lt;li&gt;large → small 方向より、small → large 方向のほうが良かった&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;異なる事前学習済み単語ベクトルを使用したときの精度比較&quot;&gt;異なる事前学習済み単語ベクトルを使用したときの精度比較&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;word2vec や GloVe より fastText を用いたほうがよかった
+    &lt;ul&gt;
+      &lt;li&gt;fastText は OOV に強い&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;odp-データセットに対する精度比較&quot;&gt;ODP データセットに対する精度比較&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Large-scale&lt;/code&gt; テキスト分類タスクでは提案手法 SPG-CNN が outperform&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Small-scale&lt;/code&gt; テキスト分類タスクにおいては share layer + private layer のある LSTM が outperform
+    &lt;ul&gt;
+      &lt;li&gt;データが十分にあってカテゴリ間の分布が均衡なものは CNN より LSTM が強い傾向は先行研究でも確認されている&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;nyt-データセットに対する精度比較&quot;&gt;NYT データセットに対する精度比較&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;提案手法の SPG-CNN が outperform
+    &lt;ul&gt;
+      &lt;li&gt;そのほかのマルチタスクモデルもシングルタスクモデルよりも良い結果&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;MC (Merge-Centroid) について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2529997&quot;&gt;Lee, Jung-Hyun, et al. “Semantic contextual advertising based on the open directory project.” ACM Transactions on the Web (TWEB) 7.4 (2013): 24.p&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;論文リンク&quot;&gt;著者，”タイトル，” ジャーナル名，voluem，no.，ページ，年&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3313563&quot;&gt;Kim, Kang-Min, et al. “From Small-scale to Large-scale Text Classification.” The World Wide Web Conference. ACM, 2019.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Content-Based Citation Recommendation</title><link href="https://shunk031.github.io/paper-survey/summary/others/Content-Based-Citation-Recommendation" rel="alternate" type="text/html" title="Content-Based Citation Recommendation" /><published>2019-06-25T00:00:00+00:00</published><updated>2019-06-25T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Content-Based-Citation-Recommendation</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Content-Based-Citation-Recommendation">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;メタデータに依存しない論文内容に基づいた、学術論文の草案に対する引用文献の推薦システムの提案。&lt;/p&gt;
 

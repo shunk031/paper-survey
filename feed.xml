@@ -1,5 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-07-22T06:56:49+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">From Small-scale to Large-scale Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification" rel="alternate" type="text/html" title="From Small-scale to Large-scale Text Classification" /><published>2019-07-09T00:00:00+00:00</published><updated>2019-07-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-07-27T15:32:30+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">DropAttention: A Regularization Method for Fully Connected Self Attention-Networks</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks" rel="alternate" type="text/html" title="DropAttention: A Regularization Method for Fully Connected Self Attention-Networks" /><published>2019-07-27T00:00:00+00:00</published><updated>2019-07-27T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;全結合からなる self-attention 層に対して dropout を行う DropAttention を用いて過学習抑制し汎化性能向上を確認した。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;Dropout は全結合層に対して確率的にノード落とすことで過学習を抑えることができる。
+こうした手法は recurrent neural network (RNN) や convolutional neural network (CNN) にも応用されており、それぞれパフォーマンスの向上が確認されている。&lt;/p&gt;
+
+&lt;p&gt;本研究では dropout 手法を全結合からなる self-attention に対して適用する DropAttention を提案し、汎化性能向上を確認している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dropattention&quot;&gt;DropAttention&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;複数種類の dropout 手法を比較
+    &lt;ul&gt;
+      &lt;li&gt;DropAttention(c)
+        &lt;ul&gt;
+          &lt;li&gt;列ベースで dropout する。先行研究の Dropout と同様の振る舞い。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;DropAttention(e)
+        &lt;ul&gt;
+          &lt;li&gt;要素ベースで dropout する。先行研究の DropConnect と同賞の振る舞い。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;これらの DropAttention にはハイパーパラメータとして dropout 率 &lt;script type=&quot;math/tex&quot;&gt;p&lt;/script&gt; と drop 対象となる連続した範囲を示すウィンドウサイズ &lt;script type=&quot;math/tex&quot;&gt;w&lt;/script&gt; の設定が必要である。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Dropout 後のリスケーリング処理
+    &lt;ul&gt;
+      &lt;li&gt;Attention に対して dropout した後に再度総和を取ると 1 となるようにリスケーリングを行う&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;テキスト分類、系列ラベリング、テキスト含意認識、機械翻訳の 4 つのタスクに対して、DropAttention(c)および DropAttention(e)の効果確認を行っている。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DropAttention(c)および(e)のハイパーパラメータについて
+    &lt;ul&gt;
+      &lt;li&gt;DropAttention(c)の場合 dropout 率は大きく、小さいウィンドウサイズを用いるのが良い&lt;/li&gt;
+      &lt;li&gt;DropAttention(e)の場合 dropout 率は小さく、大きいウィンドウサイズを用いるのが良い&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;先行研究である dropout も適用後にリスケーリング処理を行うが、同様の処理を DropAttention に適用すると性能が悪くなることが確認された。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dropout 関連の論文がまとまっているので参考になる&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks/table1.png&quot; alt=&quot;Table 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1907.11065&quot;&gt;Lin Zehui, Pengfei Liu, Luyao Huang, Jie Fu, Junkun Chen, Xipeng Qiu, Xuanjing Huang. DropAttention: A Regularization Method for Fully-Connected Self-Attention Networks. arXiv:1907.11065, 2019&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">From Small-scale to Large-scale Text Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification" rel="alternate" type="text/html" title="From Small-scale to Large-scale Text Classification" /><published>2019-07-09T00:00:00+00:00</published><updated>2019-07-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;カテゴリ数が非常に多いテキスト分類と比較的カテゴリ数の少ないテキスト分類を同時に行うマルチタスクなモデルアーキテクチャを提案。&lt;/p&gt;
 
@@ -1102,89 +1169,4 @@ Grad-CAM は&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;と�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.06838&quot;&gt;Youngjoo Jo, Jongyoul Park. SC-FEGAN: Face Editing Generative Adversarial Network with User’s Sketch and Color. arXiv:1902.06838, 2019&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Field-aware Probabilistic Embedding Neural Network for CTR Prediction</title><link href="https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction" rel="alternate" type="text/html" title="Field-aware Probabilistic Embedding Neural Network for CTR Prediction" /><published>2018-12-06T00:00:00+00:00</published><updated>2018-12-06T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;確率的埋め込みを導入し特徴表現の確率的振る舞いを学習する CTR 予測のためのモデル Field-aware Probabilistic Embedding Neural Network を提案&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;Click Though Rate (CTR) 予測に通常用いられるロジスティック回帰 (LR) や Factorization Machine (FM) は一般的な線形の特徴を捉えることが可能でシンプルな実装であることが知られているが、高次元特徴の表現能力に乏しい。&lt;/p&gt;
-
-&lt;p&gt;本件研究では特徴の embedding に対して点推定ではなく分布を推定する Probabilistic Embedding という新たな embedding 手法を提案し、事前知識を導入することで先行研究よりもロバストなモデルを構築した。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Field-aware Probabilistic Embedding Neural Networks (FPENN)
-    &lt;ul&gt;
-      &lt;li&gt;Field-aware Probabilistic Embedding (FPE) による確率的埋め込みの学習
-        &lt;ul&gt;
-          &lt;li&gt;埋め込み行列 &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; の平均・分散からなる確率分布を用いて確率的な振る舞いを導入&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;多様な特徴を学習するコンポーネント
-        &lt;ul&gt;
-          &lt;li&gt;Linear term (LT)
-            &lt;ul&gt;
-              &lt;li&gt;低次元の相互作用を捉える&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Quadratic term (QDR)
-            &lt;ul&gt;
-              &lt;li&gt;2 次の相互作用を捉える&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;Deep NN term (DNN)
-            &lt;ul&gt;
-              &lt;li&gt;高次元の相互作用を捉える&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;埋め込みを確率分布としたときの学習手法の適用
-        &lt;ul&gt;
-          &lt;li&gt;Reparameterization trick
-            &lt;ul&gt;
-              &lt;li&gt;埋め込み行列 &lt;script type=&quot;math/tex&quot;&gt;V&lt;/script&gt; の平均・分散を持つ正規分布から埋め込み表現をサンプリングする場合誤差逆伝播が不可能&lt;/li&gt;
-              &lt;li&gt;Reparameterization trick でこの問題を解決&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;CTR 予測のデータセットとして Avazu dataset と Criteo dataset を用いて提案する FPENN とベースラインの LR や FM、CNN ベースの CCPM や DeepFM と比較を行っている。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;提案手法が 50 〜 100 ミリ秒以内に 200 〜 300 アプリの CTR 値を予測との記述あり&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;CCPM について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2806603&quot;&gt;Liu, Qiang, et al. “A convolutional click prediction model.” Proceedings of the 24th ACM International on Conference on Information and Knowledge Management. ACM, 2015.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;DeepFM について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.04247&quot;&gt;Guo, Huifeng, et al. “Deepfm: a factorization-machine based neural network for ctr prediction.” arXiv preprint arXiv:1703.04247 (2017).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3240396&quot;&gt;Weiwen Liu, Ruiming Tang, Jiajin Li, Jinkai Yu, Huifeng Guo, Xiuqiang He, and Shengyu Zhang. 2018. Field-aware probabilistic embedding neural network for CTR prediction. In Proceedings of the 12th ACM Conference on Recommender Systems (RecSys ‘18). ACM, New York, NY, USA, 412-416.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/shunk031/paper-summary-of-field-aware-probabilistic-embedding-neural-network-for-ctr-prediction&quot;&gt;[論文紹介] Field-aware Probabilistic Embedding Neural Network for CTR Prediction [RecSys 2018] / Paper summary of Field-aware Probabilistic Embedding Neural Network for CTR Prediction&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shunk031.github.io/paper-survey/assets/img/others/Field-aware-Probabilistic-Embedding-Neural-Network-for-CTR-Prediction/figure1.png" /></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

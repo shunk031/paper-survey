@@ -1,5 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-07-27T15:32:30+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">DropAttention: A Regularization Method for Fully Connected Self Attention-Networks</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks" rel="alternate" type="text/html" title="DropAttention: A Regularization Method for Fully Connected Self Attention-Networks" /><published>2019-07-27T00:00:00+00:00</published><updated>2019-07-27T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-08-15T11:54:38+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Putting Fairness Principles into Practice Challenges Metrics and Improvements</title><link href="https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements" rel="alternate" type="text/html" title="Putting Fairness Principles into Practice Challenges Metrics and Improvements" /><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;機械学習における公正性に向けて、プロダクション環境へ適用可能でグループ間のバイアスに頑健となる absolute correlation regularization を提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;ユーザの特徴を用いた学習データには偏りが存在する場合があり、こうした偏りは公正な予測の妨げとなる。
+特に機械学習システムをプロダクション環境で運用する際には、公正な予測を提供する必要がある。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;あるデータセットにおいて従来手法で予測した場合、センシティブな属性で分かれるあるグループとそれ以外のグループの間に予測のバイアスが観測される例がある (左図)。
+本来なら右図のようにグループ間で予測の差は現れないはずである。
+こうした予測のバイアスを解消するため、Adversarial training を用いたグループ間の偏りに頑健な学習が提案されているが、学習時に不安定であったり、そもそも学習が難しい場合が多い。&lt;/p&gt;
+
+&lt;p&gt;本研究ではあるグループにおける公正性、特にグループ間の &lt;code class=&quot;highlighter-rouge&quot;&gt;False Positive&lt;/code&gt; の比較に焦点を当て、こうした false positive を抑制する新たな正則化手法である absolute correlation regularization を提案している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;Deep Neural Network (DNN) に通常の損失関数に加えて &lt;code class=&quot;highlighter-rouge&quot;&gt;absolute correlation regularization&lt;/code&gt; を導入。&lt;/p&gt;
+
+&lt;h3 id=&quot;absolute-correlation-regularization&quot;&gt;Absolute correlation regularization&lt;/h3&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\min_{f} \left[\sum_{(\mathbf{x}_i,y_i) \in \mathcal{X}}^{} \textrm{L}(y_i, f(\mathbf{x}_i))\right] + \lambda |Corr_{\mathcal{X}^{-}}|&lt;/script&gt;
+
+&lt;p&gt;ここで &lt;script type=&quot;math/tex&quot;&gt;Corr_{\mathcal{X}^{-}}&lt;/script&gt; は予測値 &lt;script type=&quot;math/tex&quot;&gt;\hat{y}&lt;/script&gt; とセンシティブな属性 &lt;script type=&quot;math/tex&quot;&gt;s&lt;/script&gt; との相対的な相関を最小化する:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;Corr_{\mathcal{X}^{-}} = \frac{(\sum_{\mathbf{X}_i \in \mathcal{X}^{-}}^{} f(\mathbf{x}_i) - \mu_{\hat{y}}) (\sum_{s_i \in \mathcal{X}^{-}}^{} s_i - \mu_s)}{\sigma_{\hat{y}} \sigma_s}&lt;/script&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;線形モデル、DNN、DNN w/ adversarial training、DNN w/ absolute correlation regularization の 4 つのモデルを適用した結果を比較している。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements/figure3-1.png&quot; alt=&quot;Figure 3-1&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements/figure3-2.png&quot; alt=&quot;Figure 3-2&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements/figure3-3.png&quot; alt=&quot;Figure 3-3&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements/figure3-4.png&quot; alt=&quot;Figure 3-4&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;比較対象のモデルに対して、absolute correlation regularization を導入した DNN の予測はグループ間で偏りが小さいことを確認した。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;p&gt;モデルの予測とセンシティブな属性との相関を無相関にすることで、結果的に予測結果のバイアスが取り除かれるように学習が進むと考えられる。&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Adversarial training を用いたグループ間の偏りに頑健な学習
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1707.00075&quot;&gt;Beutel, Alex, et al. “Data decisions and theoretical implications when adversarially learning fair representations.” arXiv preprint arXiv:1707.00075 (2017).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.04562&quot;&gt;Beutel, Alex, et al. “Putting fairness principles into practice: Challenges, metrics, and improvements.” arXiv preprint arXiv:1901.04562 (2019).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">DropAttention: A Regularization Method for Fully Connected Self Attention-Networks</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks" rel="alternate" type="text/html" title="DropAttention: A Regularization Method for Fully Connected Self Attention-Networks" /><published>2019-07-27T00:00:00+00:00</published><updated>2019-07-27T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;全結合からなる self-attention 層に対して dropout を行う DropAttention を用いて過学習抑制し汎化性能向上を確認した。&lt;/p&gt;
 
@@ -1027,146 +1099,4 @@ Grad-CAM は&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;と�
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1802.10171&quot;&gt;Li, Kunpeng, et al. “Tell me where to look: Guided attention inference network.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">SC-FEGAN: Face Editing Generative Adversarial Networks with User’s Sketch and Color</title><link href="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color" rel="alternate" type="text/html" title="SC-FEGAN: Face Editing Generative Adversarial Networks with User's Sketch and Color" /><published>2019-02-21T00:00:00+00:00</published><updated>2019-02-21T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;ユーザーのインタラクティブなスケッチや色指定が可能なニューラルネットワークベースの顔画像編集システム SC-FEGAN を提案。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;従来の Generative Adversarial Network (GAN) を用いた顔画像編集システムは低画質でエッジを適切に捉えるのが難しかった。
-また顔編集を行う際のユーザの入力に対して質の高い応答を返すのは困難であった。&lt;/p&gt;
-
-&lt;p&gt;Deepfillv2 や Guided inpainting はこうしたユーザーが入力するマスキングや他の画像を入力として編集を可能としたが、編集時の色の指定ができなかったり、詳細な細かい復元が可能ではなかった。&lt;/p&gt;
-
-&lt;p&gt;本研究では UNet ベースのアーキテクチャに対して gated convolutional layer を導入したネットワークアーキテクチャをベースにユーザーのスケッチや色指定を可能とした、
-自由で高品質な顔編集システムである SC-FEGAN を提案した。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;学習データに対する処理&quot;&gt;学習データに対する処理&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;高品質な瞳の編集
-    &lt;ul&gt;
-      &lt;li&gt;学習時にランダムに目周辺にマスキングを適用することで細かい瞳の復元を可能とする&lt;/li&gt;
-      &lt;li&gt;同時に generative face completion (GFC) を適用する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ユーザーが入力するスケッチや色指定への対応
-    &lt;ul&gt;
-      &lt;li&gt;FaceShop と同様の手法を導入
-        &lt;ul&gt;
-          &lt;li&gt;スケッチデータをビットマップからベクターへと変換する&lt;a href=&quot;http://autotrace.sourceforge.net/&quot;&gt;AutoTrace&lt;/a&gt;は用いていない&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;HED によるエッジ検出器を使用して、ユーザーの入力からスケッチデータを生成&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;提案顔編集システムのアーキテクチャ&quot;&gt;提案顔編集システムのアーキテクチャ&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Generator
-    &lt;ul&gt;
-      &lt;li&gt;U-net ベースの generator を採用
-        &lt;ul&gt;
-          &lt;li&gt;すべての畳み込み層に gated convolution を導入している&lt;/li&gt;
-          &lt;li&gt;畳み込みの後に local signal normalization (LRN)を用いている&lt;/li&gt;
-          &lt;li&gt;入力は&lt;script type=&quot;math/tex&quot;&gt;512 \times 512 \times 9&lt;/script&gt;である
-            &lt;ul&gt;
-              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RGB (3 チャンネル)&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;マスク (1 チャンネル)&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;スケッチ(1 チャンネル)&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;色指定マップ(3 チャンネル)&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;ノイズ(1 チャンネル)&lt;/code&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Discriminator
-    &lt;ul&gt;
-      &lt;li&gt;SN-patchGAN ベースの discriminator を採用
-        &lt;ul&gt;
-          &lt;li&gt;複数の loss 関数を最小化する
-            &lt;ul&gt;
-              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;per-pixcel loss&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;perceptual loss&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;style loss&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;total variance loss&lt;/code&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;CelebA-HO データセットにおいてランダムに学習用とテスト用で分割したものに対して提案システムである SC-FEGAN による顔編集の質を検討している。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;h3 id=&quot;generator-の違いによる瞳の編集精度&quot;&gt;Generator の違いによる瞳の編集精度&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Generator を U-net と Coarse-Refined net で変えたときに、瞳領域をマスクして復元したときの結果。U-net 構造のほうが細かい瞳の復元に成功している&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;perceptual-loss-の有無による編集精度&quot;&gt;Perceptual loss の有無による編集精度&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure5.png&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Perceptual loss である VGG loss を導入することにより、髪部分が正確に編集できている&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;先行研究との復元精度の比較&quot;&gt;先行研究との復元精度の比較&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure6.png&quot; alt=&quot;Figure 6&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;先行研究の Deepfillv1 に対して提案システムである SC-FEGAN による復元精度が高いことがわかる&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;アクセサリーなどの小さい物体に対する編集の可能性&quot;&gt;アクセサリーなどの小さい物体に対する編集の可能性&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/SC-FEGAN-Face-Editing-Generative-Adversarial-Networks-with-Users-Sketch-and-Color/figure8.png&quot; alt=&quot;Figure 8&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;HED をもとにマスキング領域を拡張して学習することにより、イヤリングと共に顔の画像を生成するという特別な結果を得ることができた&lt;/li&gt;
-  &lt;li&gt;ネットワークが小さな詳細を学習し、小さな入力に対しても妥当な結果を生み出すことができることを示している&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Deepfillv2 (SN-patchGAN, gated convolutional layer) について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1806.03589&quot;&gt;Yu, Jiahui, et al. “Free-form image inpainting with gated convolution.” arXiv preprint arXiv:1806.03589 (2018).&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Guided inpainting について
-    &lt;ul&gt;
-      &lt;li&gt;[Zhao, Yinan, et al. “Guided image inpainting: Replacing an image region by pulling content from another image.” arXiv preprint arXiv:1803.08435 (2018).]&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Generative Face Completion (GFC) について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://openaccess.thecvf.com/content_cvpr_2017/html/Li_Generative_Face_Completion_CVPR_2017_paper.html&quot;&gt;Li, Yijun, et al. “Generative face completion.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;FaceShop について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1804.08972&quot;&gt;Portenier, Tiziano, et al. “Faceshop: Deep sketch-based face image editing.” ACM Transactions on Graphics (TOG) 37.4 (2018): 99.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;U-net について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://www.cs.cmu.edu/~jeanoh/16-785/papers/ronnenberger-miccai2015-u-net.pdf&quot;&gt;Ronneberger, Olaf, Philipp Fischer, and Thomas Brox. “U-net: Convolutional networks for biomedical image segmentation.” International Conference on Medical image computing and computer-assisted intervention. Springer, Cham, 2015.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.06838&quot;&gt;Youngjoo Jo, Jongyoul Park. SC-FEGAN: Face Editing Generative Adversarial Network with User’s Sketch and Color. arXiv:1902.06838, 2019&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

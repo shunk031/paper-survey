@@ -1,5 +1,196 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-08-23T14:58:11+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Putting Fairness Principles into Practice Challenges Metrics and Improvements</title><link href="https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements" rel="alternate" type="text/html" title="Putting Fairness Principles into Practice Challenges Metrics and Improvements" /><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-08-24T08:17:22+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Personalized Fashion Recommendation with Visual Explanations based on Multimodal Attention-Network</title><link href="https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network" rel="alternate" type="text/html" title="Personalized Fashion Recommendation with Visual Explanations based on Multimodal Attention-Network" /><published>2019-08-22T00:00:00+00:00</published><updated>2019-08-22T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;ユーザー単位でファッション画像・レビューテキストを用いた解釈性のある注意機構つきファッション商品推薦システムを提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;ファッションアイテムのオンラインショッピングがますます盛んになっており、ファッション業界や学術界ではファッションに対する推薦が注目を集めている。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ファッション商品には画像の他に商品のレビューが付与されている。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ユーザ A は首元にフォーカスしている&lt;/li&gt;
+  &lt;li&gt;ユーザ B は服のポケットにフォーカスしている&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ファッション画像全体の特徴を捉えるのではなく、ユーザーごといくつかの領域にフォーカスする必要がある。&lt;/p&gt;
+
+&lt;p&gt;先行研究ではファッション商品の推薦を行うモデルにおいて、以下の 3 つの点で疑問点が残る:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ファッション画像全体の特徴を捉えるのではなく、ユーザごとにいくつかのサブ領域に着目すべき&lt;/li&gt;
+  &lt;li&gt;複数の要素が組み合わさったファッション画像をそのままエンコードするのは、モデルの学習時にノイズとなりうる&lt;/li&gt;
+  &lt;li&gt;ユーザの勾配体験向上のためには、推薦の根拠の提示や説明性の向上が重要である&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;これら 3 つの疑問点を解決し、より効果的なファッション推薦システムを行うモデルが必要である。
+しかしこれらの疑問点を解決するには、以下の問題点が存在する:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;情報量の少ない教師信号
+    &lt;ul&gt;
+      &lt;li&gt;先行研究ではクリック等のスパースで暗黙的なフィードバックを教師信号として使用している&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;個々人に合った商品画像の興味領域の選択
+    &lt;ul&gt;
+      &lt;li&gt;個々人の興味を元にファッション画像に対してアノテーションするのは時間がかかり、そもそも教師ラベルを定義するのも難しい&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;評価データセットの欠如
+    &lt;ul&gt;
+      &lt;li&gt;特に説明性のある可視化結果に対する評価に利用できるデータセットは非常に少ない&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;本研究ではこれらの問題に対処するため、Visually Explanable Collaborative Filtering (VECF) を提案している。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fine-grained-visual-preference-modeling&quot;&gt;Fine-grained Visual Preference Modeling&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;ファッション画像に対して事前学習済み VGG19 の &lt;code class=&quot;highlighter-rouge&quot;&gt;conv5&lt;/code&gt; ブロック (最終ブロック) を画像特徴量として利用
+    &lt;ul&gt;
+      &lt;li&gt;計算リソースが許すなら fine-tuning してもよいが今回は実施していない&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ユーザ単位の fine-grained な視覚特徴を考慮するために visual attention 機構を導入
+    &lt;ul&gt;
+      &lt;li&gt;推薦時に視覚的な説明性を提供することも可能&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;review-enhanced-model-supervision&quot;&gt;Review enhanced Model Supervision&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;ファッション商品のレビューテキストにはユーザの趣向が含まれている
+    &lt;ul&gt;
+      &lt;li&gt;クリック等のスパースで暗黙的なフィードバックと比較すると、よりリッチな情報を含んでいる&lt;/li&gt;
+      &lt;li&gt;弱教師 (weak supervision signal) としてレビュー情報を使用し、推薦のパフォーマンスや説明性を向上させる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;LSTM をベースに、抽出した画像特徴を concat して学習させる
+    &lt;ul&gt;
+      &lt;li&gt;論文中の図では GRU と書いてあるが本文では LSTM を使用していると記述あり&lt;/li&gt;
+      &lt;li&gt;このコンポーネントは推薦スコアの予測には直接必要ないため、より計算量的な観点で実践的である&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ハイパーパラメータ &lt;script type=&quot;math/tex&quot;&gt;\beta&lt;/script&gt; によって暗黙的なフィードバックかレビューテキストのトレードオフを決める。&lt;/p&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;p&gt;ファッションデータセットとして Amazon.com をベースとした公開データセットを使用し、ベースラインの手法と提案手法を比較している。またレビューテキストを考慮しないモデル VECF(-rev)と visual attention を適用しない VECF(-att)を比較対象に追加している。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+&lt;p&gt;ファッション推薦システムにおける視覚的な説明性を評価するのは著者らが知る限り本研究が初であるため、評価できるデータセットもまた存在しない。&lt;/p&gt;
+
+&lt;p&gt;クラウドソーシングを使ってこれらを評価できるデータセットを構築した。
+商品レビューからユーザが 7x7 の格子に分けたファッション画像のどの領域に着目しているかをワーカーがラベリングした。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;定量的評価
+    &lt;ul&gt;
+      &lt;li&gt;VECF と VECF(-rev)に対して視覚的説明性を比較&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;定量的評価
+    &lt;ul&gt;
+      &lt;li&gt;VECF と VECF(-rev)における attention の可視化を定性的に評価&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+&lt;p&gt;説明性のあるレコメンデーションについて&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HFT
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=2507163&quot;&gt;McAuley, Julian, and Jure Leskovec. “Hidden factors and hidden topics: understanding rating dimensions with review text.” Proceedings of the 7th ACM conference on Recommender systems. ACM, 2013.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RBLT
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.ijcai.org/Proceedings/16/Papers/375.pdf&quot;&gt;Tan, Yunzhi, et al. “Rating-boosted latent topics: Understanding users and items with ratings and reviews.” IJCAI. Vol. 16. 2016.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;D-attn
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3109890&quot;&gt;Seo, Sungyong, et al. “Interpretable convolutional neural networks with dual local and global attention for review rating prediction.” Proceedings of the Eleventh ACM Conference on Recommender Systems. ACM, 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;NARRE
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3186070&quot;&gt;Chen, Chong, et al. “Neural attentional rating regression with review-level explanations.” Proceedings of the 2018 World Wide Web Conference. International World Wide Web Conferences Steering Committee, 2018.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;CARL
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3298988&quot;&gt;Wu, Libing, et al. “A context-aware user-item representation learning for item recommendation.” ACM Transactions on Information Systems (TOIS) 37.2 (2019): 22.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;MPCN
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3220086&quot;&gt;Tay, Yi, Anh Tuan Luu, and Siu Cheung Hui. “Multi-pointer co-attention networks for recommendation.” Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery &amp;amp; Data Mining. ACM, 2018.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DER
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.aaai.org/ojs/index.php/AAAI/article/view/3768&quot;&gt;Chen, Xu, Yongfeng Zhang, and Zheng Qin. “Dynamic Explainable Recommendation based on Neural Attentive Models.” Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 33. 2019.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;NRT
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3080822&quot;&gt;Li, Piji, et al. “Neural rating regression with abstractive tips generation for recommendation.” Proceedings of the 40th International ACM SIGIR conference on Research and Development in Information Retrieval. ACM, 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;gC2S
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1611.09900&quot;&gt;Tang, Jian, et al. “Context-aware natural language generation with recurrent neural networks.” arXiv preprint arXiv:1611.09900 (2016).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;NOR
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/8669792/&quot;&gt;Lin, Yujie, et al. “Explainable Outfit Recommendation with Joint Outfit Matching and Comment Generation.” IEEE Transactions on Knowledge and Data Engineering (2019).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;KSR
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3210017&quot;&gt;Huang, Jin, et al. “Improving sequential recommendation with knowledge-enhanced memory networks.” The 41st International ACM SIGIR Conference on Research &amp;amp; Development in Information Retrieval. ACM, 2018.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ECFKG
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.mdpi.com/1999-4893/11/9/137&quot;&gt;Ai, Qingyao, et al. “Learning heterogeneous knowledge base embeddings for explainable recommendation.” Algorithms 11.9 (2018): 137.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;RippleNet
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3271739&quot;&gt;Wang, Hongwei, et al. “Ripplenet: Propagating user preferences on the knowledge graph for recommender systems.” Proceedings of the 27th ACM International Conference on Information and Knowledge Management. ACM, 2018.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;KPRN
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.aaai.org/ojs/index.php/AAAI/article/view/4470&quot;&gt;Wang, Xiang, et al. “Explainable reasoning over knowledge graphs for recommendation.” Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 33. 2019.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;KTUP
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3313705&quot;&gt;Cao, Yixin, et al. “Unifying Knowledge Graph Learning and Recommendation: Towards a Better Understanding of User Preferences.” The World Wide Web Conference. ACM, 2019.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3331254&quot;&gt;Chen, Xu, et al. “Personalized Fashion Recommendation with Visual Explanations based on Multimodal Attention Network: Towards Visually Explainable Recommendation.” Proceedings of the 42nd International ACM SIGIR Conference on Research and Development in Information Retrieval. ACM, 2019.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Putting Fairness Principles into Practice Challenges Metrics and Improvements</title><link href="https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements" rel="alternate" type="text/html" title="Putting Fairness Principles into Practice Challenges Metrics and Improvements" /><published>2019-08-14T00:00:00+00:00</published><updated>2019-08-14T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;機械学習における公正性に向けて、プロダクション環境へ適用可能でグループ間のバイアスに頑健となる absolute correlation regularization を提案。&lt;/p&gt;
 
@@ -1008,95 +1199,4 @@ LSR は感情ラベルの分布とモデル予測の分布との KL 距離に等
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.09314&quot;&gt;Song, Youwei, et al. “Attentional Encoder Network for Targeted Sentiment Classification.” arXiv preprint arXiv:1902.09314 (2019).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Tell Me Where to Look: Guided Attention Inference Network</title><link href="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network" rel="alternate" type="text/html" title="Tell Me Where to Look: Guided Attention Inference Network" /><published>2019-02-24T00:00:00+00:00</published><updated>2019-02-24T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;Attention map を用いた弱教師ありセマンティックセグメンテーションを高精度に行う guided attention inference networks (GAIN) を提案。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;クラスラベルをもとに学習し予測することで得られる attention map は局所的な特徴やセグメンテーションの情報を保持している場合が多い。
-こうした attention map を利用しセマンティックセグメンテーションといったタスクを解く弱教師あり学習 (weakly supervised learning) の枠組みは先行研究で複数手法が提案されてきた。
-しかしながらクラスラベルから classification loss で学習した attention map は分類に必要最低限の領域にのみフォーカスしており、対象となる物体全体をカバーすることは難しい。&lt;/p&gt;
-
-&lt;p&gt;また学習データセットのバイアスにより、未知のデータに対して正しくセグメンテーションを行うのは難しい。
-具体的には&lt;code class=&quot;highlighter-rouge&quot;&gt;ボート&lt;/code&gt;と&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;は同時に撮影される場合が多く、高い相関がある。
-したがって予測時に海面が移っていない&lt;code class=&quot;highlighter-rouge&quot;&gt;ボート&lt;/code&gt;のサンプルを正しくセグメンテーションするのは難しい場合が多い。&lt;/p&gt;
-
-&lt;p&gt;本研究では end-to-end で attention map を学習し、classification loss に加えて attention の妥当性を考慮する loss を同時に学習する guided attention inference networks (GAIN) を提案している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;h3 id=&quot;gain&quot;&gt;GAIN&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;共通する 2 つのストリーム (&lt;script type=&quot;math/tex&quot;&gt;S_{cl}&lt;/script&gt; と &lt;script type=&quot;math/tex&quot;&gt;S_{am}&lt;/script&gt;)
-    &lt;ul&gt;
-      &lt;li&gt;2 つのストリームにおける conv 層と一部の fc 層のパラメータは共通&lt;/li&gt;
-      &lt;li&gt;Classification stream &lt;script type=&quot;math/tex&quot;&gt;S_{cl}&lt;/script&gt;
-        &lt;ul&gt;
-          &lt;li&gt;クラスに分類するために役立つ領域を見つけるよう学習&lt;/li&gt;
-          &lt;li&gt;マルチラベル・マルチクラスの &lt;code class=&quot;highlighter-rouge&quot;&gt;classification loss&lt;/code&gt; を最小化する&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Attention mining stream &lt;script type=&quot;math/tex&quot;&gt;S_{am}&lt;/script&gt;
-        &lt;ul&gt;
-          &lt;li&gt;クラスの決定に寄与する可能性があるすべての領域が attention に含まれるよう学習&lt;/li&gt;
-          &lt;li&gt;対象クラスに対する attention 領域が大きくならないようにする &lt;code class=&quot;highlighter-rouge&quot;&gt;attention mining loss&lt;/code&gt; を最小化する&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;gain_textrmext&quot;&gt;GAIN&lt;script type=&quot;math/tex&quot;&gt;_{\textrm{ext}}&lt;/script&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network/figure3.png&quot; alt=&quot;Figure 3&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;追加で小規模のセグメンテーションマスクを学習に利用
-    &lt;ul&gt;
-      &lt;li&gt;External stream &lt;script type=&quot;math/tex&quot;&gt;S_{e}&lt;/script&gt; を追加
-        &lt;ul&gt;
-          &lt;li&gt;教師となるセグメンテーションマスクから attention map を学習&lt;/li&gt;
-          &lt;li&gt;Attention map とセグメンテーションマスクの二乗誤差である &lt;code class=&quot;highlighter-rouge&quot;&gt;attention loss&lt;/code&gt; を最小化する&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;PASCAL VOC を用いた弱教師ありセグメンテーションタスクで先行研究の SoTA モデルとの mean intersection-over-union (mIoU) のスコアを比較している。
-SoTA モデルである SEC に対して attention map を用いた提案手法を適用することにより精度向上が確認されている。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;SoTA モデルである SEC に対して GAIN を導入することにより、複数物体を正確に広い範囲で捉えることが可能となっている。
-また追加でセグメンテーションマスクを用いることで、より精度のよいセグメンテーションが行われている。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Tell-Me-Where-to-Look-Guided-Attention-Inference-Network/figure6.png&quot; alt=&quot;Figure 6&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;学習データセットにバイアスがある場合にベースラインの Grad-CAM と提案手法の GAIN がどのような予測をするか可視化を行った結果。
-Grad-CAM は&lt;code class=&quot;highlighter-rouge&quot;&gt;海&lt;/code&gt;とともに現れやすい&lt;code class=&quot;highlighter-rouge&quot;&gt;ボート&lt;/code&gt;に過学習している傾向があるが、GAIN は&lt;code class=&quot;highlighter-rouge&quot;&gt;ボート&lt;/code&gt;を適切に捉えていることがわかる。
-提案手法の GAIN がバイアスのあるデータセットに対してもロバストであることを示している。&lt;/p&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;SEC について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1603.06098&quot;&gt;Kolesnikov, Alexander, and Christoph H. Lampert. “Seed, expand and constrain: Three principles for weakly-supervised image segmentation.” European Conference on Computer Vision. Springer, Cham, 2016.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1802.10171&quot;&gt;Li, Kunpeng, et al. “Tell me where to look: Guided attention inference network.” Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

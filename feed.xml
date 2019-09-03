@@ -1,5 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-08-24T08:17:22+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Personalized Fashion Recommendation with Visual Explanations based on Multimodal Attention-Network</title><link href="https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network" rel="alternate" type="text/html" title="Personalized Fashion Recommendation with Visual Explanations based on Multimodal Attention-Network" /><published>2019-08-22T00:00:00+00:00</published><updated>2019-08-22T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-09-03T10:20:02+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model</title><link href="https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model" rel="alternate" type="text/html" title="Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model" /><published>2019-09-03T00:00:00+00:00</published><updated>2019-09-03T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+&lt;p&gt;ユーザーの閲覧行動と現在の広告の品質の影響を考慮して、広告の CTR を時系列ベースで予測する新しいアプローチを提案&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+&lt;p&gt;検索連動型広告は、最も効果的で収益性の高い広告アプローチの 1 つである。
+本研究の目標は、検索連動型広告を主としたオンライン広告の品質が他の広告のクリック率にどのように影響するかを分析することである。
+通常、広告は複数個同時に表示され、これら広告の表示順は広告の配信効果に影響があるとされている。&lt;/p&gt;
+
+&lt;p&gt;本研究ではこうした広告群に対して時系列でクリックされる確率 &lt;code class=&quot;highlighter-rouge&quot;&gt;pClick&lt;/code&gt; スコアを予測するモデルを構築した。
+また pClick スコアをもとにトップに表示される広告とそれ以外の広告との間にある &lt;code class=&quot;highlighter-rouge&quot;&gt;Externality&lt;/code&gt; を用いて広告の品質を考慮するモデルを構築した。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;p&gt;表示されている広告の順番を考慮するため、LSTM に表示された順 &lt;script type=&quot;math/tex&quot;&gt;\textrm{ML}{1}, \cdots, \textrm{ML}_{4}&lt;/script&gt; に広告の特徴量 &lt;script type=&quot;math/tex&quot;&gt;X_{1}, \cdots, X_{4}&lt;/script&gt; を入力する。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model/figure2.png&quot; width=&quot;400px&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;先行研究の DNN ベースのベースラインモデルに加えて &lt;code class=&quot;highlighter-rouge&quot;&gt;Externality&lt;/code&gt; を考慮した特徴量を入力する。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model/figure5.png&quot; width=&quot;400px&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;広告の表示順-externality-を考慮したモデリング&quot;&gt;広告の表示順 (externality) を考慮したモデリング&lt;/h2&gt;
+&lt;p&gt;LSTM を使用する代わりに、externality を表す特徴量を導入する。
+トップに表示される広告 &lt;script type=&quot;math/tex&quot;&gt;\textrm{ML}_{1}&lt;/script&gt; の pClick スコアをそれ以降に表示される広告の externality 特徴として利用する。&lt;/p&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+&lt;p&gt;Microsoft の Bing から 1 週間分のユーザー閲覧履歴データを取得し訓練用データセットとして利用した。また次週のデータを評価用データセットとして用いた。
+評価指標は AUC と Relative Information Gain (RIG) を使用した。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;h3 id=&quot;広告の表示順に対する-ctr-の上下の分析&quot;&gt;広告の表示順に対する CTR の上下の分析&lt;/h3&gt;
+&lt;p&gt;トップに表示される広告 &lt;script type=&quot;math/tex&quot;&gt;\textrm{ML}_{1}&lt;/script&gt; とそれ以降に表示された広告に対する分析がされている。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\textrm{ML}_{1}&lt;/script&gt; の CTR が上昇すると、それ以降に表示された広告の CTR も上昇し、 &lt;script type=&quot;math/tex&quot;&gt;\textrm{ML}_{1}&lt;/script&gt; の CTR が下落すると、それを追うように以降の広告の CTR も下落する。&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\textrm{ML}_{1}&lt;/script&gt; の予測 CTR が低いと、それ以降に表示された広告の予測 CTR も低くなってしまう。逆も同じ。
+トップに表示される広告の品質が他の広告の CTR に影響を与えている。
+&lt;script type=&quot;math/tex&quot;&gt;\textrm{ML}_{1}&lt;/script&gt;の品質が低い場合、ユーザーは 2 番目以降の広告を見る可能性が高くなり、クリックされやすくなる。
+逆に&lt;script type=&quot;math/tex&quot;&gt;\textrm{ML}_{1}&lt;/script&gt;がユーザーを満足させてしまう場合には、2 番目以降の広告は無視されてしまう可能性が高く、クリックされにくくなる。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;ベースラインモデルの比較&lt;/th&gt;
+      &lt;th&gt;RNN モデルの比較&lt;/th&gt;
+      &lt;th&gt;DNN+externality モデルの比較&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model/figure4.png&quot; alt=&quot;Figure 4&quot; /&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model/figure6.png&quot; alt=&quot;Figure 6&quot; /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;計算コストの削減&quot;&gt;計算コストの削減&lt;/h2&gt;
+&lt;p&gt;RNN をベースとした LSTM は大規模データになればなるほど計算コストが増えてしまう。
+また LSTM を用いた予測 CTR を特徴量 (pClick) として用いるためにこうしたコストを削減しなければレスポンスに影響が出てしまう。
+今回以下の用にトップに表示された広告の予測 CTR スコア (pClick) とポジションバイアスの差として定義する用いることで高速化を行なった。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;% &lt;![CDATA[
+\begin{eqnarray}
+    \textrm{pClick}_{ML_{x}} &amp;=&amp; \sigma(\textrm{externality} + \textrm{positionBias}_{ML_{x}} + \textrm{otherSum}) \\
+    &amp;=&amp; \sigma(\textrm{externality} + \textrm{positionBias}_{ML_{x}} + \sigma^{-1}(\textrm{pClick}_{ML_{1}} - \textrm{positionBias}_{ML_{1}}))
+\end{eqnarray} %]]&gt;&lt;/script&gt;
+
+&lt;p&gt;[$ \begin{eqnarray} \textrm{pClick}&lt;em&gt;{ML&lt;/em&gt;{x}} &amp;amp;=&amp;amp; \sigma(\textrm{externality} + \textrm{positionBias}&lt;em&gt;{ML&lt;/em&gt;{x}} + \textrm{otherSum}) \ &amp;amp;=&amp;amp; \sigma(\textrm{externality} + \textrm{positionBias}&lt;em&gt;{ML&lt;/em&gt;{x}} + \sigma^{-1}(\textrm{pClick}&lt;em&gt;{ML&lt;/em&gt;{1}} - \textrm{positionBias}&lt;em&gt;{ML&lt;/em&gt;{1}})) \end{eqnarray} ]&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Externality を考慮した先行研究について
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=1835470&quot;&gt;Xu, Wanhong, Eren Manavoglu, and Erick Cantu-Paz. “Temporal click model for sponsored search.” Proceedings of the 33rd international ACM SIGIR conference on Research and development in information retrieval. ACM, 2010.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1404.5772&quot;&gt;Zhang, Yuyu, et al. “Sequential click prediction for sponsored search with recurrent neural networks.” Twenty-Eighth AAAI Conference on Artificial Intelligence. 2014.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ベースラインのモデルについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3041021.3054192&quot;&gt;Ling, Xiaoliang, et al. “Model ensemble for click prediction in bing search ads.” Proceedings of the 26th International Conference on World Wide Web Companion. International World Wide Web Conferences Steering Committee, 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ポジションを考慮したモデルについて
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1502.06922&quot;&gt;Palangi, Hamid, et al. “Deep sentence embedding using long short-term memory networks: Analysis and application to information retrieval.” IEEE/ACM Transactions on Audio, Speech and Language Processing (TASLP) 24.4 (2016): 694-707.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3210071&quot;&gt;Deng, Weiwei, et al. “Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model.” The 41st International ACM SIGIR Conference on Research &amp;amp; Development in Information Retrieval. ACM, 2018.&lt;/a&gt;q&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？ ユーザーの閲覧行動と現在の広告の品質の影響を考慮して、広告の CTR を時系列ベースで予測する新しいアプローチを提案</summary></entry><entry><title type="html">Personalized Fashion Recommendation with Visual Explanations based on Multimodal Attention-Network</title><link href="https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network" rel="alternate" type="text/html" title="Personalized Fashion Recommendation with Visual Explanations based on Multimodal Attention-Network" /><published>2019-08-22T00:00:00+00:00</published><updated>2019-08-22T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;ユーザー単位でファッション画像・レビューテキストを用いた解釈性のある注意機構つきファッション商品推薦システムを提案。&lt;/p&gt;
 
@@ -1090,113 +1186,4 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.10339&quot;&gt;Wenhu Chen, Yu Su, Yilin Shen, Zhiyu Chen, Xifeng Yan, William Wang. How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection. arXiv:1902.10339, 2019&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Attentional Encoder Network for Targeted Sentiment Classification</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification" rel="alternate" type="text/html" title="Attentional Encoder Network for Targeted Sentiment Classification" /><published>2019-03-01T00:00:00+00:00</published><updated>2019-03-01T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;ターゲットに対する感情分析で使われてきた LSTM に変わる self-attention ベースの attentional encoder network (AEN) を提案した。
-また付与されている感情ラベルに対する非信頼性に対して label smoothing を行う損失関数を導入した。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;自然言語処理 (NLP) のタスクに対して RNN ベースの LSTM モデルが広く用いられてきたが、
-コンテキスト内のターゲットに対する感情を分析する fine-grained なターゲットに対する感情分類 (targeted sentiment classification) に対しては依然として改善の余地が残されている。
-先行研究の問題点としてはテキストのモデリングにおいて RNN ベースのモデルに比重がおかれており、また学習速度も遅いことが挙げられる。
-感情分類タスクにおいて attention は重要な役割を果たすが、モデルの後段部分でのみしか使用されてこなかった。
-また感情分類タスクにおいて付与されている感情ラベルは信頼性が低い場合がある。特に &lt;em&gt;neutral&lt;/em&gt; な感情ラベルはとてもファジーでモデルの学習を難しくしている。&lt;/p&gt;
-
-&lt;p&gt;本研究では fine-grained なターゲットに対する感情分析にタスクに対してターゲットとコンテキストの交互作用を self-attention で捉え、ファジーな感情ラベルに対して効果的な label smoothing を行う損失関数を導入した。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;Attentional Encoder Network &lt;code class=&quot;highlighter-rouge&quot;&gt;(AEN)&lt;/code&gt; を提案&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;attentional-encoder-layer&quot;&gt;Attentional Encoder Layer&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;LSTM に代わる並列計算可能なレイヤー
-    &lt;ul&gt;
-      &lt;li&gt;コンテキストとターゲットの embedding に対して隠れ状態の表現を計算&lt;/li&gt;
-      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Multi-Head Attention&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;Point-wise Convolutional Transformation&lt;/code&gt; から構成される&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;multi-head-attention-mha&quot;&gt;Multi-Head Attention (MHA)&lt;/h4&gt;
-&lt;p&gt;入力されるコンテキストとターゲットに対して異なる MHA を適用する。
-MHA は RNN と比較して短いネットワークで離れた単語のコンテキストを捉えることが可能。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Intra-MHA
-    &lt;ul&gt;
-      &lt;li&gt;コンテキスト embedding &lt;script type=&quot;math/tex&quot;&gt;\textbf{e}^c&lt;/script&gt; を MHA に入力&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{e}^{\textrm{intra}} = MHA(\textbf{e}^c, \textbf{e}^c)&lt;/script&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Inter-MHA
-    &lt;ul&gt;
-      &lt;li&gt;コンテキスト embedding &lt;script type=&quot;math/tex&quot;&gt;\textbf{e}^c&lt;/script&gt; と ターゲット embedding &lt;script type=&quot;math/tex&quot;&gt;\textbf{e}^t&lt;/script&gt; を MHA に入力&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{e}^{\textrm{inter}} = MHA(\textbf{e}^c, \textbf{e}^t)&lt;/script&gt;
-
-&lt;h4 id=&quot;point-wise-convolution-transformation-pct&quot;&gt;Point-wise Convolution Transformation (PCT)&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;2 つの 1D convolution と活性化関数から構成される&lt;/li&gt;
-  &lt;li&gt;MHA で得られた表現に対して位置ごとにコンテキストを学習することが可能&lt;/li&gt;
-  &lt;li&gt;Intra-MHA と inter-MHA それぞれに対して PCT を適用し、コンテキスト表現を得る&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;label-smoothing-regularization-lsr&quot;&gt;Label Smoothing Regularization (LSR)&lt;/h3&gt;
-
-&lt;p&gt;感情分類タスクに対して &lt;em&gt;neutral&lt;/em&gt; というラベルはとてもファジーであるため、LSR を導入し、過学習を抑制している。
-LSR は感情ラベルの分布とモデル予測の分布との KL 距離に等しいため、LSR 項は以下のように表せる。&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_{lsr} = - D_{\textrm{KL}} (u(k)||p_{\theta})&lt;/script&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;SemEval 2014 Task4 (レストランのレビューデータセット、ラップトップのレビューデータセット)、ACL 14 Twitter データセットの 3 つで比較を行っている。
-これらのデータセットには 3 つの感情ラベル (positive/neutral/negative) が付与されている。&lt;/p&gt;
-
-&lt;p&gt;ベースラインのモデルとして SVM、Rec-NN、TD-LSTM、ATAE-LSTM、IAN、MemNet、RAM を用いて提案手法の AEN との比較を行っている。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-&lt;h3 id=&quot;label-smoothing-regularization-の効果&quot;&gt;Label smoothing regularization の効果&lt;/h3&gt;
-&lt;p&gt;Label smoothing regularization を導入することで、導入していないモデルよりも良い精度であった。
-信頼性の低いラベルに対して効果的に過学習を抑制できたと考えられる。&lt;/p&gt;
-
-&lt;h3 id=&quot;recurrence-vsattention&quot;&gt;Recurrence vs.Attention&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Attentional-Encoder-Network-for-Targeted-Sentiment-Classification/table3.png&quot; width=&quot;400px&quot; alt=&quot;Table 3&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;AEN に対して Attention encoder layer を LSTM に代えたネットワークと比較すると同等程度の精度を記録している。
-よって LSTM に比べて半数程度の少ないパラメータで同程度の予測精度を達成できるメリットがある。&lt;/p&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Multi-Head Atteition について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/7181-attention-is-all-you-need&quot;&gt;Vaswani, Ashish, et al. “Attention is all you need.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Label Smoothing Regularization について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.html&quot;&gt;Szegedy, Christian, et al. “Rethinking the inception architecture for computer vision.” Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.09314&quot;&gt;Song, Youwei, et al. “Attentional Encoder Network for Targeted Sentiment Classification.” arXiv preprint arXiv:1902.09314 (2019).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

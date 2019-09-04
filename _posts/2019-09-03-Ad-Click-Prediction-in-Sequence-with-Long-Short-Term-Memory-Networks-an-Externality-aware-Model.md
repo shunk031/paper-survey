@@ -14,7 +14,7 @@ categories: Others
 通常、広告は複数個同時に表示され、これら広告の表示順は広告の配信効果に影響があるとされている。
 
 本研究ではこうした広告群に対して時系列でクリックされる確率 `pClick` スコアを予測するモデルを構築した。
-また pClick スコアをもとにトップに表示される広告とそれ以外の広告との間にある `Externality` を用いて広告の品質を考慮するモデルを構築した。
+また pClick スコアをもとにトップに表示される広告とそれ移行の広告との間にある `Externality` を用いて広告の品質を考慮するモデルを構築した。
 
 ## 3. 技術や手法の"キモ"はどこにある？
 
@@ -75,4 +75,4 @@ $$
   
 ### 論文情報・リンク
 
-- [Deng, Weiwei, et al. "Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model." The 41st International ACM SIGIR Conference on Research & Development in Information Retrieval. ACM, 2018.](https://dl.acm.org/citation.cfm?id=3210071)q
+- [Deng, Weiwei, et al. "Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model." The 41st International ACM SIGIR Conference on Research & Development in Information Retrieval. ACM, 2018.](https://dl.acm.org/citation.cfm?id=3210071)

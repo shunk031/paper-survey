@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-09-03T10:20:02+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-09-04T01:21:15+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
 </subtitle><entry><title type="html">Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model</title><link href="https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model" rel="alternate" type="text/html" title="Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model" /><published>2019-09-03T00:00:00+00:00</published><updated>2019-09-03T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;ユーザーの閲覧行動と現在の広告の品質の影響を考慮して、広告の CTR を時系列ベースで予測する新しいアプローチを提案&lt;/p&gt;
 
@@ -8,7 +8,7 @@
 通常、広告は複数個同時に表示され、これら広告の表示順は広告の配信効果に影響があるとされている。&lt;/p&gt;
 
 &lt;p&gt;本研究ではこうした広告群に対して時系列でクリックされる確率 &lt;code class=&quot;highlighter-rouge&quot;&gt;pClick&lt;/code&gt; スコアを予測するモデルを構築した。
-また pClick スコアをもとにトップに表示される広告とそれ以外の広告との間にある &lt;code class=&quot;highlighter-rouge&quot;&gt;Externality&lt;/code&gt; を用いて広告の品質を考慮するモデルを構築した。&lt;/p&gt;
+また pClick スコアをもとにトップに表示される広告とそれ移行の広告との間にある &lt;code class=&quot;highlighter-rouge&quot;&gt;Externality&lt;/code&gt; を用いて広告の品質を考慮するモデルを構築した。&lt;/p&gt;
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
@@ -94,7 +94,7 @@
 &lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3210071&quot;&gt;Deng, Weiwei, et al. “Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model.” The 41st International ACM SIGIR Conference on Research &amp;amp; Development in Information Retrieval. ACM, 2018.&lt;/a&gt;q&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3210071&quot;&gt;Deng, Weiwei, et al. “Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model.” The 41st International ACM SIGIR Conference on Research &amp;amp; Development in Information Retrieval. ACM, 2018.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？ ユーザーの閲覧行動と現在の広告の品質の影響を考慮して、広告の CTR を時系列ベースで予測する新しいアプローチを提案</summary></entry><entry><title type="html">Personalized Fashion Recommendation with Visual Explanations based on Multimodal Attention-Network</title><link href="https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network" rel="alternate" type="text/html" title="Personalized Fashion Recommendation with Visual Explanations based on Multimodal Attention-Network" /><published>2019-08-22T00:00:00+00:00</published><updated>2019-08-22T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;ユーザー単位でファッション画像・レビューテキストを用いた解釈性のある注意機構つきファッション商品推薦システムを提案。&lt;/p&gt;

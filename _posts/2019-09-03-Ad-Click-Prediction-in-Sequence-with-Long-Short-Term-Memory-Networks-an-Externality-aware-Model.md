@@ -61,8 +61,6 @@ $$
 
 $$
 
-[$ \begin{eqnarray} \textrm{pClick}_{ML_{x}} &=& \sigma(\textrm{externality} + \textrm{positionBias}_{ML_{x}} + \textrm{otherSum}) \\ &=& \sigma(\textrm{externality} + \textrm{positionBias}_{ML_{x}} + \sigma^{-1}(\textrm{pClick}_{ML_{1}} - \textrm{positionBias}_{ML_{1}})) \end{eqnarray} ]
-
 ## 6. 次に読むべき論文はあるか？
 
 - Externality を考慮した先行研究について

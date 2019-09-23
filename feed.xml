@@ -1,5 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-09-04T01:30:48+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model</title><link href="https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model" rel="alternate" type="text/html" title="Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model" /><published>2019-09-03T00:00:00+00:00</published><updated>2019-09-03T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-09-23T13:22:04+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Saliency Learning: Teaching the Model Where to Pay Attention</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention" rel="alternate" type="text/html" title="Saliency Learning: Teaching the Model Where to Pay Attention" /><published>2019-09-23T00:00:00+00:00</published><updated>2019-09-23T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;モデルの訓練時に予測根拠となる部分を明示的に学習させることで、予測時に正確な予測根拠を提示する学習法を提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;バイアスのあるデータでモデルを学習させてしまうと意味をなさなかったり、害のある予測をしてしまう場合がある。
+特に深層学習ベースのモデルはブラックボックスとして扱われることが多く、こうしたバイアス由来の誤った予測を検知しづらい。&lt;/p&gt;
+
+&lt;p&gt;先行研究ではブラックボックスになりがちな深層学習ベースの手法に対し、gradient/saliency を元にしたモデルの正則化手法が提案されている。&lt;/p&gt;
+
+&lt;p&gt;本研究は先行研究を受けて、モデルがどの部分に注視すべきかを明示的に与える saliency learning を提案し、
+複数データセットに対して説明性に寄与する情報に摂動を与えた時の感度について検証を行っている。&lt;/p&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;h3 id=&quot;saliency-based-explanation-learning&quot;&gt;Saliency-based Explanation Learning&lt;/h3&gt;
+
+&lt;p&gt;通常の損失関数 &lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}&lt;/script&gt; に加えて、単語列 &lt;script type=&quot;math/tex&quot;&gt;X&lt;/script&gt; どの単語が説明性を持つかを表す ground-truth explanation &lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt; とした、hinge loss ベースの以下の損失関数を最小化する。&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{C}(\theta, X, y, Z) = \mathcal{L}(\theta, X, y) + \lambda \sum_{i=1}^{n} \max{\left(0, -Z_{i} \sum_{j=1}^{d} \frac{\partial f_{\theta}(X, y)}{\partial X_{i,j}} \right)}&lt;/script&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;p&gt;文中の各単語に対して説明性のアノテーションを付与するのは難しい。そこで &lt;code class=&quot;highlighter-rouge&quot;&gt;event extraction&lt;/code&gt; タスクと &lt;code class=&quot;highlighter-rouge&quot;&gt;cloze-style question answering&lt;/code&gt; タスクを元に説明性のアノテーションをシミュレーションした。
+Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt;ACE2005&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;Rich ERE 2015&lt;/code&gt; を使用した。また cloze-style question answering タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt;Children Book Test Named Entity&lt;/code&gt; (CBT-NE) と &lt;code class=&quot;highlighter-rouge&quot;&gt;Common Noun&lt;/code&gt; (CBT-CN) を使用した。&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;p&gt;提案する saliency learning を導入することにより予測精度の向上が見られ、説明性のアノテーションを元に適切な学習がされていることを確認した。
+また説明性のアノテーション &lt;script type=&quot;math/tex&quot;&gt;Z&lt;/script&gt; と positive な gradient の位置を元に計算される saliency accuracy を定義し、ベースラインとの比較を行った。&lt;/p&gt;
+
+&lt;p&gt;Saliency learning で獲得された重要語を意図的に落とした場合にどの程度の予測精度の低下が見られるかを確認した。
+ベースラインと比べると精度の落差は大きく、学習から得られた説明性のある単語が予測に重要であることを示した。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention/table3.png&quot; alt=&quot;Table 3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;勾配ベースの説明性の学習手法
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1703.03717&quot;&gt;Ross, Andrew Slavin, Michael C. Hughes, and Finale Doshi-Velez. “Right for the right reasons: training differentiable models by constraining their explanations.” Proceedings of the 26th International Joint Conference on Artificial Intelligence. AAAI Press, 2017.&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.08649&quot;&gt;Ghaeini, Reza, et al. “Saliency Learning: Teaching the Model Where to Pay Attention.” Proceedings of the 2019 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers). 2019.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model</title><link href="https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model" rel="alternate" type="text/html" title="Ad Click Prediction in Sequence with Long Short-Term Memory Networks: an Externality-aware Model" /><published>2019-09-03T00:00:00+00:00</published><updated>2019-09-03T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 &lt;p&gt;ユーザーの閲覧行動と現在の広告の品質の影響を考慮して、広告の CTR を時系列ベースで予測する新しいアプローチを提案&lt;/p&gt;
 
 &lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
@@ -1082,106 +1133,4 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1712.07709&quot;&gt;Shu, Kai, Suhang Wang, and Huan Liu. “Beyond News Contents: The Role of Social Context for Fake News Detection.” Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining. ACM, 2019.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection" rel="alternate" type="text/html" title="How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection" /><published>2019-03-02T00:00:00+00:00</published><updated>2019-03-02T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;精度を保ったまま最小限の語彙を選択する variational vocabulary dropout (VDD) を提案。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;自然言語処理 (NLP) のタスクに対して deep learning モデルを用いる場合、入力にあらかじめ定義された語彙を元に単語をベクトル化して入力する必要がある。
-こうした語彙数は非常に大規模となる場合が多くパラメータ数も増大してしまうため、限られた計算リソース下での実行することは難しい。
-したがってタスクを解く精度を保ったまま必要な語彙を選択する必要がある。&lt;/p&gt;
-
-&lt;p&gt;本研究ではこの語彙選択問題に対して、タスクを考慮した語彙選択手法である variational vocabulary dropoput (VDD) を提案している。
-また適切な語彙選択が行われているかを確認するため、AUC ベースの評価指標を導入し、提案手法の効果を確認している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-&lt;h3 id=&quot;語彙選択に対する問題設定&quot;&gt;語彙選択に対する問題設定&lt;/h3&gt;
-&lt;p&gt;元の embedding &lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt;と語彙選択を行った後の embedding &lt;script type=&quot;math/tex&quot;&gt;\hat{W}&lt;/script&gt; を使用した場合に、予測精度の差が閾値以上である語彙数を最小にする。&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathop{\rm argmin}\limits_{\hat{W},\hat{\theta}} \textrm{#Row}(\hat{W})~~s.t. \textrm{Acc}(f_{\hat{\theta}}(x; \hat{W}), y) - \textrm{Acc}(f_{\theta}(x;W),y)\le \epsilon&lt;/script&gt;
-
-&lt;h3 id=&quot;語彙選択に対する評価指標&quot;&gt;語彙選択に対する評価指標&lt;/h3&gt;
-&lt;p&gt;AUC ベースの評価指標 &lt;code class=&quot;highlighter-rouge&quot;&gt;Vocab@-X%&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;X ％のパフォーマンス低下が許される場合に必要な最小の語彙数を計算する
-    &lt;ul&gt;
-      &lt;li&gt;本研究では &lt;code class=&quot;highlighter-rouge&quot;&gt;Vocab@-3%&lt;/code&gt; および &lt;code class=&quot;highlighter-rouge&quot;&gt;Vocab@-5%&lt;/code&gt; を用いている&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;variational-vocabulary-dropout-vdd&quot;&gt;Variational Vocabulary Dropout (VDD)&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Bernouli Dropout
-    &lt;ul&gt;
-      &lt;li&gt;Onehot ベクトルに対してベルヌーイノイズ&lt;script type=&quot;math/tex&quot;&gt;\textbf{b}&lt;/script&gt;を適用する
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;script type=&quot;math/tex; mode=display&quot;&gt;E(x|\textbf{b}) = (\textbf{b} \odot \textrm{OneHot}(x)) \cdot W&lt;/script&gt;
-            &lt;ul&gt;
-              &lt;li&gt;しかしながらベルヌーイ分布を reparameterize するのは難しい&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Gaussian Relaxation
-    &lt;ul&gt;
-      &lt;li&gt;ベルヌーイノイズの代わりにガウシアンノイズ &lt;script type=&quot;math/tex&quot;&gt;z_i \sim \mathcal{N}(1, \alpha_{i} = \frac{p_i}{1 - p_i})&lt;/script&gt; を適用する
-        &lt;ul&gt;
-          &lt;li&gt;
-            &lt;script type=&quot;math/tex; mode=display&quot;&gt;E(x|\textbf{z}) = (\textbf{z} \odot \textrm{OneHot}(x) \cdot W)&lt;/script&gt;
-            &lt;ul&gt;
-              &lt;li&gt;Reparameterization trick に従うと、&lt;script type=&quot;math/tex&quot;&gt;W&lt;/script&gt; は多変量ガウス分布 &lt;script type=&quot;math/tex&quot;&gt;B&lt;/script&gt; を用いて以下のようになる
-                &lt;ul&gt;
-                  &lt;li&gt;
-                    &lt;script type=&quot;math/tex; mode=display&quot;&gt;E(x|\textbf{z}) = \textrm{OneHot}(x) \cdot B&lt;/script&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/How-Large-Vocabulary-Does-Text-Classification-Need-A-Variational-Approach-to-Vocabulary-Selection/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Dropout 率 &lt;script type=&quot;math/tex&quot;&gt;\alpha_i&lt;/script&gt; は 語彙の&lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;番目の単語が必要かどうかを示す指標となる。
-ここで&lt;script type=&quot;math/tex&quot;&gt;\alpha_i&lt;/script&gt;より数値が大きい場合は&lt;script type=&quot;math/tex&quot;&gt;i&lt;/script&gt;番目の語彙をドロップしてもパフォーマンス低下の要因にならないことを意味する。&lt;/p&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;文書分類 (document classification: DC)、自然言語理解 (natural language understanding: NLU)、自然言語推論 (natural language inference: NLI) のデータセットを用いてそれぞれのタスクにおける VVD の効果を確認している。
-提案手法の VVD に対して、ベースラインとして頻度に基づいた語彙形成、TF-IDF に基づいた語彙形成、そして group lasso に基づいた語彙形成を比較している。
-各タスクではそれぞれ DC では CNN ベースのモデル、NLU では attetion を導入した bi-directional LSTM モデル、NLI では ESIM モデルを用いている。&lt;/p&gt;
-
-&lt;p&gt;すべてのタスクに対して提案手法の語彙選択手法である VVD が outperform する結果となっている。
-また語彙選択を考慮した評価指標として Vocab@-X% を用いた場合では、特に提案手法のスコアが良くなっていることが示されており、効果的な語彙選択が行われていることがわかる。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;h3 id=&quot;学習時の速度について&quot;&gt;学習時の速度について&lt;/h3&gt;
-&lt;p&gt;VVD は確率的な振る舞いを扱うため、テキスト分類に対して学習を行う場合通常の cross entropy よりも時間がかかった。
-フルサイズの語彙に対して VVD を適用すると計算時間がかかるため、前段階で精度低下が怒らない程度に語彙を制限したほうがよい。&lt;/p&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Deep learning モデルに対するベイジアンベースのモデル圧縮について
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;http://papers.nips.cc/paper/6921-bayesian-compression-for-deep-learning&quot;&gt;Louizos, Christos, Karen Ullrich, and Max Welling. “Bayesian compression for deep learning.” Advances in Neural Information Processing Systems. 2017.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1902.10339&quot;&gt;Wenhu Chen, Yu Su, Yilin Shen, Zhiyu Chen, Xifeng Yan, William Wang. How Large Vocabulary Does Text Classification Need? A Variational Approach to Vocabulary Selection. arXiv:1902.10339, 2019&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

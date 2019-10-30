@@ -1,4 +1,4 @@
-var CACHE_NAME = '20190923132204';
+var CACHE_NAME = '20191030083205';
 
 self.addEventListener('install',event => {
   event.waitUntil(caches.open(CACHE_NAME)
@@ -50,10 +50,11 @@ self.addEventListener('install',event => {
     '/paper-survey/summary/33/',
     '/paper-survey/summary/34/',
     '/paper-survey/summary/35/',
+    '/paper-survey/summary/36/',
     
     
     
-    '/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention','/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model','/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network','/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements','/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks','/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification','/paper-survey/summary/others/Content-Based-Citation-Recommendation','/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples','/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting',
+    '/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text','/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention','/paper-survey/summary/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model','/paper-survey/summary/others/Personalized-Fashion-Recommendation-with-Visual-Explanations-based-on-Multimodal-Attention-Network','/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements','/paper-survey/summary/nlp/DropAttention-A-Regularization-Method-for-Fully-Connected-Self-Attention-Networks','/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification','/paper-survey/summary/others/Content-Based-Citation-Recommendation','/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples',
   ]))
 );
 });

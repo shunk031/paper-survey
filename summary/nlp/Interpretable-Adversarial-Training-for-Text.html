@@ -1,0 +1,560 @@
+<!doctype html>
+<html ⚡ lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
+  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <title>Interpretable Adversarial Training for Text - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.5.0 -->
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Interpretable Adversarial Training for Text" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="1. どんなもの？" />
+<meta property="og:description" content="1. どんなもの？" />
+<link rel="canonical" href="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text" />
+<meta property="og:url" content="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text" />
+<meta property="og:site_name" content="Paper Survey" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-10-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@shunk031" />
+<script type="application/ld+json">
+{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text","headline":"Interpretable Adversarial Training for Text","dateModified":"2019-10-28T00:00:00+00:00","datePublished":"2019-10-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
+  <style amp-custom>
+  
+  body,h1,h2,h3,h4,h5,h6,p,blockquote,pre,hr,dl,dd,ol,ul,figure{margin:0;padding:0}body{font:400 16px/1.5 "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;color:#606c71;-webkit-text-size-adjust:100%;-webkit-font-feature-settings:"kern" 1;-moz-font-feature-settings:"kern" 1;-o-font-feature-settings:"kern" 1;font-feature-settings:"kern" 1;font-kerning:normal;line-height:1.5}h1,h2,h3,h4,h5,h6,p,blockquote,pre,ul,ol,dl,figure,.highlight{margin-bottom:15px}hr{display:block;border:none;height:1px;margin:40px auto;background:#eee}img{max-width:100%;vertical-align:middle}figure>img{display:block}figcaption{font-size:14px}ul,ol{margin-left:30px}li>ul,li>ol{margin-bottom:0}h1,h2,h3,h4,h5,h6{font-weight:400}a{color:#2a7ae2;text-decoration:none}a:visited{color:#1756a9}a:hover{color:#606c71}blockquote{color:#828282;border-left:4px solid #e8e8e8;padding-left:15px;font-size:18px;letter-spacing:-1px;font-style:italic}blockquote>:last-child{margin-bottom:0}pre,code{font-family:Menlo,Monaco,Courier;font-size:14px;border:1px solid #e8e8e8;border-radius:3px;background-color:#eef}code{padding:1px 5px}pre{padding:8px 12px;overflow-x:auto}pre>code{border:0;padding-right:0;padding-left:0}.default .wrapper{max-width:600px}.wrapper{max-width:-webkit-calc(800px - (30px));max-width:calc(800px - (30px));padding-right:15px;padding-left:15px;margin:0 auto}@media screen and (min-width: 800px){.wrapper{max-width:-webkit-calc(800px - (30px * 2));max-width:calc(800px - (30px * 2));padding:0 30px}}.wrapper:after{content:"";display:table;clear:both}.icon>svg{display:inline-block;width:16px;height:16px;vertical-align:middle}.icon>svg path{fill:#828282}.social-button-item{display:inline-block;vertical-align:top}.site-header{min-height:60px;padding:15px 0;position:relative;background-color:#159957;background-image:linear-gradient(120deg, #155799, #159957)}.site-header a{color:#fff}.header-nav .site-nav{position:absolute;right:40px;top:26px;font-weight:700}.site-title{font-size:26px;font-weight:300;line-height:56px;letter-spacing:-1px;margin-bottom:0;float:left}.site-nav{float:right;position:absolute;top:18px;right:15px;border:1px solid #e8e8e8;border-radius:5px}.site-nav .menu-icon{float:right;width:36px;height:36px;line-height:0;background:none;border:0;outline:0}.site-nav .menu-icon>svg{width:18px;height:15px}.site-nav .menu-icon>svg path{fill:#fff}.site-nav .trigger{clear:both;display:none}@media screen and (min-width: 600px){.site-nav{position:relative;background-color:transparent;border:none}.site-nav .menu-icon{display:none}.site-nav .trigger{display:block}.site-nav .page-link{display:inline}}.page-link{display:block;padding:5px 10px;margin-left:20px}.page-link:not(:last-child){margin-right:0}amp-sidebar{width:200px;padding-right:10px}.amp-close-image{top:10px;left:175px;cursor:pointer}.author{text-align:center;align-items:center;padding:10px;margin:60px 0 10px 0}.author .avatar{width:90px;height:90px;margin:0 auto}.author .avatar img{border-radius:50%;border-color:aliceblue}.author h1{margin:12px 0 0 0;font-size:30px;color:#fff}.author h2{font-size:19px;color:#E0E0E0}.site-footer{padding:30px 0}.site-footer .wrapper{border-top:solid 1px #eff0f1;padding-top:2rem;margin-top:2rem}.site-footer-owner{display:block;font-weight:bold}.site-footer-credits{color:#819198}.page-content{padding:30px 0;display:block}.page-content h1,.page-content h2,.page-content h3,.page-content h4,.page-content h5,.page-content h6{color:#159957;margin-top:1rem;margin-bottom:1rem;font-weight:normal}.page-heading{font-size:20px}.post-list{margin-left:0;list-style:none}.post-list>li{margin-bottom:30px}.post-meta{font-size:14px;color:#828282}.post-link{display:block;font-size:24px}.post-header{margin-bottom:30px;text-align:center}.post-title{font-size:42px;letter-spacing:-1px;line-height:1}@media screen and (min-width: 800px){.post-title{font-size:36px}}.post-content{margin-bottom:30px}.post-content img{max-width:100%;vertical-align:middle;display:block;margin:auto}.post-content h2{font-size:1.5em}@media screen and (min-width: 800px){.post-content h2{font-size:1.5em}}.post-content h3{font-size:1.17em}@media screen and (min-width: 800px){.post-content h3{font-size:1.17em}}.post-content h4{font-size:18px}@media screen and (min-width: 800px){.post-content h4{font-size:20px}}.post-content table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all;-webkit-overflow-scrolling:touch;border-collapse:collapse}.post-content table th{font-weight:bold}.post-content table th,.post-content table td{padding:0.5rem 1rem;border:1px solid #e9ebec}.post-content dl{padding:0}.post-content dl dt{padding:0;margin-top:1rem;font-size:1rem;font-weight:bold}.post-content dl dd{padding:0;margin-bottom:1rem}.post-content hr{height:2px;padding:0;margin:1rem 0;background-color:#eff0f1;border:0}.pagination{width:100%;padding:20px 0;display:block;position:relative}.pagination a{background:#E3F2FD;padding:5px 7px}.pagination .prev{float:left}.pagination .next{float:right}.highlight{background:#fff}.highlighter-rouge .highlight{background:#eef}.highlight .c{color:#998;font-style:italic}.highlight .err{color:#a61717;background-color:#e3d2d2}.highlight .k{font-weight:bold}.highlight .o{font-weight:bold}.highlight .cm{color:#998;font-style:italic}.highlight .cp{color:#999;font-weight:bold}.highlight .c1{color:#998;font-style:italic}.highlight .cs{color:#999;font-weight:bold;font-style:italic}.highlight .gd{color:#000;background-color:#fdd}.highlight .gd .x{color:#000;background-color:#faa}.highlight .ge{font-style:italic}.highlight .gr{color:#a00}.highlight .gh{color:#999}.highlight .gi{color:#000;background-color:#dfd}.highlight .gi .x{color:#000;background-color:#afa}.highlight .go{color:#888}.highlight .gp{color:#555}.highlight .gs{font-weight:bold}.highlight .gu{color:#aaa}.highlight .gt{color:#a00}.highlight .kc{font-weight:bold}.highlight .kd{font-weight:bold}.highlight .kp{font-weight:bold}.highlight .kr{font-weight:bold}.highlight .kt{color:#458;font-weight:bold}.highlight .m{color:#099}.highlight .s{color:#d14}.highlight .na{color:teal}.highlight .nb{color:#0086B3}.highlight .nc{color:#458;font-weight:bold}.highlight .no{color:teal}.highlight .ni{color:purple}.highlight .ne{color:#900;font-weight:bold}.highlight .nf{color:#900;font-weight:bold}.highlight .nn{color:#555}.highlight .nt{color:navy}.highlight .nv{color:teal}.highlight .ow{font-weight:bold}.highlight .w{color:#bbb}.highlight .mf{color:#099}.highlight .mh{color:#099}.highlight .mi{color:#099}.highlight .mo{color:#099}.highlight .sb{color:#d14}.highlight .sc{color:#d14}.highlight .sd{color:#d14}.highlight .s2{color:#d14}.highlight .se{color:#d14}.highlight .sh{color:#d14}.highlight .si{color:#d14}.highlight .sx{color:#d14}.highlight .sr{color:#009926}.highlight .s1{color:#d14}.highlight .ss{color:#990073}.highlight .bp{color:#999}.highlight .vc{color:teal}.highlight .vg{color:teal}.highlight .vi{color:teal}.highlight .il{color:#099}
+
+  </style>
+    <link rel="apple-touch-icon" sizes="57x57" href="/paper-survey/assets/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/paper-survey/assets/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/paper-survey/assets/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/paper-survey/assets/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/paper-survey/assets/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/paper-survey/assets/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/paper-survey/assets/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/paper-survey/assets/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/paper-survey/assets/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" href="/paper-survey/assets/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/paper-survey/assets/favicons/android-icon-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/paper-survey/assets/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/paper-survey/assets/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="shortcut icon" href="/paper-survey/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/paper-survey/favicon.ico" type="image/x-icon">
+<link rel="mask-icon" href="/paper-survey/assets/favicons/icon.svg" color="#5bbad5">
+<meta name="msapplication-TileImage" content="/paper-survey/assets/favicons/ms-icon-144x144.png">
+<link rel="manifest" href="/paper-survey/manifest.json">
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#ffffff">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#ffffff">
+<meta name=msapplication-TileColor content=#ffffff>
+<!-- iOS Safari -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-status-bar-style" content="black-translucent">
+
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+
+  <body>
+     <amp-sidebar id='sidebar'
+    layout="nodisplay"
+    side="right">
+  <amp-img class='amp-close-image'
+      src="/paper-survey/assets/img/close.png"
+      width="20"
+      height="20"
+      alt="close sidebar"
+      on="tap:sidebar.close"
+      role="button"
+      tabindex="0"></amp-img>
+      
+        
+      
+        
+        <a class="page-link" href="/paper-survey/about/">About</a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      <a class="page-link" href="/paper-survey/summary/">Summary</a>
+      <a class="page-link" href="/paper-survey/category/cv">CV</a>
+      <a class="page-link" href="/paper-survey/category/nlp">NLP</a>
+      <a class="page-link" href="/paper-survey/category/others">Others</a>
+</amp-sidebar>
+
+<header class="site-header">
+    <div class="wrapper"><a class="site-title" href="/paper-survey/">Paper Survey</a>
+
+    <nav class="site-nav">
+      <button on='tap:sidebar.toggle' class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </button>
+      <div class="trigger">
+        
+          
+        
+          
+          <a class="page-link" href="/paper-survey/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+	<a class="page-link" href="/paper-survey/summary/">Summary</a>
+	<a class="page-link" href="/paper-survey/category/cv">CV</a>
+	<a class="page-link" href="/paper-survey/category/nlp">NLP</a>
+	<a class="page-link" href="/paper-survey/category/others">Others</a>
+      </div>
+    </nav>
+  </div>
+</header>
+ 
+    <div class="page-content ">
+      <div class="wrapper">
+	<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Interpretable Adversarial Training for Text</h1>
+    <p class="post-meta"><time datetime="2019-10-28T00:00:00+00:00" itemprop="datePublished">Oct 28, 2019</time>
+      in 
+      <a href="/paper-survey/category/NLP">NLP</a>
+      <p>
+    </p>
+  </header>
+  <div class="post-content" itemprop="articleBody">
+    <h2 id="1-どんなもの">1. どんなもの？</h2>
+
+<p>自然言語処理に対する解釈可能な敵対的摂動を生成する sparse projected gradient descent (SPGD) を提案</p>
+
+<h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
+
+<h3 id="自然言語処理における敵対的摂動の例">自然言語処理における敵対的摂動の例</h3>
+
+<p><img src="/paper-survey/assets/img/nlp/Interpretable-Adversarial-Training-for-Text/figure1.png" alt="Figure 1" /></p>
+
+<ul>
+  <li>2 つのある単語埋め込み表現 (original embedding と neighbor embedding) 間における敵対的摂動の例
+    <ul>
+      <li>Original embedding から 3 ステップ (緑の矢印) 動いて、黄色で示された生の摂動 (raw perturbation)となる
+ 	- スパース係数 <script type="math/tex">\sigma = 0.5</script> の場合、最大ノルムの摂動の 50%が保持される</li>
+      <li>Word A の摂動はコサイン類似度が最も高い最近傍に射影され、赤色で示された摂動 (projected perturbation) となる</li>
+    </ul>
+  </li>
+</ul>
+
+<p>先行研究に以下 3 つの問題点が存在する:</p>
+<ul>
+  <li>Interpretability
+    <ul>
+      <li>なぜそのような敵対的摂動が加えられたか、また加えたあとの embedding を解釈するのは難しい</li>
+    </ul>
+  </li>
+  <li>Likelihood
+    <ul>
+      <li>敵対的摂動が加えられた単語列は、ground truth と比較してあまり自然なものではない</li>
+    </ul>
+  </li>
+  <li>Label-Invariance
+    <ul>
+      <li>敵対的摂動が加えられることにより単語列が表す意味が変わってしまい、教師ラベルが反転する余地がある</li>
+    </ul>
+  </li>
+</ul>
+
+<p>本研究では先行研究の問題点を以下の視点から解決する <code class="highlighter-rouge">sparse projected gradient descent (SPGD)</code> を提案:</p>
+<ul>
+  <li>Sparsification
+    <ul>
+      <li>センテンスレベルに対して L2 ノルムが大きい摂動を選択して加える。ノルムが小さいものは 0 にする
+        <ul>
+          <li>スパース化した敵対的摂動を加えることで ground truth と比べても自然な文となる</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Directional Projection
+    <ul>
+      <li>敵対的摂動を加えるときに近傍の単語埋め込み表現と同じ direction に摂動が追加されるように写像する</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
+
+<h3 id="先行研究-vanilla-adversarial-training-for-text-advt-text-miyato-iclr17">先行研究 Vanilla Adversarial Training for Text (AdvT-Text) <a href="https://arxiv.org/abs/1605.07725">[Miyato+ ICLR17]</a></h3>
+<ul>
+  <li>通常の loss <script type="math/tex">\mathcal{L}(\theta)</script> と adversarial loss <script type="math/tex">\mathcal{L}_{\textrm{Adv}}</script> を最小化する
+    <ul>
+      <li>
+        <script type="math/tex; mode=display">\mathbf{\theta}^{*} = \textrm{arg min}_{\mathbf{\theta}} (\mathcal{L}(\theta) + \lambda \mathcal{L}_{\textrm{Adv}}(\mathbf{\theta}))</script>
+      </li>
+    </ul>
+  </li>
+  <li>Adversarial loss <script type="math/tex">\mathcal{L}_{\textrm{Adv}}</script>
+    <ul>
+      <li>
+        <script type="math/tex; mode=display">\mathcal{L}_{\textrm{Adv}} = \frac{1}{N} \sum^{j=1}_{N} - \log{p(y^{(j)} | \textbf{x}^{(j)} + \textbf{d}^{(j)}}; \mathbf{\theta})</script>
+      </li>
+    </ul>
+  </li>
+  <li>Adversarial noise <script type="math/tex">\textbf{d}^{(j)}</script>
+    <ul>
+      <li>
+        <script type="math/tex; mode=display">\textbf{d}^{(j)} = - \epsilon \frac{\textbf{g}}{||\textbf{g}||}, ~\textrm{where}~ \textbf{g} = \nabla_{\textbf{x}^{(j)}} \log{p(y^{(j)} | \textbf{x}^{(i)}; \mathbf{\hat{\theta}})}</script>
+        <ul>
+          <li>AdvT-Text で計算される敵対的摂動から得られる単語表現は、元ある単語表現と一致しないため解釈が難しい。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="先行研究-interpretable-adversarial-training-iadvt-text-sato-ijcai18">先行研究 Interpretable Adversarial Training (iAdvT-Text)] <a href="https://arxiv.org/abs/1805.02917">[Sato+ IJCAI18]</a></h3>
+<ul>
+  <li>Interpretable adversarial noise
+    <ul>
+      <li>word embedding <script type="math/tex">v_i</script> に対する <script type="math/tex">K</script> 個の最近傍の unit-direction vectors <script type="math/tex">U_{i}^{K}</script> を用いて <script type="math/tex">\textbf{d}</script> を計算
+        <ul>
+          <li>
+            <script type="math/tex; mode=display">\textbf{d} = \sum_{k=1}^{K} \alpha_{k} \textbf{u}_{k}^{K}</script>
+          </li>
+        </ul>
+      </li>
+      <li>direction を持った敵対的摂動 <script type="math/tex">\alpha^{*}</script> を以下で計算
+        <ul>
+          <li>
+            <script type="math/tex; mode=display">\mathbf{\alpha}^{*} = - \epsilon \frac{\textbf{g}}{||\textbf{g}||}, ~\textrm{where}~ \textbf{g} = \nabla_{\mathbf{\alpha}} \log{p_c(y^{(j)}|\textbf{w}^{(i)}+\textbf{d}; \mathbf{\hat{\theta}})}</script>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="提案手法-sparsified-projected-gradient-descent">提案手法 Sparsified Projected Gradient Descent</h2>
+<ul>
+  <li>AdvT-Text において <script type="math/tex">M</script> 回生成した摂動 <script type="math/tex">r_i</script> に対して
+    <ul>
+      <li>unit-direction vector とのコサイン類似度が最大となるような摂動 <script type="math/tex">\hat{r}_i</script> を得る
+        <ul>
+          <li>
+            <script type="math/tex; mode=display">\mathbf{\hat{r}}_{i} = (\textbf{r}_{i} \cdot \textbf{u}_{i}^{*})\textbf{u}_{i}^{*}, \textrm{where} ~\textbf{u}_{i}^{*} = \textrm{arg max}_{\textbf{u}_{i}^{(j)} \in U_{i}^{K}} (\textbf{r}_{i} \cdot \textbf{u}_{i}^{(j)})</script>
+          </li>
+        </ul>
+      </li>
+      <li>スパース係数 <script type="math/tex">\sigma</script> を用いて、L2 ノルムが <script type="math/tex">\lfloor (1 - \sigma)N \rfloor</script> を満たさない摂動は 0 にする</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
+
+<ul>
+  <li>映画の大規模レビューデータセット IMDB を用いて評価
+    <ul>
+      <li>摂動の解釈性を保持しつつ、先行研究と同等の精度を達成している</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/paper-survey/assets/img/nlp/Interpretable-Adversarial-Training-for-Text/table3.png" alt="Table 3" /></p>
+
+<h2 id="5-議論はあるか">5. 議論はあるか？</h2>
+
+<ul>
+  <li>AdvT-Text, iAdvT-Text および提案手法の SPGD による生成される adversarial noise の比較
+    <ul>
+      <li>もともとの文の意味が壊れること無く adversarial example を生成できている</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/paper-survey/assets/img/nlp/Interpretable-Adversarial-Training-for-Text/figure2.png" alt="Figure 2" /></p>
+
+<h2 id="6-次に読むべき論文はあるか">6. 次に読むべき論文はあるか？</h2>
+
+<ul>
+  <li>AdvT-Text
+    <ul>
+      <li><a href="https://arxiv.org/abs/1605.07725">Miyato, Takeru, Andrew M. Dai, and Ian Goodfellow. “Adversarial training methods for semi-supervised text classification.” arXiv preprint arXiv:1605.07725 (2016).</a></li>
+    </ul>
+  </li>
+  <li>iAdvT-Text
+    <ul>
+      <li><a href="https://arxiv.org/abs/1805.02917">Sato, Motoki, et al. “Interpretable adversarial perturbation in input embedding space for text.” arXiv preprint arXiv:1805.02917 (2018).</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="論文情報リンク">論文情報・リンク</h3>
+
+<ul>
+  <li><a href="https://arxiv.org/abs/1905.12864">Barham, Samuel, and Soheil Feizi. “Interpretable Adversarial Training for Text.” arXiv preprint arXiv:1905.12864 (2019).</a></li>
+</ul>
+
+  </div>
+  <div class="social-button-item">
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text" data-via="shunk031" data-related="" data-show-count="false">Tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<div class="social-button-item">
+  <a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="basic-label-counter" data-hatena-bookmark-lang="ja" data-hatena-bookmark-height="28" title="このエントリーをはてなブックマークに追加">
+    <img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" />
+  </a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+</div>
+
+<div class="social-button-item">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.1';
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div class="fb-like" data-href="/summary/nlp/Interpretable-Adversarial-Training-for-Text" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+</div>
+
+</article>
+<!-- Post Navigation -->
+<div class="pagination">
+  <a class="prev" href="/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention">←&nbsp; Previous post</a>
+  
+</div>
+
+      </div>
+    </div>
+    <footer class="site-footer">
+  <div class="wrapper">
+    <span class="site-footer-owner">
+      <a href="https://github.com/shunk031/paper-survey">Paper Survey</a> is maintained by <a href="https://github.com/shunk031">shunk031</a>.
+    </span>
+    <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+  </div>
+</footer>
+
+<amp-analytics type="googleanalytics" id="analytics1">
+  <script type="application/json">
+    {
+	"vars": {
+	    "account": "UA-114287158-1"
+	},
+	"triggers": {
+	    "trackPageview": {
+		"on": "visible",
+		"request": "pageview"
+	    }
+	}
+    }
+  </script>
+</amp-analytics>
+
+
+<amp-install-serviceworker src="https://shunk031.github.io/paper-survey/sw.js" layout="nodisplay"></amp-install-serviceworker>
+
+  </body>
+</html>

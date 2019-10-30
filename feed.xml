@@ -1,5 +1,173 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-09-23T13:22:04+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Saliency Learning: Teaching the Model Where to Pay Attention</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention" rel="alternate" type="text/html" title="Saliency Learning: Teaching the Model Where to Pay Attention" /><published>2019-09-23T00:00:00+00:00</published><updated>2019-09-23T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-10-30T08:32:05+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Interpretable Adversarial Training for Text</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text" rel="alternate" type="text/html" title="Interpretable Adversarial Training for Text" /><published>2019-10-28T00:00:00+00:00</published><updated>2019-10-28T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;自然言語処理に対する解釈可能な敵対的摂動を生成する sparse projected gradient descent (SPGD) を提案&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;h3 id=&quot;自然言語処理における敵対的摂動の例&quot;&gt;自然言語処理における敵対的摂動の例&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Interpretable-Adversarial-Training-for-Text/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;2 つのある単語埋め込み表現 (original embedding と neighbor embedding) 間における敵対的摂動の例
+    &lt;ul&gt;
+      &lt;li&gt;Original embedding から 3 ステップ (緑の矢印) 動いて、黄色で示された生の摂動 (raw perturbation)となる
+ 	- スパース係数 &lt;script type=&quot;math/tex&quot;&gt;\sigma = 0.5&lt;/script&gt; の場合、最大ノルムの摂動の 50%が保持される&lt;/li&gt;
+      &lt;li&gt;Word A の摂動はコサイン類似度が最も高い最近傍に射影され、赤色で示された摂動 (projected perturbation) となる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;先行研究に以下 3 つの問題点が存在する:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Interpretability
+    &lt;ul&gt;
+      &lt;li&gt;なぜそのような敵対的摂動が加えられたか、また加えたあとの embedding を解釈するのは難しい&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Likelihood
+    &lt;ul&gt;
+      &lt;li&gt;敵対的摂動が加えられた単語列は、ground truth と比較してあまり自然なものではない&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Label-Invariance
+    &lt;ul&gt;
+      &lt;li&gt;敵対的摂動が加えられることにより単語列が表す意味が変わってしまい、教師ラベルが反転する余地がある&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;本研究では先行研究の問題点を以下の視点から解決する &lt;code class=&quot;highlighter-rouge&quot;&gt;sparse projected gradient descent (SPGD)&lt;/code&gt; を提案:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Sparsification
+    &lt;ul&gt;
+      &lt;li&gt;センテンスレベルに対して L2 ノルムが大きい摂動を選択して加える。ノルムが小さいものは 0 にする
+        &lt;ul&gt;
+          &lt;li&gt;スパース化した敵対的摂動を加えることで ground truth と比べても自然な文となる&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Directional Projection
+    &lt;ul&gt;
+      &lt;li&gt;敵対的摂動を加えるときに近傍の単語埋め込み表現と同じ direction に摂動が追加されるように写像する&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
+
+&lt;h3 id=&quot;先行研究-vanilla-adversarial-training-for-text-advt-text-miyato-iclr17&quot;&gt;先行研究 Vanilla Adversarial Training for Text (AdvT-Text) &lt;a href=&quot;https://arxiv.org/abs/1605.07725&quot;&gt;[Miyato+ ICLR17]&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;通常の loss &lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}(\theta)&lt;/script&gt; と adversarial loss &lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}_{\textrm{Adv}}&lt;/script&gt; を最小化する
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathbf{\theta}^{*} = \textrm{arg min}_{\mathbf{\theta}} (\mathcal{L}(\theta) + \lambda \mathcal{L}_{\textrm{Adv}}(\mathbf{\theta}))&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adversarial loss &lt;script type=&quot;math/tex&quot;&gt;\mathcal{L}_{\textrm{Adv}}&lt;/script&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathcal{L}_{\textrm{Adv}} = \frac{1}{N} \sum^{j=1}_{N} - \log{p(y^{(j)} | \textbf{x}^{(j)} + \textbf{d}^{(j)}}; \mathbf{\theta})&lt;/script&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Adversarial noise &lt;script type=&quot;math/tex&quot;&gt;\textbf{d}^{(j)}&lt;/script&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{d}^{(j)} = - \epsilon \frac{\textbf{g}}{||\textbf{g}||}, ~\textrm{where}~ \textbf{g} = \nabla_{\textbf{x}^{(j)}} \log{p(y^{(j)} | \textbf{x}^{(i)}; \mathbf{\hat{\theta}})}&lt;/script&gt;
+        &lt;ul&gt;
+          &lt;li&gt;AdvT-Text で計算される敵対的摂動から得られる単語表現は、元ある単語表現と一致しないため解釈が難しい。&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;先行研究-interpretable-adversarial-training-iadvt-text-sato-ijcai18&quot;&gt;先行研究 Interpretable Adversarial Training (iAdvT-Text)] &lt;a href=&quot;https://arxiv.org/abs/1805.02917&quot;&gt;[Sato+ IJCAI18]&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Interpretable adversarial noise
+    &lt;ul&gt;
+      &lt;li&gt;word embedding &lt;script type=&quot;math/tex&quot;&gt;v_i&lt;/script&gt; に対する &lt;script type=&quot;math/tex&quot;&gt;K&lt;/script&gt; 個の最近傍の unit-direction vectors &lt;script type=&quot;math/tex&quot;&gt;U_{i}^{K}&lt;/script&gt; を用いて &lt;script type=&quot;math/tex&quot;&gt;\textbf{d}&lt;/script&gt; を計算
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{d} = \sum_{k=1}^{K} \alpha_{k} \textbf{u}_{k}^{K}&lt;/script&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;direction を持った敵対的摂動 &lt;script type=&quot;math/tex&quot;&gt;\alpha^{*}&lt;/script&gt; を以下で計算
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathbf{\alpha}^{*} = - \epsilon \frac{\textbf{g}}{||\textbf{g}||}, ~\textrm{where}~ \textbf{g} = \nabla_{\mathbf{\alpha}} \log{p_c(y^{(j)}|\textbf{w}^{(i)}+\textbf{d}; \mathbf{\hat{\theta}})}&lt;/script&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;提案手法-sparsified-projected-gradient-descent&quot;&gt;提案手法 Sparsified Projected Gradient Descent&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;AdvT-Text において &lt;script type=&quot;math/tex&quot;&gt;M&lt;/script&gt; 回生成した摂動 &lt;script type=&quot;math/tex&quot;&gt;r_i&lt;/script&gt; に対して
+    &lt;ul&gt;
+      &lt;li&gt;unit-direction vector とのコサイン類似度が最大となるような摂動 &lt;script type=&quot;math/tex&quot;&gt;\hat{r}_i&lt;/script&gt; を得る
+        &lt;ul&gt;
+          &lt;li&gt;
+            &lt;script type=&quot;math/tex; mode=display&quot;&gt;\mathbf{\hat{r}}_{i} = (\textbf{r}_{i} \cdot \textbf{u}_{i}^{*})\textbf{u}_{i}^{*}, \textrm{where} ~\textbf{u}_{i}^{*} = \textrm{arg max}_{\textbf{u}_{i}^{(j)} \in U_{i}^{K}} (\textbf{r}_{i} \cdot \textbf{u}_{i}^{(j)})&lt;/script&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;スパース係数 &lt;script type=&quot;math/tex&quot;&gt;\sigma&lt;/script&gt; を用いて、L2 ノルムが &lt;script type=&quot;math/tex&quot;&gt;\lfloor (1 - \sigma)N \rfloor&lt;/script&gt; を満たさない摂動は 0 にする&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;映画の大規模レビューデータセット IMDB を用いて評価
+    &lt;ul&gt;
+      &lt;li&gt;摂動の解釈性を保持しつつ、先行研究と同等の精度を達成している&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Interpretable-Adversarial-Training-for-Text/table3.png&quot; alt=&quot;Table 3&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AdvT-Text, iAdvT-Text および提案手法の SPGD による生成される adversarial noise の比較
+    &lt;ul&gt;
+      &lt;li&gt;もともとの文の意味が壊れること無く adversarial example を生成できている&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/nlp/Interpretable-Adversarial-Training-for-Text/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;AdvT-Text
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1605.07725&quot;&gt;Miyato, Takeru, Andrew M. Dai, and Ian Goodfellow. “Adversarial training methods for semi-supervised text classification.” arXiv preprint arXiv:1605.07725 (2016).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;iAdvT-Text
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1805.02917&quot;&gt;Sato, Motoki, et al. “Interpretable adversarial perturbation in input embedding space for text.” arXiv preprint arXiv:1805.02917 (2018).&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1905.12864&quot;&gt;Barham, Samuel, and Soheil Feizi. “Interpretable Adversarial Training for Text.” arXiv preprint arXiv:1905.12864 (2019).&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Saliency Learning: Teaching the Model Where to Pay Attention</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention" rel="alternate" type="text/html" title="Saliency Learning: Teaching the Model Where to Pay Attention" /><published>2019-09-23T00:00:00+00:00</published><updated>2019-09-23T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Saliency-Learning-Teaching-the-Model-Where-to-Pay-Attention">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;モデルの訓練時に予測根拠となる部分を明示的に学習させることで、予測時に正確な予測根拠を提示する学習法を提案。&lt;/p&gt;
 
@@ -1045,92 +1213,4 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3186184&quot;&gt;Gao, Hongchang, et al. “Attention Convolutional Neural Network for Advertiser-level Click-through Rate Forecasting.” Proceedings of the 2018 World Wide Web Conference on World Wide Web. International World Wide Web Conferences Steering Committee, 2018.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Beyond News Contents: The Role of Social Context for Fake News Detection</title><link href="https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection" rel="alternate" type="text/html" title="Beyond News Contents: The Role of Social Context for Fake News Detection" /><published>2019-03-20T00:00:00+00:00</published><updated>2019-03-20T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;出版社・ニュース記事・ユーザの 3 つの関係をモデリングすることでフェイクニュース検出の精度向上を目指す TriFN を提案。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;フェイクニュース検出は主にニュース記事にフォーカスしたものと、ユーザのソーシャルな行動にフォーカスしているものが多い。
-これらは偽の情報を判断する言語的な観点やフェイク画像に対する視覚的観点に基づいたモデルの構築を行っている。
-またユーザに対して行動ログベースやユーザ間のネットワークベースのモデリングを行っている事例も多い。&lt;/p&gt;
-
-&lt;p&gt;本研究では、先行研究では考慮されてこなかった、&lt;code class=&quot;highlighter-rouge&quot;&gt;出版社&lt;/code&gt;・&lt;code class=&quot;highlighter-rouge&quot;&gt;ニュース記事&lt;/code&gt;・&lt;code class=&quot;highlighter-rouge&quot;&gt;ユーザ行動&lt;/code&gt;の 3 つの関係 &lt;code class=&quot;highlighter-rouge&quot;&gt;tri-relationship&lt;/code&gt; を考慮することでフェイクニュース検出の精度向上を目指す TriFN を提案している。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection/figure1.png&quot; width=&quot;400px&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Beyond-News-Contents-The-Role-of-Social-Context-for-Fake-News-Detection/figure2.png&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;tri-relationship-を考慮したフェイクニュース検出モデル-trifn&quot;&gt;Tri-relationship を考慮したフェイクニュース検出モデル TriFN&lt;/h3&gt;
-&lt;p&gt;TriFN は主に non-negative matrix factorization (NMF) をベースとした 5 つのコンポーネントから構成される。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;News Contents Embedding
-    &lt;ul&gt;
-      &lt;li&gt;Bag-of-words 表現なニュース記事から NMF でニュース記事の潜在表現を学習する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;User Embedding
-    &lt;ul&gt;
-      &lt;li&gt;ユーザのソーシャルな関係から NMF でユーザの潜在表現を学習する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;User-News Interaction Embedding
-    &lt;ul&gt;
-      &lt;li&gt;ユーザの信頼度によって得られるニュース記事の潜在表現を学習する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Publisher-News Relation Embedding
-    &lt;ul&gt;
-      &lt;li&gt;出版社の党派的なバイアスを考慮したニュース記事の潜在表現を学習する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Semi-supervised Linear Classifier
-    &lt;ul&gt;
-      &lt;li&gt;ニュース記事に対してフェイクニュース予測を行うための学習器を学習する&lt;/li&gt;
-      &lt;li&gt;半教師あり学習の枠組みを同時に使用し、ラベルが付与されていないデータからも学習する&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;FakeNewsNet データセットを用いて、&lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;か&lt;code class=&quot;highlighter-rouge&quot;&gt;fake&lt;/code&gt;かの 2 値分類問題としてフェイクニュース検出に対する検出精度の比較を行っている。
-比較対象として先行研究で提案されている複数の特徴抽出手法 (RST, LIWC, Castillo とこれらを組み合わせた RST + Castillo, LIWC + Castillo) とベースラインのモデル (LogReg, NBayes, DTree, RForest, XGBoost, AdaBoost, Gradient Boosting) で比較している。&lt;/p&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;早期のフェイクニュース検出におけるパフォーマンス
-    &lt;ul&gt;
-      &lt;li&gt;記事公開から 12 時間後 〜 96 時間後の各時間におけるフェイクニュース検出の精度比較を行った結果、提案手法の TriFN が一番良かった。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;モデルのパラメータ分析
-    &lt;ul&gt;
-      &lt;li&gt;ユーザのソーシャルな関係の寄与をコントロールするパラメータを大きくすると精度が向上した。
-        &lt;ul&gt;
-          &lt;li&gt;ユーザとニュース間の関係よりユーザのソーシャルな関係のほうが予測に寄与する。&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;フェイクニュース検出における data augmentation
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://ieeexplore.ieee.org/abstract/document/8594871/&quot;&gt;Shu, Kai, et al. “Deep headline generation for clickbait detection.” 2018 IEEE International Conference on Data Mining (ICDM). IEEE, 2018.&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1712.07709&quot;&gt;Shu, Kai, Suhang Wang, and Huan Liu. “Beyond News Contents: The Role of Social Context for Fake News Detection.” Proceedings of the Twelfth ACM International Conference on Web Search and Data Mining. ACM, 2019.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>

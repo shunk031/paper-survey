@@ -8,7 +8,7 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>Putting Fairness Principles into Practice Challenges Metrics and Improvements - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <title>Putting Fairness Principles into Practice Challenges Metrics and Improvements - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Putting Fairness Principles into Practice Challenges Metrics and Improvements" />
 <meta property="og:locale" content="en_US" />
@@ -20,9 +20,10 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-08-14T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Putting Fairness Principles into Practice Challenges Metrics and Improvements" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements","headline":"Putting Fairness Principles into Practice Challenges Metrics and Improvements","dateModified":"2019-08-14T00:00:00+00:00","datePublished":"2019-08-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements"},"@context":"http://schema.org"}</script>
+{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements","headline":"Putting Fairness Principles into Practice Challenges Metrics and Improvements","dateModified":"2019-08-14T00:00:00+00:00","datePublished":"2019-08-14T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/others/Putting-Fairness-Principles-into-Practice-Challenges-Metrics-and-Improvements"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -80,8 +81,6 @@
       
         
         <a class="page-link" href="/paper-survey/about/">About</a>
-        
-      
         
       
         
@@ -301,8 +300,6 @@
         
           
         
-          
-        
 	<a class="page-link" href="/paper-survey/summary/">Summary</a>
 	<a class="page-link" href="/paper-survey/category/cv">CV</a>
 	<a class="page-link" href="/paper-survey/category/nlp">NLP</a>
@@ -339,11 +336,11 @@
 本来なら右図のようにグループ間で予測の差は現れないはずである。
 こうした予測のバイアスを解消するため、Adversarial training を用いたグループ間の偏りに頑健な学習が提案されているが、学習時に不安定であったり、そもそも学習が難しい場合が多い。</p>
 
-<p>本研究ではあるグループにおける公正性、特にグループ間の <code class="highlighter-rouge">False Positive</code> の比較に焦点を当て、こうした false positive を抑制する新たな正則化手法である absolute correlation regularization を提案している。</p>
+<p>本研究ではあるグループにおける公正性、特にグループ間の <code class="language-plaintext highlighter-rouge">False Positive</code> の比較に焦点を当て、こうした false positive を抑制する新たな正則化手法である absolute correlation regularization を提案している。</p>
 
 <h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
 
-<p>Deep Neural Network (DNN) に通常の損失関数に加えて <code class="highlighter-rouge">absolute correlation regularization</code> を導入。</p>
+<p>Deep Neural Network (DNN) に通常の損失関数に加えて <code class="language-plaintext highlighter-rouge">absolute correlation regularization</code> を導入。</p>
 
 <h3 id="absolute-correlation-regularization">Absolute correlation regularization</h3>
 

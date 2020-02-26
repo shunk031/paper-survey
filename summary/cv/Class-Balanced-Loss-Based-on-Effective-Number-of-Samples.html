@@ -8,7 +8,7 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>Class-Balanced Loss Based on Effective Number of Samples - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <title>Class-Balanced Loss Based on Effective Number of Samples - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Class-Balanced Loss Based on Effective Number of Samples" />
 <meta property="og:locale" content="en_US" />
@@ -20,9 +20,10 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-05-25T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Class-Balanced Loss Based on Effective Number of Samples" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples","headline":"Class-Balanced Loss Based on Effective Number of Samples","dateModified":"2019-05-25T00:00:00+00:00","datePublished":"2019-05-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples"},"@context":"http://schema.org"}</script>
+{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples","headline":"Class-Balanced Loss Based on Effective Number of Samples","dateModified":"2019-05-25T00:00:00+00:00","datePublished":"2019-05-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -80,8 +81,6 @@
       
         
         <a class="page-link" href="/paper-survey/about/">About</a>
-        
-      
         
       
         
@@ -301,8 +300,6 @@
         
           
         
-          
-        
 	<a class="page-link" href="/paper-survey/summary/">Summary</a>
 	<a class="page-link" href="/paper-survey/category/cv">CV</a>
 	<a class="page-link" href="/paper-survey/category/nlp">NLP</a>
@@ -333,10 +330,10 @@
 <p><img src="/paper-survey/assets/img/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples/figure1.png" width="400px" alt="Figure 1" /></p>
 
 <p>実世界のデータセットは long-tail な分布を持つ不均衡データであることが多い。
-こうした不均衡データに対して、先行研究では主に <code class="highlighter-rouge">re-sampling</code> と <code class="highlighter-rouge">cost-sensitive learning</code> の観点から解決が図られてきた。
-<code class="highlighter-rouge">Re-sampling</code> における over-sampling では学習時に重複したデータを学習して過学習を引き起こしたり、under-sampling では学習に重要なデータを適切にサンプリングして学習することが難しい。
-そこで深層学習の文脈では損失関数に重み付けを行う <code class="highlighter-rouge">cost-sensitive learning</code> を採用する場合が多いが、こうした手法は実世界の long-tail な分布を持つ不均衡データに対してパフォーマンスが低下してしまう場合が多い。
-本研究では long-tail な不均衡データに対して、対象となるデータ数に効果的な <code class="highlighter-rouge">class-balanced loss</code> を提案し、
+こうした不均衡データに対して、先行研究では主に <code class="language-plaintext highlighter-rouge">re-sampling</code> と <code class="language-plaintext highlighter-rouge">cost-sensitive learning</code> の観点から解決が図られてきた。
+<code class="language-plaintext highlighter-rouge">Re-sampling</code> における over-sampling では学習時に重複したデータを学習して過学習を引き起こしたり、under-sampling では学習に重要なデータを適切にサンプリングして学習することが難しい。
+そこで深層学習の文脈では損失関数に重み付けを行う <code class="language-plaintext highlighter-rouge">cost-sensitive learning</code> を採用する場合が多いが、こうした手法は実世界の long-tail な分布を持つ不均衡データに対してパフォーマンスが低下してしまう場合が多い。
+本研究では long-tail な不均衡データに対して、対象となるデータ数に効果的な <code class="language-plaintext highlighter-rouge">class-balanced loss</code> を提案し、
 一般的に広く使われている softmax cross-entropy や sigmoid cross-entropy、focal loss などに適用し効果の検証を行っている。</p>
 
 <h2 id="3-技術や手法のキモはどこにある">3. 技術や手法の”キモ”はどこにある？</h2>
@@ -376,7 +373,7 @@
 
 <h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
 
-<p>CIFAR10/100 に対して imbalanced factor を元にデータの分布を擬似的に不均衡にした <code class="highlighter-rouge">long-tailed CIFAR10/100</code> 、<code class="highlighter-rouge">iNatiralist</code> 、<code class="highlighter-rouge">ImageNet</code> を用いて、ベースラインのモデルと class-balanced loss を導入したモデルの比較を行っている。</p>
+<p>CIFAR10/100 に対して imbalanced factor を元にデータの分布を擬似的に不均衡にした <code class="language-plaintext highlighter-rouge">long-tailed CIFAR10/100</code> 、<code class="language-plaintext highlighter-rouge">iNatiralist</code> 、<code class="language-plaintext highlighter-rouge">ImageNet</code> を用いて、ベースラインのモデルと class-balanced loss を導入したモデルの比較を行っている。</p>
 
 <p>Sigmoid ベースの loss を用いる場合は、最終全結合層のバイアスに対してクラスの事前確率を <script type="math/tex">\pi = 1/C</script> として、<script type="math/tex">b = - \log{((1 - \pi)/{\pi})}</script> として初期化し、バイアス項にのみ weight decay を適用している。</p>
 

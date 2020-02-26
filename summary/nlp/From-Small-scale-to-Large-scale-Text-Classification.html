@@ -8,7 +8,7 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>From Small-scale to Large-scale Text Classification - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <title>From Small-scale to Large-scale Text Classification - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="From Small-scale to Large-scale Text Classification" />
 <meta property="og:locale" content="en_US" />
@@ -20,9 +20,10 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-07-09T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="From Small-scale to Large-scale Text Classification" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification","headline":"From Small-scale to Large-scale Text Classification","dateModified":"2019-07-09T00:00:00+00:00","datePublished":"2019-07-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification"},"@context":"http://schema.org"}</script>
+{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification","headline":"From Small-scale to Large-scale Text Classification","dateModified":"2019-07-09T00:00:00+00:00","datePublished":"2019-07-09T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/nlp/From-Small-scale-to-Large-scale-Text-Classification"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -80,8 +81,6 @@
       
         
         <a class="page-link" href="/paper-survey/about/">About</a>
-        
-      
         
       
         
@@ -301,8 +300,6 @@
         
           
         
-          
-        
 	<a class="page-link" href="/paper-survey/summary/">Summary</a>
 	<a class="page-link" href="/paper-survey/category/cv">CV</a>
 	<a class="page-link" href="/paper-survey/category/nlp">NLP</a>
@@ -330,7 +327,7 @@
 
 <h2 id="2-先行研究と比べてどこがすごいの">2. 先行研究と比べてどこがすごいの？</h2>
 
-<p>テキスト分類においてカテゴリ数が非常に多い <code class="highlighter-rouge">large-scale</code> な問題設定と、比較的カテゴリ数の少ない <code class="highlighter-rouge">small-scale</code> な問題設定がある。</p>
+<p>テキスト分類においてカテゴリ数が非常に多い <code class="language-plaintext highlighter-rouge">large-scale</code> な問題設定と、比較的カテゴリ数の少ない <code class="language-plaintext highlighter-rouge">small-scale</code> な問題設定がある。</p>
 
 <p>Web 検索のパーソナライズやレコメンドシステムなど、カテゴリ数が非常に多いテキスト分類は学習時に各カテゴリを捉えられるよう大規模なデータセットが必要である。</p>
 
@@ -369,14 +366,14 @@
 <script type="math/tex; mode=display">\textbf{g} = \sigma(\textbf{W}_{\textrm{small} \to \textrm{large}} \textbf{z}_{\textrm{small}} + \textbf{b}_{\textrm{small} \to \textrm{large}})</script>
 
 <ul>
-  <li><code class="highlighter-rouge">Large-scale</code> テキスト分類タスクにおいて、ゲート <script type="math/tex">{\bf g}</script> を用いて最終的な特徴量を得る
+  <li><code class="language-plaintext highlighter-rouge">Large-scale</code> テキスト分類タスクにおいて、ゲート <script type="math/tex">{\bf g}</script> を用いて最終的な特徴量を得る
     <ul>
       <li>
         <script type="math/tex; mode=display">\textbf{z}'_{\textrm{large}} = \textbf{z}_{\textrm{large}} + \textbf{z}_{\textrm{share}} + \textbf{g} \odot \textbf{z}_{\textrm{small}}</script>
       </li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">Small-scale</code> テキスト分類タスクにおいては以下となる
+  <li><code class="language-plaintext highlighter-rouge">Small-scale</code> テキスト分類タスクにおいては以下となる
     <ul>
       <li>
         <script type="math/tex; mode=display">\textbf{z}'_{\textrm{small}} = \textbf{z}_{\textrm{small}} + \textbf{z}_{\textrm{share}}</script>
@@ -388,7 +385,7 @@
 <h3 id="モデルの学習">モデルの学習</h3>
 <h4 id="joint-traning">Joint Traning</h4>
 <ul>
-  <li>ランダムにタスクを選択する (<code class="highlighter-rouge">large-scale</code> or <code class="highlighter-rouge">small-scale</code>)</li>
+  <li>ランダムにタスクを選択する (<code class="language-plaintext highlighter-rouge">large-scale</code> or <code class="language-plaintext highlighter-rouge">small-scale</code>)</li>
   <li>選択したタスクに沿った学習データを選択する</li>
   <li>これら学習データをもとに勾配降下法でパラメータを更新する</li>
 </ul>
@@ -406,19 +403,19 @@
         <ul>
           <li>大分類と小分類が含まれている。
             <ul>
-              <li><code class="highlighter-rouge">Top/Sports</code>, <code class="highlighter-rouge">Top/Health</code>, <code class="highlighter-rouge">Top/Computers</code></li>
-              <li><code class="highlighter-rouge">Top/Sports/Baseball/Major_League/Teams/Los_Angles_Dogders/News_and_Media</code></li>
+              <li><code class="language-plaintext highlighter-rouge">Top/Sports</code>, <code class="language-plaintext highlighter-rouge">Top/Health</code>, <code class="language-plaintext highlighter-rouge">Top/Computers</code></li>
+              <li><code class="language-plaintext highlighter-rouge">Top/Sports/Baseball/Major_League/Teams/Los_Angles_Dogders/News_and_Media</code></li>
             </ul>
           </li>
           <li>学習データとして 23,000 ページを対象
- 	  - <code class="highlighter-rouge">Smal-scale</code> テキスト分類タスク用にトップレベルの 13 カテゴリを使用</li>
+ 	  - <code class="language-plaintext highlighter-rouge">Smal-scale</code> テキスト分類タスク用にトップレベルの 13 カテゴリを使用</li>
         </ul>
       </li>
     </ul>
   </li>
   <li>New York Times (NYT)
     <ul>
-      <li>ODP の追加テストデータとして、new york times の記事から <code class="highlighter-rouge">art</code>, <code class="highlighter-rouge">business</code>, <code class="highlighter-rouge">food</code>, <code class="highlighter-rouge">health</code>, <code class="highlighter-rouge">politics</code>, <code class="highlighter-rouge">sports</code> なカテゴリをランダムに取得して評価に使用した。</li>
+      <li>ODP の追加テストデータとして、new york times の記事から <code class="language-plaintext highlighter-rouge">art</code>, <code class="language-plaintext highlighter-rouge">business</code>, <code class="language-plaintext highlighter-rouge">food</code>, <code class="language-plaintext highlighter-rouge">health</code>, <code class="language-plaintext highlighter-rouge">politics</code>, <code class="language-plaintext highlighter-rouge">sports</code> なカテゴリをランダムに取得して評価に使用した。</li>
     </ul>
   </li>
 </ul>
@@ -510,8 +507,8 @@
 
 <h3 id="odp-データセットに対する精度比較">ODP データセットに対する精度比較</h3>
 <ul>
-  <li><code class="highlighter-rouge">Large-scale</code> テキスト分類タスクでは提案手法 SPG-CNN が outperform</li>
-  <li><code class="highlighter-rouge">Small-scale</code> テキスト分類タスクにおいては share layer + private layer のある LSTM が outperform
+  <li><code class="language-plaintext highlighter-rouge">Large-scale</code> テキスト分類タスクでは提案手法 SPG-CNN が outperform</li>
+  <li><code class="language-plaintext highlighter-rouge">Small-scale</code> テキスト分類タスクにおいては share layer + private layer のある LSTM が outperform
     <ul>
       <li>データが十分にあってカテゴリ間の分布が均衡なものは CNN より LSTM が強い傾向は先行研究でも確認されている</li>
     </ul>

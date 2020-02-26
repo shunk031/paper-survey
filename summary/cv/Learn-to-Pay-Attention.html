@@ -8,7 +8,7 @@
   <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <title>Learn to Pay Attention - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <title>Learn to Pay Attention - Paper Survey</title> <!-- Begin Jekyll SEO tag v2.6.1 -->
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Learn to Pay Attention" />
 <meta property="og:locale" content="en_US" />
@@ -20,9 +20,10 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-06-16T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Learn to Pay Attention" />
 <meta name="twitter:site" content="@shunk031" />
 <script type="application/ld+json">
-{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention","headline":"Learn to Pay Attention","dateModified":"2018-06-16T00:00:00+00:00","datePublished":"2018-06-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention"},"@context":"http://schema.org"}</script>
+{"description":"1. どんなもの？","@type":"BlogPosting","url":"https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention","headline":"Learn to Pay Attention","dateModified":"2018-06-16T00:00:00+00:00","datePublished":"2018-06-16T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://shunk031.github.io/paper-survey/summary/cv/Learn-to-Pay-Attention"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link type="application/atom+xml" rel="alternate" href="https://shunk031.github.io/paper-survey/feed.xml" title="Paper Survey" />
@@ -80,8 +81,6 @@
       
         
         <a class="page-link" href="/paper-survey/about/">About</a>
-        
-      
         
       
         
@@ -301,8 +300,6 @@
         
           
         
-          
-        
 	<a class="page-link" href="/paper-survey/summary/">Summary</a>
 	<a class="page-link" href="/paper-survey/category/cv">CV</a>
 	<a class="page-link" href="/paper-survey/category/nlp">NLP</a>
@@ -342,19 +339,19 @@
 
 <p><img src="/paper-survey/assets/img/cv/Learn-to-Pay-Attention/figure2.png" alt="Figure 2" /></p>
 
-<p><code class="highlighter-rouge">local feature vector</code> と <code class="highlighter-rouge">global feature vector</code> を用いたattention機構を実現した。</p>
+<p><code class="language-plaintext highlighter-rouge">local feature vector</code> と <code class="language-plaintext highlighter-rouge">global feature vector</code> を用いたattention機構を実現した。</p>
 
 <ul>
-  <li>畳み込み層から活性化関数を通して得られるlocal feature vector <script type="math/tex">\mathcal{L}</script> と最終全結合層の出力であるglobal feature vector <script type="math/tex">\mathcal{G}</script> から、<code class="highlighter-rouge">compatibility score</code> <script type="math/tex">C\left(\hat{\mathcal{L}}, \mathcal{G} \right)</script> を計算し、各local feature vectorの重要度 <script type="math/tex">\mathcal{A}</script> (attention) を算出する</li>
+  <li>畳み込み層から活性化関数を通して得られるlocal feature vector <script type="math/tex">\mathcal{L}</script> と最終全結合層の出力であるglobal feature vector <script type="math/tex">\mathcal{G}</script> から、<code class="language-plaintext highlighter-rouge">compatibility score</code> <script type="math/tex">C\left(\hat{\mathcal{L}}, \mathcal{G} \right)</script> を計算し、各local feature vectorの重要度 <script type="math/tex">\mathcal{A}</script> (attention) を算出する</li>
   <li>重要度 <script type="math/tex">\mathcal{A}</script> とlocal feature vectorとの重み付き平均 <script type="math/tex">\mathcal{G}_a</script> を計算する</li>
   <li>各畳み込み層から得られる複数の <script type="math/tex">\mathcal{G}_a</script> をconcatしたベクトルを用いて分類を行う</li>
-  <li><code class="highlighter-rouge">compatibility socre</code> を計算する際に用いる <script type="math/tex">\mathcal{C}</script> は ドット積 を利用した</li>
+  <li><code class="language-plaintext highlighter-rouge">compatibility socre</code> を計算する際に用いる <script type="math/tex">\mathcal{C}</script> は ドット積 を利用した</li>
 </ul>
 
 <h2 id="4-どうやって有効だと検証した">4. どうやって有効だと検証した？</h2>
 
 <p>ベースラインとして、先行研究のVGG-GAPおよびVGG-PAN、ResNet164と、VGG/ResNetに対して本研究のattention機構を導入できるようパラメータを調整したネットワークを比較している。
-global feature vectorとlocal feature vectorに対してcompatibility scoreを計算する際にドット積を用いた<code class="highlighter-rouge">dp</code>と、パラメータを用いた<code class="highlighter-rouge">pc</code>を比較している。</p>
+global feature vectorとlocal feature vectorに対してcompatibility scoreを計算する際にドット積を用いた<code class="language-plaintext highlighter-rouge">dp</code>と、パラメータを用いた<code class="language-plaintext highlighter-rouge">pc</code>を比較している。</p>
 
 <p>評価に用いるデータセットはCIFAR10/100、CUB-200-2011、SVHN等を利用している。また導入したattention機構がadversarialなサンプルに対してもロバストであることを示す実験も行っている。</p>
 

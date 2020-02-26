@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2019-10-30T08:32:05+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2020-02-26T13:51:00+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
 </subtitle><entry><title type="html">Interpretable Adversarial Training for Text</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text" rel="alternate" type="text/html" title="Interpretable Adversarial Training for Text" /><published>2019-10-28T00:00:00+00:00</published><updated>2019-10-28T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;自然言語処理に対する解釈可能な敵対的摂動を生成する sparse projected gradient descent (SPGD) を提案&lt;/p&gt;
@@ -38,7 +38,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;本研究では先行研究の問題点を以下の視点から解決する &lt;code class=&quot;highlighter-rouge&quot;&gt;sparse projected gradient descent (SPGD)&lt;/code&gt; を提案:&lt;/p&gt;
+&lt;p&gt;本研究では先行研究の問題点を以下の視点から解決する &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sparse projected gradient descent (SPGD)&lt;/code&gt; を提案:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Sparsification
     &lt;ul&gt;
@@ -191,8 +191,8 @@
 
 &lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 
-&lt;p&gt;文中の各単語に対して説明性のアノテーションを付与するのは難しい。そこで &lt;code class=&quot;highlighter-rouge&quot;&gt;event extraction&lt;/code&gt; タスクと &lt;code class=&quot;highlighter-rouge&quot;&gt;cloze-style question answering&lt;/code&gt; タスクを元に説明性のアノテーションをシミュレーションした。
-Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt;ACE2005&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;Rich ERE 2015&lt;/code&gt; を使用した。また cloze-style question answering タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt;Children Book Test Named Entity&lt;/code&gt; (CBT-NE) と &lt;code class=&quot;highlighter-rouge&quot;&gt;Common Noun&lt;/code&gt; (CBT-CN) を使用した。&lt;/p&gt;
+&lt;p&gt;文中の各単語に対して説明性のアノテーションを付与するのは難しい。そこで &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;event extraction&lt;/code&gt; タスクと &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cloze-style question answering&lt;/code&gt; タスクを元に説明性のアノテーションをシミュレーションした。
+Event extraction タスクでは &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ACE2005&lt;/code&gt; と &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rich ERE 2015&lt;/code&gt; を使用した。また cloze-style question answering タスクでは &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Children Book Test Named Entity&lt;/code&gt; (CBT-NE) と &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Common Noun&lt;/code&gt; (CBT-CN) を使用した。&lt;/p&gt;
 
 &lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
 
@@ -226,8 +226,8 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 本研究の目標は、検索連動型広告を主としたオンライン広告の品質が他の広告のクリック率にどのように影響するかを分析することである。
 通常、広告は複数個同時に表示され、これら広告の表示順は広告の配信効果に影響があるとされている。&lt;/p&gt;
 
-&lt;p&gt;本研究ではこうした広告群に対して時系列でクリックされる確率 &lt;code class=&quot;highlighter-rouge&quot;&gt;pClick&lt;/code&gt; スコアを予測するモデルを構築した。
-また pClick スコアをもとにトップに表示される広告とそれ移行の広告との間にある &lt;code class=&quot;highlighter-rouge&quot;&gt;Externality&lt;/code&gt; を用いて広告の品質を考慮するモデルを構築した。&lt;/p&gt;
+&lt;p&gt;本研究ではこうした広告群に対して時系列でクリックされる確率 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pClick&lt;/code&gt; スコアを予測するモデルを構築した。
+また pClick スコアをもとにトップに表示される広告とそれ移行の広告との間にある &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Externality&lt;/code&gt; を用いて広告の品質を考慮するモデルを構築した。&lt;/p&gt;
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
@@ -235,7 +235,7 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 
 &lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model/figure2.png&quot; width=&quot;400px&quot; alt=&quot;Figure 2&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;先行研究の DNN ベースのベースラインモデルに加えて &lt;code class=&quot;highlighter-rouge&quot;&gt;Externality&lt;/code&gt; を考慮した特徴量を入力する。&lt;/p&gt;
+&lt;p&gt;先行研究の DNN ベースのベースラインモデルに加えて &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Externality&lt;/code&gt; を考慮した特徴量を入力する。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Ad-Click-Prediction-in-Sequence-with-Long-Short-Term-Memory-Networks-an-Externality-aware-Model/figure5.png&quot; width=&quot;400px&quot; alt=&quot;Figure 5&quot; /&gt;&lt;/p&gt;
 
@@ -365,7 +365,7 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 
 &lt;h3 id=&quot;fine-grained-visual-preference-modeling&quot;&gt;Fine-grained Visual Preference Modeling&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;ファッション画像に対して事前学習済み VGG19 の &lt;code class=&quot;highlighter-rouge&quot;&gt;conv5&lt;/code&gt; ブロック (最終ブロック) を画像特徴量として利用
+  &lt;li&gt;ファッション画像に対して事前学習済み VGG19 の &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conv5&lt;/code&gt; ブロック (最終ブロック) を画像特徴量として利用
     &lt;ul&gt;
       &lt;li&gt;計算リソースが許すなら fine-tuning してもよいが今回は実施していない&lt;/li&gt;
     &lt;/ul&gt;
@@ -518,11 +518,11 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 本来なら右図のようにグループ間で予測の差は現れないはずである。
 こうした予測のバイアスを解消するため、Adversarial training を用いたグループ間の偏りに頑健な学習が提案されているが、学習時に不安定であったり、そもそも学習が難しい場合が多い。&lt;/p&gt;
 
-&lt;p&gt;本研究ではあるグループにおける公正性、特にグループ間の &lt;code class=&quot;highlighter-rouge&quot;&gt;False Positive&lt;/code&gt; の比較に焦点を当て、こうした false positive を抑制する新たな正則化手法である absolute correlation regularization を提案している。&lt;/p&gt;
+&lt;p&gt;本研究ではあるグループにおける公正性、特にグループ間の &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;False Positive&lt;/code&gt; の比較に焦点を当て、こうした false positive を抑制する新たな正則化手法である absolute correlation regularization を提案している。&lt;/p&gt;
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
 
-&lt;p&gt;Deep Neural Network (DNN) に通常の損失関数に加えて &lt;code class=&quot;highlighter-rouge&quot;&gt;absolute correlation regularization&lt;/code&gt; を導入。&lt;/p&gt;
+&lt;p&gt;Deep Neural Network (DNN) に通常の損失関数に加えて &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;absolute correlation regularization&lt;/code&gt; を導入。&lt;/p&gt;
 
 &lt;h3 id=&quot;absolute-correlation-regularization&quot;&gt;Absolute correlation regularization&lt;/h3&gt;
 
@@ -648,7 +648,7 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 
 &lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 
-&lt;p&gt;テキスト分類においてカテゴリ数が非常に多い &lt;code class=&quot;highlighter-rouge&quot;&gt;large-scale&lt;/code&gt; な問題設定と、比較的カテゴリ数の少ない &lt;code class=&quot;highlighter-rouge&quot;&gt;small-scale&lt;/code&gt; な問題設定がある。&lt;/p&gt;
+&lt;p&gt;テキスト分類においてカテゴリ数が非常に多い &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;large-scale&lt;/code&gt; な問題設定と、比較的カテゴリ数の少ない &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;small-scale&lt;/code&gt; な問題設定がある。&lt;/p&gt;
 
 &lt;p&gt;Web 検索のパーソナライズやレコメンドシステムなど、カテゴリ数が非常に多いテキスト分類は学習時に各カテゴリを捉えられるよう大規模なデータセットが必要である。&lt;/p&gt;
 
@@ -687,14 +687,14 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 &lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{g} = \sigma(\textbf{W}_{\textrm{small} \to \textrm{large}} \textbf{z}_{\textrm{small}} + \textbf{b}_{\textrm{small} \to \textrm{large}})&lt;/script&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Large-scale&lt;/code&gt; テキスト分類タスクにおいて、ゲート &lt;script type=&quot;math/tex&quot;&gt;{\bf g}&lt;/script&gt; を用いて最終的な特徴量を得る
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Large-scale&lt;/code&gt; テキスト分類タスクにおいて、ゲート &lt;script type=&quot;math/tex&quot;&gt;{\bf g}&lt;/script&gt; を用いて最終的な特徴量を得る
     &lt;ul&gt;
       &lt;li&gt;
         &lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{z}'_{\textrm{large}} = \textbf{z}_{\textrm{large}} + \textbf{z}_{\textrm{share}} + \textbf{g} \odot \textbf{z}_{\textrm{small}}&lt;/script&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Small-scale&lt;/code&gt; テキスト分類タスクにおいては以下となる
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Small-scale&lt;/code&gt; テキスト分類タスクにおいては以下となる
     &lt;ul&gt;
       &lt;li&gt;
         &lt;script type=&quot;math/tex; mode=display&quot;&gt;\textbf{z}'_{\textrm{small}} = \textbf{z}_{\textrm{small}} + \textbf{z}_{\textrm{share}}&lt;/script&gt;
@@ -706,7 +706,7 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 &lt;h3 id=&quot;モデルの学習&quot;&gt;モデルの学習&lt;/h3&gt;
 &lt;h4 id=&quot;joint-traning&quot;&gt;Joint Traning&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;ランダムにタスクを選択する (&lt;code class=&quot;highlighter-rouge&quot;&gt;large-scale&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;small-scale&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;ランダムにタスクを選択する (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;large-scale&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;small-scale&lt;/code&gt;)&lt;/li&gt;
   &lt;li&gt;選択したタスクに沿った学習データを選択する&lt;/li&gt;
   &lt;li&gt;これら学習データをもとに勾配降下法でパラメータを更新する&lt;/li&gt;
 &lt;/ul&gt;
@@ -724,19 +724,19 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
         &lt;ul&gt;
           &lt;li&gt;大分類と小分類が含まれている。
             &lt;ul&gt;
-              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Sports&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Health&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Computers&lt;/code&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Top/Sports/Baseball/Major_League/Teams/Los_Angles_Dogders/News_and_Media&lt;/code&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Top/Sports&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Top/Health&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Top/Computers&lt;/code&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Top/Sports/Baseball/Major_League/Teams/Los_Angles_Dogders/News_and_Media&lt;/code&gt;&lt;/li&gt;
             &lt;/ul&gt;
           &lt;/li&gt;
           &lt;li&gt;学習データとして 23,000 ページを対象
- 	  - &lt;code class=&quot;highlighter-rouge&quot;&gt;Smal-scale&lt;/code&gt; テキスト分類タスク用にトップレベルの 13 カテゴリを使用&lt;/li&gt;
+ 	  - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Smal-scale&lt;/code&gt; テキスト分類タスク用にトップレベルの 13 カテゴリを使用&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;New York Times (NYT)
     &lt;ul&gt;
-      &lt;li&gt;ODP の追加テストデータとして、new york times の記事から &lt;code class=&quot;highlighter-rouge&quot;&gt;art&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;business&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;food&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;health&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;politics&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;sports&lt;/code&gt; なカテゴリをランダムに取得して評価に使用した。&lt;/li&gt;
+      &lt;li&gt;ODP の追加テストデータとして、new york times の記事から &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;art&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;business&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;food&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;health&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;politics&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sports&lt;/code&gt; なカテゴリをランダムに取得して評価に使用した。&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -828,8 +828,8 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 
 &lt;h3 id=&quot;odp-データセットに対する精度比較&quot;&gt;ODP データセットに対する精度比較&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Large-scale&lt;/code&gt; テキスト分類タスクでは提案手法 SPG-CNN が outperform&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Small-scale&lt;/code&gt; テキスト分類タスクにおいては share layer + private layer のある LSTM が outperform
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Large-scale&lt;/code&gt; テキスト分類タスクでは提案手法 SPG-CNN が outperform&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Small-scale&lt;/code&gt; テキスト分類タスクにおいては share layer + private layer のある LSTM が outperform
     &lt;ul&gt;
       &lt;li&gt;データが十分にあってカテゴリ間の分布が均衡なものは CNN より LSTM が強い傾向は先行研究でも確認されている&lt;/li&gt;
     &lt;/ul&gt;
@@ -928,19 +928,19 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 &lt;h4 id=&quot;モデルのアーキテクチャ&quot;&gt;モデルのアーキテクチャ&lt;/h4&gt;
 &lt;h4 id=&quot;モデルの学習-1&quot;&gt;モデルの学習&lt;/h4&gt;
 &lt;p&gt;入力特徴を concat したものをフィードフォワードニューラルネットワークに入力する。
-損失関数として&lt;code class=&quot;highlighter-rouge&quot;&gt;NNSelect&lt;/code&gt;と同様に&lt;code class=&quot;highlighter-rouge&quot;&gt;triplet loss&lt;/code&gt;を使用する。
+損失関数として&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NNSelect&lt;/code&gt;と同様に&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;triplet loss&lt;/code&gt;を使用する。
 ここでは &lt;script type=&quot;math/tex&quot;&gt;s(d_i, d_j)&lt;/script&gt; としてフィードフォワードニューラルネットワークの出力を sigmoid の通した値を使用する。
 テスト時にはこの &lt;script type=&quot;math/tex&quot;&gt;s(d_i, d_j)&lt;/script&gt; の値が一番高いものを推薦候補として使用する。&lt;/p&gt;
 
 &lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 &lt;p&gt;論文引用推薦の評価に用いられる DBLP、PubMed データセットを使用した。
-また新たに &lt;code class=&quot;highlighter-rouge&quot;&gt;OpenCorpus&lt;/code&gt; という 700 万件程度のコンピュータサイエンスやニューロサイエンスの科学論文を集めたデータセットを構築し、モデルの評価に使用した。&lt;/p&gt;
+また新たに &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OpenCorpus&lt;/code&gt; という 700 万件程度のコンピュータサイエンスやニューロサイエンスの科学論文を集めたデータセットを構築し、モデルの評価に使用した。&lt;/p&gt;
 
 &lt;p&gt;ベースラインとして先行研究の Cluscite と BM25 に対して提案手法の比較を行った。
-評価指標として &lt;code class=&quot;highlighter-rouge&quot;&gt;Mean Reciprocal Rank (MRR)&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;F1@20&lt;/code&gt; を使用した。&lt;/p&gt;
+評価指標として &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Mean Reciprocal Rank (MRR)&lt;/code&gt; と &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;F1@20&lt;/code&gt; を使用した。&lt;/p&gt;
 
-&lt;p&gt;候補論文を &lt;code class=&quot;highlighter-rouge&quot;&gt;NNSelect&lt;/code&gt; で探索するに当たり、近傍探索アルゴリズムとして &lt;code class=&quot;highlighter-rouge&quot;&gt;Annoy&lt;/code&gt; を使用した。
-また提案手法のハイパーパラメータを &lt;code class=&quot;highlighter-rouge&quot;&gt;hyperopt&lt;/code&gt; で最適化した。&lt;/p&gt;
+&lt;p&gt;候補論文を &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NNSelect&lt;/code&gt; で探索するに当たり、近傍探索アルゴリズムとして &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Annoy&lt;/code&gt; を使用した。
+また提案手法のハイパーパラメータを &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hyperopt&lt;/code&gt; で最適化した。&lt;/p&gt;
 
 &lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
 &lt;h3 id=&quot;負例選択について&quot;&gt;負例選択について&lt;/h3&gt;
@@ -961,7 +961,7 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 
 &lt;h3 id=&quot;自己引用のバイアスについて&quot;&gt;自己引用のバイアスについて&lt;/h3&gt;
 &lt;p&gt;メタデータ（例えば著者）で訓練されたモデルは、自己引用や他の有名な著者に偏っている可能性があると仮定し、
-メタデータの有無でそれぞれ &lt;code class=&quot;highlighter-rouge&quot;&gt;NNRank&lt;/code&gt; モデルを学習させる実験を行った。
+メタデータの有無でそれぞれ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NNRank&lt;/code&gt; モデルを学習させる実験を行った。
 メタデータを使って訓練されたモデルは、クエリ論文の著者の 1 人によって作成された論文を上位に推薦する傾向を確認した。&lt;/p&gt;
 
 &lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
@@ -986,10 +986,10 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 &lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/cv/Class-Balanced-Loss-Based-on-Effective-Number-of-Samples/figure1.png&quot; width=&quot;400px&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;実世界のデータセットは long-tail な分布を持つ不均衡データであることが多い。
-こうした不均衡データに対して、先行研究では主に &lt;code class=&quot;highlighter-rouge&quot;&gt;re-sampling&lt;/code&gt; と &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-sensitive learning&lt;/code&gt; の観点から解決が図られてきた。
-&lt;code class=&quot;highlighter-rouge&quot;&gt;Re-sampling&lt;/code&gt; における over-sampling では学習時に重複したデータを学習して過学習を引き起こしたり、under-sampling では学習に重要なデータを適切にサンプリングして学習することが難しい。
-そこで深層学習の文脈では損失関数に重み付けを行う &lt;code class=&quot;highlighter-rouge&quot;&gt;cost-sensitive learning&lt;/code&gt; を採用する場合が多いが、こうした手法は実世界の long-tail な分布を持つ不均衡データに対してパフォーマンスが低下してしまう場合が多い。
-本研究では long-tail な不均衡データに対して、対象となるデータ数に効果的な &lt;code class=&quot;highlighter-rouge&quot;&gt;class-balanced loss&lt;/code&gt; を提案し、
+こうした不均衡データに対して、先行研究では主に &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;re-sampling&lt;/code&gt; と &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cost-sensitive learning&lt;/code&gt; の観点から解決が図られてきた。
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Re-sampling&lt;/code&gt; における over-sampling では学習時に重複したデータを学習して過学習を引き起こしたり、under-sampling では学習に重要なデータを適切にサンプリングして学習することが難しい。
+そこで深層学習の文脈では損失関数に重み付けを行う &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cost-sensitive learning&lt;/code&gt; を採用する場合が多いが、こうした手法は実世界の long-tail な分布を持つ不均衡データに対してパフォーマンスが低下してしまう場合が多い。
+本研究では long-tail な不均衡データに対して、対象となるデータ数に効果的な &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class-balanced loss&lt;/code&gt; を提案し、
 一般的に広く使われている softmax cross-entropy や sigmoid cross-entropy、focal loss などに適用し効果の検証を行っている。&lt;/p&gt;
 
 &lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
@@ -1029,7 +1029,7 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
 
 &lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
 
-&lt;p&gt;CIFAR10/100 に対して imbalanced factor を元にデータの分布を擬似的に不均衡にした &lt;code class=&quot;highlighter-rouge&quot;&gt;long-tailed CIFAR10/100&lt;/code&gt; 、&lt;code class=&quot;highlighter-rouge&quot;&gt;iNatiralist&lt;/code&gt; 、&lt;code class=&quot;highlighter-rouge&quot;&gt;ImageNet&lt;/code&gt; を用いて、ベースラインのモデルと class-balanced loss を導入したモデルの比較を行っている。&lt;/p&gt;
+&lt;p&gt;CIFAR10/100 に対して imbalanced factor を元にデータの分布を擬似的に不均衡にした &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;long-tailed CIFAR10/100&lt;/code&gt; 、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iNatiralist&lt;/code&gt; 、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ImageNet&lt;/code&gt; を用いて、ベースラインのモデルと class-balanced loss を導入したモデルの比較を行っている。&lt;/p&gt;
 
 &lt;p&gt;Sigmoid ベースの loss を用いる場合は、最終全結合層のバイアスに対してクラスの事前確率を &lt;script type=&quot;math/tex&quot;&gt;\pi = 1/C&lt;/script&gt; として、&lt;script type=&quot;math/tex&quot;&gt;b = - \log{((1 - \pi)/{\pi})}&lt;/script&gt; として初期化し、バイアス項にのみ weight decay を適用している。&lt;/p&gt;
 
@@ -1105,11 +1105,11 @@ Event extraction タスクでは &lt;code class=&quot;highlighter-rouge&quot;&gt
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.05555&quot;&gt;Cui, Yin, et al. “Class-Balanced Loss Based on Effective Number of Samples.” arXiv preprint arXiv:1901.05555 (2019).&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting</title><link href="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting" rel="alternate" type="text/html" title="Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting" /><published>2019-05-09T00:00:00+00:00</published><updated>2019-05-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; という新たな視点で CTR 予測を行う Context-aware Attention Convolutional Neural Network を提案した。&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; という新たな視点で CTR 予測を行う Context-aware Attention Convolutional Neural Network を提案した。&lt;/p&gt;
 
 &lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
 
-&lt;p&gt;CTR 予測問題はオンライン広告における重要な問題の 1 つである。先行研究では &lt;code class=&quot;highlighter-rouge&quot;&gt;ユーザ単位&lt;/code&gt; の CTR 予測モデルの提案は複数行われているが、 &lt;code class=&quot;highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; での予測は本研究が著者が知りうる限りで初めてである。
+&lt;p&gt;CTR 予測問題はオンライン広告における重要な問題の 1 つである。先行研究では &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ユーザ単位&lt;/code&gt; の CTR 予測モデルの提案は複数行われているが、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; での予測は本研究が著者が知りうる限りで初めてである。
 通常集計されたログデータをモデルに入力するが、本研究ではログデータを時系列データとみなししてモデルに入力し学習を行う。&lt;/p&gt;
 
 &lt;p&gt;本研究では、以下の特徴を持つ context-aware attention convolutional neural network (CACNN) を提案し、実世界のデータセットに対して CTR 予測を行った結果を報告している。&lt;/p&gt;

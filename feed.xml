@@ -1,5 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2020-02-26T13:51:00+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
-</subtitle><entry><title type="html">Interpretable Adversarial Training for Text</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text" rel="alternate" type="text/html" title="Interpretable Adversarial Training for Text" /><published>2019-10-28T00:00:00+00:00</published><updated>2019-10-28T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://shunk031.github.io/paper-survey/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shunk031.github.io/paper-survey/" rel="alternate" type="text/html" /><updated>2020-12-07T07:52:08+00:00</updated><id>https://shunk031.github.io/paper-survey/feed.xml</id><title type="html">Paper Survey</title><subtitle>Survey of previous research and related works on machine learning (especially Deep Learning) in Japanese
+</subtitle><entry><title type="html">Explaining Word Embeddings via Disentangled Representation</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Explaining-Word-Embeddings-via-Disentangled-Representation" rel="alternate" type="text/html" title="Explaining Word Embeddings via Disentangled Representation" /><published>2020-12-07T00:00:00+00:00</published><updated>2020-12-07T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Explaining-Word-Embeddings-via-Disentangled-Representation</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Explaining-Word-Embeddings-via-Disentangled-Representation">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
+
+&lt;p&gt;学習済みの単語埋め込みを使って埋め込みの各次元が独立した特徴を捉えるような disentangled 表現へ変換する手法を提案。&lt;/p&gt;
+
+&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
+
+&lt;p&gt;事前学習済み単語埋め込み e.g., word2vec, GloVe は広く用いられている。
+こうした単語埋め込みに対して、埋め込みの各次元が独立した性質を持つ disentangled 表現への変換はあまり議論されていない。
+本研究では事前学習済み単語埋め込みを disentangled 表現へと変換する手法である disentangled word embeddings (DWE) を提案した。&lt;/p&gt;
+
+&lt;p&gt;DWE は以下の優位性を有する:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;事前学習済み単語埋め込みへの説明性 (explaining underlying knowledge)&lt;/li&gt;
+  &lt;li&gt;変換された埋め込みの独立性 (modular and compact features)&lt;/li&gt;
+  &lt;li&gt;元の事前学習済み埋め込みの保持性 (quality preservation)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3-技術や手法の-キモ-はどこにある&quot;&gt;3. 技術や手法の “キモ” はどこにある？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;事前学習済み単語埋め込みを予め設定した属性を予測できるような出力をするモデルを学習
+    &lt;ul&gt;
+      &lt;li&gt;埋め込みの説明性につながる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;行列分解の要領で事前学習済み単語埋め込みと学習したモデルが出力する埋め込みが等しくなるように学習
+    &lt;ul&gt;
+      &lt;li&gt;埋め込みの情報保持性につながる&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
+
+&lt;h3 id=&quot;学習&quot;&gt;学習&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;事前学習済み GloVe を用いて提案手法の DWE を学習&lt;/li&gt;
+  &lt;li&gt;ターゲットとなる属性は &lt;a href=&quot;https://provalisresearch.com/products/content-analysis-software&quot;&gt;Word Stat&lt;/a&gt; から取得
+    &lt;ul&gt;
+      &lt;li&gt;この中から説明しやすい 5 つの属性を選択 (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;artifact&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;location&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;animal&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adjective (ADJ)&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;adverb (ADV)&lt;/code&gt;)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;評価&quot;&gt;評価&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;単語間の類似度
+    &lt;ul&gt;
+      &lt;li&gt;Marco, Elia, and Nam (MEN)&lt;/li&gt;
+      &lt;li&gt;SimLex-999&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;単語のアナロジー
+    &lt;ul&gt;
+      &lt;li&gt;Bigger Analogy Test Set (BATS)&lt;/li&gt;
+      &lt;li&gt;Google Analogy (GA)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;品詞タグ付け
+    &lt;ul&gt;
+      &lt;li&gt;Chunking and Named Entity Recognition (NER)&lt;/li&gt;
+      &lt;li&gt;CoNLL2003&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;QVEC-CCA
+    &lt;ul&gt;
+      &lt;li&gt;単語埋め込みの自動評価指標&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DWEを用いた感情分析
+    &lt;ul&gt;
+      &lt;li&gt;感情分析タスクとしてIMDBのレビュー分類を実施&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;予め定めた属性に沿った埋め込みの学習により説明性が向上した&lt;/li&gt;
+  &lt;li&gt;変換元の事前学習済み単語埋め込みの情報を保持できた&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;単語埋め込みの自動評価指標
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;https://www.aclweb.org/anthology/D15-1243/&quot;&gt;Tsvetkov, Yulia, et al. “Evaluation of word vector representations by subspace alignment.” Proc. of EMNLP 2015&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.aclweb.org/anthology/2020.aacl-main.72/&quot;&gt;Liao, Keng-Te et al. “Explaining Word Embeddings via Disentangled Representation.” Proc. of AACL-IJCNLP 2020&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Interpretable Adversarial Training for Text</title><link href="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text" rel="alternate" type="text/html" title="Interpretable Adversarial Training for Text" /><published>2019-10-28T00:00:00+00:00</published><updated>2019-10-28T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/nlp/Interpretable-Adversarial-Training-for-Text">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
 
 &lt;p&gt;自然言語処理に対する解釈可能な敵対的摂動を生成する sparse projected gradient descent (SPGD) を提案&lt;/p&gt;
 
@@ -1103,114 +1202,4 @@ Event extraction タスクでは &lt;code class=&quot;language-plaintext highlig
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1901.05555&quot;&gt;Cui, Yin, et al. “Class-Balanced Loss Based on Effective Number of Samples.” arXiv preprint arXiv:1901.05555 (2019).&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry><entry><title type="html">Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting</title><link href="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting" rel="alternate" type="text/html" title="Attention Convolutional Neural Network for Advertiser level Click through Rate Forecasting" /><published>2019-05-09T00:00:00+00:00</published><updated>2019-05-09T00:00:00+00:00</updated><id>https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting</id><content type="html" xml:base="https://shunk031.github.io/paper-survey/summary/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting">&lt;h2 id=&quot;1-どんなもの&quot;&gt;1. どんなもの？&lt;/h2&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; という新たな視点で CTR 予測を行う Context-aware Attention Convolutional Neural Network を提案した。&lt;/p&gt;
-
-&lt;h2 id=&quot;2-先行研究と比べてどこがすごいの&quot;&gt;2. 先行研究と比べてどこがすごいの？&lt;/h2&gt;
-
-&lt;p&gt;CTR 予測問題はオンライン広告における重要な問題の 1 つである。先行研究では &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ユーザ単位&lt;/code&gt; の CTR 予測モデルの提案は複数行われているが、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;広告主単位&lt;/code&gt; での予測は本研究が著者が知りうる限りで初めてである。
-通常集計されたログデータをモデルに入力するが、本研究ではログデータを時系列データとみなししてモデルに入力し学習を行う。&lt;/p&gt;
-
-&lt;p&gt;本研究では、以下の特徴を持つ context-aware attention convolutional neural network (CACNN) を提案し、実世界のデータセットに対して CTR 予測を行った結果を報告している。&lt;/p&gt;
-
-&lt;h2 id=&quot;3-技術や手法のキモはどこにある&quot;&gt;3. 技術や手法の”キモ”はどこにある？&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure1.png&quot; alt=&quot;Figure 1&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;context-aware-attention-convolutional-neural-network-cacnn&quot;&gt;Context-aware Attention Convolutional Neural Network (CACNN)&lt;/h3&gt;
-&lt;p&gt;時系列の CTR データに対する Attention CNN とコンテキストデータ対する MLP からなるネットワーク構造を持つ。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;時系列の CTR データに対する Attention CNN
-    &lt;ul&gt;
-      &lt;li&gt;畳み込みで得られた特徴マップに対して attention weight を掛ける
-        &lt;ul&gt;
-          &lt;li&gt;局所的な非線形性や季節性の傾向を適切に捉えることが可能&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;コンテキストデータに対する MLP
-    &lt;ul&gt;
-      &lt;li&gt;本研究では配信対象の国とデバイスタイプを使用する
-        &lt;ul&gt;
-          &lt;li&gt;実際の CTR と国・デバイスタイプは相関関係にあるため、これらの情報を適切に捉えることが重要&lt;/li&gt;
-          &lt;li&gt;通常こうした特徴量は同一空間上には存在しないが、複数の全結合層を経て concat することにより、同一の潜在空間で扱うことが可能&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;4-どうやって有効だと検証した&quot;&gt;4. どうやって有効だと検証した？&lt;/h2&gt;
-
-&lt;p&gt;インターネット企業の主要な広告プラットフォームから 30 日分の広告キャンペーンデータ 20 万件程度を取得し、これらを元に評価を行っている。
-ベースラインのモデルとして古典的な手法 (exponential moving average 系)と深層学習ベースの手法 (CNN, CNN with Attention 等)と提案手法である CACNN の比較を行っている。&lt;/p&gt;
-
-&lt;h3 id=&quot;学習方法と評価方法について&quot;&gt;学習方法と評価方法について&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;train として 29 日分のデータを使用した。
-    &lt;ul&gt;
-      &lt;li&gt;28 日目までのデータを使って 29 日目を予測するよう学習を行う。&lt;/li&gt;
-      &lt;li&gt;valid として train からランダムに 10%程度サンプリングして使用した。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;test として 30 日目のデータを使用した。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;5-議論はあるか&quot;&gt;5. 議論はあるか？&lt;/h2&gt;
-&lt;h3 id=&quot;畳み込み操作の効果の確認&quot;&gt;畳み込み操作の効果の確認&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure12.png&quot; alt=&quot;Figure 12&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;ランダムに時系列の CTR データをサンプリングし、それらに対する畳み込み後の特徴マップの状態を可視化したもの。
-    &lt;ul&gt;
-      &lt;li&gt;異なるカーネルサイズで異なる時系列の特徴を捉えていることが分かる。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;attention-の効果確認&quot;&gt;Attention の効果確認&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Figure 13 (a)&lt;/th&gt;
-      &lt;th&gt;Figure 13 (b)&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure13a.png&quot; alt=&quot;Figure 13 (a)&quot; /&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;img src=&quot;/paper-survey/assets/img/others/Attention-Convolutional-Neural-Network-for-Advertiser-level-Click-through-Rate-Forecasting/figure13b.png&quot; alt=&quot;Figure 13 (b)&quot; /&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Figure 13 (a) : ある特徴マップ 50 個を対象に、それらに対する attention の重みを可視化した図&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Figure 13 (b) : (a)の特徴マップ先頭 3 つを対象に、時系列データを入力したときの特徴マップ値の変化を可視化したもの。&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Figure 13 (a) において、特徴マップ 1 と特徴マップ 3 は attention の重みが似ている。
-    &lt;ul&gt;
-      &lt;li&gt;Figure 13 (b) で特徴マップ 1 (赤) と 特徴マップ 3 (青) は時系列データに対して同様の反応をしている。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;特徴マップ 2 は、1 と 3 と同様の傾向の反応パターンを示しているが、元の時系列データ (黄) と大きさという点では離れている。
-    &lt;ul&gt;
-      &lt;li&gt;大きな誤差に対して学習された attention の重みが小さくなっているため、最終的な予測誤差は小さくなっていると考えられる。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;6-次に読むべき論文はあるか&quot;&gt;6. 次に読むべき論文はあるか？&lt;/h2&gt;
-&lt;p&gt;特になし。&lt;/p&gt;
-
-&lt;h3 id=&quot;論文情報リンク&quot;&gt;論文情報・リンク&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://dl.acm.org/citation.cfm?id=3186184&quot;&gt;Gao, Hongchang, et al. “Attention Convolutional Neural Network for Advertiser-level Click-through Rate Forecasting.” Proceedings of the 2018 World Wide Web Conference on World Wide Web. International World Wide Web Conferences Steering Committee, 2018.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name></name></author><summary type="html">1. どんなもの？</summary></entry></feed>
